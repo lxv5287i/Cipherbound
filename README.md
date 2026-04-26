@@ -1,2 +1,2 @@
 # Cipherbound
-Cipherbound by *Wanpip Software Engineering Team*
+Cipherbound by *WANPIP Software Engineering Team*
