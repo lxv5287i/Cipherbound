@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b6sl64d5fpfc"]
 
-[ext_resource type="Texture2D" uid="uid://bynudq47tw7y0" path="res://Assets/floor1_floor2_tileset.png" id="1_gli6d"]
-[ext_resource type="Texture2D" uid="uid://d1ng7d5oghsga" path="res://Assets/FloorAssets.png" id="2_277jj"]
+[ext_resource type="Texture2D" uid="uid://bynudq47tw7y0" path="res://World/floor1_floor2_tileset.png" id="1_gli6d"]
+[ext_resource type="Texture2D" uid="uid://d1ng7d5oghsga" path="res://World/FloorAssets.png" id="2_277jj"]
 [ext_resource type="Script" uid="uid://jelov2r6as0h" path="res://Script/whiteboard.gd" id="4_6cdf3"]
 [ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Analyst/analyst_player.tscn" id="4_moqve"]
 [ext_resource type="Texture2D" uid="uid://bmhm1n0r76tqa" path="res://Interactables/WhiteBoard.png" id="4_sb2y3"]
@@ -591,24 +591,27 @@ label_settings = SubResource("LabelSettings_6cdf3")
 script = ExtResource("6_k15ay")
 
 [node name="Panel" type="Panel" parent="AnalystPuzzlePopup" unique_id=1634737550]
-offset_left = 18.0
-offset_top = 96.0
-offset_right = 238.0
+texture_filter = 1
+offset_left = 19.0
+offset_top = 90.0
+offset_right = 124.0
 offset_bottom = 256.0
 
-[node name="Background" type="TextureRect" parent="AnalystPuzzlePopup/Panel" unique_id=717400480]
+[node name="Background" type="NinePatchRect" parent="AnalystPuzzlePopup/Panel" unique_id=612117716]
 layout_mode = 0
+offset_left = -8.0
+offset_top = -74.0
 offset_right = 220.0
-offset_bottom = 160.0
+offset_bottom = 259.0
 texture = ExtResource("6_6cdf3")
-expand_mode = 1
 
 [node name="QuestionLabel" type="Label" parent="AnalystPuzzlePopup/Panel" unique_id=1637509759]
+texture_filter = 1
 layout_mode = 0
 offset_left = 21.0
-offset_top = 10.0
+offset_top = -4.0
 offset_right = 225.0
-offset_bottom = 159.0
+offset_bottom = 145.0
 text = "You found a broken time machine display.
 It only shows ONE number:
 40867 seconds
@@ -623,28 +626,28 @@ label_settings = SubResource("LabelSettings_sb2y3")
 
 [node name="AnswerInput" type="LineEdit" parent="AnalystPuzzlePopup/Panel" unique_id=281021720]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 126.0
-offset_right = 100.0
-offset_bottom = 146.0
+offset_left = 22.0
+offset_top = 179.0
+offset_right = 124.0
+offset_bottom = 199.0
 theme_override_font_sizes/font_size = 8
 text = "Answer here"
 
 [node name="SubmitButton" type="Button" parent="AnalystPuzzlePopup/Panel" unique_id=781622148]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 126.0
-offset_right = 155.0
-offset_bottom = 146.0
+offset_left = 134.0
+offset_top = 179.0
+offset_right = 174.0
+offset_bottom = 199.0
 theme_override_font_sizes/font_size = 8
 text = "Submit"
 
 [node name="ResultLabel" type="Label" parent="AnalystPuzzlePopup/Panel" unique_id=1920086698]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 87.0
-offset_right = 204.0
-offset_bottom = 110.0
+offset_left = 25.0
+offset_top = 135.0
+offset_right = 101.0
+offset_bottom = 158.0
 text = "Result"
 
 [node name="BrownBoard" type="Area2D" parent="." unique_id=1710564980]
@@ -671,6 +674,7 @@ text = "[Space]"
 label_settings = SubResource("LabelSettings_v2ki8")
 
 [node name="HintPopup" type="CanvasLayer" parent="." unique_id=2116388033]
+visible = false
 script = ExtResource("8_u3bsr")
 
 [node name="Panel" type="Panel" parent="HintPopup" unique_id=1452218858]
@@ -714,6 +718,7 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_l6gxh")
 
 [node name="Label" type="Label" parent="ExitDoor" unique_id=1917388448]
+texture_filter = 1
 offset_left = -13.0
 offset_top = 17.0
 offset_right = 27.0
