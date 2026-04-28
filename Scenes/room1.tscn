@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b6sl64d5fpfc"]
 
-[ext_resource type="Texture2D" uid="uid://bynudq47tw7y0" path="res://World/floor1_floor2_tileset.png" id="1_gli6d"]
-[ext_resource type="Texture2D" uid="uid://d1ng7d5oghsga" path="res://World/FloorAssets.png" id="2_277jj"]
+[ext_resource type="Texture2D" uid="uid://ses2qyw74a74" path="res://World/floor1_floor2_tileset.png" id="1_gli6d"]
+[ext_resource type="Texture2D" uid="uid://chvw5qgq6e4bx" path="res://World/FloorAssets.png" id="2_277jj"]
 [ext_resource type="Script" uid="uid://jelov2r6as0h" path="res://Script/whiteboard.gd" id="4_6cdf3"]
 [ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Analyst/analyst_player.tscn" id="4_moqve"]
 [ext_resource type="Texture2D" uid="uid://bmhm1n0r76tqa" path="res://Interactables/WhiteBoard.png" id="4_sb2y3"]
