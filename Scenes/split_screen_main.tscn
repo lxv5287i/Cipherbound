@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bjgvn3ngrk6ch"]
+
+[ext_resource type="PackedScene" uid="uid://b6sl64d5fpfc" path="res://Scenes/room1.tscn" id="1_hmig3"]
+[ext_resource type="Script" uid="uid://b0hcrfbcwwmlt" path="res://Script/SplitScreen.gd" id="1_jg6n2"]
+[ext_resource type="Script" uid="uid://di4cofcf6wiuj" path="res://Script/game_progress.gd" id="2_hmig3"]
+[ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/room2.tscn" id="2_jg6n2"]
+
+[node name="SplitScreenMain" type="Control" unique_id=935910680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jg6n2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1493206573]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="LeftSide" type="SubViewportContainer" parent="HBoxContainer" unique_id=1929871673]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="AnalystView" type="SubViewport" parent="HBoxContainer/LeftSide" unique_id=69739850]
+handle_input_locally = false
+size = Vector2i(260, 352)
+render_target_update_mode = 4
+
+[node name="AnalystCam" type="Camera2D" parent="HBoxContainer/LeftSide/AnalystView" unique_id=1969062751]
+
+[node name="Room2" parent="HBoxContainer/LeftSide/AnalystView" unique_id=822085381 instance=ExtResource("2_jg6n2")]
+
+[node name="Divider" type="ColorRect" parent="HBoxContainer" unique_id=1941821234]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RightSide" type="SubViewportContainer" parent="HBoxContainer" unique_id=1889385132]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="CoderView" type="SubViewport" parent="HBoxContainer/RightSide" unique_id=621698463]
+handle_input_locally = false
+size = Vector2i(260, 352)
+render_target_update_mode = 4
+
+[node name="CoderCam" type="Camera2D" parent="HBoxContainer/RightSide/CoderView" unique_id=893259102]
+
+[node name="Room1" parent="HBoxContainer/RightSide/CoderView" unique_id=146614346 instance=ExtResource("1_hmig3")]
+
+[node name="GameProgress" type="Node" parent="." unique_id=618667140]
+script = ExtResource("2_hmig3")
