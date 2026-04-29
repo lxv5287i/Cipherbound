@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dtlttah7y11iq" path="res://Interactables/R1/poweroff.png" id="5_4yq2u"]
 [ext_resource type="PackedScene" uid="uid://bo7wgh36jabxj" path="res://Character/Coder/coder_player.tscn" id="5_mjn56"]
 [ext_resource type="Script" uid="uid://gw2krwwhlb8c" path="res://Script/powercabinet.gd" id="6_53ype"]
+[ext_resource type="Texture2D" uid="uid://dfnfgv2cvagld" path="res://Interactables/UI_Popups/UI.png" id="7_hbc0m"]
 [ext_resource type="Script" uid="uid://cgln0sbfoqy0e" path="res://Script/R2puzzle_popup.gd" id="8_4yq2u"]
-[ext_resource type="Texture2D" uid="uid://c4qr6gy3w1oir" path="res://Interactables/doorclose.png" id="10_4yq2u"]
+[ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="10_4yq2u"]
 [ext_resource type="Script" uid="uid://dt1fubms5qj8f" path="res://Script/exitdoor1.gd" id="10_t1d84"]
-[ext_resource type="Texture2D" uid="uid://bjmlcra8eusp7" path="res://Interactables/dooropen.png" id="12_ksc4w"]
+[ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="12_ksc4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksc4w"]
 texture = ExtResource("1_t1d84")
@@ -569,7 +570,6 @@ text = "[Press E]"
 label_settings = SubResource("LabelSettings_b2s5g")
 
 [node name="CoderPuzzlePopup" type="CanvasLayer" parent="." unique_id=924738830]
-visible = false
 script = ExtResource("8_4yq2u")
 
 [node name="Panel" type="Panel" parent="CoderPuzzlePopup" unique_id=56650673]
@@ -584,6 +584,7 @@ offset_left = 3.0
 offset_top = 4.0
 offset_right = 223.0
 offset_bottom = 164.0
+texture = ExtResource("7_hbc0m")
 region_rect = Rect2(33, 1, 14, 14)
 patch_margin_left = 6
 patch_margin_top = 6
