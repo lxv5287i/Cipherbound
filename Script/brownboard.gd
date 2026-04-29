@@ -4,6 +4,7 @@ extends Area2D
 
 @onready var prompt_label: Label = $Label
 @onready var hint_popup: CanvasLayer = $"../HintPopup"
+@onready var sprite: Sprite2D = $Sprite2D 
 
 var popup_open := false
 

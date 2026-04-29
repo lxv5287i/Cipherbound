@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bo7wgh36jabxj"]
 
-[ext_resource type="Texture2D" uid="uid://deye3cdm4eiaq" path="res://Character/Coder/FEMALE.png" id="1"]
 [ext_resource type="Script" uid="uid://c811h8oc2ph6x" path="res://Character/Coder/coder_player.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bfvux6b6xnquv" path="res://Character/Analyst/MALE.png" id="2_m5dqj"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)
@@ -175,13 +175,13 @@ size = Vector2(48, 48)
 
 [node name="CoderPlayer" type="CharacterBody2D" unique_id=2004721522 groups=["coder_player"]]
 z_index = 5
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2147206494]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1")
+texture = ExtResource("2_m5dqj")
 centered = false
 offset = Vector2(0, -16)
 hframes = 3
