@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cgy8d6o80xk5x"]
 
 [ext_resource type="Texture2D" uid="uid://dgc4veij83fyj" path="res://World/Floor/FLOOR.png" id="1_x3cab"]
-[ext_resource type="Texture2D" uid="uid://mfkktws0m0x6" path="res://World/Wall/WALL.png" id="2_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://b4pul514idto4" path="res://World/Wall/WALL.png" id="2_u2i1c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0oo0"]
 texture = ExtResource("1_x3cab")
@@ -309,12 +309,16 @@ texture = ExtResource("2_u2i1c")
 18:15/0 = 0
 17:15/0 = 0
 22:12/0 = 0
+22:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:13/0 = 0
 21:14/0 = 0
+21:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:15/0 = 0
 19:16/0 = 0
 22:13/0 = 0
+22:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:14/0 = 0
+22:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 22:15/0 = 0
 21:15/0 = 0
 
