@@ -174,7 +174,7 @@ _data = {
 size = Vector2(40, 39)
 
 [node name="AnalystPlayer" type="CharacterBody2D" unique_id=2004721522 groups=["coder_player"]]
-z_index = 20
+z_index = 15
 collision_mask = 6
 script = ExtResource("1_ieqrl")
 

@@ -16,6 +16,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = -2.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2bvto")
@@ -33,12 +37,14 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 
 [node name="CoderViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1225091618]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
+stretch = true
 
 [node name="CoderViewport" type="SubViewport" parent="SplitContainer/CoderViewContainer" unique_id=2099657381]
 handle_input_locally = false
-size = Vector2i(256, 352)
+size = Vector2i(252, 352)
 render_target_update_mode = 4
 
 [node name="CoderWorld" type="Node2D" parent="SplitContainer/CoderViewContainer/CoderViewport" unique_id=1404168340]
@@ -46,6 +52,7 @@ render_target_update_mode = 4
 [node name="Room1" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=822085381 instance=ExtResource("3_f5yf0")]
 
 [node name="CoderCamera" type="Camera2D" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1104504483 node_paths=PackedStringArray("target")]
+texture_filter = 1
 position = Vector2(256, 176)
 script = ExtResource("4_sw7fr")
 target = NodePath("../CoderPlayer")
@@ -54,10 +61,17 @@ target = NodePath("../CoderPlayer")
 z_index = 5
 position = Vector2(256, 176)
 
+[node name="Divider" type="ColorRect" parent="SplitContainer" unique_id=1627566854]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
 [node name="AnalystViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1789114351]
+texture_filter = 1
 custom_minimum_size = Vector2(256, 352)
 layout_mode = 2
 size_flags_horizontal = 3
+stretch = true
 
 [node name="AnalystViewport" type="SubViewport" parent="SplitContainer/AnalystViewContainer" unique_id=108729704]
 handle_input_locally = false
@@ -69,6 +83,7 @@ render_target_update_mode = 4
 [node name="Room2" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=146614346 instance=ExtResource("6_4u5vd")]
 
 [node name="AnalystCamera" type="Camera2D" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=687167008 node_paths=PackedStringArray("target")]
+texture_filter = 1
 position = Vector2(100, 176)
 script = ExtResource("7_ftovv")
 target = NodePath("../AnalystPlayer")
@@ -79,6 +94,7 @@ position = Vector2(100, 176)
 
 [node name="SharedViewContainer" type="SubViewportContainer" parent="." unique_id=1905845002]
 visible = false
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

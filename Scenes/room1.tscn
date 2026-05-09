@@ -639,7 +639,7 @@ outline_color = Color(0, 0, 0, 1)
 line_spacing = 1.0
 paragraph_spacing = 3.0
 font = ExtResource("10_uaei7")
-font_size = 7
+font_size = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_2rppd"]
 line_spacing = 0.0
@@ -709,6 +709,7 @@ position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_dl1m8")
 
 [node name="Label" type="Label" parent="PowerCabinet" unique_id=1228706267]
+texture_filter = 1
 offset_left = -18.0
 offset_top = -26.0
 offset_right = 22.0
@@ -727,6 +728,7 @@ offset_right = 238.0
 offset_bottom = 256.0
 
 [node name="Background" type="NinePatchRect" parent="CoderPuzzlePopup/Panel" unique_id=341165309]
+texture_filter = 1
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
@@ -740,6 +742,7 @@ patch_margin_right = 6
 patch_margin_bottom = 6
 
 [node name="QuestionLabel" type="Label" parent="CoderPuzzlePopup/Panel" unique_id=772706512]
+texture_filter = 1
 layout_mode = 0
 offset_left = 13.0
 offset_top = 12.0
@@ -759,6 +762,7 @@ END"
 label_settings = SubResource("LabelSettings_53ype")
 
 [node name="Ans1" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=1841779391]
+texture_filter = 1
 layout_mode = 0
 offset_left = 83.0
 offset_top = 33.0
@@ -773,6 +777,7 @@ script = ExtResource("11_t1d84")
 filter_mode = 2
 
 [node name="Ans2" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=1525203946]
+texture_filter = 1
 layout_mode = 0
 offset_left = 118.0
 offset_top = 62.0
@@ -786,6 +791,7 @@ script = ExtResource("11_t1d84")
 filter_mode = 2
 
 [node name="Ans3" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=83307096]
+texture_filter = 1
 layout_mode = 0
 offset_left = 150.0
 offset_top = 91.0
@@ -799,6 +805,7 @@ script = ExtResource("11_t1d84")
 filter_mode = 2
 
 [node name="SubmitButton" type="Button" parent="CoderPuzzlePopup/Panel" unique_id=213106463]
+texture_filter = 1
 layout_mode = 0
 offset_left = 172.0
 offset_top = 141.0
@@ -809,6 +816,7 @@ theme_override_font_sizes/font_size = 5
 text = "SUBMIT"
 
 [node name="ResultLabel" type="Label" parent="CoderPuzzlePopup/Panel" unique_id=739234057]
+texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
 offset_top = 145.0
@@ -818,6 +826,7 @@ text = "result: "
 label_settings = SubResource("LabelSettings_2rppd")
 
 [node name="NextButton" type="Button" parent="CoderPuzzlePopup/Panel" unique_id=1911063585]
+texture_filter = 1
 layout_mode = 0
 offset_left = 171.0
 offset_top = 141.0
@@ -828,6 +837,7 @@ theme_override_font_sizes/font_size = 5
 text = "NEXT"
 
 [node name="CloseButton" type="Button" parent="CoderPuzzlePopup/Panel" unique_id=200233244]
+texture_filter = 1
 layout_mode = 0
 offset_left = 171.0
 offset_top = 141.0
@@ -859,6 +869,8 @@ position = Vector2(55, 75)
 shape = SubResource("RectangleShape2D_cfaiu")
 
 [node name="Label" type="Label" parent="ComputerSwitches/ComputerSwitchA" unique_id=1680340579]
+z_index = 7
+texture_filter = 1
 offset_left = 37.0
 offset_top = 53.0
 offset_right = 78.0
@@ -895,6 +907,8 @@ position = Vector2(55, 75)
 shape = SubResource("RectangleShape2D_cfaiu")
 
 [node name="Label" type="Label" parent="ComputerSwitches/ComputerSwitchB" unique_id=2082706411]
+z_index = 7
+texture_filter = 1
 offset_left = 36.0
 offset_top = 89.0
 offset_right = 77.0
@@ -931,6 +945,8 @@ position = Vector2(55, 75)
 shape = SubResource("RectangleShape2D_cfaiu")
 
 [node name="Label" type="Label" parent="ComputerSwitches/ComputerSwitchC" unique_id=1907359830]
+z_index = 7
+texture_filter = 1
 offset_left = 35.0
 offset_top = 55.0
 offset_right = 76.0
@@ -963,6 +979,7 @@ texture = ExtResource("20_roffw")
 shape = SubResource("RectangleShape2D_iqruc")
 
 [node name="Label" type="Label" parent="ExitDoor" unique_id=786799646]
+texture_filter = 1
 offset_left = -20.0
 offset_top = -27.0
 offset_right = 21.0

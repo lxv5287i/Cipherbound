@@ -39,7 +39,7 @@ func show_prompt():
 
 		return
 
-	prompt_label.text = "[SPACE]"
+	prompt_label.text = "[BROKEN]"
 
 	if inrange_texture:
 		sprite.texture = inrange_texture
@@ -77,7 +77,7 @@ func interact(_player = null):
 
 	if player_inside:
 		prompt_label.visible = true
-		prompt_label.text = "[OPENED]"
+		prompt_label.text = "[FIXED]"
 
 		if changed_inrange_texture:
 			sprite.texture = changed_inrange_texture

@@ -7,7 +7,6 @@ func _process(_delta):
 	if player_1 == null or player_2 == null:
 		return
 
-	global_position = (
-		player_1.global_position +
-		player_2.global_position
-	) / 2.0
+	var midpoint := (player_1.global_position + player_2.global_position) / 2.0
+	global_position = midpoint.round()
+	zoom = Vector2.ONE

@@ -15,10 +15,4 @@ func _ready():
 func _on_coder_done():
 	sprite.texture = online_texture
 
-	status_label.text = "UNIT-7: SYSTEM ONLINE"
-	await get_tree().create_timer(0.7).timeout
-
-	status_label.text = "UNIT-7: FIRING WEAPONS"
-	await get_tree().create_timer(0.7).timeout
-
-	status_label.text = "UNIT-7: TAKING FLIGHT"
+	status_label.text = "FIXED"

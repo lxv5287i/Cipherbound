@@ -110,11 +110,11 @@ func hide_prompt():
 func update_prompt_text():
 	if GameProgress.room5_analyst_solved:
 		if solved:
-			prompt_label.text = "PRESS [E] Explanation"
+			prompt_label.text = "PRESS [E]"
 		else:
 			prompt_label.text = "PRESS [E]"
 	else:
-		prompt_label.text = "[Locked]"
+		prompt_label.text = "[LOCKED]"
 
 
 func _on_analyst_done():

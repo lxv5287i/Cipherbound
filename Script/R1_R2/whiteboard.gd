@@ -32,7 +32,7 @@ func show_range():
 		elif inrange_texture:
 			sprite.texture = inrange_texture
 
-		prompt_label.text = "Explanation"
+		prompt_label.text = "[Eplanation]"
 		return
 
 	if inrange_texture:

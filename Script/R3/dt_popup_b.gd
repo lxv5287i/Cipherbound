@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export_multiline var question_text: String = "What structure is used when the program chooses between two possible actions?"
+@export_multiline var question_text: String = "IF ELSE"
 @export_multiline var explanation_text: String = "Explanation:\n\nIf else is used when the program needs to choose between two possible actions."
 
 @onready var panel: Panel = $Panel

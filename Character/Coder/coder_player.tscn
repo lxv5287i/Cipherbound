@@ -174,7 +174,7 @@ _data = {
 size = Vector2(39, 38)
 
 [node name="CoderPlayer" type="CharacterBody2D" unique_id=1699527945 groups=["analyst_player"]]
-z_index = 20
+z_index = 15
 collision_mask = 2
 script = ExtResource("1_qxruy")
 

@@ -2723,6 +2723,7 @@ position = Vector2(-1, 6)
 shape = SubResource("RectangleShape2D_8xjlg")
 
 [node name="Label" type="Label" parent="DataTableA" unique_id=1730204581]
+z_index = 7
 offset_left = -16.0
 offset_top = -15.0
 offset_right = 40.0
@@ -2791,6 +2792,7 @@ position = Vector2(-1, 6)
 shape = SubResource("RectangleShape2D_8xjlg")
 
 [node name="Label" type="Label" parent="DataTableB" unique_id=1661452477]
+z_index = 7
 offset_left = -21.0
 offset_top = 18.0
 offset_right = 25.0
@@ -2891,11 +2893,11 @@ texture = ExtResource("13_4ig2l")
 shape = SubResource("RectangleShape2D_4ig2l")
 
 [node name="Label" type="Label" parent="Hint" unique_id=822087216]
-offset_left = -15.0
-offset_top = 23.0
-offset_right = 25.0
-offset_bottom = 46.0
-theme_override_font_sizes/font_size = 6
+z_index = 7
+offset_left = -13.0
+offset_top = -19.0
+offset_right = 27.0
+offset_bottom = 4.0
 text = "[HINT]"
 label_settings = SubResource("LabelSettings_emaet")
 uppercase = true

@@ -6,8 +6,8 @@ extends Area2D
 @export var solved_inrange_texture: Texture2D
 
 @export var locked_text: String = "[LOCKED]"
-@export var interact_text: String = "[PRESS E]"
-@export var solved_text: String = "Explanation"
+@export var interact_text: String = "PRESS [E]"
+@export var solved_text: String = "[EXPLANATION]"
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label

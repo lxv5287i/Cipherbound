@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
 [ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Coder/coder_player.tscn" id="38_8isgd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -783,8 +784,18 @@ sources/0 = SubResource("TileSetAtlasSource_vmftg")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy1bw"]
 size = Vector2(11, 11)
 
+[sub_resource type="LabelSettings" id="LabelSettings_6msik"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r753w"]
 size = Vector2(13, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_amwwa"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wagpd"]
 font = ExtResource("11_1al0n")
@@ -792,6 +803,16 @@ font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3paf"]
 size = Vector2(12, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hjgg"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_23gij"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1al0n"]
 line_spacing = 1.0
@@ -801,6 +822,11 @@ font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_idhfa"]
 size = Vector2(29, 27.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_17xsj"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03jl0"]
 size = Vector2(26.5, 27.5)
@@ -813,6 +839,16 @@ font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhbti"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_o54y0"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5vw4"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_8bywp"]
 line_spacing = 1.0
 paragraph_spacing = 3.0
@@ -821,6 +857,11 @@ font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sy2g3"]
 size = Vector2(30, 26)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbrio"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4sjms"]
 size = Vector2(29, 26)
@@ -834,6 +875,11 @@ font_size = 7
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpjhh"]
 size = Vector2(14, 14)
 
+[sub_resource type="LabelSettings" id="LabelSettings_njw7c"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpovp"]
 size = Vector2(14, 14)
 
@@ -845,6 +891,11 @@ font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yj0t"]
 size = Vector2(30, 27)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d3qyh"]
+font = ExtResource("11_1al0n")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dy145"]
 size = Vector2(30, 27)
@@ -861,16 +912,16 @@ size = Vector2(20, 21)
 [sub_resource type="LabelSettings" id="LabelSettings_2n0gg"]
 font = ExtResource("11_1al0n")
 font_size = 7
+font_color = Color(0, 0, 0, 1)
 outline_size = 1
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8isgd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ngjh1"]
 font = ExtResource("11_1al0n")
 font_size = 7
+font_color = Color(0, 0, 0, 1)
 outline_size = 1
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Lobby" type="Node2D" unique_id=179727676]
 y_sort_enabled = true
@@ -920,8 +971,14 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_xy1bw")
 
 [node name="Label" type="Label" parent="Folders/FolderA" unique_id=1572686784]
-offset_right = 40.0
-offset_bottom = 23.0
+z_index = 20
+offset_left = -21.0
+offset_top = -18.0
+offset_right = 27.0
+offset_bottom = 5.0
+text = "[Interact]"
+label_settings = SubResource("LabelSettings_6msik")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Folders/FolderA" unique_id=594518163]
 collision_layer = 2
@@ -947,8 +1004,14 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_xy1bw")
 
 [node name="Label" type="Label" parent="Folders/FolderB" unique_id=804288802]
-offset_right = 40.0
-offset_bottom = 23.0
+z_index = 20
+offset_left = -24.0
+offset_top = -14.0
+offset_right = 26.0
+offset_bottom = 9.0
+text = "[Interact]"
+label_settings = SubResource("LabelSettings_amwwa")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Folders/FolderB" unique_id=1150322326 groups=["info_popup"]]
 collision_layer = 2
@@ -958,7 +1021,6 @@ position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_r753w")
 
 [node name="FolderPopup" type="CanvasLayer" parent="Folders" unique_id=763621968 groups=["info_popup"]]
-visible = false
 script = ExtResource("5_s3paf")
 
 [node name="Panel" type="Panel" parent="Folders/FolderPopup" unique_id=27417051]
@@ -1013,12 +1075,15 @@ texture = ExtResource("6_vmftg")
 shape = SubResource("RectangleShape2D_s3paf")
 
 [node name="Label" type="Label" parent="Banners/BannerA" unique_id=1837132162]
-offset_left = -16.0
-offset_top = -27.0
+z_index = 21
+offset_left = -24.0
+offset_top = -26.0
 offset_right = 24.0
-offset_bottom = -4.0
-theme_override_font_sizes/font_size = 8
+offset_bottom = -3.0
 text = "[Interact]"
+label_settings = SubResource("LabelSettings_5hjgg")
+clip_text = true
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Banners/BannerA" unique_id=243046104]
 collision_layer = 2
@@ -1041,12 +1106,15 @@ texture = ExtResource("6_vmftg")
 shape = SubResource("RectangleShape2D_s3paf")
 
 [node name="Label" type="Label" parent="Banners/BannerB" unique_id=1700518230]
-offset_left = -16.0
-offset_top = -27.0
-offset_right = 24.0
-offset_bottom = -4.0
+z_index = 20
+offset_left = -22.0
+offset_top = -25.0
+offset_right = 26.0
+offset_bottom = -2.0
 theme_override_font_sizes/font_size = 8
 text = "[Interact]"
+label_settings = SubResource("LabelSettings_23gij")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Banners/BannerB" unique_id=511767789]
 collision_layer = 2
@@ -1055,7 +1123,6 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_r753w")
 
 [node name="BannerPopup" type="CanvasLayer" parent="Banners" unique_id=933229954 groups=["info_popup"]]
-visible = false
 script = ExtResource("11_idhfa")
 
 [node name="Panel" type="Panel" parent="Banners/BannerPopup" unique_id=424747828]
@@ -1104,11 +1171,14 @@ position = Vector2(0.5, -2.25)
 shape = SubResource("RectangleShape2D_idhfa")
 
 [node name="Label" type="Label" parent="Box/Box" unique_id=1030214007]
-offset_left = -37.0
-offset_top = -36.0
-offset_right = 35.0
-offset_bottom = -13.0
+z_index = 20
+offset_left = -21.0
+offset_top = -27.0
+offset_right = 51.0
+offset_bottom = -4.0
 text = "[interact]"
+label_settings = SubResource("LabelSettings_17xsj")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Box/Box" unique_id=687232578]
 collision_layer = 2
@@ -1118,7 +1188,6 @@ position = Vector2(2.25, 0.75)
 shape = SubResource("RectangleShape2D_03jl0")
 
 [node name="BoxPopup" type="CanvasLayer" parent="Box" unique_id=1053859485 groups=["info_popup"]]
-visible = false
 script = ExtResource("17_6n5of")
 
 [node name="Panel" type="Panel" parent="Box/BoxPopup" unique_id=92591679]
@@ -1166,11 +1235,15 @@ texture = ExtResource("15_yesx4")
 shape = SubResource("RectangleShape2D_uhbti")
 
 [node name="Label" type="Label" parent="Experiment/ExperimentA" unique_id=670563674]
-offset_left = -37.0
-offset_top = -32.0
-offset_right = 35.0
-offset_bottom = -9.0
+z_index = 5
+offset_left = -21.0
+offset_top = -27.0
+offset_right = 51.0
+offset_bottom = -4.0
 text = "[Interact]"
+label_settings = SubResource("LabelSettings_o54y0")
+clip_text = true
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Experiment/ExperimentA" unique_id=1304029481]
 collision_layer = 2
@@ -1194,11 +1267,14 @@ texture = ExtResource("15_yesx4")
 shape = SubResource("RectangleShape2D_uhbti")
 
 [node name="Label" type="Label" parent="Experiment/ExperimentB" unique_id=1191743068]
-offset_left = -37.0
-offset_top = -32.0
-offset_right = 35.0
-offset_bottom = -9.0
+z_index = 5
+offset_left = -22.0
+offset_top = -26.0
+offset_right = 50.0
+offset_bottom = -3.0
 text = "[Interact]"
+label_settings = SubResource("LabelSettings_m5vw4")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Experiment/ExperimentB" unique_id=192321865]
 collision_layer = 2
@@ -1208,7 +1284,6 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_03jl0")
 
 [node name="ExperimentPopup" type="CanvasLayer" parent="Experiment" unique_id=1497004670 groups=["info_popup"]]
-visible = false
 script = ExtResource("20_u60dt")
 
 [node name="Panel" type="Panel" parent="Experiment/ExperimentPopup" unique_id=398311477]
@@ -1257,11 +1332,14 @@ texture = ExtResource("22_sy2g3")
 shape = SubResource("RectangleShape2D_sy2g3")
 
 [node name="Label" type="Label" parent="Organizer/Organizer" unique_id=343101593]
-offset_left = -38.0
-offset_top = -31.0
-offset_right = 34.0
-offset_bottom = -8.0
+z_index = 20
+offset_left = -25.0
+offset_top = -26.0
+offset_right = 47.0
+offset_bottom = -3.0
 text = "[interact]"
+label_settings = SubResource("LabelSettings_pbrio")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Organizer/Organizer" unique_id=1600881020]
 collision_layer = 2
@@ -1319,10 +1397,14 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_dpjhh")
 
 [node name="Label" type="Label" parent="Table/Table" unique_id=1232897923]
+z_index = 20
 offset_left = -19.0
 offset_top = 8.0
 offset_right = 21.0
 offset_bottom = 31.0
+text = "[Interact]"
+label_settings = SubResource("LabelSettings_njw7c")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="Table/Table" unique_id=710813538]
 collision_layer = 2
@@ -1332,7 +1414,6 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_cpovp")
 
 [node name="TablePopup" type="CanvasLayer" parent="Table" unique_id=1695153079 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="Table/TablePopup" unique_id=746675410]
@@ -1380,11 +1461,14 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_7yj0t")
 
 [node name="Label" type="Label" parent="TableUp/TableUp" unique_id=1377820181]
-offset_left = -37.0
-offset_top = -36.0
-offset_right = 35.0
-offset_bottom = -13.0
+z_index = 20
+offset_left = -22.0
+offset_top = -26.0
+offset_right = 50.0
+offset_bottom = -3.0
 text = "[interact]"
+label_settings = SubResource("LabelSettings_d3qyh")
+uppercase = true
 
 [node name="Blocker" type="StaticBody2D" parent="TableUp/TableUp" unique_id=977648859]
 collision_layer = 2
@@ -1394,7 +1478,6 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_dy145")
 
 [node name="TableUpPopup" type="CanvasLayer" parent="TableUp" unique_id=915280982 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="TableUp/TableUpPopup" unique_id=745866324]
@@ -1494,3 +1577,6 @@ offset_right = 22.0
 offset_bottom = -2.0
 text = "ROOM 5"
 label_settings = SubResource("LabelSettings_ngjh1")
+
+[node name="CoderPlayer" parent="." unique_id=1699527945 instance=ExtResource("38_8isgd")]
+position = Vector2(176, 228)

@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://b0menpw3ca2fp" path="res://World/Font/DePixelHalbfett.ttf" id="18_ralre"]
 [ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="19_05ack"]
 [ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="20_6851f"]
+[ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="21_uaei7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ry5yk"]
 texture = ExtResource("1_pfsya")
@@ -691,12 +692,6 @@ font_size = 7
 font_color = Color(0, 0, 0, 1)
 outline_size = 1
 
-[sub_resource type="LabelSettings" id="LabelSettings_6vwvs"]
-line_spacing = 0.0
-font = ExtResource("7_ry5yk")
-font_size = 5
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ufxwj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eumu0"]
@@ -742,10 +737,11 @@ position = Vector2(8, 10.5)
 shape = SubResource("RectangleShape2D_moqve")
 
 [node name="PromptLabel" type="Label" parent="WhiteBoard" unique_id=1469033318]
-offset_left = -11.0
-offset_top = -11.0
-offset_right = 34.0
-offset_bottom = 3.0
+texture_filter = 1
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 2.0
 scale = Vector2(0.9, 0.9)
 text = "[Space]"
 label_settings = SubResource("LabelSettings_6cdf3")
@@ -797,6 +793,7 @@ label_settings = SubResource("LabelSettings_sb2y3")
 horizontal_alignment = 3
 
 [node name="Ans1" type="LineEdit" parent="WhiteBoard/AnalystPuzzlePopup/Panel" unique_id=281021720]
+texture_filter = 1
 layout_mode = 0
 offset_left = 14.0
 offset_top = 160.0
@@ -810,6 +807,7 @@ script = ExtResource("9_pfsya")
 filter_mode = 1
 
 [node name="Ans2" type="LineEdit" parent="WhiteBoard/AnalystPuzzlePopup/Panel" unique_id=632399890]
+texture_filter = 1
 layout_mode = 0
 offset_left = 67.0
 offset_top = 160.0
@@ -823,6 +821,7 @@ script = ExtResource("9_pfsya")
 filter_mode = 1
 
 [node name="SubmitButton" type="Button" parent="WhiteBoard/AnalystPuzzlePopup/Panel" unique_id=781622148]
+texture_filter = 1
 layout_mode = 0
 offset_left = 136.0
 offset_top = 168.0
@@ -833,6 +832,7 @@ theme_override_font_sizes/font_size = 5
 text = "Submit"
 
 [node name="ResultLabel" type="Label" parent="WhiteBoard/AnalystPuzzlePopup/Panel" unique_id=1920086698]
+texture_filter = 1
 layout_mode = 0
 offset_left = 13.0
 offset_top = 53.0
@@ -842,6 +842,7 @@ text = "Result"
 label_settings = SubResource("LabelSettings_ry5yk")
 
 [node name="CloseButton" type="Button" parent="WhiteBoard/AnalystPuzzlePopup/Panel" unique_id=1264325716]
+texture_filter = 1
 layout_mode = 0
 offset_left = 137.0
 offset_top = 168.0
@@ -870,6 +871,7 @@ position = Vector2(14, 10)
 shape = SubResource("RectangleShape2D_u3bsr")
 
 [node name="Label" type="Label" parent="BrownBoard" unique_id=1616904557]
+texture_filter = 1
 offset_left = -5.0
 offset_top = -13.0
 offset_right = 35.0
@@ -881,6 +883,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="HintPopup" type="CanvasLayer" parent="." unique_id=1899508476]
+visible = false
 script = ExtResource("8_u3bsr")
 
 [node name="Panel" type="Panel" parent="HintPopup" unique_id=1069840071]
@@ -890,10 +893,12 @@ offset_right = 201.0
 offset_bottom = 244.0
 
 [node name="Background" type="NinePatchRect" parent="HintPopup/Panel" unique_id=1629100682]
+texture_filter = 1
 layout_mode = 0
-offset_top = -1.0
-offset_right = 180.0
-offset_bottom = 112.0
+offset_left = -1.0
+offset_top = -25.0
+offset_right = 256.0
+offset_bottom = 161.0
 texture = ExtResource("11_pfsya")
 region_rect = Rect2(17, 1, 14, 14)
 patch_margin_left = 6
@@ -901,25 +906,27 @@ patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
 
-[node name="Label" type="Label" parent="HintPopup/Panel" unique_id=1571871446]
+[node name="Label" type="RichTextLabel" parent="HintPopup/Panel" unique_id=2059828554]
+texture_filter = 1
 layout_mode = 0
-offset_left = 9.0
-offset_top = 5.0
-offset_right = 175.0
-offset_bottom = 109.0
+offset_left = 15.0
+offset_top = -13.0
+offset_right = 244.0
+offset_bottom = 151.0
+theme_override_fonts/normal_font = ExtResource("18_ralre")
+theme_override_font_sizes/normal_font_size = 7
 text = "                                        HINT
-
 1 hour = 60 minutes
 
 % = a symbol used to divide two 
-numbers and get its remainder as an output. 
+numbers and get its remainder as 
+an output. 
 
 Any extra energy that does not 
 fill a full battery is called remaining energy.
 
 Format:
 batteries, remainingEnergy"
-label_settings = SubResource("LabelSettings_6vwvs")
 
 [node name="ExitDoor" type="Area2D" parent="." unique_id=1414087718 groups=["analyst_interactable"]]
 position = Vector2(440, 13)
@@ -937,6 +944,7 @@ texture = ExtResource("17_x3xnl")
 shape = SubResource("RectangleShape2D_ufxwj")
 
 [node name="Label" type="Label" parent="ExitDoor" unique_id=1487412404]
+texture_filter = 1
 offset_left = -20.0
 offset_top = -27.0
 offset_right = 21.0
@@ -946,6 +954,9 @@ label_settings = SubResource("LabelSettings_eumu0")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=271748650]
 position = Vector2(100, 46)
+
+[node name="AnalystPlayer" parent="." unique_id=2004721522 instance=ExtResource("21_uaei7")]
+position = Vector2(358, 229)
 
 [connection signal="body_entered" from="WhiteBoard" to="WhiteBoard" method="_on_body_entered"]
 [connection signal="body_exited" from="WhiteBoard" to="WhiteBoard" method="_on_body_exited"]

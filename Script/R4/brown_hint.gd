@@ -2,7 +2,7 @@ extends Area2D
 
 @export var normal_texture: Texture2D
 @export var inrange_texture: Texture2D
-@export var prompt_text := "[Hint]"
+@export var prompt_text := "[HINT]"
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label

@@ -770,6 +770,7 @@ position = Vector2(8, 0)
 shape = SubResource("CapsuleShape2D_7mbuy")
 
 [node name="Label" type="Label" parent="Glass" unique_id=225702150]
+z_index = 7
 offset_left = -11.0
 offset_top = -17.0
 offset_right = 45.0
@@ -801,6 +802,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="GlassPopup/Panel" unique_id=1891706480]
+texture_filter = 1
 layout_mode = 0
 offset_left = -10.0
 offset_top = -8.0
@@ -846,10 +848,11 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ugd8l")
 
 [node name="Label" type="Label" parent="Kiosk" unique_id=402968581]
-offset_left = -17.0
-offset_top = 11.0
-offset_right = 39.0
-offset_bottom = 34.0
+z_index = 7
+offset_left = -16.0
+offset_top = -19.0
+offset_right = 40.0
+offset_bottom = 4.0
 text = "[Space]"
 label_settings = SubResource("LabelSettings_3bwa1")
 uppercase = true
@@ -983,6 +986,7 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_s38dd")
 
 [node name="Label" type="Label" parent="SciComp" unique_id=952300736]
+z_index = 7
 offset_left = -18.0
 offset_top = -21.0
 offset_right = 25.0

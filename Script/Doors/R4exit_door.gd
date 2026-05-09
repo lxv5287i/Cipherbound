@@ -37,6 +37,8 @@ func _ready():
 	if GameProgress.room4_done_signal_sent:
 		open_door()
 
+	print("R4 Exit ready")
+
 
 func open_door():
 	door_open = true
@@ -44,7 +46,7 @@ func open_door():
 	if open_texture:
 		sprite.texture = open_texture
 
-	print("Room 4 exit door opened")
+	print("R4 Exit opened")
 	update_state()
 
 
@@ -54,9 +56,11 @@ func _on_body_entered(body):
 
 	if body.name == "CoderPlayer":
 		coder_in_range = true
+		print("Coder entered R4 exit")
 
 	if body.name == "AnalystPlayer":
 		analyst_in_range = true
+		print("Analyst entered R4 exit")
 
 	update_state()
 
@@ -64,9 +68,11 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.name == "CoderPlayer":
 		coder_in_range = false
+		print("Coder left R4 exit")
 
 	if body.name == "AnalystPlayer":
 		analyst_in_range = false
+		print("Analyst left R4 exit")
 
 	update_state()
 
@@ -77,6 +83,8 @@ func update_state():
 
 	var any_inside := coder_in_range or analyst_in_range
 	var both_inside := coder_in_range and analyst_in_range
+
+	print("R4 Exit state | open=", door_open, " coder=", coder_in_range, " analyst=", analyst_in_range)
 
 	if not any_inside:
 		label.visible = false
@@ -110,10 +118,14 @@ func update_state():
 
 		transferring = true
 
+		print("R4 Exit: both players inside. Unlocking Room 5, then going to lobby.")
+
 		GameProgress.unlock_only_room5()
 
 		var main = get_tree().get_first_node_in_group("split_screen_main")
-		if main:
+
+		if main and main.has_method("go_to_lobby"):
+			print("R4 Exit: calling go_to_lobby")
 			main.call_deferred("go_to_lobby")
 		else:
 			print("ERROR: SplitScreenMain or go_to_lobby not found")
