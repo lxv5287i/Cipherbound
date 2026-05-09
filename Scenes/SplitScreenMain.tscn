@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ukv5ff3g3lq8"]
+
+[ext_resource type="Script" uid="uid://bdurt1rntws7h" path="res://New/split_screen_main.gd" id="1_2bvto"]
+[ext_resource type="Script" uid="uid://bdtqnrhv6t7su" path="res://New/game_progress.gd" id="2_wpldl"]
+[ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/room1.tscn" id="3_f5yf0"]
+[ext_resource type="Script" uid="uid://cebkgd01i4aem" path="res://New/coder_camera.gd" id="4_sw7fr"]
+[ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Coder/coder_player.tscn" id="5_w5uyl"]
+[ext_resource type="PackedScene" uid="uid://b6sl64d5fpfc" path="res://Scenes/room2.tscn" id="6_4u5vd"]
+[ext_resource type="Script" uid="uid://db0syds1krm8t" path="res://New/analyst_camera.gd" id="7_ftovv"]
+[ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="8_vtvcs"]
+[ext_resource type="PackedScene" uid="uid://k5ppokrlrys7" path="res://Scenes/Lobby.tscn" id="9_43xyp"]
+[ext_resource type="Script" uid="uid://c8qts7423n2wj" path="res://New/shared_camera.gd" id="10_5qox4"]
+
+[node name="SplitScreenMain" type="Control" unique_id=801453013]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2bvto")
+
+[node name="GameProgress" type="Node" parent="." unique_id=777986087 groups=["game_progress"]]
+script = ExtResource("2_wpldl")
+
+[node name="SplitContainer" type="HBoxContainer" parent="." unique_id=1030092439]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="CoderViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1225091618]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CoderViewport" type="SubViewport" parent="SplitContainer/CoderViewContainer" unique_id=2099657381]
+handle_input_locally = false
+size = Vector2i(256, 352)
+render_target_update_mode = 4
+
+[node name="CoderWorld" type="Node2D" parent="SplitContainer/CoderViewContainer/CoderViewport" unique_id=1404168340]
+
+[node name="Room1" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=822085381 instance=ExtResource("3_f5yf0")]
+
+[node name="CoderCamera" type="Camera2D" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1104504483 node_paths=PackedStringArray("target")]
+position = Vector2(256, 176)
+script = ExtResource("4_sw7fr")
+target = NodePath("../CoderPlayer")
+
+[node name="CoderPlayer" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1699527945 instance=ExtResource("5_w5uyl")]
+z_index = 5
+position = Vector2(256, 176)
+
+[node name="AnalystViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1789114351]
+custom_minimum_size = Vector2(256, 352)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AnalystViewport" type="SubViewport" parent="SplitContainer/AnalystViewContainer" unique_id=108729704]
+handle_input_locally = false
+size = Vector2i(256, 352)
+render_target_update_mode = 4
+
+[node name="AnalystWorld" type="Node2D" parent="SplitContainer/AnalystViewContainer/AnalystViewport" unique_id=51533325]
+
+[node name="Room2" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=146614346 instance=ExtResource("6_4u5vd")]
+
+[node name="AnalystCamera" type="Camera2D" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=687167008 node_paths=PackedStringArray("target")]
+position = Vector2(100, 176)
+script = ExtResource("7_ftovv")
+target = NodePath("../AnalystPlayer")
+
+[node name="AnalystPlayer" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=2004721522 instance=ExtResource("8_vtvcs")]
+z_index = 5
+position = Vector2(100, 176)
+
+[node name="SharedViewContainer" type="SubViewportContainer" parent="." unique_id=1905845002]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SharedViewport" type="SubViewport" parent="SharedViewContainer" unique_id=1016326554]
+handle_input_locally = false
+size = Vector2i(512, 352)
+render_target_update_mode = 0
+
+[node name="SharedWorld" type="Node2D" parent="SharedViewContainer/SharedViewport" unique_id=1599340501]
+
+[node name="Lobby" parent="SharedViewContainer/SharedViewport/SharedWorld" unique_id=179727676 instance=ExtResource("9_43xyp")]
+
+[node name="SharedCamera" type="Camera2D" parent="SharedViewContainer/SharedViewport/SharedWorld" unique_id=1212806850 node_paths=PackedStringArray("player_1", "player_2")]
+position = Vector2(256, 176)
+script = ExtResource("10_5qox4")
+player_1 = NodePath("../../../../SplitContainer/CoderViewContainer/CoderViewport/CoderWorld/CoderPlayer")
+player_2 = NodePath("../../../../SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer")

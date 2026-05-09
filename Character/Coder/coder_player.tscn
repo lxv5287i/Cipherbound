@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://bo7wgh36jabxj"]
+[gd_scene format=3 uid="uid://wfuwrcp0130k"]
 
-[ext_resource type="Script" uid="uid://c811h8oc2ph6x" path="res://Character/Coder/coder_player.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://bfvux6b6xnquv" path="res://Character/Analyst/MALE.png" id="2_m5dqj"]
+[ext_resource type="Script" uid="uid://dxsruw5rr6oij" path="res://Character/Coder/coder_player.gd" id="1_qxruy"]
+[ext_resource type="Texture2D" uid="uid://36456vj8kmy" path="res://Character/Analyst/FEMALE.png" id="2_7m2ag"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)
 
-[sub_resource type="Animation" id="Animation_5lkas"]
+[sub_resource type="Animation" id="Animation_f0oto"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -159,7 +159,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="10"]
 _data = {
-&"RESET": SubResource("Animation_5lkas"),
+&"RESET": SubResource("Animation_f0oto"),
 &"idleDown": SubResource("2"),
 &"idleLeft": SubResource("5"),
 &"idleRight": SubResource("4"),
@@ -170,36 +170,39 @@ _data = {
 &"walkUp": SubResource("7")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dqj"]
-size = Vector2(48, 48)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhgsb"]
+size = Vector2(39, 38)
 
-[node name="CoderPlayer" type="CharacterBody2D" unique_id=2004721522 groups=["coder_player"]]
-z_index = 5
-collision_mask = 3
-script = ExtResource("2")
+[node name="CoderPlayer" type="CharacterBody2D" unique_id=1699527945 groups=["analyst_player"]]
+z_index = 20
+collision_mask = 2
+script = ExtResource("1_qxruy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2147206494]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235305258]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_m5dqj")
+texture = ExtResource("2_7m2ag")
 centered = false
 offset = Vector2(0, -16)
 hframes = 3
 vframes = 4
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388760412]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1302492588]
 position = Vector2(8, 8)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1421310222]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=128725529]
 libraries/ = SubResource("10")
 
-[node name="InteractDetector" type="Area2D" parent="." unique_id=766459290]
+[node name="InteractDetector" type="Area2D" parent="." unique_id=2136197758]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector" unique_id=1710822715]
-position = Vector2(8, 4.75)
-shape = SubResource("RectangleShape2D_m5dqj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector" unique_id=1871649055]
+position = Vector2(8.5, 7)
+shape = SubResource("RectangleShape2D_lhgsb")
+
+[connection signal="area_entered" from="InteractDetector" to="." method="_on_interact_detector_area_entered"]
+[connection signal="area_exited" from="InteractDetector" to="." method="_on_interact_detector_area_exited"]

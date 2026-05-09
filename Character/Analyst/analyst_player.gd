@@ -27,6 +27,21 @@ func _ready():
 	play_idle_animation()
 
 func _physics_process(delta):
+	if GameLock.movement_locked:
+		play_idle_animation()
+		return
+
+	var analyst_popup = get_tree().get_first_node_in_group("analyst_popup")
+	if analyst_popup and analyst_popup.is_open:
+		play_idle_animation()
+		return
+
+	update_current_interactable()
+
+	if current_interactable and Input.is_action_just_pressed("a_interact"):
+		current_interactable.interact()
+		return
+
 	var dir := get_input_direction()
 
 	if is_moving:
@@ -42,14 +57,10 @@ func _physics_process(delta):
 	else:
 		play_idle_animation()
 
-func _process(_delta):
-	update_current_interactable()
-
-	if current_interactable and Input.is_action_just_pressed("a_interact"):
-		current_interactable.interact()
-
 func _on_interactable_entered(area: Area2D):
-	if area.has_method("interact"):
+	print("Analyst entered:", area.name, area.get_groups())
+
+	if area.is_in_group("analyst_interactable") and area.has_method("interact"):
 		if not nearby_interactables.has(area):
 			nearby_interactables.append(area)
 
@@ -57,6 +68,7 @@ func _on_interactable_exited(area: Area2D):
 	if nearby_interactables.has(area):
 		if area.has_method("hide_prompt"):
 			area.hide_prompt()
+
 		if area.has_method("close_popup"):
 			area.close_popup()
 
@@ -155,4 +167,4 @@ func play_idle_animation():
 	elif last_direction == Vector2.UP:
 		anim.play("idleUp")
 	elif last_direction == Vector2.DOWN:
-		anim.play("idleDown")
+		anim.play("idleDown") 

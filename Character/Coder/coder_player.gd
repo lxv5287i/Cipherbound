@@ -10,6 +10,7 @@ var last_pressed_direction := Vector2.ZERO
 var is_moving := false
 var move_progress := 0.0
 
+var nearby_interactables: Array[Area2D] = []
 var current_interactable: Area2D = null
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
@@ -26,6 +27,21 @@ func _ready():
 	play_idle_animation()
 
 func _physics_process(delta):
+	if GameLock.movement_locked:
+		play_idle_animation()
+		return
+
+	var coder_popup = get_tree().get_first_node_in_group("coder_popup")
+	if coder_popup and coder_popup.is_open:
+		play_idle_animation()
+		return
+
+	update_current_interactable()
+
+	if current_interactable and Input.is_action_just_pressed("c_interact"):
+		current_interactable.interact()
+		return
+
 	var dir := get_input_direction()
 
 	if is_moving:
@@ -41,23 +57,48 @@ func _physics_process(delta):
 	else:
 		play_idle_animation()
 
-func _process(_delta):
-	if current_interactable and Input.is_action_just_pressed("c_interact"):
-		current_interactable.interact()
-
 func _on_interactable_entered(area: Area2D):
-	if area.has_method("interact"):
-		current_interactable = area
+	print("Coder entered:", area.name, area.get_groups())
 
-		if area.has_method("show_prompt"):
-			area.show_prompt()
+	if area.is_in_group("coder_interactable") and area.has_method("interact"):
+		if not nearby_interactables.has(area):
+			nearby_interactables.append(area)
 
 func _on_interactable_exited(area: Area2D):
-	if area == current_interactable:
+	if nearby_interactables.has(area):
 		if area.has_method("hide_prompt"):
 			area.hide_prompt()
 
+		if area.has_method("close_popup"):
+			area.close_popup()
+
+		nearby_interactables.erase(area)
+
+	if current_interactable == area:
 		current_interactable = null
+
+func update_current_interactable():
+	if nearby_interactables.is_empty():
+		current_interactable = null
+		return
+
+	var closest: Area2D = nearby_interactables[0]
+	var closest_distance := global_position.distance_to(closest.global_position)
+
+	for area in nearby_interactables:
+		var distance := global_position.distance_to(area.global_position)
+		if distance < closest_distance:
+			closest = area
+			closest_distance = distance
+
+	if current_interactable != closest:
+		if current_interactable and current_interactable.has_method("hide_prompt"):
+			current_interactable.hide_prompt()
+
+		current_interactable = closest
+
+		if current_interactable.has_method("show_prompt"):
+			current_interactable.show_prompt()
 
 func get_input_direction() -> Vector2:
 	if Input.is_physical_key_pressed(KEY_W):

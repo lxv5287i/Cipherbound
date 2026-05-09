@@ -1,68 +1,62 @@
 extends Control
 
-@onready var left_view: SubViewport = $HBoxContainer/LeftSide/AnalystView
-@onready var right_view: SubViewport = $HBoxContainer/RightSide/CoderView
+@onready var split_container: Control = $HBoxContainer
+@onready var shared_view: Node2D = $SharedView
 
-@onready var left_cam: Camera2D = $HBoxContainer/LeftSide/AnalystView/AnalystCam
-@onready var right_cam: Camera2D = $HBoxContainer/RightSide/CoderView/CoderCam
+@onready var analyst_cam: Camera2D = $HBoxContainer/RightSide/AnalystView/AnalystCam
+@onready var coder_cam: Camera2D = $HBoxContainer/LeftSide/CoderView/CoderCam
+@onready var shared_cam: Camera2D = $SharedView/SharedCam
 
-@onready var left_player: Node2D = $HBoxContainer/LeftSide/AnalystView/Room2/CoderPlayer
-@onready var right_player: Node2D = $HBoxContainer/RightSide/CoderView/Room1/AnalystPlayer
+@onready var analyst_player: Node2D = $HBoxContainer/RightSide/AnalystView/AnalystPlayer
+@onready var coder_player: Node2D = $HBoxContainer/LeftSide/CoderView/CoderPlayer
 
 func _ready():
-	left_cam.enabled = true
-	right_cam.enabled = true
+	shared_cam.set_players(analyst_player, coder_player)
+	use_split_screen()
 
-	left_cam.make_current()
-	right_cam.make_current()
+func use_split_screen():
+	split_container.visible = true
+	shared_view.visible = false
 
-func _process(_delta):
-	if left_player:
-		left_cam.global_position = left_player.global_position
+	analyst_cam.enabled = true
+	coder_cam.enabled = true
+	shared_cam.enabled = false
 
-	if right_player:
-		right_cam.global_position = right_player.global_position
+func use_shared_screen():
+	split_container.visible = false
+	shared_view.visible = true
 
-func go_to_room3():
-	var room3_scene := preload("res://Scenes/room3.tscn")
-	var coder_scene := preload("res://Character/Coder/coder_player.tscn")
-	var analyst_scene := preload("res://Character/Analyst/analyst_player.tscn")
+	analyst_cam.enabled = false
+	coder_cam.enabled = false
+	shared_cam.enabled = true
+@onready var current_shared_room: Node2D = $SharedView/CurrentSharedRoom
 
-	clear_view(left_view)
-	clear_view(right_view)
+func load_shared_room(room_path: String):
+	use_shared_screen()
 
-	var room3_left = room3_scene.instantiate()
-	var room3_right = room3_scene.instantiate()
-
-	room3_left.name = "Room3_Left"
-	room3_right.name = "Room3_Right"
-
-	left_view.add_child(room3_left)
-	right_view.add_child(room3_right)
-
-	var coder_spawn: Marker2D = room3_left.get_node("CoderSpawn")
-	var analyst_spawn: Marker2D = room3_right.get_node("AnalystSpawn")
-
-	var coder = coder_scene.instantiate()
-	var analyst = analyst_scene.instantiate()
-
-	coder.name = "CoderPlayer"
-	analyst.name = "AnalystPlayer"
-
-	room3_left.add_child(coder)
-	room3_right.add_child(analyst)
-
-	coder.global_position = coder_spawn.global_position
-	analyst.global_position = analyst_spawn.global_position
-
-	left_player = coder
-	right_player = analyst
-
-	left_cam.make_current()
-	right_cam.make_current()
-
-func clear_view(view: SubViewport):
-	for child in view.get_children():
-		if child is Camera2D:
-			continue
+	for child in current_shared_room.get_children():
 		child.queue_free()
+
+	var room_scene: PackedScene = load(room_path)
+
+	if room_scene == null:
+		print("ERROR: Cannot load room: ", room_path)
+	return
+
+	var room: Node = room_scene.instantiate()
+	current_shared_room.add_child(room)
+
+	await get_tree().process_frame
+
+	var analyst_spawn = room.get_node_or_null("AnalystSpawn")
+	var coder_spawn = room.get_node_or_null("CoderSpawn")
+
+	if analyst_spawn:
+		analyst_player.global_position = analyst_spawn.global_position
+	else:
+		print("ERROR: AnalystSpawn missing in ", room_path)
+
+	if coder_spawn:
+		coder_player.global_position = coder_spawn.global_position
+	else:
+		print("ERROR: CoderSpawn missing in ", room_path)

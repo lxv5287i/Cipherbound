@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="cipherbound"
-run/main_scene="uid://bjgvn3ngrk6ch"
+run/main_scene="uid://ukv5ff3g3lq8"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+GameLock="*uid://c78rikofeb22o"
+GameProgress="*uid://bdtqnrhv6t7su"
 
 [display]
 
@@ -22,6 +27,12 @@ window/size/mode=2
 window/size/window_width_override=1024
 window/size/window_height_override=704
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+coder_interactable=""
+analyst_interactable=""
+game_progress=""
 
 [input]
 
@@ -79,7 +90,7 @@ a_interact={
 [layer_names]
 
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Walls"
+2d_physics/layer_2="World"
 2d_physics/layer_3="Interactables"
 
 [physics]

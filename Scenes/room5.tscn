@@ -3,6 +3,27 @@
 [ext_resource type="Texture2D" uid="uid://dgc4veij83fyj" path="res://World/Floor/FLOOR.png" id="1_x3cab"]
 [ext_resource type="Texture2D" uid="uid://b4pul514idto4" path="res://World/Wall/WALL.png" id="2_u2i1c"]
 [ext_resource type="Texture2D" uid="uid://cqcc7fo18iymh" path="res://World/Objects/R5_Obejcts.png" id="3_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://cpha6rpp3t8db" path="res://Interactables/R5/inheritancePanel.png" id="6_idjqp"]
+[ext_resource type="Script" uid="uid://dx8j6uunr7jb1" path="res://Script/R5/analyst_board.gd" id="6_nk5kx"]
+[ext_resource type="Texture2D" uid="uid://b71bu6nbgidcn" path="res://Interactables/R5/repairTerminal.png" id="8_6p5ga"]
+[ext_resource type="Texture2D" uid="uid://myybn5st2pyb" path="res://Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
+[ext_resource type="Script" uid="uid://dt6xyw12jpobu" path="res://Script/R5/coder_terminal.gd" id="8_t37p4"]
+[ext_resource type="FontFile" uid="uid://ctl0kb1ffgnjw" path="res://World/Font/DePixelHalbfett.otf" id="9_d51si"]
+[ext_resource type="Texture2D" uid="uid://bcspqohj0wkqg" path="res://Interactables/coderBG.png" id="9_hir6l"]
+[ext_resource type="Texture2D" uid="uid://c2wagaq5bhtgq" path="res://Interactables/R5/statusMonitor.png" id="11_3p68e"]
+[ext_resource type="Script" uid="uid://ghi0br4uuw5f" path="res://Script/R5/drone_robot.gd" id="11_gr3ss"]
+[ext_resource type="Texture2D" uid="uid://csioq6jboos4w" path="res://Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
+[ext_resource type="Texture2D" uid="uid://bu265yif8fl24" path="res://Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
+[ext_resource type="Texture2D" uid="uid://b2k0fl82rbwxx" path="res://Interactables/R5/computerHint.png" id="16_gshci"]
+[ext_resource type="Script" uid="uid://dokatutmbrne1" path="res://Script/R5/computer_hint.gd" id="16_xusyf"]
+[ext_resource type="FontFile" uid="uid://b0menpw3ca2fp" path="res://World/Font/DePixelHalbfett.ttf" id="17_tvxs7"]
+[ext_resource type="Texture2D" uid="uid://dpcom1jqp415j" path="res://Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
+[ext_resource type="Script" uid="uid://dqla2vtotbo2i" path="res://Script/R5/computer_hint_popup.gd" id="19_4mq8d"]
+[ext_resource type="Script" uid="uid://2prrbj308nkf" path="res://Script/Doors/R5exit_door.gd" id="20_tvxs7"]
+[ext_resource type="Texture2D" uid="uid://beyw35jgohxp7" path="res://Interactables/doorclose_inrange.png" id="22_440xx"]
+[ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="23_gmluh"]
+[ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="23_qa7lu"]
+[ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="24_ltqot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0oo0"]
 texture = ExtResource("1_x3cab")
@@ -324,7 +345,7 @@ texture = ExtResource("2_u2i1c")
 21:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_nk5kx"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_idjqp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2i1c"]
@@ -589,10 +610,84 @@ texture = ExtResource("3_u2i1c")
 13:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_w0oo0"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_u2i1c")
 
-[node name="Node2D" type="Node2D" unique_id=642504826]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idjqp"]
+size = Vector2(50, 28)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tvxs7"]
+font = ExtResource("9_d51si")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_440xx"]
+font = ExtResource("17_tvxs7")
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_idjqp"]
+font = ExtResource("17_tvxs7")
+font_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_qa7lu"]
+font = ExtResource("17_tvxs7")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gr3ss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p5ga"]
+size = Vector2(32, 38)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d51si"]
+font = ExtResource("9_d51si")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ltqot"]
+font = ExtResource("17_tvxs7")
+font_size = 7
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17isa"]
+size = Vector2(29, 34)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eh4pa"]
+font = ExtResource("17_tvxs7")
+font_size = 7
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qryu6"]
+size = Vector2(20, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xusyf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2dhja"]
+font = ExtResource("9_d51si")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gshci"]
+size = Vector2(28, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_djjim"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("17_tvxs7")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmav1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2g4yd"]
+font = ExtResource("17_tvxs7")
+font_size = 7
+outline_size = 1
+outline_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
+
+[node name="Room5" type="Node2D" unique_id=642504826]
+position = Vector2(16, 18)
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1976770991]
 position = Vector2(-432, -304)
@@ -606,5 +701,479 @@ tile_set = SubResource("TileSet_nk5kx")
 
 [node name="Objects" type="TileMapLayer" parent="." unique_id=1177113708]
 z_index = 6
-tile_map_data = PackedByteArray("AAADAAIAAAAAAAMAAAADAAMAAAAAAAQAAAAEAAIAAAABAAMAAAAEAAMAAAABAAQAAAAFAAIAAAACAAMAAAAFAAMAAAACAAQAAAAGAAIAAAADAAMAAAAGAAMAAAADAAQAAAAHAAIAAAAEAAMAAAAHAAMAAAAEAAQAAAAIAAEAAAAEAAAAAAAIAAIAAAAEAAEAAAAIAAMAAAAEAAIAAAAJAAEAAAAFAAAAAAAJAAIAAAAFAAEAAAAJAAMAAAAFAAIAAAAKAAEAAAAGAAAAAAAKAAIAAAAGAAEAAAAKAAMAAAAGAAIAAAALAAkAAAAAAAAAAAALAAoAAAAAAAEAAAAMAAkAAAABAAAAAAAMAAoAAAABAAEAAAANAAkAAAACAAAAAAANAAoAAAACAAEAAAAOAAkAAAADAAAAAAAOAAoAAAADAAEAAAAPAAQAAAAFAAMAAAAPAAUAAAAFAAQAAAAPAAYAAAAFAAUAAAAQAAQAAAAGAAMAAAAQAAUAAAAGAAQAAAAQAAYAAAAGAAUAAAATAAQAAAAFAAMAAAATAAUAAAAFAAQAAAATAAYAAAAFAAUAAAAUAAQAAAAGAAMAAAAUAAUAAAAGAAQAAAAUAAYAAAAGAAUAAAAXAAQAAAAFAAMAAAAXAAUAAAAFAAQAAAAXAAYAAAAFAAUAAAAYAAQAAAAGAAMAAAAYAAUAAAAGAAQAAAAYAAYAAAAGAAUAAAAJAAYAAAACAAUAAAAJAAcAAAACAAYAAAAJAAgAAAACAAcAAAAKAAYAAAADAAUAAAAKAAcAAAADAAYAAAAKAAgAAAADAAcAAAALAAYAAAAEAAUAAAALAAcAAAAEAAYAAAALAAgAAAAEAAcAAAABAAEAAAACAAgAAAABAAIAAAACAAkAAAABAAMAAAACAAoAAAACAAEAAAADAAgAAAACAAIAAAADAAkAAAACAAMAAAADAAoAAAARAAkAAAAAAAcAAAARAAoAAAAAAAgAAAASAAkAAAABAAcAAAASAAoAAAABAAgAAAALAAUAAAAEAAgAAAAAAAMAAAAFAAcAAAAAAAIAAAAFAAYAAAALAAIAAAAFAAYAAAALAAMAAAAFAAcAAAAOAAIAAAAFAAYAAAAOAAMAAAAFAAcAAAAZAAIAAAAFAAYAAAAZAAMAAAAFAAcAAAAIAAcAAAAFAAkAAAAIAAgAAAAFAAoAAAAAAAYAAAAHAAMAAAAAAAcAAAAHAAQAAAABAAYAAAAIAAMAAAABAAcAAAAIAAQAAAACAAYAAAAJAAMAAAACAAcAAAAJAAQAAAADAAYAAAAKAAMAAAADAAcAAAAKAAQAAAAAAAkAAAAJAAMAAAAAAAoAAAAJAAQAAAABAAkAAAAKAAMAAAABAAoAAAAKAAQAAAACAAkAAAAHAAMAAAACAAoAAAAHAAQAAAADAAkAAAAIAAMAAAADAAoAAAAIAAQAAAAAAA4AAAAFAAYAAAAAAA8AAAAFAAcAAAAZAA4AAAAFAAYAAAAZAA8AAAAFAAcAAAAQAAAAAAAHAAEAAAAQAAEAAAAHAAIAAAARAAAAAAAIAAEAAAARAAEAAAAIAAIAAAASAAAAAAAJAAEAAAASAAEAAAAJAAIAAAATAAAAAAAKAAEAAAATAAEAAAAKAAIAAAAXAAAAAAALAAEAAAAXAAEAAAALAAIAAAAYAAAAAAAMAAEAAAAYAAEAAAAMAAIAAAAUAAEAAAAGAAYAAAAUAAIAAAAGAAcAAAAVAAEAAAAHAAYAAAAVAAIAAAAHAAcAAAAWAAkAAAAJAAUAAAAWAAoAAAAJAAYAAAAXAAkAAAAKAAUAAAAXAAoAAAAKAAYAAAAWAAwAAAAJAAUAAAAWAA0AAAAJAAYAAAAXAAwAAAAKAAUAAAAXAA0AAAAKAAYAAAAVAAsAAAAIAAUAAAAVAAwAAAAIAAYAAAAVAA0AAAAIAAcAAAAVAAgAAAAIAAUAAAAVAAkAAAAIAAYAAAAVAAoAAAAIAAcAAAAYAAgAAAAIAAUAABAYAAkAAAAIAAYAABAYAAoAAAAIAAcAABAYAAsAAAAIAAUAABAYAAwAAAAIAAYAABAYAA0AAAAIAAcAABAJAAkAAAACAAAAAAAJAAoAAAACAAEAAAAKAAkAAAADAAAAAAAKAAoAAAADAAEAAAA=")
+tile_map_data = PackedByteArray("AAADAAIAAAAAAAMAAAADAAMAAAAAAAQAAAAEAAIAAAABAAMAAAAEAAMAAAABAAQAAAAFAAIAAAACAAMAAAAFAAMAAAACAAQAAAAGAAIAAAADAAMAAAAGAAMAAAADAAQAAAAHAAIAAAAEAAMAAAAHAAMAAAAEAAQAAAAPAAQAAAAFAAMAAAAPAAUAAAAFAAQAAAAPAAYAAAAFAAUAAAAQAAQAAAAGAAMAAAAQAAUAAAAGAAQAAAAQAAYAAAAGAAUAAAATAAQAAAAFAAMAAAATAAUAAAAFAAQAAAATAAYAAAAFAAUAAAAUAAQAAAAGAAMAAAAUAAUAAAAGAAQAAAAUAAYAAAAGAAUAAAAXAAQAAAAFAAMAAAAXAAUAAAAFAAQAAAAXAAYAAAAFAAUAAAAYAAQAAAAGAAMAAAAYAAUAAAAGAAQAAAAYAAYAAAAGAAUAAAAJAAYAAAACAAUAAAAJAAcAAAACAAYAAAAJAAgAAAACAAcAAAAKAAYAAAADAAUAAAAKAAcAAAADAAYAAAAKAAgAAAADAAcAAAALAAYAAAAEAAUAAAALAAcAAAAEAAYAAAALAAgAAAAEAAcAAAABAAEAAAACAAgAAAABAAIAAAACAAkAAAABAAMAAAACAAoAAAACAAEAAAADAAgAAAACAAIAAAADAAkAAAACAAMAAAADAAoAAAARAAkAAAAAAAcAAAARAAoAAAAAAAgAAAASAAkAAAABAAcAAAASAAoAAAABAAgAAAALAAUAAAAEAAgAAAAAAAMAAAAFAAcAAAAAAAIAAAAFAAYAAAALAAIAAAAFAAYAAAALAAMAAAAFAAcAAAAOAAIAAAAFAAYAAAAOAAMAAAAFAAcAAAAZAAIAAAAFAAYAAAAZAAMAAAAFAAcAAAAIAAcAAAAFAAkAAAAIAAgAAAAFAAoAAAAAAAYAAAAHAAMAAAAAAAcAAAAHAAQAAAABAAYAAAAIAAMAAAABAAcAAAAIAAQAAAACAAYAAAAJAAMAAAACAAcAAAAJAAQAAAADAAYAAAAKAAMAAAADAAcAAAAKAAQAAAAAAAkAAAAJAAMAAAAAAAoAAAAJAAQAAAABAAkAAAAKAAMAAAABAAoAAAAKAAQAAAACAAkAAAAHAAMAAAACAAoAAAAHAAQAAAADAAkAAAAIAAMAAAADAAoAAAAIAAQAAAAAAA4AAAAFAAYAAAAAAA8AAAAFAAcAAAAZAA4AAAAFAAYAAAAZAA8AAAAFAAcAAAAWAAkAAAAJAAUAAAAWAAoAAAAJAAYAAAAXAAkAAAAKAAUAAAAXAAoAAAAKAAYAAAAWAAwAAAAJAAUAAAAWAA0AAAAJAAYAAAAXAAwAAAAKAAUAAAAXAA0AAAAKAAYAAAAVAAsAAAAIAAUAAAAVAAwAAAAIAAYAAAAVAA0AAAAIAAcAAAAVAAkAAAAIAAYAAAAVAAoAAAAIAAcAAAAYAAgAAAAIAAUAABAYAAkAAAAIAAYAABAYAAoAAAAIAAcAABAYAAsAAAAIAAUAABAYAAwAAAAIAAYAABAYAA0AAAAIAAcAABAKAAkAAAACAAAAAAAKAAoAAAACAAEAAAALAAkAAAADAAAAAAALAAoAAAADAAEAAAAOAAkAAAACAAAAAAAOAAoAAAACAAEAAAAPAAkAAAADAAAAAAAPAAoAAAADAAEAAAAXAAAAAAALAAEAAAAXAAEAAAALAAIAAAAYAAAAAAAMAAEAAAAYAAEAAAAMAAIAAAAVAAEAAAAAAAAAAAAVAAIAAAAAAAEAAAAWAAEAAAABAAAAAAAWAAIAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_w0oo0")
+
+[node name="AnalystSpawn" type="Marker2D" parent="." unique_id=2027676660]
+position = Vector2(232, 231)
+
+[node name="CoderSpawn" type="Marker2D" parent="." unique_id=102631436]
+position = Vector2(184, 231)
+
+[node name="AnalystBoard" type="Area2D" parent="." unique_id=1462649593 groups=["analyst_interactable"]]
+position = Vector2(287, 17)
+collision_layer = 4
+script = ExtResource("6_nk5kx")
+normal_texture = ExtResource("6_idjqp")
+inrange_texture = ExtResource("8_17isa")
+
+[node name="Sprite2D" type="Sprite2D" parent="AnalystBoard" unique_id=271836939]
+texture = ExtResource("6_idjqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnalystBoard" unique_id=1017017663]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_idjqp")
+
+[node name="PromptLabel" type="Label" parent="AnalystBoard" unique_id=1582229894]
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 66.0
+offset_bottom = -4.0
+text = "[space]"
+label_settings = SubResource("LabelSettings_tvxs7")
+uppercase = true
+
+[node name="AnalystPopup" type="CanvasLayer" parent="AnalystBoard" unique_id=553521389]
+
+[node name="Panel" type="Panel" parent="AnalystBoard/AnalystPopup" unique_id=1886851924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 61.0
+offset_right = -166.0
+offset_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="AnalystBoard/AnalystPopup/Panel" unique_id=2017686503]
+layout_mode = 0
+offset_right = 252.0
+offset_bottom = 163.0
+texture = ExtResource("9_hir6l")
+expand_mode = 1
+
+[node name="Clean" type="VBoxContainer" parent="AnalystBoard/AnalystPopup/Panel" unique_id=756404718]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 9.0
+offset_right = 222.0
+offset_bottom = 182.0
+
+[node name="TitleLabel" type="Label" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=204831848]
+layout_mode = 2
+text = "Robot Inheritance Chain"
+label_settings = SubResource("LabelSettings_440xx")
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=1721180519]
+layout_mode = 2
+text = "Identify the Parent, SubClass, SubClass"
+label_settings = SubResource("LabelSettings_idjqp")
+horizontal_alignment = 1
+
+[node name="ParentOption" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=912920200]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 7
+flat = true
+item_count = 3
+popup/item_0/text = "Machine"
+popup/item_0/id = 0
+popup/item_1/text = "CombatRobot"
+popup/item_1/id = 1
+popup/item_2/text = "Drone"
+popup/item_2/id = 2
+
+[node name="SubClass1Option" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=1433942446]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 7
+flat = true
+item_count = 3
+popup/item_0/text = "Machine"
+popup/item_0/id = 0
+popup/item_1/text = "CombatRobot"
+popup/item_1/id = 1
+popup/item_2/text = "Drone"
+popup/item_2/id = 2
+
+[node name="SubClass2Option" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=654315829]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 7
+flat = true
+item_count = 3
+popup/item_0/text = "Drone"
+popup/item_0/id = 2
+popup/item_1/text = "Machine"
+popup/item_1/id = 0
+popup/item_2/text = "CombatRobot"
+popup/item_2/id = 1
+
+[node name="Submit" type="Button" parent="AnalystBoard/AnalystPopup/Panel" unique_id=1201655443]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 121.0
+offset_right = 226.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 5
+text = "SUBMIT"
+
+[node name="Result" type="Label" parent="AnalystBoard/AnalystPopup/Panel" unique_id=814345725]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 121.0
+offset_right = 109.0
+offset_bottom = 144.0
+text = "result"
+label_settings = SubResource("LabelSettings_qa7lu")
+
+[node name="Blocker" type="StaticBody2D" parent="AnalystBoard" unique_id=219812962]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnalystBoard/Blocker" unique_id=797745646]
+shape = SubResource("RectangleShape2D_gr3ss")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="CoderTerminal" type="Area2D" parent="." unique_id=1787165762 groups=["coder_interactable"]]
+position = Vector2(152, 38)
+collision_layer = 4
+script = ExtResource("8_t37p4")
+normal_texture = ExtResource("8_6p5ga")
+inrange_texture = ExtResource("11_qryu6")
+slide_1 = "i"
+slide_2 = "2"
+slide_3 = "3"
+slide_4 = "4"
+slide_5 = "5"
+slide_6 = "6"
+
+[node name="Sprite2D" type="Sprite2D" parent="CoderTerminal" unique_id=238007736]
+texture = ExtResource("8_6p5ga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoderTerminal" unique_id=957842281]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_6p5ga")
+
+[node name="Label" type="Label" parent="CoderTerminal" unique_id=695974621]
+offset_left = -18.0
+offset_top = -35.0
+offset_right = 57.0
+offset_bottom = -12.0
+text = "[Locked]"
+label_settings = SubResource("LabelSettings_d51si")
+uppercase = true
+
+[node name="CoderPopup" type="CanvasLayer" parent="CoderTerminal" unique_id=893134837]
+
+[node name="Panel" type="Panel" parent="CoderTerminal/CoderPopup" unique_id=860654345]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = 48.0
+offset_right = -136.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CoderTerminal/CoderPopup/Panel" unique_id=115291040]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 175.0
+mouse_filter = 2
+texture = ExtResource("9_hir6l")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CoderTerminal/CoderPopup/Panel" unique_id=1040351762]
+z_index = 5
+layout_mode = 0
+offset_left = 1.0
+offset_right = 309.0
+offset_bottom = 283.0
+
+[node name="CodeScroll" type="ScrollContainer" parent="CoderTerminal/CoderPopup/Panel/VBoxContainer" unique_id=310035670]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="CodeLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel/VBoxContainer/CodeScroll" unique_id=895485282]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("17_tvxs7")
+theme_override_font_sizes/normal_font_size = 7
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 3
+
+[node name="GridContainer" type="GridContainer" parent="CoderTerminal/CoderPopup/Panel" unique_id=1444894758]
+custom_minimum_size = Vector2(30, 15)
+layout_mode = 0
+offset_left = 43.0
+offset_top = 111.0
+offset_right = 261.0
+offset_bottom = 155.0
+columns = 3
+
+[node name="Ans1" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=824804772]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "1"
+alignment = 1
+
+[node name="Ans2" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=651914445]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "2"
+alignment = 1
+
+[node name="Ans3" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1663684961]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "3"
+alignment = 1
+
+[node name="Ans4" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=267012876]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "4"
+alignment = 1
+
+[node name="Ans5" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=119894330]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "5"
+alignment = 1
+
+[node name="Ans6" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1774023822]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "6"
+alignment = 1
+
+[node name="Ans7" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=956399981]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "7"
+alignment = 1
+
+[node name="Ans8" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=710915202]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "8"
+alignment = 1
+
+[node name="Ans9" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=935535062]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "9"
+alignment = 1
+
+[node name="Ans10" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=933093598]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "10"
+alignment = 1
+
+[node name="Ans11" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1213873180]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "11"
+alignment = 1
+
+[node name="Ans12" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1899465360]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 6
+text = "12"
+alignment = 1
+
+[node name="SubmitButton" type="Button" parent="CoderTerminal/CoderPopup/Panel" unique_id=1052481740]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 194.0
+offset_right = 296.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 5
+text = "SUBMIT"
+
+[node name="ResultLabel" type="Label" parent="CoderTerminal/CoderPopup/Panel" unique_id=8988253]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 197.0
+offset_right = 124.0
+offset_bottom = 220.0
+text = "RESULT"
+label_settings = SubResource("LabelSettings_ltqot")
+
+[node name="NextButton" type="Button" parent="CoderTerminal/CoderPopup/Panel" unique_id=869253565]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 193.0
+offset_right = 288.0
+offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 5
+text = "NEXT"
+
+[node name="BackButton" type="Button" parent="CoderTerminal/CoderPopup/Panel" unique_id=2085900213]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 194.0
+offset_right = 258.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 5
+text = "BACK"
+
+[node name="CloseButton" type="Button" parent="CoderTerminal/CoderPopup/Panel" unique_id=1238794819]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 194.0
+offset_right = 229.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("17_tvxs7")
+theme_override_font_sizes/font_size = 5
+text = "CLOSE"
+
+[node name="Blocker" type="StaticBody2D" parent="CoderTerminal" unique_id=1184216624]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoderTerminal/Blocker" unique_id=1521205859]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_17isa")
+
+[node name="DroneRobot" type="Node2D" parent="." unique_id=344174115]
+position = Vector2(81, 160)
+script = ExtResource("11_gr3ss")
+broken_texture = ExtResource("11_3p68e")
+online_texture = ExtResource("15_eh4pa")
+
+[node name="Label" type="Label" parent="DroneRobot" unique_id=443838776]
+offset_left = -19.0
+offset_top = 22.0
+offset_right = 48.0
+offset_bottom = 45.0
+text = "[BROKEN]"
+label_settings = SubResource("LabelSettings_eh4pa")
+
+[node name="Sprite2D" type="Sprite2D" parent="DroneRobot" unique_id=237513084]
+texture = ExtResource("11_3p68e")
+
+[node name="Blocker" type="StaticBody2D" parent="DroneRobot" unique_id=256186492]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DroneRobot/Blocker" unique_id=190464127]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_qryu6")
+
+[node name="ComputerHint" type="Area2D" parent="." unique_id=1587964772 groups=["analyst_interactable"]]
+position = Vector2(47, 223)
+collision_layer = 4
+script = ExtResource("16_xusyf")
+normal_texture = ExtResource("16_gshci")
+inrange_texture = ExtResource("18_as0qb")
+
+[node name="Sprite2D" type="Sprite2D" parent="ComputerHint" unique_id=1542836165]
+texture = ExtResource("16_gshci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerHint" unique_id=1527243151]
+shape = SubResource("RectangleShape2D_xusyf")
+
+[node name="Label" type="Label" parent="ComputerHint" unique_id=1025688572]
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 28.0
+offset_bottom = -1.0
+text = "[hint]"
+label_settings = SubResource("LabelSettings_2dhja")
+uppercase = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ComputerHint" unique_id=1969177992]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerHint/StaticBody2D" unique_id=1288833972]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_gshci")
+debug_color = Color(0.8200989, 0.4034578, 0, 0.41960785)
+
+[node name="ComputerHintPopup" type="CanvasLayer" parent="ComputerHint" unique_id=1427164895 groups=["info_group"]]
+script = ExtResource("19_4mq8d")
+
+[node name="Panel" type="Panel" parent="ComputerHint/ComputerHintPopup" unique_id=512408390]
+offset_left = 124.0
+offset_top = 78.0
+offset_right = 324.0
+offset_bottom = 192.0
+
+[node name="Background" type="TextureRect" parent="ComputerHint/ComputerHintPopup/Panel" unique_id=1436288669]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 116.0
+texture = ExtResource("9_hir6l")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ComputerHint/ComputerHintPopup/Panel" unique_id=228610410]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 256.0
+offset_bottom = 119.0
+text = "The most general class is the parent (superclass)
+
+A child class uses the keyword 
+extends to inherit from its parent
+
+A child class can use super() 
+to call the parent's constructor
+"
+label_settings = SubResource("LabelSettings_djjim")
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=1811905935 groups=["analyst_interactable", "coder_interactable"]]
+position = Vector2(208, 154)
+collision_layer = 4
+script = ExtResource("20_tvxs7")
+closed_texture = ExtResource("23_gmluh")
+closed_inrange_texture = ExtResource("22_440xx")
+open_texture = ExtResource("23_qa7lu")
+open_inrange_texture = ExtResource("24_ltqot")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitDoor" unique_id=1095976003]
+texture = ExtResource("23_gmluh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=590072367]
+shape = SubResource("RectangleShape2D_kmav1")
+
+[node name="Label" type="Label" parent="ExitDoor" unique_id=715977786]
+offset_left = -20.0
+offset_top = -27.0
+offset_right = 21.0
+offset_bottom = -4.0
+text = "[LOCKED]"
+label_settings = SubResource("LabelSettings_2g4yd")

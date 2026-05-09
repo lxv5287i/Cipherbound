@@ -3,6 +3,32 @@
 [ext_resource type="Texture2D" uid="uid://dgc4veij83fyj" path="res://World/Floor/FLOOR.png" id="1_ue16m"]
 [ext_resource type="Texture2D" uid="uid://b4pul514idto4" path="res://World/Wall/WALL.png" id="2_3x6hs"]
 [ext_resource type="Texture2D" uid="uid://b5yi3d2c322rl" path="res://World/Objects/R4_Objects.png" id="3_ue16m"]
+[ext_resource type="Texture2D" uid="uid://w3ar83qq8rym" path="res://Interactables/R4/yesBREAK.png" id="4_3x6hs"]
+[ext_resource type="Script" uid="uid://c0hcvtbtdtbfq" path="res://Script/R4/glass.gd" id="4_lqko1"]
+[ext_resource type="Texture2D" uid="uid://b3o36kib80njd" path="res://Interactables/R4/sciComp.png" id="5_7mbuy"]
+[ext_resource type="Texture2D" uid="uid://bcspqohj0wkqg" path="res://Interactables/coderBG.png" id="5_ugd8l"]
+[ext_resource type="Script" uid="uid://dmcfpwxbrtieq" path="res://Script/R4/glass_popup.gd" id="6_a2mbq"]
+[ext_resource type="Texture2D" uid="uid://dnyj768oortg6" path="res://Interactables/R4/yesBREAK_inrange.png" id="6_avhjg"]
+[ext_resource type="Texture2D" uid="uid://5damf2a11uqm" path="res://Interactables/R4/sciKIOSK.png" id="6_s38dd"]
+[ext_resource type="Texture2D" uid="uid://wxnc6nnyjtec" path="res://Interactables/R4/notBREAK.png" id="7_xbk4l"]
+[ext_resource type="Texture2D" uid="uid://jntdfay3j40f" path="res://Interactables/R4/brownHint.png" id="8_65fho"]
+[ext_resource type="Texture2D" uid="uid://fenitdx5scqq" path="res://Interactables/R4/notBREAK_inrange.png" id="8_drwv6"]
+[ext_resource type="FontFile" uid="uid://ctl0kb1ffgnjw" path="res://World/Font/DePixelHalbfett.otf" id="11_04tnd"]
+[ext_resource type="Script" uid="uid://da8i66ys3tg5o" path="res://Script/R4/kiosk.gd" id="11_xbk4l"]
+[ext_resource type="Script" uid="uid://ccqplvuw8ly6m" path="res://Script/R4/brown_hint.gd" id="12_tu5f7"]
+[ext_resource type="Script" uid="uid://fa5hskx6eqqo" path="res://Script/R4/kiosk_popup.gd" id="13_drwv6"]
+[ext_resource type="Texture2D" uid="uid://knw8mk54y03t" path="res://Interactables/R4/sciKIOSK_inrange.png" id="13_sowe0"]
+[ext_resource type="Script" uid="uid://cu8u5wj0vq46m" path="res://Script/R4/brown_popup.gd" id="14_0m4uv"]
+[ext_resource type="Script" uid="uid://bb5dseld3njxm" path="res://Script/R4/sci_comp.gd" id="18_ii7p1"]
+[ext_resource type="Texture2D" uid="uid://j2da4o80dqw1" path="res://Interactables/R4/sciComp_inrange.png" id="20_0u70n"]
+[ext_resource type="Texture2D" uid="uid://cnxae37j2tkmu" path="res://Interactables/R4/inrangebrown.png" id="20_45y14"]
+[ext_resource type="Script" uid="uid://cej7ptkadx4ji" path="res://Script/R4/sci_comp_popup.gd" id="20_gled6"]
+[ext_resource type="Script" uid="uid://bwfdqxkd7bu3g" path="res://Script/Doors/R4exit_door.gd" id="25_45y14"]
+[ext_resource type="FontFile" uid="uid://b0menpw3ca2fp" path="res://World/Font/DePixelHalbfett.ttf" id="26_3bwa1"]
+[ext_resource type="Texture2D" uid="uid://beyw35jgohxp7" path="res://Interactables/doorclose_inrange.png" id="27_vq0d5"]
+[ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="28_ap4fu"]
+[ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="28_gs4d0"]
+[ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="29_bkcjs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mbuy"]
 texture = ExtResource("1_ue16m")
@@ -289,17 +315,11 @@ texture = ExtResource("2_3x6hs")
 8:14/0 = 0
 8:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:14/0 = 0
-9:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:14/0 = 0
-10:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:14/0 = 0
-11:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:14/0 = 0
-12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:14/0 = 0
-13:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:14/0 = 0
-14:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:14/0 = 0
 15:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:15/0 = 0
@@ -330,7 +350,7 @@ texture = ExtResource("2_3x6hs")
 20:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_65fho"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_ugd8l")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3x6hs"]
@@ -407,12 +427,17 @@ texture = ExtResource("3_ue16m")
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 7:3/0 = 0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8, -8, 8)
 9:3/0 = 0
 9:3/0/z_index = -2
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -426,22 +451,16 @@ texture = ExtResource("3_ue16m")
 1:4/0 = 0
 2:4/0 = 0
 2:4/0/z_index = -2
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
 3:4/0/z_index = -2
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
 4:4/0/z_index = -2
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:4/0 = 0
 5:4/0/z_index = -2
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:4/0 = 0
 6:4/0/z_index = -2
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:4/0 = 0
 7:4/0/z_index = -2
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
 8:4/0/z_index = -2
 8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -532,7 +551,7 @@ texture = ExtResource("3_ue16m")
 8:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7mbuy"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_3x6hs")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2hcyp"]
@@ -617,7 +636,94 @@ texture = ExtResource("1_ue16m")
 [sub_resource type="TileSet" id="TileSet_ue16m"]
 sources/0 = SubResource("TileSetAtlasSource_2hcyp")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mbuy"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_45y14"]
+font = ExtResource("11_04tnd")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0m4uv"]
+radius = 7.0
+height = 26.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_04tnd"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("11_04tnd")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugd8l"]
+size = Vector2(8, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3bwa1"]
+font = ExtResource("11_04tnd")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m4uv"]
+size = Vector2(12, 18)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jg6dp"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("11_04tnd")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqko1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vq0d5"]
+font = ExtResource("11_04tnd")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04tnd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gs4d0"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("11_04tnd")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s38dd"]
+size = Vector2(9, 13)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rxqb6"]
+font = ExtResource("26_3bwa1")
+font_size = 7
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45y14"]
+size = Vector2(9, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bkcjs"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("26_3bwa1")
+font_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_ap4fu"]
+line_spacing = 1.0
+font = ExtResource("26_3bwa1")
+font_size = 7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abn4r"]
+size = Vector2(20, 17)
+
+[sub_resource type="LabelSettings" id="LabelSettings_obyl4"]
+font = ExtResource("26_3bwa1")
+font_size = 7
+outline_size = 1
+outline_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
+
 [node name="Room4" type="Node2D" unique_id=1955290873]
+position = Vector2(-80, 2)
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=1095958783]
 position = Vector2(-432, -304)
@@ -629,9 +735,9 @@ position = Vector2(-432, -304)
 tile_map_data = PackedByteArray("AAArACMAAAASAA8AAAArACIAAAASAA4AAAArACEAAAASAA4AAAArACAAAAASAA4AAAArAB8AAAASAA4AAAArAB4AAAASAA4AAAArAB0AAAASAA4AAAArABwAAAATAA8AAAAsABwAAAAUAA8AAAAtABwAAAAUAA8AAAAuABwAAAAUAA8AAAAvABwAAAAUAA8AAAAwABwAAAATAA8AABAwAB0AAAASAA4AABAwAB4AAAASAA4AABAwAB8AAAASAA4AABAwACAAAAASAA4AABAwACEAAAASAA4AABAwACIAAAASAA4AABAwACMAAAASAA8AABAxACMAAAARAA8AAAAyACMAAAARAA8AAAAzACMAAAARAA8AAAA0ACMAAAARAA8AAAA1ACMAAAARAA8AAAA2ACMAAAARAA8AAAA3ACMAAAARAA8AAAAqACMAAAARAA8AAAApACMAAAARAA8AAAAoACMAAAARAA8AAAAnACMAAAARAA8AAAAmACMAAAARAA8AAAAlACMAAAARAA8AAAAkACMAAAARAA8AAAAjACMAAAARAA8AAAAiACMAAAARAA8AAAAhACMAAAARAA8AAAAgACMAAAASAA8AABAgACIAAAASAA4AABAgACEAAAASAA4AABAgACAAAAASAA4AABAgAB8AAAASAA4AABAgAB4AAAASAA4AABAgAB0AAAASAA4AABAgABwAAAASAA4AABAgABsAAAASAA4AABAgABoAAAASAA4AABAgABkAAAASAA4AABAgABgAAAASAA4AABAgABcAAAASAA4AABAgABYAAAASAA4AABAgABUAAAASAA4AABAhABMAAAAIAAwAAAAhABQAAAAIAA0AAAAhABUAAAAIAA4AAAAhABYAAAAIAA8AAAAiABMAAAAJAAwAAAAiABQAAAAJAA0AAAAiABUAAAAJAA4AAAAiABYAAAAJAA8AAAAgABQAAAASAA0AABAgABMAAAASAAwAABAjABMAAAAKAAwAAAAjABQAAAAKAA0AAAAjABUAAAAKAA4AAAAjABYAAAAKAA8AAAAkABMAAAALAAwAAAAkABQAAAALAA0AAAAkABUAAAALAA4AAAAkABYAAAALAA8AAAAlABMAAAAMAAwAAAAlABQAAAAMAA0AAAAlABUAAAAMAA4AAAAlABYAAAAMAA8AAAAmABMAAAANAAwAAAAmABQAAAANAA0AAAAmABUAAAANAA4AAAAmABYAAAANAA8AAAAnABMAAAAKAAwAAAAnABQAAAAKAA0AAAAnABUAAAAKAA4AAAAnABYAAAAKAA8AAAAoABMAAAALAAwAAAAoABQAAAALAA0AAAAoABUAAAALAA4AAAAoABYAAAALAA8AAAApABMAAAAMAAwAAAApABQAAAAMAA0AAAApABUAAAAMAA4AAAApABYAAAAMAA8AAAAqABMAAAANAAwAAAAqABQAAAANAA0AAAAqABUAAAANAA4AAAAqABYAAAANAA8AAAArABMAAAAKAAwAAAArABQAAAAKAA0AAAArABUAAAAKAA4AAAArABYAAAAKAA8AAAAsABMAAAALAAwAAAAsABQAAAALAA0AAAAsABUAAAALAA4AAAAsABYAAAALAA8AAAAtABMAAAAMAAwAAAAtABQAAAAMAA0AAAAtABUAAAAMAA4AAAAtABYAAAAMAA8AAAAuABMAAAANAAwAAAAuABQAAAANAA0AAAAuABUAAAANAA4AAAAuABYAAAANAA8AAAAvABMAAAAKAAwAAAAvABQAAAAKAA0AAAAvABUAAAAKAA4AAAAvABYAAAAKAA8AAAAxABMAAAAMAAwAAAAyABMAAAANAAwAAAAyABQAAAANAA0AAAAyABUAAAANAA4AAAAyABYAAAANAA8AAAAzABMAAAAKAAwAAAAzABQAAAAKAA0AAAAzABUAAAAKAA4AAAAzABYAAAAKAA8AAAA0ABMAAAALAAwAAAA0ABQAAAALAA0AAAA0ABUAAAALAA4AAAA0ABYAAAALAA8AAAA1ABMAAAAMAAwAAAA1ABQAAAAMAA0AAAA1ABUAAAAMAA4AAAA1ABYAAAAMAA8AAAA2ABMAAAANAAwAAAA2ABQAAAANAA0AAAA2ABUAAAANAA4AAAA2ABYAAAANAA8AAAA3ABMAAAAKAAwAAAA3ABQAAAAKAA0AAAA3ABUAAAAKAA4AAAA3ABYAAAAKAA8AAAA4ABMAAAANAAwAAAA4ABQAAAANAA0AAAA4ABUAAAANAA4AAAA4ABYAAAANAA8AAAA4ACMAAAARAA8AAAA5ABMAAAAOAAwAAAA5ABQAAAAOAA0AAAA5ABUAAAAOAA4AAAA5ABYAAAAOAA8AAAA5ACMAAAARAA8AAAA6ABMAAAAPAAwAAAA6ABQAAAAPAA0AAAA6ABUAAAAPAA4AAAA6ABYAAAAPAA8AAAA6ACMAAAARAA8AAAA7ABMAAAASAAwAAAA7ABQAAAASAA0AAAA7ABUAAAASAA4AAAA7ABYAAAASAA4AAAA7AB0AAAASAA4AAAA7AB4AAAASAA4AAAA7AB8AAAASAA4AAAA7ACAAAAASAA4AAAA7ACEAAAASAA4AAAA7ACIAAAASAA4AAAA7ACMAAAASAA8AAAA7ABwAAAASAA4AAAA7ABsAAAASAA4AAAA7ABoAAAASAA4AAAA7ABkAAAASAA4AAAA7ABgAAAASAA4AAAA7ABcAAAASAA4AAAAwABMAAAAMAAwAAAAwABQAAAAMAA0AAAAwABUAAAAMAA4AAAAwABYAAAAMAA8AAAAxABQAAAAMAA0AAAAxABUAAAAMAA4AAAAxABYAAAAMAA8AAAA=")
 tile_set = SubResource("TileSet_65fho")
 
-[node name="Object" type="TileMapLayer" parent="." unique_id=1376658056]
+[node name="Object" type="TileMapLayer" parent="." unique_id=1376658056 groups=["analyst_interactable", "coder_interactable"]]
 z_index = 6
-tile_map_data = PackedByteArray("AAAJAAoAAAAJAAQAABAKAAoAAAAIAAIAAAALAAoAAAAIAAIAAAAMAAoAAAAJAAQAAAAMAAkAAAAJAAMAAAAMAAgAAAAJAAMAAAAMAAcAAAAJAAIAAAALAAcAAAAIAAIAAAAKAAcAAAAIAAIAAAAJAAcAAAAHAAIAAAAJAAkAAAAIAAMAAAAPAA4AAAAJAAAAAAAPAA8AAAAJAAEAAAAGAA4AAAAJAAAAAAAGAA8AAAAJAAEAAAAGAAMAAAAJAAAAAAAGAAQAAAAJAAEAAAAfAAMAAAAJAAAAAAAfAAQAAAAJAAEAAAAWAA4AAAAJAAAAAAAWAA8AAAAJAAEAAAAfAA4AAAAJAAAAAAAfAA8AAAAJAAEAAAASAAgAAAAHAAEAAAATAAgAAAAIAAEAAAAUAAcAAAAMAAgAAAAUAAgAAAAEAAEAAAARAAcAAAAJAAgAAAARAAgAAAAEAAEAABAaAAoAAAAKAAMAAAAaAAsAAAAKAAQAAAAbAAoAAAALAAMAAAAbAAsAAAALAAQAAAAYAAIAAAALAAEAAAAYAAMAAAALAAIAAAAZAAIAAAAMAAEAAAAZAAMAAAAMAAIAAAAaAAIAAAANAAEAAAAaAAMAAAANAAIAAAAbAAIAAAAOAAEAAAAbAAMAAAAOAAIAAAAcAAIAAAALAAEAAAAcAAMAAAALAAIAAAAdAAIAAAAMAAEAAAAdAAMAAAAMAAIAAAAHAAIAAAACAAMAAAAHAAMAAAACAAQAAAAIAAIAAAADAAMAAAAIAAMAAAADAAQAAAAJAAIAAAAEAAMAAAAJAAMAAAAEAAQAAAAKAAIAAAAFAAMAAAAKAAMAAAAFAAQAAAALAAIAAAACAAMAAAALAAMAAAACAAQAAAAMAAIAAAADAAMAAAAMAAMAAAADAAQAAAANAAIAAAAEAAMAAAANAAMAAAAEAAQAAAAOAAIAAAAFAAMAAAAOAAMAAAAFAAQAAAAPAAIAAAAGAAMAAAAPAAMAAAAGAAQAAAAQAAIAAAAGAAMAAAAQAAMAAAAGAAQAAAARAAIAAAAHAAMAAAARAAMAAAAHAAQAAAAMAAsAAAAKAAIAAAAZAAoAAAADAAAAAAAZAAsAAAADAAEAAAAcAAkAAAADAAAAABAcAAoAAAADAAEAABAXAA4AAAAEAAUAAAAXAA8AAAAEAAYAAAAYAA4AAAAFAAUAAAAYAA8AAAAFAAYAAAARAAUAAAAJAAYAAAARAAYAAAAJAAcAAAASAAUAAAAKAAYAAAASAAYAAAAKAAcAAAASAAcAAAAKAAgAAAATAAUAAAALAAYAAAATAAYAAAALAAcAAAATAAcAAAALAAgAAAAUAAUAAAAMAAYAAAAUAAYAAAAMAAcAAAAdAAYAAAAAAAEAAAAeAAUAAAABAAAAAAAeAAYAAAABAAEAAAAeAAcAAAABAAUAAAAeAAgAAAABAAYAAAAeAAkAAAAAAAUAAAAeAAoAAAAAAAYAAAAeAAsAAAACAAAAAAAeAAwAAAACAAEAAAAbAAEAAAACAAcAAAAWAAEAAAABAAcAAAAHAAEAAAAAAAcAAAA=")
+tile_map_data = PackedByteArray("AAAJAAoAAAAJAAQAABAKAAoAAAAIAAIAAAALAAoAAAAIAAIAAAAMAAoAAAAJAAQAAAAMAAkAAAAJAAMAAAAMAAgAAAAJAAMAAAAMAAcAAAAJAAIAAAALAAcAAAAIAAIAAAAKAAcAAAAIAAIAAAAJAAcAAAAHAAIAAAAJAAkAAAAIAAMAAAAPAA4AAAAJAAAAAAAPAA8AAAAJAAEAAAAGAA4AAAAJAAAAAAAGAA8AAAAJAAEAAAAGAAMAAAAJAAAAAAAGAAQAAAAJAAEAAAAfAAMAAAAJAAAAAAAfAAQAAAAJAAEAAAAWAA4AAAAJAAAAAAAWAA8AAAAJAAEAAAAfAA4AAAAJAAAAAAAfAA8AAAAJAAEAAAASAAgAAAAHAAEAAAATAAgAAAAIAAEAAAAUAAcAAAAMAAgAAAAUAAgAAAAEAAEAAAARAAcAAAAJAAgAAAARAAgAAAAEAAEAABAaAAoAAAAKAAMAAAAaAAsAAAAKAAQAAAAbAAoAAAALAAMAAAAbAAsAAAALAAQAAAAaAAIAAAANAAEAAAAaAAMAAAANAAIAAAAbAAIAAAAOAAEAAAAbAAMAAAAOAAIAAAAcAAIAAAALAAEAAAAcAAMAAAALAAIAAAAdAAIAAAAMAAEAAAAdAAMAAAAMAAIAAAAHAAIAAAACAAMAAAAHAAMAAAACAAQAAAAIAAIAAAADAAMAAAAIAAMAAAADAAQAAAAJAAIAAAAEAAMAAAAJAAMAAAAEAAQAAAAKAAIAAAAFAAMAAAAKAAMAAAAFAAQAAAALAAIAAAACAAMAAAALAAMAAAACAAQAAAAMAAIAAAADAAMAAAAMAAMAAAADAAQAAAANAAIAAAAEAAMAAAANAAMAAAAEAAQAAAAOAAIAAAAFAAMAAAAOAAMAAAAFAAQAAAAPAAIAAAAGAAMAAAAPAAMAAAAGAAQAAAAQAAIAAAAGAAMAAAAQAAMAAAAGAAQAAAARAAIAAAAHAAMAAAARAAMAAAAHAAQAAAAMAAsAAAAKAAIAAAAZAAoAAAADAAAAAAAZAAsAAAADAAEAAAAcAAkAAAADAAAAABAcAAoAAAADAAEAABAXAA4AAAAEAAUAAAAXAA8AAAAEAAYAAAAYAA4AAAAFAAUAAAAYAA8AAAAFAAYAAAARAAUAAAAJAAYAAAARAAYAAAAJAAcAAAASAAUAAAAKAAYAAAASAAYAAAAKAAcAAAASAAcAAAAKAAgAAAATAAUAAAALAAYAAAATAAYAAAALAAcAAAATAAcAAAALAAgAAAAUAAUAAAAMAAYAAAAUAAYAAAAMAAcAAAAeAAcAAAABAAUAAAAeAAgAAAABAAYAAAAeAAkAAAAAAAUAAAAeAAoAAAAAAAYAAAAeAAsAAAACAAAAAAAeAAwAAAACAAEAAAAbAAEAAAACAAcAAAAWAAEAAAABAAcAAAAHAAEAAAAAAAcAAAA=")
 tile_set = SubResource("TileSet_7mbuy")
 
 [node name="Entrance" type="TileMapLayer" parent="." unique_id=1678450649]
@@ -640,8 +746,408 @@ position = Vector2(-960, -736)
 tile_map_data = PackedByteArray("AABFAD0AAAAGAAkAAABGAD0AAAAHAAkAAABHAD0AAAAHAAkAAABIAD0AAAAIAAkAAAA=")
 tile_set = SubResource("TileSet_ue16m")
 
-[node name="AnalystSpawn" type="Marker2D" parent="." unique_id=1407730892]
-position = Vector2(177, 244)
+[node name="CoderSpawn" type="Marker2D" parent="." unique_id=871997926]
+position = Vector2(167, 232)
 
-[node name="CoderSpawn" type="Marker2D" parent="." unique_id=1987898422]
-position = Vector2(206, 245)
+[node name="AnalystSpawn" type="Marker2D" parent="." unique_id=1978027288]
+position = Vector2(185, 232)
+
+[node name="Glass" type="Area2D" parent="." unique_id=657915741 groups=["analyst_interactable"]]
+position = Vector2(480, 98)
+collision_layer = 4
+script = ExtResource("4_lqko1")
+normal_texture = ExtResource("4_3x6hs")
+inrange_texture = ExtResource("6_avhjg")
+changed_texture = ExtResource("7_xbk4l")
+changed_inrange_texture = ExtResource("8_drwv6")
+unlock_target_path = NodePath("../Kiosk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Glass" unique_id=1469238222]
+texture = ExtResource("4_3x6hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Glass" unique_id=243300644]
+position = Vector2(8, 0)
+shape = SubResource("CapsuleShape2D_7mbuy")
+
+[node name="Label" type="Label" parent="Glass" unique_id=225702150]
+offset_left = -11.0
+offset_top = -17.0
+offset_right = 45.0
+offset_bottom = 6.0
+text = "[Space]"
+label_settings = SubResource("LabelSettings_45y14")
+uppercase = true
+
+[node name="Blocker" type="StaticBody2D" parent="Glass" unique_id=660314271]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Glass/Blocker" unique_id=583999932]
+position = Vector2(8, -1)
+shape = SubResource("CapsuleShape2D_0m4uv")
+debug_color = Color(0.8117647, 0.40392157, 0.24313726, 0.41960785)
+
+[node name="GlassPopup" type="CanvasLayer" parent="." unique_id=1229565898]
+script = ExtResource("6_a2mbq")
+
+[node name="Panel" type="Panel" parent="GlassPopup" unique_id=169072869]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 126.0
+offset_top = 53.0
+offset_right = -186.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="GlassPopup/Panel" unique_id=1891706480]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -8.0
+offset_right = 210.0
+offset_bottom = 164.825
+texture = ExtResource("5_ugd8l")
+expand_mode = 1
+
+[node name="Text" type="Label" parent="GlassPopup/Panel" unique_id=1564456050]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 8
+text = "A display panel is malfunctioning and 
+should show a growing signal pattern. 
+The system must print stars in 
+increasing order: 
+first 1 star, then 2 stars, then 3 stars. 
+
+This pattern is required to calibrate 
+the device correctly. Fix the program 
+so it outputs the correct pattern.
+
+"
+label_settings = SubResource("LabelSettings_04tnd")
+
+[node name="Kiosk" type="Area2D" parent="." unique_id=1282610708 groups=["analyst_interactable"]]
+position = Vector2(136, 175)
+collision_layer = 6
+script = ExtResource("11_xbk4l")
+normal_texture = ExtResource("6_s38dd")
+inrange_texture = ExtResource("13_sowe0")
+changed_texture = ExtResource("6_s38dd")
+changed_inrange_texture = ExtResource("13_sowe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Kiosk" unique_id=593895181]
+texture = ExtResource("6_s38dd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kiosk" unique_id=537454284]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ugd8l")
+
+[node name="Label" type="Label" parent="Kiosk" unique_id=402968581]
+offset_left = -17.0
+offset_top = 11.0
+offset_right = 39.0
+offset_bottom = 34.0
+text = "[Space]"
+label_settings = SubResource("LabelSettings_3bwa1")
+uppercase = true
+
+[node name="Blocker" type="StaticBody2D" parent="Kiosk" unique_id=757904605]
+collision_layer = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Kiosk/Blocker" unique_id=494875203]
+shape = SubResource("RectangleShape2D_0m4uv")
+debug_color = Color(0.8117647, 0.40392157, 0.24313726, 0.41960785)
+
+[node name="KioskPopup" type="CanvasLayer" parent="." unique_id=287814039]
+script = ExtResource("13_drwv6")
+
+[node name="Panel" type="Panel" parent="KioskPopup" unique_id=672225467]
+offset_left = 114.0
+offset_top = 48.0
+offset_right = 154.0
+offset_bottom = 88.0
+
+[node name="TextureRect" type="TextureRect" parent="KioskPopup/Panel" unique_id=739317645]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 160.0
+texture = ExtResource("5_ugd8l")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="KioskPopup/Panel" unique_id=1246444670]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 218.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 8
+text = "Instructions:
+Use a loop to control how many 
+lines will be printed (3 lines)
+For each line, print stars 
+based on the current line number
+After printing stars in one line, 
+move to the next line
+"
+label_settings = SubResource("LabelSettings_jg6dp")
+
+[node name="BrownHint" type="Area2D" parent="." unique_id=1506940077 groups=["analyst_interactable"]]
+position = Vector2(401, 48)
+collision_layer = 4
+script = ExtResource("12_tu5f7")
+normal_texture = ExtResource("8_65fho")
+inrange_texture = ExtResource("20_45y14")
+
+[node name="Sprite2D" type="Sprite2D" parent="BrownHint" unique_id=1666667706]
+texture = ExtResource("8_65fho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrownHint" unique_id=1042180906]
+shape = SubResource("RectangleShape2D_lqko1")
+
+[node name="Label" type="Label" parent="BrownHint" unique_id=1849258883 groups=["analyst_interactable"]]
+offset_left = -14.0
+offset_top = -25.0
+offset_right = 30.0
+offset_bottom = -2.0
+text = "[Hint]"
+label_settings = SubResource("LabelSettings_vq0d5")
+uppercase = true
+
+[node name="Blocker" type="StaticBody2D" parent="BrownHint" unique_id=1234455272]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrownHint/Blocker" unique_id=34307866]
+shape = SubResource("RectangleShape2D_04tnd")
+debug_color = Color(0.8117647, 0.40392157, 0.24313726, 0.41960785)
+
+[node name="BrownPopup" type="CanvasLayer" parent="." unique_id=1396848369]
+script = ExtResource("14_0m4uv")
+
+[node name="Panel" type="Panel" parent="BrownPopup" unique_id=682132095]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = 50.0
+offset_right = -176.0
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="BrownPopup/Panel" unique_id=650540089]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 226.0
+offset_bottom = 174.0
+texture = ExtResource("5_ugd8l")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="BrownPopup/Panel" unique_id=69172736]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 216.0
+offset_bottom = 164.0
+text = "public class Main{ }
+The class is the container of the program. 
+Java places variables, methods, 
+and program logic inside a class. 
+Main is commonly used as the starting class name. 
+
+
+(public static void main(String[] args) {}
+This is the entry point of the program. 
+Java starts executing the code inside 
+the main method when the program runs. 
+"
+label_settings = SubResource("LabelSettings_gs4d0")
+
+[node name="SciComp" type="Area2D" parent="." unique_id=1412467329 groups=["coder_interactable"]]
+position = Vector2(168, 101)
+collision_layer = 4
+script = ExtResource("18_ii7p1")
+normal_texture = ExtResource("5_7mbuy")
+inrange_texture = ExtResource("20_0u70n")
+solved_texture = ExtResource("5_7mbuy")
+solved_inrange_texture = ExtResource("20_0u70n")
+
+[node name="Sprite2D" type="Sprite2D" parent="SciComp" unique_id=1867947291]
+texture = ExtResource("5_7mbuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SciComp" unique_id=722865094]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_s38dd")
+
+[node name="Label" type="Label" parent="SciComp" unique_id=952300736]
+offset_left = -18.0
+offset_top = -21.0
+offset_right = 25.0
+offset_bottom = 2.0
+text = "PRESS [E]"
+label_settings = SubResource("LabelSettings_rxqb6")
+
+[node name="Blocker" type="StaticBody2D" parent="SciComp" unique_id=126024627]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SciComp/Blocker" unique_id=852711886]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_45y14")
+debug_color = Color(0.8117647, 0.40392157, 0.24313726, 0.41960785)
+
+[node name="SciCompPopup" type="CanvasLayer" parent="." unique_id=1952972860]
+script = ExtResource("20_gled6")
+
+[node name="Panel" type="Panel" parent="SciCompPopup" unique_id=1302681901]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = 53.0
+offset_right = -174.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="SciCompPopup/Panel" unique_id=84279449]
+layout_mode = 0
+offset_right = 220.0
+offset_bottom = 160.0
+texture = ExtResource("5_ugd8l")
+expand_mode = 1
+
+[node name="CodeLabel" type="Label" parent="SciCompPopup/Panel" unique_id=87280500]
+layout_mode = 0
+offset_right = 218.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 8
+text = "public class Main {
+  public static void main(String[] args) {
+
+              (int i =                 ; i<=                 ;                 ) {
+            for (int j = 1; j <= i; j++) {
+                                                             ;
+          }
+                                                              ;
+        }
+
+    }
+"
+label_settings = SubResource("LabelSettings_bkcjs")
+
+[node name="Ans1" type="LineEdit" parent="SciCompPopup/Panel" unique_id=845785183]
+layout_mode = 0
+offset_top = 39.0
+offset_right = 35.25
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "ans1"
+alignment = 1
+
+[node name="Ans2" type="LineEdit" parent="SciCompPopup/Panel" unique_id=79872858]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 39.0
+offset_right = 101.25
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "a2"
+alignment = 1
+
+[node name="Ans3" type="LineEdit" parent="SciCompPopup/Panel" unique_id=1314204350]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 38.0
+offset_right = 159.25
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "Ans3"
+
+[node name="Ans4" type="LineEdit" parent="SciCompPopup/Panel" unique_id=872437606]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 38.0
+offset_right = 202.25
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "Ans4"
+
+[node name="Ans5" type="LineEdit" parent="SciCompPopup/Panel" unique_id=1637906095]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 69.0
+offset_right = 142.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "Ans5"
+
+[node name="Ans6" type="LineEdit" parent="SciCompPopup/Panel" unique_id=318083112]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 94.0
+offset_right = 147.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "Ans6"
+
+[node name="Submit" type="Button" parent="SciCompPopup/Panel" unique_id=1387016145]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 122.0
+offset_right = 196.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "SUBMIT"
+
+[node name="Result" type="Label" parent="SciCompPopup/Panel" unique_id=1963620874]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 128.0
+offset_right = 85.0
+offset_bottom = 151.0
+text = "result"
+label_settings = SubResource("LabelSettings_ap4fu")
+
+[node name="Next" type="Button" parent="SciCompPopup/Panel" unique_id=1454095883]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 121.0
+offset_right = 195.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("26_3bwa1")
+theme_override_font_sizes/font_size = 5
+text = "NEXT"
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=1910098369 groups=["analyst_interactable", "coder_interactable"]]
+position = Vector2(328, 43)
+collision_layer = 6
+script = ExtResource("25_45y14")
+closed_texture = ExtResource("28_ap4fu")
+closed_inrange_texture = ExtResource("27_vq0d5")
+open_texture = ExtResource("28_gs4d0")
+open_inrange_texture = ExtResource("29_bkcjs")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitDoor" unique_id=878533693]
+texture = ExtResource("28_ap4fu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=826481927]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_abn4r")
+
+[node name="Label" type="Label" parent="ExitDoor" unique_id=1710546974]
+offset_left = -20.0
+offset_top = -27.0
+offset_right = 21.0
+offset_bottom = -4.0
+text = "[LOCKED]"
+label_settings = SubResource("LabelSettings_obyl4")
