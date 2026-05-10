@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Interactables/LOBBY/folder.png" id="4_nsj2m"]
 [ext_resource type="Script" uid="uid://daepisdlnnwhs" path="res://Script/Lobby/folder_interactable.gd" id="4_yg8gm"]
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Lobby/folder_popup.gd" id="5_s3paf"]
-[ext_resource type="Texture2D" uid="uid://bcspqohj0wkqg" path="res://Interactables/coderBG.png" id="5_xy1bw"]
 [ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
 [ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Interactables/LOBBY/Banner.png" id="6_vmftg"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Lobby/banner_interactable.gd" id="10_b6u2u"]
@@ -25,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://coe7nodwocgd5" path="res://Interactables/LOBBY/organizer.png" id="22_sy2g3"]
 [ext_resource type="Texture2D" uid="uid://6o14f31m7thc" path="res://Interactables/LOBBY/table.png" id="23_4sjms"]
 [ext_resource type="Texture2D" uid="uid://c1r6dvpsrmjsh" path="res://Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Interactables/UI_Popups/UI.png" id="24_yoplv"]
 [ext_resource type="Script" uid="uid://d1677ki88bmov" path="res://Script/Lobby/simple_info_popup.gd" id="25_5g874"]
 [ext_resource type="Texture2D" uid="uid://bmhnqbuyg1ld6" path="res://Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
 [ext_resource type="Texture2D" uid="uid://d32bajtu4nh3a" path="res://Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
@@ -780,7 +780,7 @@ physics_layer_0/collision_layer = 6
 sources/0 = SubResource("TileSetAtlasSource_vmftg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy1bw"]
-size = Vector2(11, 11)
+size = Vector2(26.5, 11)
 
 [sub_resource type="Image" id="Image_ea552"]
 data = {
@@ -1517,6 +1517,9 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r753w"]
 size = Vector2(13, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bywp"]
+size = Vector2(10, 20)
+
 [sub_resource type="LabelSettings" id="LabelSettings_amwwa"]
 font = SubResource("FontFile_kw4da")
 font_size = 7
@@ -1563,6 +1566,7 @@ font = SubResource("FontFile_kw4da")
 font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhbti"]
+size = Vector2(24, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_o54y0"]
 font = SubResource("FontFile_kw4da")
@@ -1615,7 +1619,7 @@ font = SubResource("FontFile_kw4da")
 font_size = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yj0t"]
-size = Vector2(30, 27)
+size = Vector2(50, 25)
 
 [sub_resource type="LabelSettings" id="LabelSettings_d3qyh"]
 font = SubResource("FontFile_kw4da")
@@ -1641,6 +1645,7 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8isgd"]
+size = Vector2(27, 14)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ngjh1"]
 font = SubResource("FontFile_kw4da")
@@ -1692,7 +1697,7 @@ folder_text = "foldera"
 texture = ExtResource("4_nsj2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Folders/FolderA" unique_id=1302650647]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-8, 1)
 shape = SubResource("RectangleShape2D_xy1bw")
 
 [node name="Label" type="Label" parent="Folders/FolderA" unique_id=1572686784]
@@ -1725,8 +1730,8 @@ folder_text = "kim
 texture = ExtResource("4_nsj2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Folders/FolderB" unique_id=1735860037]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_xy1bw")
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_8bywp")
 
 [node name="Label" type="Label" parent="Folders/FolderB" unique_id=804288802]
 z_index = 20
@@ -1759,14 +1764,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Folders/FolderPopup/Panel" unique_id=1081294225]
+[node name="Background" type="NinePatchRect" parent="Folders/FolderPopup/Panel" unique_id=2128761440]
 layout_mode = 0
-offset_left = -10.0
-offset_top = -9.0
-offset_right = 210.0
-offset_bottom = 151.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 212.0
+offset_bottom = 154.0
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Folders/FolderPopup/Panel" unique_id=561522068]
 layout_mode = 0
@@ -1797,6 +1806,7 @@ banner_text = "1"
 texture = ExtResource("6_vmftg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banners/BannerA" unique_id=218254546]
+position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_s3paf")
 
 [node name="Label" type="Label" parent="Banners/BannerA" unique_id=1837132162]
@@ -1828,6 +1838,7 @@ banner_text = "2"
 texture = ExtResource("6_vmftg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banners/BannerB" unique_id=918990823]
+position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_s3paf")
 
 [node name="Label" type="Label" parent="Banners/BannerB" unique_id=1700518230]
@@ -1861,14 +1872,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Banners/BannerPopup/Panel" unique_id=1331942700]
+[node name="Background" type="NinePatchRect" parent="Banners/BannerPopup/Panel" unique_id=1637846818]
 layout_mode = 0
-offset_left = -10.0
-offset_top = -7.0
-offset_right = 210.0
-offset_bottom = 153.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 212.0
+offset_bottom = 154.0
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Banners/BannerPopup/Panel" unique_id=538907960]
 layout_mode = 0
@@ -1889,17 +1904,18 @@ box_text = "box
 "
 
 [node name="Sprite2D" type="Sprite2D" parent="Box/Box" unique_id=882635554]
+position = Vector2(6, 0)
 texture = ExtResource("11_r753w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box/Box" unique_id=806940370]
-position = Vector2(0.5, -2.25)
+position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_idhfa")
 
 [node name="Label" type="Label" parent="Box/Box" unique_id=1030214007]
 z_index = 20
-offset_left = -21.0
+offset_left = -16.0
 offset_top = -27.0
-offset_right = 51.0
+offset_right = 56.0
 offset_bottom = -4.0
 text = "[interact]"
 label_settings = SubResource("LabelSettings_17xsj")
@@ -1926,14 +1942,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Box/BoxPopup/Panel" unique_id=460911732]
+[node name="Background" type="NinePatchRect" parent="Box/BoxPopup/Panel" unique_id=2139353413]
 layout_mode = 0
-offset_left = -10.0
-offset_top = -7.0
-offset_right = 210.0
-offset_bottom = 153.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 212.0
+offset_bottom = 154.0
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Box/BoxPopup/Panel" unique_id=924804870]
 layout_mode = 0
@@ -1957,6 +1977,7 @@ experiment_text = "expiA"
 texture = ExtResource("15_yesx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Experiment/ExperimentA" unique_id=210723270]
+position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_uhbti")
 
 [node name="Label" type="Label" parent="Experiment/ExperimentA" unique_id=670563674]
@@ -1989,6 +2010,7 @@ experiment_text = "expiB"
 texture = ExtResource("15_yesx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Experiment/ExperimentB" unique_id=1854425358]
+position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_uhbti")
 
 [node name="Label" type="Label" parent="Experiment/ExperimentB" unique_id=1191743068]
@@ -2022,14 +2044,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Experiment/ExperimentPopup/Panel" unique_id=973019469]
+[node name="Background" type="NinePatchRect" parent="Experiment/ExperimentPopup/Panel" unique_id=907298561]
 layout_mode = 0
 offset_left = -11.0
 offset_top = -7.0
 offset_right = 209.0
 offset_bottom = 153.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Experiment/ExperimentPopup/Panel" unique_id=1636498398]
 layout_mode = 0
@@ -2054,6 +2080,7 @@ popup_path = NodePath("../OrganizerPopup")
 texture = ExtResource("22_sy2g3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Organizer/Organizer" unique_id=1814072505]
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_sy2g3")
 
 [node name="Label" type="Label" parent="Organizer/Organizer" unique_id=343101593]
@@ -2074,7 +2101,6 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_4sjms")
 
 [node name="OrganizerPopup" type="CanvasLayer" parent="Organizer" unique_id=860077000 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="Organizer/OrganizerPopup" unique_id=1449356476]
@@ -2088,14 +2114,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Organizer/OrganizerPopup/Panel" unique_id=1345432789]
+[node name="Background" type="NinePatchRect" parent="Organizer/OrganizerPopup/Panel" unique_id=1691963805]
 layout_mode = 0
 offset_left = -8.0
 offset_top = -6.0
 offset_right = 212.0
 offset_bottom = 154.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Organizer/OrganizerPopup/Panel" unique_id=1575662517]
 layout_mode = 0
@@ -2115,18 +2145,19 @@ popup_text = "table"
 popup_path = NodePath("../TablePopup")
 
 [node name="Sprite2D" type="Sprite2D" parent="Table/Table" unique_id=1345163344]
+position = Vector2(-5, 0)
 texture = ExtResource("23_4sjms")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table/Table" unique_id=2143503]
-position = Vector2(0, 1)
+position = Vector2(-5, 10)
 shape = SubResource("RectangleShape2D_dpjhh")
 
 [node name="Label" type="Label" parent="Table/Table" unique_id=1232897923]
 z_index = 20
-offset_left = -19.0
-offset_top = 8.0
-offset_right = 21.0
-offset_bottom = 31.0
+offset_left = -27.0
+offset_top = -19.0
+offset_right = 23.0
+offset_bottom = 4.0
 text = "[Interact]"
 label_settings = SubResource("LabelSettings_njw7c")
 uppercase = true
@@ -2135,7 +2166,7 @@ uppercase = true
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table/Table/Blocker" unique_id=1299795042]
-position = Vector2(0, 1)
+position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_cpovp")
 
 [node name="TablePopup" type="CanvasLayer" parent="Table" unique_id=1695153079 groups=["info_popup"]]
@@ -2152,14 +2183,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="Table/TablePopup/Panel" unique_id=1074957174]
+[node name="Background" type="NinePatchRect" parent="Table/TablePopup/Panel" unique_id=1258139330]
 layout_mode = 0
-offset_left = -12.0
+offset_left = -8.0
 offset_top = -6.0
-offset_right = 208.0
+offset_right = 212.0
 offset_bottom = 154.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="Table/TablePopup/Panel" unique_id=2045277755]
 layout_mode = 0
@@ -2182,7 +2217,7 @@ popup_path = NodePath("../TableUpPopup")
 texture = ExtResource("24_dpjhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TableUp/TableUp" unique_id=547541481]
-position = Vector2(0, -0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_7yj0t")
 
 [node name="Label" type="Label" parent="TableUp/TableUp" unique_id=1377820181]
@@ -2216,14 +2251,18 @@ offset_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="TableUp/TableUpPopup/Panel" unique_id=331038644]
+[node name="Background" type="NinePatchRect" parent="TableUp/TableUpPopup/Panel" unique_id=37646490]
 layout_mode = 0
-offset_left = -11.0
+offset_left = -8.0
 offset_top = -6.0
-offset_right = 209.0
+offset_right = 212.0
 offset_bottom = 154.0
-texture = ExtResource("5_xy1bw")
-expand_mode = 1
+texture = ExtResource("24_yoplv")
+region_rect = Rect2(17, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Label" type="Label" parent="TableUp/TableUpPopup/Panel" unique_id=618938193]
 layout_mode = 0
@@ -2270,7 +2309,7 @@ position = Vector2(425, 142)
 texture = ExtResource("34_wagpd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoRoom4" unique_id=1710291655]
-position = Vector2(425, 142.5)
+position = Vector2(424, 154)
 shape = SubResource("RectangleShape2D_xfaes")
 
 [node name="Label" type="Label" parent="DoortoRoom4" unique_id=1494120254]
@@ -2294,6 +2333,7 @@ open_inrange_texture = ExtResource("35_8isgd")
 texture = ExtResource("34_wagpd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoortoRoom5" unique_id=457825009]
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_8isgd")
 
 [node name="Label" type="Label" parent="DoortoRoom5" unique_id=541639695]
