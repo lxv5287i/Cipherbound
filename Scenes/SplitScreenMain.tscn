@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://ukv5ff3g3lq8"]
 
 [ext_resource type="Script" uid="uid://bdurt1rntws7h" path="res://New/split_screen_main.gd" id="1_2bvto"]
+[ext_resource type="Texture2D" uid="uid://u1717sykn1bg" path="res://World/GeneralUI/pause.png" id="2_sw7fr"]
 [ext_resource type="Script" uid="uid://bdtqnrhv6t7su" path="res://New/game_progress.gd" id="2_wpldl"]
 [ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/room1.tscn" id="3_f5yf0"]
+[ext_resource type="Texture2D" uid="uid://cmwjaws35m5iy" path="res://World/GeneralUI/pause_pressed.png" id="3_w5uyl"]
+[ext_resource type="Texture2D" uid="uid://bjwg6yxxsaqi3" path="res://World/GeneralUI/pause_hovered.png" id="4_4u5vd"]
 [ext_resource type="Script" uid="uid://cebkgd01i4aem" path="res://New/coder_camera.gd" id="4_sw7fr"]
 [ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Coder/coder_player.tscn" id="5_w5uyl"]
 [ext_resource type="PackedScene" uid="uid://b6sl64d5fpfc" path="res://Scenes/room2.tscn" id="6_4u5vd"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/GeneralUI/quitToMenu_pressed.png" id="6_ftovv"]
 [ext_resource type="Script" uid="uid://db0syds1krm8t" path="res://New/analyst_camera.gd" id="7_ftovv"]
 [ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="8_vtvcs"]
 [ext_resource type="PackedScene" uid="uid://k5ppokrlrys7" path="res://Scenes/Lobby.tscn" id="9_43xyp"]
 [ext_resource type="Script" uid="uid://c8qts7423n2wj" path="res://New/shared_camera.gd" id="10_5qox4"]
+[ext_resource type="PackedScene" uid="uid://c80tbjtbvvlha" path="res://Scenes/pause_ui.tscn" id="11_wpldl"]
 
 [node name="SplitScreenMain" type="Control" unique_id=801453013]
 layout_mode = 3
@@ -23,6 +28,21 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2bvto")
+
+[node name="PauseMenu" parent="." unique_id=2094932446 instance=ExtResource("11_wpldl")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1624996222]
+
+[node name="Pause" type="TextureButton" parent="HUD" unique_id=1157600553]
+offset_left = 213.0
+offset_top = 10.0
+offset_right = 373.0
+offset_bottom = 50.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_sw7fr")
+texture_pressed = ExtResource("3_w5uyl")
+texture_hover = ExtResource("4_4u5vd")
+texture_disabled = ExtResource("6_ftovv")
 
 [node name="GameProgress" type="Node" parent="." unique_id=777986087 groups=["game_progress"]]
 script = ExtResource("2_wpldl")
@@ -116,3 +136,5 @@ position = Vector2(256, 176)
 script = ExtResource("10_5qox4")
 player_1 = NodePath("../../../../SplitContainer/CoderViewContainer/CoderViewport/CoderWorld/CoderPlayer")
 player_2 = NodePath("../../../../SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer")
+
+[connection signal="pressed" from="HUD/Pause" to="." method="_on_pause_pressed"]

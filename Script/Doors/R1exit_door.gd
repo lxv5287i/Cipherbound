@@ -14,7 +14,6 @@ extends Area2D
 var door_open := false
 var player_in_range := false
 
-
 func _ready():
 	if not body_entered.is_connected(_on_body_entered):
 		body_entered.connect(_on_body_entered)

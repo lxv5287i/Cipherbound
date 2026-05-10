@@ -11,6 +11,7 @@ extends Control
 @onready var coder_player = $SplitContainer/CoderViewContainer/CoderViewport/CoderWorld/CoderPlayer
 @onready var analyst_player = $SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer
 
+@onready var pause_menu = $PauseMenu 
 
 func _ready():
 	add_to_group("split_screen_main")
@@ -81,7 +82,6 @@ func change_shared_room(room_path: String):
 
 	var coder_spawn: Marker2D = new_room.get_node("CoderSpawn")
 	var analyst_spawn: Marker2D = new_room.get_node("AnalystSpawn")
-
 	place_players(coder_spawn.global_position, analyst_spawn.global_position)
 
 
@@ -116,3 +116,20 @@ func place_players(coder_pos: Vector2, analyst_pos: Vector2):
 	shared_camera.player_1 = coder_player
 	shared_camera.player_2 = analyst_player
 	shared_camera.enabled = true
+	
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):  # ESC key
+		_toggle_pause()
+
+func _toggle_pause():
+	if pause_menu.visible:
+		pause_menu.close()
+	else:
+		pause_menu.open()
+
+func _on_texture_button_pressed() -> void:
+	_toggle_pause()
+
+
+func _on_pause_pressed() -> void:
+	_toggle_pause()

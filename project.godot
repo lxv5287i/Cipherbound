@@ -10,14 +10,15 @@ config_version=5
 
 [application]
 
-config/name="cipherbound"
-run/main_scene="uid://ukv5ff3g3lq8"
+config/name="Cipherbound"
+run/main_scene="uid://b768p582nwe5y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 GameLock="*uid://c78rikofeb22o"
 GameProgress="*uid://bdtqnrhv6t7su"
+LoadingScreen="*uid://ct7yhprhri7u3"
 
 [display]
 
@@ -27,6 +28,7 @@ window/size/mode=2
 window/size/window_width_override=1024
 window/size/window_height_override=704
 window/stretch/mode="canvas_items"
+window/main_scene="uid://ukv5ff3g3lq8"
 
 [global_group]
 

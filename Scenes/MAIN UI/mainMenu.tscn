@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b768p582nwe5y"]
+
+[ext_resource type="Script" uid="uid://p7blq35yp0o3" path="res://Script/MainMenu/main_menu.gd" id="1_o4oiv"]
+[ext_resource type="Texture2D" uid="uid://lmi4vwhdeadp" path="res://Scenes/MAIN UI/Buttons/startButton.png" id="2_4agm1"]
+[ext_resource type="Texture2D" uid="uid://1rd308g88gpe" path="res://Scenes/MAIN UI/Background/floorBG.png" id="2_qxkgs"]
+[ext_resource type="Texture2D" uid="uid://dp4s0qkoylhrn" path="res://Scenes/MAIN UI/Background/wallBG.png" id="2_xgent"]
+[ext_resource type="Texture2D" uid="uid://dh4b0rfhbfjjd" path="res://Scenes/MAIN UI/Buttons/startButton_Pressed.png" id="3_u21yi"]
+[ext_resource type="Texture2D" uid="uid://dwm7ax5hglufw" path="res://Scenes/MAIN UI/Background/ObjectBG.png" id="4_1jfh7"]
+[ext_resource type="Texture2D" uid="uid://b5apl0n0w3lsi" path="res://Scenes/MAIN UI/Buttons/startButton_Hovered.png" id="4_qxkgs"]
+[ext_resource type="Texture2D" uid="uid://jthh35w1fif0" path="res://Scenes/MAIN UI/Background/TitleBG.png" id="5_gerqo"]
+[ext_resource type="Texture2D" uid="uid://42jejy041b38" path="res://Scenes/MAIN UI/Buttons/creditButton.png" id="9_l30fp"]
+[ext_resource type="Texture2D" uid="uid://bmynxe46fx856" path="res://Scenes/MAIN UI/Buttons/leaderboardButton.png" id="9_vhqic"]
+[ext_resource type="Texture2D" uid="uid://7qo0idteinol" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Pressed.png" id="10_ajx5d"]
+[ext_resource type="Texture2D" uid="uid://02yeondfmpal" path="res://Scenes/MAIN UI/Buttons/creditButton_Pressed.png" id="10_gh2x4"]
+[ext_resource type="Texture2D" uid="uid://dm6f8gobl7n5c" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Hovered.png" id="11_2x10c"]
+[ext_resource type="Texture2D" uid="uid://be43g8qhkh6kv" path="res://Scenes/MAIN UI/Buttons/creditButton_Hovered.png" id="11_6gd6s"]
+[ext_resource type="Texture2D" uid="uid://c7r7hfb26g1ge" path="res://Scenes/MAIN UI/Buttons/exitButton.png" id="12_l30fp"]
+[ext_resource type="Texture2D" uid="uid://cnye2wqkjjqwy" path="res://Scenes/MAIN UI/Buttons/exitButton_Pressed.png" id="13_gh2x4"]
+[ext_resource type="Texture2D" uid="uid://rgf5gwy6wrh8" path="res://Scenes/MAIN UI/Buttons/exitButton_Hovered.png" id="14_6gd6s"]
+
+[node name="MainMenu" type="Node2D" unique_id=701179138]
+script = ExtResource("1_o4oiv")
+
+[node name="Background" type="Control" parent="." unique_id=318237721]
+layout_mode = 3
+anchors_preset = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Wall" type="TextureRect" parent="Background" unique_id=1505320704]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 352.0
+texture = ExtResource("2_xgent")
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor" type="TextureRect" parent="Background" unique_id=1437967581]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_qxkgs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Objects" type="TextureRect" parent="Background" unique_id=724303480]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 352.0
+texture = ExtResource("4_1jfh7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="TextureRect" parent="Background" unique_id=1778810263]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_gerqo")
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonManager" type="Control" parent="." unique_id=906479158]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="TextureButton" parent="ButtonManager" unique_id=69670701]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 152.0
+offset_right = 336.0
+offset_bottom = 184.0
+texture_normal = ExtResource("2_4agm1")
+texture_pressed = ExtResource("3_u21yi")
+texture_hover = ExtResource("4_qxkgs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="TextureButton" parent="ButtonManager" unique_id=1401403523]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 328.0
+offset_right = 584.0
+offset_bottom = 360.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("9_l30fp")
+texture_pressed = ExtResource("10_gh2x4")
+texture_hover = ExtResource("11_6gd6s")
+metadata/_edit_use_anchors_ = true
+
+[node name="Leaderboard" type="TextureButton" parent="ButtonManager" unique_id=1221367758]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 192.0
+offset_right = 392.0
+offset_bottom = 224.0
+texture_normal = ExtResource("9_vhqic")
+texture_pressed = ExtResource("10_ajx5d")
+texture_hover = ExtResource("11_2x10c")
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="TextureButton" parent="ButtonManager" unique_id=654742166]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 232.0
+offset_right = 336.0
+offset_bottom = 264.0
+texture_normal = ExtResource("12_l30fp")
+texture_pressed = ExtResource("13_gh2x4")
+texture_hover = ExtResource("14_6gd6s")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ButtonManager/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="ButtonManager/Leaderboard" to="." method="_on_leaderboard_pressed"]
+[connection signal="pressed" from="ButtonManager/Exit" to="." method="_on_exit_pressed"]
