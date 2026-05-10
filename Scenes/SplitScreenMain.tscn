@@ -59,7 +59,7 @@ target = NodePath("../CoderPlayer")
 
 [node name="CoderPlayer" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1699527945 instance=ExtResource("5_w5uyl")]
 z_index = 5
-position = Vector2(256, 176)
+position = Vector2(224, 79)
 
 [node name="Divider" type="ColorRect" parent="SplitContainer" unique_id=1627566854]
 custom_minimum_size = Vector2(4, 0)
@@ -90,7 +90,7 @@ target = NodePath("../AnalystPlayer")
 
 [node name="AnalystPlayer" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=2004721522 instance=ExtResource("8_vtvcs")]
 z_index = 5
-position = Vector2(100, 176)
+position = Vector2(208, 272)
 
 [node name="SharedViewContainer" type="SubViewportContainer" parent="." unique_id=1905845002]
 visible = false
