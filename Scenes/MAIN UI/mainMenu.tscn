@@ -126,10 +126,8 @@ texture_hover = ExtResource("14_6gd6s")
 metadata/_edit_use_anchors_ = true
 
 [node name="charInfo" parent="." unique_id=1161544681 instance=ExtResource("18_6gd6s")]
-visible = false
 
 [node name="teamName" parent="." unique_id=1011824385 instance=ExtResource("19_3isct")]
-visible = false
 
 [node name="Leaderboard" parent="." unique_id=282360567 instance=ExtResource("20_3isct")]
 
