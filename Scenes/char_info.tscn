@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ds034udoqe4su"]
+
+[ext_resource type="Script" uid="uid://d3ktqdkx7i73x" path="res://Script/char_info.gd" id="1_ql3g4"]
+[ext_resource type="Texture2D" uid="uid://qgtcgo7562ui" path="res://Character/characterUD.png" id="2_cdf3l"]
+[ext_resource type="Texture2D" uid="uid://dtu6c6dqn4chl" path="res://World/Buttons/continue.png" id="3_7l5mn"]
+[ext_resource type="Texture2D" uid="uid://l6hlcgc1vof7" path="res://World/Buttons/continue_pressed.png" id="4_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://df11iptj06yil" path="res://World/Buttons/continue_hovered.png" id="5_tye78"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://World/Buttons/x.png" id="6_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://World/Buttons/x_pressed.png" id="7_tye78"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://World/Buttons/x_hovered.png" id="8_iieth"]
+
+[node name="charInfo" type="CanvasLayer" unique_id=1161544681]
+script = ExtResource("1_ql3g4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=676107508]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="PanelContainer" type="Control" parent="." unique_id=1324046210]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="PanelContainer" unique_id=1686039548]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cdf3l")
+
+[node name="Continue" type="TextureButton" parent="PanelContainer" unique_id=1308548441]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 320.0
+offset_right = 368.0
+offset_bottom = 360.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_7l5mn")
+texture_pressed = ExtResource("4_vh0g3")
+texture_hover = ExtResource("5_tye78")
+
+[node name="Cancel" type="TextureButton" parent="PanelContainer" unique_id=167008208]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture_normal = ExtResource("6_vh0g3")
+texture_pressed = ExtResource("7_tye78")
+texture_hover = ExtResource("8_iieth")
+
+[connection signal="pressed" from="PanelContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]

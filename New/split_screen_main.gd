@@ -43,7 +43,7 @@ func go_to_room3():
 	var progress = get_tree().get_first_node_in_group("game_progress")
 	if progress:
 		progress.reset_room_progress()
-
+	
 	print("Changing to room 3")
 	change_shared_room("res://Scenes/room3.tscn")
 
@@ -126,10 +126,6 @@ func _toggle_pause():
 		pause_menu.close()
 	else:
 		pause_menu.open()
-
-func _on_texture_button_pressed() -> void:
-	_toggle_pause()
-
 
 func _on_pause_pressed() -> void:
 	_toggle_pause()

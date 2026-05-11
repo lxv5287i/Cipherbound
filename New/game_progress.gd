@@ -11,6 +11,8 @@ signal room5_analyst_done
 signal room5_coder_done
 signal room5_both_done
 
+var team_name: String = "Team 1"
+
 var analyst_done := false
 var coder_done := false
 

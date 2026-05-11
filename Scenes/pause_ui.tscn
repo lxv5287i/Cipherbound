@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bpt4f7plj26ys" path="res://Scenes/pause_ui.gd" id="1_bthaf"]
 [ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Interactables/UI_Popups/UI.png" id="2_srqh7"]
-[ext_resource type="Texture2D" uid="uid://beegfanba56h2" path="res://World/GeneralUI/resume.png" id="3_w3mym"]
-[ext_resource type="Texture2D" uid="uid://bfue2aoc7oyj3" path="res://World/GeneralUI/resume_pressed.png" id="4_36amk"]
-[ext_resource type="Texture2D" uid="uid://ccnqmjuld5qo" path="res://World/GeneralUI/resume_hovered.png" id="5_knkv6"]
-[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://World/GeneralUI/quitToMenu.png" id="6_ywlh3"]
-[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/GeneralUI/quitToMenu_pressed.png" id="7_ipnwg"]
-[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://World/GeneralUI/quitToMenu_hovered.png" id="8_043jw"]
+[ext_resource type="Texture2D" uid="uid://beegfanba56h2" path="res://World/Buttons/resume.png" id="3_w3mym"]
+[ext_resource type="Texture2D" uid="uid://bfue2aoc7oyj3" path="res://World/Buttons/resume_pressed.png" id="4_36amk"]
+[ext_resource type="Texture2D" uid="uid://ccnqmjuld5qo" path="res://World/Buttons/resume_hovered.png" id="5_knkv6"]
+[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://World/Buttons/quitToMenu.png" id="6_ywlh3"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/Buttons/quitToMenu_pressed.png" id="7_ipnwg"]
+[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://World/Buttons/quitToMenu_hovered.png" id="8_043jw"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=2094932446]
 script = ExtResource("1_bthaf")
@@ -41,7 +41,7 @@ offset_top = 108.0
 offset_right = 323.0
 offset_bottom = 224.0
 texture = ExtResource("2_srqh7")
-region_rect = Rect2(1, 1, 14, 14)
+region_rect = Rect2(33, 49, 14, 14)
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -49,22 +49,22 @@ patch_margin_bottom = 6
 
 [node name="Resume" type="TextureButton" parent="PanelContainer" unique_id=876302125]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 133.0
-offset_right = 594.0
-offset_bottom = 400.0
-scale = Vector2(0.8, 0.8)
+offset_left = 177.0
+offset_top = 146.0
+offset_right = 611.0
+offset_bottom = 413.0
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("3_w3mym")
 texture_pressed = ExtResource("4_36amk")
 texture_hover = ExtResource("5_knkv6")
 
 [node name="Quit to Menu" type="TextureButton" parent="PanelContainer" unique_id=407793351]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 173.0
-offset_right = 577.0
-offset_bottom = 440.0
-scale = Vector2(0.8, 0.8)
+offset_left = 160.0
+offset_top = 174.0
+offset_right = 594.0
+offset_bottom = 441.0
+scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("6_ywlh3")
 texture_pressed = ExtResource("7_ipnwg")
 texture_hover = ExtResource("8_043jw")

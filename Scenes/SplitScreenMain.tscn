@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://ukv5ff3g3lq8"]
 
 [ext_resource type="Script" uid="uid://bdurt1rntws7h" path="res://New/split_screen_main.gd" id="1_2bvto"]
-[ext_resource type="Texture2D" uid="uid://u1717sykn1bg" path="res://World/GeneralUI/pause.png" id="2_sw7fr"]
+[ext_resource type="Texture2D" uid="uid://u1717sykn1bg" path="res://World/Buttons/pause.png" id="2_sw7fr"]
 [ext_resource type="Script" uid="uid://bdtqnrhv6t7su" path="res://New/game_progress.gd" id="2_wpldl"]
 [ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/room1.tscn" id="3_f5yf0"]
-[ext_resource type="Texture2D" uid="uid://cmwjaws35m5iy" path="res://World/GeneralUI/pause_pressed.png" id="3_w5uyl"]
-[ext_resource type="Texture2D" uid="uid://bjwg6yxxsaqi3" path="res://World/GeneralUI/pause_hovered.png" id="4_4u5vd"]
+[ext_resource type="Texture2D" uid="uid://cmwjaws35m5iy" path="res://World/Buttons/pause_pressed.png" id="3_w5uyl"]
+[ext_resource type="Texture2D" uid="uid://bjwg6yxxsaqi3" path="res://World/Buttons/pause_hovered.png" id="4_4u5vd"]
 [ext_resource type="Script" uid="uid://cebkgd01i4aem" path="res://New/coder_camera.gd" id="4_sw7fr"]
 [ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Coder/coder_player.tscn" id="5_w5uyl"]
 [ext_resource type="PackedScene" uid="uid://b6sl64d5fpfc" path="res://Scenes/room2.tscn" id="6_4u5vd"]
-[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/GeneralUI/quitToMenu_pressed.png" id="6_ftovv"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/Buttons/quitToMenu_pressed.png" id="6_ftovv"]
 [ext_resource type="Script" uid="uid://db0syds1krm8t" path="res://New/analyst_camera.gd" id="7_ftovv"]
 [ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="8_vtvcs"]
 [ext_resource type="PackedScene" uid="uid://k5ppokrlrys7" path="res://Scenes/Lobby.tscn" id="9_43xyp"]
@@ -34,11 +34,11 @@ script = ExtResource("1_2bvto")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1624996222]
 
 [node name="Pause" type="TextureButton" parent="HUD" unique_id=1157600553]
-offset_left = 213.0
-offset_top = 10.0
-offset_right = 373.0
-offset_bottom = 50.0
-scale = Vector2(0.5, 0.5)
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 164.0
+offset_bottom = 46.0
+scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("2_sw7fr")
 texture_pressed = ExtResource("3_w5uyl")
 texture_hover = ExtResource("4_4u5vd")
