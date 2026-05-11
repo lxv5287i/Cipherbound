@@ -6,8 +6,10 @@ extends CanvasLayer
 @onready var explanation_label: RichTextLabel = $Panel/ExplanationLabel
 
 @onready var answer_input: LineEdit = $Panel/Ans
-@onready var submit_button: Button = $Panel/SubmitButton
-@onready var close_button: Button = $Panel/CloseButton
+
+@onready var submit_button: TextureButton = $Panel/SubmitButton
+@onready var close_button: TextureButton = $Panel/CloseButton
+
 @onready var result_label: Label = $Panel/Result
 
 var is_open := false

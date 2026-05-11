@@ -9,14 +9,15 @@ signal puzzle_correct
 @onready var ans2: LineEdit = $Panel/Ans2
 @onready var ans3: LineEdit = $Panel/Ans3
 
-@onready var submit_button: Button = $Panel/SubmitButton
+@onready var submit_button: TextureButton = $Panel/SubmitButton
 @onready var result_label: Label = $Panel/ResultLabel
 
-@onready var next_button: Button = $Panel/NextButton
-@onready var close_button: Button = $Panel/CloseButton
+@onready var next_button: TextureButton = $Panel/NextButton
+@onready var close_button: TextureButton = $Panel/CloseButton
 
 var is_open := false
 var correct_answers := ["135", "60", "%"]
+
 
 func _ready():
 	add_to_group("coder_popup")
@@ -34,6 +35,7 @@ func _ready():
 
 	if not close_button.pressed.is_connected(close_popup):
 		close_button.pressed.connect(close_popup)
+
 
 func open_popup():
 	is_open = true
@@ -58,6 +60,7 @@ func open_popup():
 	await get_tree().process_frame
 	ans1.grab_focus()
 
+
 func close_popup():
 	is_open = false
 	panel.visible = false
@@ -65,6 +68,7 @@ func close_popup():
 	ans1.release_focus()
 	ans2.release_focus()
 	ans3.release_focus()
+
 
 func _on_submit_pressed():
 	var a1 := ans1.text.strip_edges()
@@ -81,6 +85,7 @@ func _on_submit_pressed():
 	else:
 		result_label.text = "Try again"
 		ans1.grab_focus()
+
 
 func _on_next_pressed():
 	ans1.visible = false
@@ -105,6 +110,7 @@ Completed logic:
 SET energy = 135
 batteries = energy / 60
 remainingEnergy = energy % 60"""
+
 
 func open_explanation_only():
 	is_open = true
