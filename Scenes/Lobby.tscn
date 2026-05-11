@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Lobby/folder_popup.gd" id="5_s3paf"]
 [ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/Lobby/folder_inrange.png" id="6_sup6t"]
 [ext_resource type="Texture2D" uid="uid://cdxfvpqo3tmtt" path="res://Interactables/Lobby/Banner.png" id="6_vmftg"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Lobby/banner_interactable.gd" id="10_b6u2u"]
 [ext_resource type="Script" uid="uid://64dxsjgcaueb" path="res://Script/Lobby/banner_popup.gd" id="11_idhfa"]
 [ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Interactables/Lobby/box.png" id="11_r753w"]
@@ -36,6 +37,10 @@
 [ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
 [ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="Texture2D" uid="uid://d3knvppoi70gn" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
+[ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="38_8isgd"]
+[ext_resource type="Texture2D" uid="uid://c8ehhfdxmtf2i" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://vacqejprdup" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -1792,10 +1797,10 @@ grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Folders/FolderPopup/Panel" unique_id=2128761440]
 layout_mode = 0
-offset_left = -8.0
-offset_top = -6.0
-offset_right = 212.0
-offset_bottom = 154.0
+offset_left = -28.0
+offset_top = -12.0
+offset_right = 229.0
+offset_bottom = 177.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -1805,14 +1810,13 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Folders/FolderPopup/Panel" unique_id=315295486]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 7.0
-offset_right = 198.0
-offset_bottom = 133.0
+offset_left = -9.0
+offset_top = 11.0
+offset_right = 209.0
+offset_bottom = 157.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "just based here and the folder a and b will automatically basd here"
 
@@ -1919,10 +1923,10 @@ grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Banners/BannerPopup/Panel" unique_id=1637846818]
 layout_mode = 0
-offset_left = -8.0
+offset_left = -32.0
 offset_top = -6.0
-offset_right = 212.0
-offset_bottom = 154.0
+offset_right = 216.0
+offset_bottom = 181.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -1932,12 +1936,13 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Banners/BannerPopup/Panel" unique_id=784801159]
 layout_mode = 0
-offset_right = 204.0
-offset_bottom = 145.0
+offset_left = -14.0
+offset_top = 11.0
+offset_right = 196.0
+offset_bottom = 163.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "just based here and the folder a and b will automatically basd here"
 
@@ -2001,10 +2006,10 @@ grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Box/BoxPopup/Panel" unique_id=2139353413]
 layout_mode = 0
-offset_left = -8.0
+offset_left = -26.0
 offset_top = -6.0
-offset_right = 212.0
-offset_bottom = 154.0
+offset_right = 234.0
+offset_bottom = 180.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2014,12 +2019,13 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Box/BoxPopup/Panel" unique_id=707692522]
 layout_mode = 0
-offset_right = 204.0
-offset_bottom = 145.0
+offset_left = -4.0
+offset_top = 16.0
+offset_right = 215.0
+offset_bottom = 163.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[b]Conditional Statements[/b]
 Used for decision-making.
@@ -2164,10 +2170,10 @@ grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Experiment/ExperimentPopup/Panel" unique_id=907298561]
 layout_mode = 0
-offset_left = -11.0
+offset_left = -22.0
 offset_top = -7.0
-offset_right = 209.0
-offset_bottom = 153.0
+offset_right = 216.0
+offset_bottom = 171.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2177,14 +2183,13 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Experiment/ExperimentPopup/Panel" unique_id=1796320584]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 187.0
-offset_bottom = 137.0
+offset_left = -6.0
+offset_top = 9.0
+offset_right = 196.0
+offset_bottom = 149.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "ahdhakhsdjh  hfixed here and two experiment will based through size anf fonts"
 
@@ -2285,19 +2290,18 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Organizer/OrganizerPopup/Panel" unique_id=1283123832]
 layout_mode = 0
-offset_left = -11.0
-offset_top = 16.0
-offset_right = 194.0
-offset_bottom = 155.0
+offset_left = -15.0
+offset_top = 10.0
+offset_right = 195.0
+offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[b][color=#093C5D]Basic Program Structure in Java[/color][/b]
 
 [color=#831C91]public class Main {[/color]
-   [color=#FF70BF]public static void main(String[] args) {[/color]
+     [color=#FF70BF]public static void main(String[] args) {[/color]
 
    [color=#FF70BF]}[/color]
 [color=#831C91]}[/color]
@@ -2371,10 +2375,10 @@ grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Table/TablePopup/Panel" unique_id=1258139330]
 layout_mode = 0
-offset_left = -17.0
-offset_top = -9.0
-offset_right = 212.0
-offset_bottom = 154.0
+offset_left = -24.0
+offset_top = -8.0
+offset_right = 224.0
+offset_bottom = 175.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2384,14 +2388,13 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Table/TablePopup/Panel" unique_id=398938764]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 11.0
-offset_right = 195.0
-offset_bottom = 137.0
+offset_left = -6.0
+offset_top = 10.0
+offset_right = 205.0
+offset_bottom = 155.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[b]Flowchart[/b]
 
@@ -2528,8 +2531,12 @@ offset_left = -19.0
 offset_top = -25.0
 offset_right = 22.0
 offset_bottom = -2.0
-text = "[ROOM 3]"
 label_settings = SubResource("LabelSettings_2n0gg")
+
+[node name="R3Tag" type="Sprite2D" parent="DoortoRoom3" unique_id=139625766]
+position = Vector2(1, -22)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("36_2n0gg")
 
 [node name="DoortoRoom4" type="Area2D" parent="." unique_id=1902803123]
 collision_layer = 4
@@ -2552,8 +2559,12 @@ offset_left = 406.0
 offset_top = 117.0
 offset_right = 447.0
 offset_bottom = 140.0
-text = "[ROOM 4]"
 label_settings = SubResource("LabelSettings_2n0gg")
+
+[node name="R4Tag" type="Sprite2D" parent="DoortoRoom4" unique_id=327676543]
+position = Vector2(425, 120)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("38_ngjh1")
 
 [node name="DoortoRoom5" type="Area2D" parent="." unique_id=2068480091]
 position = Vector2(239, 60)
@@ -2571,10 +2582,17 @@ texture = ExtResource("34_wagpd")
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_8isgd")
 
-[node name="Label" type="Label" parent="DoortoRoom5" unique_id=541639695]
+[node name="R5Tag" type="Label" parent="DoortoRoom5" unique_id=541639695]
 offset_left = -18.0
 offset_top = -25.0
 offset_right = 22.0
 offset_bottom = -2.0
-text = "ROOM 5"
 label_settings = SubResource("LabelSettings_ngjh1")
+
+[node name="Room5tag" type="Sprite2D" parent="DoortoRoom5" unique_id=113460320]
+position = Vector2(1, -22)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("40_amwwa")
+
+[node name="AnalystPlayer" parent="." unique_id=2004721522 instance=ExtResource("38_8isgd")]
+position = Vector2(384, 258)

@@ -6,7 +6,7 @@ signal puzzle_correct
 
 @export_multiline var progress_text_template := """Correct
 %s = %s
-Still need to check:
+Check:
 %s%s%s"""
 
 @onready var panel: Panel = $Panel
@@ -159,7 +159,7 @@ func _on_submit_pressed():
 		score_result = "PASS"
 		checked_75 = true
 	else:
-		result_label.text = "Line 3 is wrong.\nUse only: 90, 71, 75"
+		result_label.text = "Line 3 is wrong."
 		ans3.grab_focus()
 		return
 
