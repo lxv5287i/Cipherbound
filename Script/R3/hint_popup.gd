@@ -3,7 +3,7 @@ extends CanvasLayer
 @export_multiline var hint_text := ""
 
 @onready var panel: Panel = $Panel
-@onready var hint_label: Label = $Panel/Label
+@onready var hint_label: RichTextLabel = $Panel/Label
 
 var is_open := false
 

@@ -33,6 +33,7 @@ window/stretch/mode="canvas_items"
 coder_interactable=""
 analyst_interactable=""
 game_progress=""
+player=""
 
 [input]
 

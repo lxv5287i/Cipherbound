@@ -3,19 +3,15 @@ extends Area2D
 @export var normal_texture: Texture2D
 @export var inrange_texture: Texture2D
 
-@export_multiline var slide_1 := ""
-@export_multiline var slide_2 := ""
-@export_multiline var slide_3 := ""
-@export_multiline var slide_4 := ""
-@export_multiline var slide_5 := ""
-@export_multiline var slide_6 := ""
-
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
 
 @onready var popup_panel: Panel = $CoderPopup/Panel
+
 @onready var code_scroll: ScrollContainer = $CoderPopup/Panel/VBoxContainer/CodeScroll
 @onready var code_label: RichTextLabel = $CoderPopup/Panel/VBoxContainer/CodeScroll/CodeLabel
+
+@onready var explanation_label: RichTextLabel = $CoderPopup/Panel/RichTextLabel
 
 @onready var grid_container: GridContainer = $CoderPopup/Panel/GridContainer
 
@@ -34,28 +30,13 @@ extends Area2D
 
 @onready var submit_button: Button = $CoderPopup/Panel/SubmitButton
 @onready var result_label: Label = $CoderPopup/Panel/ResultLabel
-
-@onready var next_button: Button = $CoderPopup/Panel/NextButton
-@onready var back_button: Button = $CoderPopup/Panel/BackButton
 @onready var close_button: Button = $CoderPopup/Panel/CloseButton
 
 var solved := false
-var explanation_index := 0
-
-var explanation_slides := []
 
 
 func _ready():
 	add_to_group("coder_interactable")
-
-	explanation_slides = [
-		slide_1,
-		slide_2,
-		slide_3,
-		slide_4,
-		slide_5,
-		slide_6
-	]
 
 	if normal_texture:
 		sprite.texture = normal_texture
@@ -63,25 +44,33 @@ func _ready():
 	popup_panel.visible = false
 	prompt_label.visible = false
 
-	next_button.visible = false
-	back_button.visible = false
 	close_button.visible = false
+	explanation_label.visible = false
 
-	submit_button.pressed.connect(_on_submit_pressed)
-	next_button.pressed.connect(_on_next_pressed)
-	back_button.pressed.connect(_on_back_pressed)
-	close_button.pressed.connect(close_popup)
+	code_label.bbcode_enabled = true
+	code_label.scroll_active = true
+	code_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
-	GameProgress.room5_analyst_done.connect(_on_analyst_done)
+	explanation_label.bbcode_enabled = true
+	explanation_label.scroll_active = true
+	explanation_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
-	setup_code()
+	if not submit_button.pressed.is_connected(_on_submit_pressed):
+		submit_button.pressed.connect(_on_submit_pressed)
+
+	if not close_button.pressed.is_connected(close_popup):
+		close_button.pressed.connect(close_popup)
+
+	if not GameProgress.room5_analyst_done.is_connected(_on_analyst_done):
+		GameProgress.room5_analyst_done.connect(_on_analyst_done)
+
 	setup_placeholders()
 	update_prompt_text()
 
 
 func interact():
 	if not GameProgress.room5_analyst_solved:
-		prompt_label.text = "[Locked]"
+		prompt_label.text = "[LOCKED]"
 		return
 
 	if solved:
@@ -109,10 +98,7 @@ func hide_prompt():
 
 func update_prompt_text():
 	if GameProgress.room5_analyst_solved:
-		if solved:
-			prompt_label.text = "PRESS [E]"
-		else:
-			prompt_label.text = "PRESS [E]"
+		prompt_label.text = "PRESS [E]"
 	else:
 		prompt_label.text = "[LOCKED]"
 
@@ -126,65 +112,22 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	code_scroll.visible = true
-	grid_container.visible = true
+	code_label.visible = true
+	explanation_label.visible = false
 
+	grid_container.visible = true
 	submit_button.visible = true
 	result_label.visible = true
-
-	next_button.visible = false
-	back_button.visible = false
 	close_button.visible = false
 
 	result_label.text = ""
 
-	setup_code()
 	clear_answers()
 
 
 func close_popup():
 	popup_panel.visible = false
 	GameLock.movement_locked = false
-
-
-func setup_code():
-	code_label.text = """
-public class Machine {
-    String name;
-    Machine (String name) {
-       1.______.name = name;
-    }
-    void 2._______ {
-        System.out.println(name + ": SYSTEM ONLINE");
-    }
-}
-
-class CombatRobot 3._____ Machine {
-    CombatRobot(String name) {
-        4._____(name);
-    }
-       5.________{
-        System.out.println(name + ": FIRING WEAPONS");
-    }
-}
-
-class Drone 6._____ CombatRobot {
-    Drone(7._______) {
-        super(name);
-    }
-    void fly() {
-       8.____________(name + ": TAKING FLIGHT");
-    }
-}
-
-9.______________ {
-   10.__________________ (String[] args) {
-        11._____ d = new Drone("UNIT-7");
-        d.powerOn();
-        d.attack();
-        d. 12._____();
-    }
-}
-"""
 
 
 func setup_placeholders():
@@ -263,71 +206,27 @@ func _on_submit_pressed():
 		error_text = "Answer 12 is wrong."
 
 	if correct:
-		result_label.text = "SYSTEM RESTORED"
-
 		solved = true
-
 		GameProgress.solve_room5_coder()
-
-		grid_container.visible = false
-		submit_button.visible = false
-		result_label.visible = false
-
-		code_scroll.visible = false
-
-		explanation_index = 0
-
-		next_button.visible = true
-		back_button.visible = false
-		close_button.visible = false
-
-		show_explanation_slide()
-
-		GameLock.movement_locked = false
+		show_explanation_only()
 	else:
+		result_label.visible = true
 		result_label.text = error_text
 
 
 func open_explanation_only():
 	popup_panel.visible = true
+	GameLock.movement_locked = true
+	show_explanation_only()
+
+
+func show_explanation_only():
+	code_scroll.visible = false
+	code_label.visible = false
+	explanation_label.visible = true
 
 	grid_container.visible = false
 	submit_button.visible = false
 	result_label.visible = false
 
-	explanation_index = 0
-
-	show_explanation_slide()
-
-
-func _on_next_pressed():
-	if explanation_index < explanation_slides.size() - 1:
-		explanation_index += 1
-		show_explanation_slide()
-
-
-func _on_back_pressed():
-	if explanation_index > 0:
-		explanation_index -= 1
-		show_explanation_slide()
-
-
-func show_explanation_slide():
-	code_scroll.visible = true
-
-	code_label.text = explanation_slides[explanation_index]
-
-	if explanation_index == 0:
-		back_button.visible = false
-		next_button.visible = true
-		close_button.visible = false
-
-	elif explanation_index == explanation_slides.size() - 1:
-		back_button.visible = true
-		next_button.visible = false
-		close_button.visible = true
-
-	else:
-		back_button.visible = true
-		next_button.visible = true
-		close_button.visible = false
+	close_button.visible = true

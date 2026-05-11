@@ -8,7 +8,7 @@ extends Area2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
-@onready var popup: CanvasLayer = $"../GlassPopup"
+@onready var popup: CanvasLayer = $"../HoloPopup"
 @onready var unlock_target: Area2D = get_node_or_null(unlock_target_path) as Area2D
 
 var changed := false

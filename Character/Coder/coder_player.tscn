@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wfuwrcp0130k"]
 
 [ext_resource type="Script" uid="uid://dxsruw5rr6oij" path="res://Character/Coder/coder_player.gd" id="1_qxruy"]
-[ext_resource type="Texture2D" uid="uid://csk6g8jhb2p6e" path="res://Character/Analyst/FEMALE.png" id="2_7m2ag"]
+[ext_resource type="Texture2D" uid="uid://36456vj8kmy" path="res://Character/Analyst/FEMALE.png" id="2_7m2ag"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)
@@ -171,11 +171,11 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhgsb"]
-size = Vector2(16, 16)
+size = Vector2(24, 25)
 
-[node name="CoderPlayer" type="CharacterBody2D" unique_id=1699527945 groups=["analyst_player"]]
+[node name="CoderPlayer" type="CharacterBody2D" unique_id=1699527945 groups=["coder_player"]]
 z_index = 15
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_qxruy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=235305258]
@@ -201,7 +201,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector" unique_id=1871649055]
-position = Vector2(8, 8)
+position = Vector2(8, 4.5)
 shape = SubResource("RectangleShape2D_lhgsb")
 
 [connection signal="area_entered" from="InteractDetector" to="." method="_on_interact_detector_area_entered"]

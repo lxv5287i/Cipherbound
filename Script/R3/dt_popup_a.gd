@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var panel: Panel = $Panel
-@onready var text_label: Label = $Panel/Label
+@onready var text_label: RichTextLabel = $Panel/Label
 
 var is_open := false
 

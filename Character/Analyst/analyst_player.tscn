@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bya3sndp5315d"]
 
 [ext_resource type="Script" uid="uid://c811h8oc2ph6x" path="res://Character/Analyst/analyst_player.gd" id="1_ieqrl"]
-[ext_resource type="Texture2D" uid="uid://dcay4bka50mjw" path="res://Character/Coder/MALE.png" id="2_7hieb"]
+[ext_resource type="Texture2D" uid="uid://bfvux6b6xnquv" path="res://Character/Coder/MALE.png" id="2_7hieb"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)
@@ -171,10 +171,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m5dqj"]
-size = Vector2(16, 16)
+size = Vector2(26, 25)
 
-[node name="AnalystPlayer" type="CharacterBody2D" unique_id=2004721522 groups=["coder_player"]]
-z_index = 15
+[node name="AnalystPlayer" type="CharacterBody2D" unique_id=2004721522 groups=["analyst_player"]]
+z_index = 10
 collision_mask = 6
 script = ExtResource("1_ieqrl")
 
@@ -200,7 +200,7 @@ libraries/ = SubResource("10")
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractDetector" unique_id=1710822715]
-position = Vector2(8, 8)
+position = Vector2(8, 5.5)
 shape = SubResource("RectangleShape2D_m5dqj")
 
 [node name="CameraTarget" type="Marker2D" parent="." unique_id=1455161266]
