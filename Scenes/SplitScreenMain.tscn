@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bdurt1rntws7h" path="res://New/split_screen_main.gd" id="1_2bvto"]
 [ext_resource type="Texture2D" uid="uid://u1717sykn1bg" path="res://World/Buttons/pause.png" id="2_sw7fr"]
-[ext_resource type="Script" uid="uid://bdtqnrhv6t7su" path="res://New/game_progress.gd" id="2_wpldl"]
 [ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/room1.tscn" id="3_f5yf0"]
 [ext_resource type="Texture2D" uid="uid://cmwjaws35m5iy" path="res://World/Buttons/pause_pressed.png" id="3_w5uyl"]
 [ext_resource type="Texture2D" uid="uid://bjwg6yxxsaqi3" path="res://World/Buttons/pause_hovered.png" id="4_4u5vd"]
@@ -57,9 +56,6 @@ grow_horizontal = 2
 text = "This is where timer is located"
 label_settings = ExtResource("7_vtvcs")
 horizontal_alignment = 1
-
-[node name="GameProgress" type="Node" parent="." unique_id=777986087 groups=["game_progress"]]
-script = ExtResource("2_wpldl")
 
 [node name="SplitContainer" type="HBoxContainer" parent="." unique_id=1030092439]
 layout_mode = 1

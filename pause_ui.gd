@@ -17,7 +17,7 @@ func close():
 	hide()
 	get_tree().paused = false
 	GameLock.movement_locked = false
-	GameTimer.resume_timer()    # ← move it here
+	GameTimer.resume_timer()
 
 func _on_resume_pressed():
 	close()
