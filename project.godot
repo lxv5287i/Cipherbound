@@ -18,7 +18,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 GameLock="*uid://c78rikofeb22o"
 GameProgress="*uid://bdtqnrhv6t7su"
-LoadingScreen="*uid://ct7yhprhri7u3"
+LoadingScreen="*uid://c7btladcdfj66"
 GameTimer="*uid://b3fwwpn0bkkl0"
 
 [display]
