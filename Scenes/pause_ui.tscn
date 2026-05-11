@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c80tbjtbvvlha"]
 
-[ext_resource type="Script" uid="uid://bpt4f7plj26ys" path="res://Scenes/pause_ui.gd" id="1_bthaf"]
+[ext_resource type="Script" uid="uid://bpt4f7plj26ys" path="res://pause_ui.gd" id="1_bthaf"]
 [ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Interactables/UI_Popups/UI.png" id="2_srqh7"]
 [ext_resource type="Texture2D" uid="uid://beegfanba56h2" path="res://World/Buttons/resume.png" id="3_w3mym"]
 [ext_resource type="Texture2D" uid="uid://bfue2aoc7oyj3" path="res://World/Buttons/resume_pressed.png" id="4_36amk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://World/Buttons/quitToMenu.png" id="6_ywlh3"]
 [ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/Buttons/quitToMenu_pressed.png" id="7_ipnwg"]
 [ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://World/Buttons/quitToMenu_hovered.png" id="8_043jw"]
+[ext_resource type="LabelSettings" uid="uid://dyainmr88vpag" path="res://Scenes/Fonts/PopupFont.tres" id="9_ipnwg"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=2094932446]
 script = ExtResource("1_bthaf")
@@ -68,6 +69,15 @@ scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("6_ywlh3")
 texture_pressed = ExtResource("7_ipnwg")
 texture_hover = ExtResource("8_043jw")
+
+[node name="TeamLabel" type="Label" parent="PanelContainer" unique_id=78540573]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 118.0
+offset_right = 309.0
+offset_bottom = 141.0
+text = "-"
+label_settings = ExtResource("9_ipnwg")
 
 [connection signal="pressed" from="PanelContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/Quit to Menu" to="." method="_on_quit_to_menu_pressed"]

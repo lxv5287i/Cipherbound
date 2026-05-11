@@ -31,6 +31,21 @@ func _on_enter_game_pressed() -> void:
 	if team_name == "":
 		team_name = "Team 1"
 	GameProgress.team_name = team_name
+	
+	# Debug unlock
+	if team_name == "w@np1pdevs":
+		GameProgress.room3_unlocked = true
+		GameProgress.room4_unlocked = true
+		GameProgress.room5_unlocked = true
+		GameProgress.analyst_done = true
+		GameProgress.coder_done = true
+		GameProgress.room4_analyst_opened_count = 999
+		GameProgress.room4_coder_done = true
+		GameProgress.room4_done_signal_sent = true 
+		GameProgress.room5_analyst_solved = true
+		GameProgress.room5_coder_solved = true
+		GameProgress.room5_done_signal_sent = true
+
 	close()
 	await get_tree().create_timer(0.3).timeout
 	LoadingScreen.load_scene("res://Scenes/SplitScreenMain.tscn")

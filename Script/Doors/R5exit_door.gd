@@ -113,7 +113,7 @@ func update_state():
 
 		var main = get_tree().get_first_node_in_group("split_screen_main")
 		if main and main.has_method("go_to_lobby"):
-			main.call_deferred("go_to_lobby")
+			main.call_deferred("game_complete")
 
 		return
 
