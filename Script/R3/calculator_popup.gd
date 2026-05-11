@@ -3,10 +3,10 @@ extends CanvasLayer
 signal puzzle_correct
 
 @export var exit_door_path: NodePath
-@export_multiline var explanation_text: String = ""
 
 @onready var panel: Panel = $Panel
 @onready var code_label: Label = $Panel/CodeLabel
+@onready var explanation_label: RichTextLabel = $Panel/ExplantionLabel
 
 @onready var ans1: LineEdit = $Panel/Ans1
 @onready var ans2: LineEdit = $Panel/Ans2
@@ -16,8 +16,8 @@ signal puzzle_correct
 @onready var ans6: LineEdit = $Panel/Ans6
 
 @onready var submit_button: Button = $Panel/SubmitButton
+@onready var close_button: Button = $Panel/CloseButton
 @onready var result_label: Label = $Panel/Result
-@onready var next_button: Button = $Panel/NextButton
 
 var is_open := false
 var already_solved := false
@@ -31,14 +31,19 @@ func _ready():
 	add_to_group("coder_popup")
 
 	panel.visible = false
-	next_button.visible = false
+	explanation_label.visible = false
 	result_label.text = ""
+	close_button.visible = false
+
+	explanation_label.bbcode_enabled = true
+	explanation_label.scroll_active = true
+	explanation_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
 	if not submit_button.pressed.is_connected(_on_submit_pressed):
 		submit_button.pressed.connect(_on_submit_pressed)
 
-	if not next_button.pressed.is_connected(_on_next_pressed):
-		next_button.pressed.connect(_on_next_pressed)
+	if not close_button.pressed.is_connected(close_popup):
+		close_button.pressed.connect(close_popup)
 
 
 func open_popup():
@@ -50,9 +55,13 @@ func open_popup():
 
 	if not progress.analyst_solved:
 		panel.visible = true
+		code_label.visible = true
+		explanation_label.visible = false
+		close_button.visible = true
+
 		code_label.text = "LOCKED\n\nThe Analyst must solve the puzzle first."
+
 		hide_inputs()
-		next_button.visible = true
 		GameLock.movement_locked = true
 		is_open = true
 		return
@@ -65,6 +74,9 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	panel.visible = true
+	code_label.visible = true
+	explanation_label.visible = false
+	close_button.visible = false
 
 	ans1.visible = true
 	ans2.visible = true
@@ -75,7 +87,6 @@ func open_popup():
 
 	submit_button.visible = true
 	result_label.visible = true
-	next_button.visible = false
 
 	checked_90 = false
 	checked_71 = false
@@ -99,6 +110,7 @@ func close_popup():
 	GameLock.movement_locked = false
 
 	panel.visible = false
+	close_button.visible = false
 
 	ans1.release_focus()
 	ans2.release_focus()
@@ -182,10 +194,6 @@ func _on_submit_pressed():
 	ans3.grab_focus()
 
 
-func _on_next_pressed():
-	close_popup()
-
-
 func open_explanation_only():
 	panel.visible = true
 	GameLock.movement_locked = true
@@ -195,13 +203,14 @@ func open_explanation_only():
 
 
 func show_explanation():
+	code_label.visible = false
+	explanation_label.visible = true
+
 	hide_inputs()
 
 	submit_button.visible = false
 	result_label.visible = false
-	next_button.visible = true
-
-	code_label.text = explanation_text
+	close_button.visible = true
 
 
 func hide_inputs():

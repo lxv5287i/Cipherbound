@@ -35,6 +35,7 @@ window/main_scene="uid://ukv5ff3g3lq8"
 coder_interactable=""
 analyst_interactable=""
 game_progress=""
+player=""
 
 [input]
 

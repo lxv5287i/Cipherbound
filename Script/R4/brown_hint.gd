@@ -6,7 +6,7 @@ extends Area2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
-@onready var popup: CanvasLayer = $"../BrownPopup"
+@onready var popup: CanvasLayer = $"../HintPopup"
 
 func _ready():
 	add_to_group("analyst_interactable")

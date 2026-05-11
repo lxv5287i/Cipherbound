@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bdvic42k6q4ol"]
+
+[ext_resource type="Script" uid="uid://bsso3npbpl2r6" path="res://Interactables/Infobot/robot_interactable.gd" id="1_hohp2"]
+[ext_resource type="LabelSettings" uid="uid://bu37cycw11vmo" path="res://Scenes/Fonts/Font1.tres" id="1_osj2x"]
+[ext_resource type="Texture2D" uid="uid://d1nyvubejvss5" path="res://Interactables/Infobot/bot_facedown.png" id="1_qh210"]
+[ext_resource type="Texture2D" uid="uid://bcspqohj0wkqg" path="res://Interactables/coderBG.png" id="2_7p7n2"]
+[ext_resource type="Texture2D" uid="uid://uthho4fd2sjo" path="res://Interactables/Infobot/bot_faceleft.png" id="2_hohp2"]
+[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://World/Font/NicoClean-Regular.otf" id="3_5oe0i"]
+[ext_resource type="Texture2D" uid="uid://d38sto51d24ba" path="res://Interactables/Infobot/bot_faceright.png" id="3_q4bum"]
+[ext_resource type="Texture2D" uid="uid://bwta0jrqe6kr7" path="res://Interactables/Infobot/bot_faceup.png" id="4_r6o4l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qcun"]
+atlas = ExtResource("1_qh210")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jbmi"]
+atlas = ExtResource("2_hohp2")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5folw"]
+atlas = ExtResource("3_q4bum")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kbfs"]
+atlas = ExtResource("4_r6o4l")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5oe0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qcun")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jbmi")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5folw")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kbfs")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4bum"]
+size = Vector2(10, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hohp2"]
+size = Vector2(13, 7)
+
+[node name="RobotInteractable" type="Area2D" unique_id=1239817990 groups=["analyst_interactable", "coder_interactable"]]
+z_index = 16
+collision_layer = 4
+script = ExtResource("1_hohp2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1711071643]
+sprite_frames = SubResource("SpriteFrames_5oe0i")
+animation = &"down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=780611906]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_q4bum")
+
+[node name="Label" type="Label" parent="." unique_id=306761151]
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 27.0
+offset_bottom = -2.0
+text = "[INTERACT]"
+label_settings = ExtResource("1_osj2x")
+uppercase = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1533831507]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1976795389]
+offset_left = 188.0
+offset_top = 123.0
+offset_right = 307.0
+offset_bottom = 211.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Panel" unique_id=784274997]
+layout_mode = 0
+offset_left = -47.0
+offset_top = -20.0
+offset_right = 169.0
+offset_bottom = 108.0
+texture = ExtResource("2_7p7n2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel" unique_id=1074240285]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -6.0
+offset_right = 150.0
+offset_bottom = 93.0
+theme_override_fonts/normal_font = ExtResource("3_5oe0i")
+theme_override_font_sizes/normal_font_size = 9
+bbcode_enabled = true
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=1451310383]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=1358508063]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_hohp2")
+debug_color = Color(0.71266866, 0.48048764, 0.18151197, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -2,10 +2,13 @@ extends CanvasLayer
 
 signal puzzle_correct
 
-@export_multiline var explanation_text: String = "Explanation"
+@export_multiline var question_text: String = ""
+@export_multiline var result_text: String = ""
 
 @onready var panel: Panel = $Panel
 @onready var code_label: Label = $Panel/CodeLabel
+
+@onready var explanation_label: RichTextLabel = $Panel/ExplanationLabel
 
 @onready var ans1: LineEdit = $Panel/Ans1
 @onready var ans2: LineEdit = $Panel/Ans2
@@ -16,7 +19,7 @@ signal puzzle_correct
 
 @onready var submit_button: Button = $Panel/Submit
 @onready var result_label: Label = $Panel/Result
-@onready var next_button: Button = $Panel/Next
+@onready var close_button: Button = $Panel/Close
 
 var is_open := false
 var already_solved := false
@@ -26,14 +29,17 @@ func _ready():
 	add_to_group("coder_popup")
 
 	panel.visible = false
-	next_button.visible = false
 	result_label.text = ""
 
-	if not submit_button.pressed.is_connected(_on_submit_pressed):
-		submit_button.pressed.connect(_on_submit_pressed)
+	close_button.visible = false
+	explanation_label.visible = false
 
-	if not next_button.pressed.is_connected(_on_next_pressed):
-		next_button.pressed.connect(_on_next_pressed)
+	explanation_label.bbcode_enabled = true
+	explanation_label.scroll_active = true
+	explanation_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+
+	submit_button.pressed.connect(_on_submit_pressed)
+	close_button.pressed.connect(close_popup)
 
 
 func open_popup():
@@ -41,11 +47,16 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	panel.visible = true
-	code_label.visible = true
 
 	if already_solved:
-		show_explanation()
-		return
+		show_explanation_only()
+	else:
+		show_question()
+
+
+func show_question():
+	code_label.visible = true
+	explanation_label.visible = false
 
 	ans1.visible = true
 	ans2.visible = true
@@ -56,7 +67,9 @@ func open_popup():
 
 	submit_button.visible = true
 	result_label.visible = true
-	next_button.visible = false
+	close_button.visible = false
+
+	code_label.text = question_text
 
 	ans1.text = ""
 	ans2.text = ""
@@ -74,7 +87,6 @@ func open_popup():
 func close_popup():
 	is_open = false
 	GameLock.movement_locked = false
-
 	panel.visible = false
 
 	ans1.release_focus()
@@ -86,64 +98,47 @@ func close_popup():
 
 
 func _on_submit_pressed():
-	var a1 := ans1.text.strip_edges()
-	var a2 := ans2.text.strip_edges()
-	var a3 := ans3.text.strip_edges()
-	var a4 := ans4.text.strip_edges()
-	var a5 := ans5.text.strip_edges()
-	var a6 := ans6.text.strip_edges()
-
-	if a1 != "for":
+	if ans1.text.strip_edges() != "for":
 		result_label.text = "Line 1 is wrong."
 		ans1.grab_focus()
 		return
 
-	if a2 != "1":
+	if ans2.text.strip_edges() != "1":
 		result_label.text = "Line 2 is wrong."
 		ans2.grab_focus()
 		return
 
-	if a3 != "3":
+	if ans3.text.strip_edges() != "3":
 		result_label.text = "Line 3 is wrong."
 		ans3.grab_focus()
 		return
 
-	if a4 != "i++":
+	if ans4.text.strip_edges() != "i++":
 		result_label.text = "Line 4 is wrong."
 		ans4.grab_focus()
 		return
 
-	if a5 != "System.out.print(\"*\")":
+	if ans5.text.strip_edges() != "System.out.print(\"*\")":
 		result_label.text = "Line 5 is wrong."
 		ans5.grab_focus()
 		return
 
-	if a6 != "System.out.println()":
+	if ans6.text.strip_edges() != "System.out.println()":
 		result_label.text = "Line 6 is wrong."
 		ans6.grab_focus()
 		return
-
-	result_label.text = "Correct"
 
 	if not already_solved:
 		already_solved = true
 		puzzle_correct.emit()
 
-	show_explanation()
+	show_explanation_only()
 
 
-func _on_next_pressed():
-	close_popup()
+func show_explanation_only():
+	code_label.visible = false
+	explanation_label.visible = true
 
-
-func open_explanation_only():
-	is_open = true
-	GameLock.movement_locked = true
-	panel.visible = true
-	show_explanation()
-
-
-func show_explanation():
 	ans1.visible = false
 	ans2.visible = false
 	ans3.visible = false
@@ -153,6 +148,13 @@ func show_explanation():
 
 	submit_button.visible = false
 	result_label.visible = false
-	next_button.visible = true
 
-	code_label.text = explanation_text
+	close_button.visible = true
+
+
+func open_explanation_only():
+	is_open = true
+	GameLock.movement_locked = true
+	panel.visible = true
+
+	show_explanation_only()

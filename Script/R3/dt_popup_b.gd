@@ -1,10 +1,10 @@
 extends CanvasLayer
 
-@export_multiline var question_text: String = "IF ELSE"
-@export_multiline var explanation_text: String = "Explanation:\n\nIf else is used when the program needs to choose between two possible actions."
-
 @onready var panel: Panel = $Panel
+
 @onready var question_label: Label = $Panel/QuestionLabel
+@onready var explanation_label: RichTextLabel = $Panel/ExplanationLabel
+
 @onready var answer_input: LineEdit = $Panel/Ans
 @onready var submit_button: Button = $Panel/SubmitButton
 @onready var close_button: Button = $Panel/CloseButton
@@ -16,8 +16,16 @@ var solved := false
 
 func _ready():
 	panel.visible = false
+
+	explanation_label.visible = false
 	close_button.visible = false
 	result_label.text = ""
+
+	question_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+
+	explanation_label.bbcode_enabled = true
+	explanation_label.scroll_active = true
+	explanation_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
 	if not submit_button.pressed.is_connected(_on_submit_pressed):
 		submit_button.pressed.connect(_on_submit_pressed)
@@ -31,11 +39,13 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	panel.visible = true
-	question_label.text = question_text
 
 	if solved:
 		show_explanation()
 		return
+
+	question_label.visible = true
+	explanation_label.visible = false
 
 	answer_input.visible = true
 	submit_button.visible = true
@@ -64,10 +74,6 @@ func _on_submit_pressed():
 		result_label.text = "Correct"
 		solved = true
 
-		submit_button.visible = false
-		answer_input.visible = false
-		result_label.visible = false
-
 		var progress = get_tree().get_first_node_in_group("game_progress")
 		print("Room 3 analyst answer found progress:", progress)
 
@@ -86,9 +92,10 @@ func show_explanation():
 
 	panel.visible = true
 
+	question_label.visible = false
+	explanation_label.visible = true
+
 	answer_input.visible = false
 	submit_button.visible = false
 	result_label.visible = false
 	close_button.visible = true
-
-	question_label.text = explanation_text

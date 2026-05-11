@@ -1,9 +1,7 @@
 extends CanvasLayer
 
-@export_multiline var popup_text := ""
-
 @onready var panel: Panel = $Panel
-@onready var text_label: Label = $Panel/Label
+@onready var text_label: RichTextLabel = $Panel/Text
 
 var is_open := false
 
@@ -14,14 +12,16 @@ func _ready():
 	panel.visible = false
 
 	text_label.visible = true
+	text_label.bbcode_enabled = true
+	text_label.scroll_active = true
 	text_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	text_label.text = popup_text
 
 
 func open_popup():
 	is_open = true
+
 	panel.visible = true
-	text_label.text = popup_text
+	text_label.visible = true
 
 
 func close_popup():

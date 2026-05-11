@@ -113,7 +113,6 @@ z_index = 5
 position = Vector2(208, 272)
 
 [node name="SharedViewContainer" type="SubViewportContainer" parent="." unique_id=1905845002]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -125,7 +124,7 @@ grow_vertical = 2
 [node name="SharedViewport" type="SubViewport" parent="SharedViewContainer" unique_id=1016326554]
 handle_input_locally = false
 size = Vector2i(512, 352)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="SharedWorld" type="Node2D" parent="SharedViewContainer/SharedViewport" unique_id=1599340501]
 
