@@ -28,9 +28,9 @@ extends Area2D
 @onready var ans11: LineEdit = $CoderPopup/Panel/GridContainer/Ans11
 @onready var ans12: LineEdit = $CoderPopup/Panel/GridContainer/Ans12
 
-@onready var submit_button: Button = $CoderPopup/Panel/SubmitButton
+@onready var submit_button: TextureButton = $CoderPopup/Panel/SubmitButton
 @onready var result_label: Label = $CoderPopup/Panel/ResultLabel
-@onready var close_button: Button = $CoderPopup/Panel/CloseButton
+@onready var close_button: TextureButton = $CoderPopup/Panel/CloseButton
 
 var solved := false
 

@@ -4,6 +4,11 @@ signal puzzle_correct
 
 @export var exit_door_path: NodePath
 
+@export_multiline var progress_text_template := """Correct
+%s = %s
+Still need to check:
+%s%s%s"""
+
 @onready var panel: Panel = $Panel
 @onready var code_label: Label = $Panel/CodeLabel
 @onready var explanation_label: RichTextLabel = $Panel/ExplantionLabel
@@ -15,8 +20,8 @@ signal puzzle_correct
 @onready var ans5: LineEdit = $Panel/Ans5
 @onready var ans6: LineEdit = $Panel/Ans6
 
-@onready var submit_button: Button = $Panel/SubmitButton
-@onready var close_button: Button = $Panel/CloseButton
+@onready var submit_button: TextureButton = $Panel/SubmitButton
+@onready var close_button: TextureButton = $Panel/CloseButton
 @onready var result_label: Label = $Panel/Result
 
 var is_open := false
@@ -182,7 +187,7 @@ func _on_submit_pressed():
 		show_explanation()
 		return
 
-	result_label.text = "Correct\n\n%s = %s\n\nStill need to check:\n%s%s%s" % [
+	result_label.text = progress_text_template % [
 		a3,
 		score_result,
 		"90\n" if not checked_90 else "",

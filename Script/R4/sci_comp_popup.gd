@@ -17,9 +17,9 @@ signal puzzle_correct
 @onready var ans5: LineEdit = $Panel/Ans5
 @onready var ans6: LineEdit = $Panel/Ans6
 
-@onready var submit_button: Button = $Panel/Submit
+@onready var submit_button: TextureButton = $Panel/Submit
 @onready var result_label: Label = $Panel/Result
-@onready var close_button: Button = $Panel/Close
+@onready var close_button: TextureButton = $Panel/Close
 
 var is_open := false
 var already_solved := false

@@ -14,9 +14,9 @@ extends Area2D
 @onready var subclass1_option: OptionButton = $AnalystPopup/Panel/Clean/SubClass1Option
 @onready var subclass2_option: OptionButton = $AnalystPopup/Panel/Clean/SubClass2Option
 
-@onready var submit_button: Button = $AnalystPopup/Panel/Submit
+@onready var submit_button: TextureButton = $AnalystPopup/Panel/Submit
 @onready var result_label: Label = $AnalystPopup/Panel/Result
-@onready var close_button: Button = $AnalystPopup/Panel/Close
+@onready var close_button: TextureButton = $AnalystPopup/Panel/Close
 
 var solved := false
 
