@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://cqcc7fo18iymh" path="res://World/Objects/R5_Obejcts.png" id="3_u2i1c"]
 [ext_resource type="Texture2D" uid="uid://cpha6rpp3t8db" path="res://Interactables/R5/inheritancePanel.png" id="6_idjqp"]
 [ext_resource type="Script" uid="uid://dx8j6uunr7jb1" path="res://Script/R5/analyst_board.gd" id="6_nk5kx"]
+[ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://World/Font/interact.tres" id="7_mlspx"]
 [ext_resource type="Texture2D" uid="uid://dfnfgv2cvagld" path="res://Interactables/UI_Popups/UI.png" id="8_3g6xh"]
 [ext_resource type="Texture2D" uid="uid://b71bu6nbgidcn" path="res://Interactables/R5/repairTerminal.png" id="8_6p5ga"]
 [ext_resource type="Texture2D" uid="uid://myybn5st2pyb" path="res://Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
 [ext_resource type="Script" uid="uid://dt6xyw12jpobu" path="res://Script/R5/coder_terminal.gd" id="8_t37p4"]
 [ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://World/Font/NicoClean-Regular.otf" id="9_cttw5"]
-[ext_resource type="FontFile" uid="uid://ctl0kb1ffgnjw" path="res://World/Font/DePixelHalbfett.otf" id="9_d51si"]
 [ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
 [ext_resource type="Texture2D" uid="uid://c2wagaq5bhtgq" path="res://Interactables/R5/statusMonitor.png" id="11_3p68e"]
 [ext_resource type="Script" uid="uid://ghi0br4uuw5f" path="res://Script/R5/drone_robot.gd" id="11_gr3ss"]
@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://b2k0fl82rbwxx" path="res://Interactables/R5/computerHint.png" id="16_gshci"]
 [ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://World/Buttons/submitBTN_hovered.png" id="16_mlspx"]
 [ext_resource type="Script" uid="uid://dokatutmbrne1" path="res://Script/R5/computer_hint.gd" id="16_xusyf"]
-[ext_resource type="FontFile" uid="uid://b0menpw3ca2fp" path="res://World/Font/DePixelHalbfett.ttf" id="17_tvxs7"]
 [ext_resource type="Texture2D" uid="uid://dpcom1jqp415j" path="res://Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
 [ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://World/Buttons/closeButton.png" id="18_mlspx"]
 [ext_resource type="Script" uid="uid://dqla2vtotbo2i" path="res://Script/R5/computer_hint_popup.gd" id="19_4mq8d"]
@@ -708,12 +707,6 @@ sources/0 = SubResource("TileSetAtlasSource_u2i1c")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_idjqp"]
 size = Vector2(28, 8)
 
-[sub_resource type="LabelSettings" id="LabelSettings_tvxs7"]
-font = ExtResource("9_d51si")
-font_size = 7
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_kmav1"]
 line_spacing = 1.0
 paragraph_spacing = 3.0
@@ -738,19 +731,8 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p5ga"]
 size = Vector2(12, 28)
 
-[sub_resource type="LabelSettings" id="LabelSettings_d51si"]
-font = ExtResource("9_d51si")
-font_size = 7
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17isa"]
 size = Vector2(42.5, 34)
-
-[sub_resource type="LabelSettings" id="LabelSettings_eh4pa"]
-font = ExtResource("17_tvxs7")
-font_size = 7
-font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qryu6"]
 size = Vector2(29, 12.5)
@@ -758,23 +740,11 @@ size = Vector2(29, 12.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xusyf"]
 size = Vector2(30, 20)
 
-[sub_resource type="LabelSettings" id="LabelSettings_2dhja"]
-font = ExtResource("9_d51si")
-font_size = 7
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gshci"]
 size = Vector2(28, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmav1"]
 size = Vector2(29, 20)
-
-[sub_resource type="LabelSettings" id="LabelSettings_2g4yd"]
-font = ExtResource("17_tvxs7")
-font_size = 7
-outline_size = 1
-outline_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
 
 [node name="Room5" type="Node2D" unique_id=642504826]
 position = Vector2(50, 52)
@@ -819,16 +789,16 @@ position = Vector2(1, 20)
 shape = SubResource("RectangleShape2D_idjqp")
 
 [node name="PromptLabel" type="Label" parent="AnalystBoard" unique_id=1582229894]
-offset_left = -18.0
-offset_top = -27.0
-offset_right = 66.0
-offset_bottom = -4.0
+offset_left = -41.0
+offset_top = -32.0
+offset_right = 43.0
+offset_bottom = -9.0
 text = "[space]"
-label_settings = SubResource("LabelSettings_tvxs7")
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
 uppercase = true
 
 [node name="AnalystPopup" type="CanvasLayer" parent="AnalystBoard" unique_id=553521389]
-visible = false
 
 [node name="Panel" type="Panel" parent="AnalystBoard/AnalystPopup" unique_id=1886851924]
 anchors_preset = 15
@@ -988,16 +958,16 @@ position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_6p5ga")
 
 [node name="Label" type="Label" parent="CoderTerminal" unique_id=695974621]
-offset_left = -18.0
-offset_top = -35.0
-offset_right = 57.0
-offset_bottom = -12.0
+offset_left = -36.0
+offset_top = -41.0
+offset_right = 39.0
+offset_bottom = -18.0
 text = "[Locked]"
-label_settings = SubResource("LabelSettings_d51si")
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
 uppercase = true
 
 [node name="CoderPopup" type="CanvasLayer" parent="CoderTerminal" unique_id=893134837]
-visible = false
 
 [node name="Panel" type="Panel" parent="CoderTerminal/CoderPopup" unique_id=860654345]
 anchors_preset = 15
@@ -1210,7 +1180,6 @@ texture_pressed = ExtResource("19_fv1an")
 texture_hover = ExtResource("20_yqdhs")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel" unique_id=2052299372]
-visible = false
 layout_mode = 0
 offset_left = 27.0
 offset_top = -3.0
@@ -1306,12 +1275,12 @@ online_texture = ExtResource("15_eh4pa")
 
 [node name="Label" type="Label" parent="DroneRobot" unique_id=443838776]
 z_index = 9
-offset_left = -20.0
-offset_top = -22.0
-offset_right = 47.0
-offset_bottom = 1.0
+offset_left = -31.0
+offset_top = -27.0
+offset_right = 36.0
+offset_bottom = -4.0
 text = "[BROKEN]"
-label_settings = SubResource("LabelSettings_eh4pa")
+label_settings = ExtResource("7_mlspx")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="DroneRobot" unique_id=237513084]
@@ -1340,12 +1309,13 @@ position = Vector2(1, 21)
 shape = SubResource("RectangleShape2D_xusyf")
 
 [node name="Label" type="Label" parent="ComputerHint" unique_id=1025688572]
-offset_left = -14.0
-offset_top = -24.0
-offset_right = 30.0
-offset_bottom = -1.0
+offset_left = -21.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = -5.0
 text = "[hint]"
-label_settings = SubResource("LabelSettings_2dhja")
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
 uppercase = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ComputerHint" unique_id=1969177992]
@@ -1357,7 +1327,6 @@ shape = SubResource("RectangleShape2D_gshci")
 debug_color = Color(0.8200989, 0.4034578, 0, 0.41960785)
 
 [node name="ComputerHintPopup" type="CanvasLayer" parent="ComputerHint" unique_id=1427164895 groups=["info_group"]]
-visible = false
 script = ExtResource("19_4mq8d")
 
 [node name="Panel" type="Panel" parent="ComputerHint/ComputerHintPopup" unique_id=512408390]
@@ -1418,12 +1387,12 @@ shape = SubResource("RectangleShape2D_kmav1")
 
 [node name="Label" type="Label" parent="ExitDoor" unique_id=715977786]
 z_index = 6
-offset_left = -20.0
-offset_top = -27.0
-offset_right = 21.0
-offset_bottom = -4.0
+offset_left = -29.0
+offset_top = -30.0
+offset_right = 31.0
+offset_bottom = -7.0
 text = "[LOCKED]"
-label_settings = SubResource("LabelSettings_2g4yd")
+label_settings = ExtResource("7_mlspx")
 metadata/_edit_use_anchors_ = true
 
 [node name="RobotInteractable" parent="." unique_id=1239817990 instance=ExtResource("29_cttw5")]
@@ -1434,6 +1403,12 @@ popup_text = "“Welcome to the Final Room. The last system awaits. Combine ever
 [node name="CollisionShape2D" parent="RobotInteractable" index="1" unique_id=780611906]
 position = Vector2(0, 15)
 
+[node name="Label" parent="RobotInteractable" index="2" unique_id=306761151]
+offset_left = -34.0
+offset_top = -24.0
+offset_right = 44.0
+offset_bottom = -1.0
+
 [node name="Panel" parent="RobotInteractable/CanvasLayer" parent_id_path=PackedInt32Array(1239817990, 1533831507) index="0" unique_id=1976795389]
 offset_left = 295.0
 offset_top = 160.0
@@ -1441,6 +1416,7 @@ offset_right = 414.0
 offset_bottom = 248.0
 
 [node name="RichTextLabel" parent="RobotInteractable/CanvasLayer/Panel" index="1" unique_id=1074240285]
+anchor_left = 0.29411766
 anchor_top = -0.17045455
 anchor_right = 0.29411766
 theme_override_fonts/normal_font = ExtResource("10_fv1an")

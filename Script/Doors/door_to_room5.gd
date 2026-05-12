@@ -10,7 +10,7 @@ extends Area2D
 @export var interact_text := "[INTERACT]"
 
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var label: Label = $Label
+@onready var label: Label = $R5Tag
 
 var coder_in_range := false
 var analyst_in_range := false

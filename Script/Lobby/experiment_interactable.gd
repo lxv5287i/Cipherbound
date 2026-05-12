@@ -18,12 +18,12 @@ func _ready():
 		sprite.texture = normal_texture
 
 	prompt_label.visible = false
-	prompt_label.text = "[E / SPACE]"
+	prompt_label.text = "[INTERACT]"
 
 
 func show_prompt():
 	prompt_label.visible = true
-	prompt_label.text = "[E / SPACE]"
+	prompt_label.text = "[INTERACT]"
 
 	if inrange_texture:
 		sprite.texture = inrange_texture
