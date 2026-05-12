@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://k5ppokrlrys7" path="res://Scenes/Lobby.tscn" id="9_43xyp"]
 [ext_resource type="Script" uid="uid://c8qts7423n2wj" path="res://New/shared_camera.gd" id="10_5qox4"]
 [ext_resource type="PackedScene" uid="uid://c80tbjtbvvlha" path="res://Scenes/pause_ui.tscn" id="11_wpldl"]
+[ext_resource type="PackedScene" uid="uid://cr455csc5de3r" path="res://Scenes/congratulation.tscn" id="16_ftovv"]
 
 [node name="SplitScreenMain" type="Control" unique_id=801453013]
 layout_mode = 3
@@ -145,5 +146,7 @@ position = Vector2(256, 176)
 script = ExtResource("10_5qox4")
 player_1 = NodePath("../../../../SplitContainer/CoderViewContainer/CoderViewport/CoderWorld/CoderPlayer")
 player_2 = NodePath("../../../../SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer")
+
+[node name="Congratulation" parent="." unique_id=825101189 instance=ExtResource("16_ftovv")]
 
 [connection signal="pressed" from="HUD/Pause" to="." method="_on_pause_pressed"]

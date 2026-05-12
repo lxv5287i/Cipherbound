@@ -1,39 +1,71 @@
 extends CanvasLayer
 
+var dot_count := 0
+var dot_timer := 0.0
+var dot_interval := 0.4
+var active := false
 var target_scene := ""
-var is_loading := false
 
-@onready var anim = $AnimationPlayer
-@onready var bg = $TextureRect
-@onready var label = $Label
+@onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var bg: TextureRect = $TextureRect
+@onready var label: Label = $Label
 
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	var placeholder: Texture2D = load("res://World/placeholder.png")
+	if placeholder:
+		bg.texture = placeholder
+	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	bg.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 
-func load_scene(path: String):
-	target_scene = path
-	is_loading = true
-	show()
-	bg.visible = true
-	bg.modulate.a = 1
-	anim.play("fade_in")
-	ResourceLoader.load_threaded_request(path)
-
-func _process(_delta):
-	if not is_loading:
+func _process(delta):
+	if not active:
 		return
+	if target_scene == "":
+		return
+	dot_timer += delta
+	if dot_timer >= dot_interval:
+		dot_timer = 0.0
+		dot_count += 1
+		if dot_count > 3:
+			dot_count = 1
+		label.text = "Loading" + ".".repeat(dot_count)
 
-	var progress = []
-	var status = ResourceLoader.load_threaded_get_status(target_scene, progress)
+func show_overlay():
+	if active:
+		return
+	active = true
+	target_scene = ""
+	dot_count = 1
+	dot_timer = 0.0
+	label.text = "Loading."
+	show()
+	anim.play("fade_in")
 
-	if status == ResourceLoader.THREAD_LOAD_LOADED:
-		is_loading = false
-		_finish_loading()
-
-func _finish_loading():
-	var scene = ResourceLoader.load_threaded_get(target_scene)
-	get_tree().change_scene_to_packed(scene)
+func hide_overlay():
+	if not active:
+		return
+	active = false
+	target_scene = ""
 	anim.play("fade_out")
 	await anim.animation_finished
 	hide()
+
+func load_scene(path: String):
+	target_scene = path
+	show_overlay()
+	ResourceLoader.load_threaded_request(path)
+	while true:
+		var status = ResourceLoader.load_threaded_get_status(path)
+		if status == ResourceLoader.THREAD_LOAD_LOADED:
+			break
+		elif status == ResourceLoader.THREAD_LOAD_FAILED:
+			push_error("LoadingScreen: failed to load " + path)
+			hide_overlay()
+			return
+		await get_tree().process_frame
+	var scene = ResourceLoader.load_threaded_get(path)
+	get_tree().change_scene_to_packed(scene)
+	await hide_overlay()

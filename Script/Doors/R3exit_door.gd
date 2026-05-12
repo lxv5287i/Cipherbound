@@ -17,11 +17,9 @@ var transferring := false
 var coder_in_range := false
 var analyst_in_range := false
 
-
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
-
 	label.visible = false
 
 	if closed_texture:
@@ -31,39 +29,31 @@ func _ready():
 	if progress:
 		if not progress.both_solved.is_connected(open_door):
 			progress.both_solved.connect(open_door)
-
+		if progress.analyst_done and progress.coder_done:
+			open_door()
 
 func open_door():
 	door_open = true
-
 	if open_texture:
 		sprite.texture = open_texture
-
 	print("Room 3 exit door opened")
-
+	update_door_state()
 
 func _on_body_entered(body):
 	if transferring:
 		return
-
 	if body.name == "CoderPlayer":
 		coder_in_range = true
-
 	if body.name == "AnalystPlayer":
 		analyst_in_range = true
-
 	update_door_state()
-
 
 func _on_body_exited(body):
 	if body.name == "CoderPlayer":
 		coder_in_range = false
-
 	if body.name == "AnalystPlayer":
 		analyst_in_range = false
-
 	update_door_state()
-
 
 func update_door_state():
 	if transferring:
@@ -71,33 +61,29 @@ func update_door_state():
 
 	if not coder_in_range and not analyst_in_range:
 		label.visible = false
-
 		if door_open:
 			if open_texture:
 				sprite.texture = open_texture
 		else:
 			if closed_texture:
 				sprite.texture = closed_texture
-
 		return
 
 	label.visible = true
 
 	if not door_open:
 		label.text = locked_text
-
 		if closed_inrange_texture:
 			sprite.texture = closed_inrange_texture
-
 		return
 
 	if coder_in_range and analyst_in_range:
 		label.text = open_text
-
 		if open_inrange_texture:
 			sprite.texture = open_inrange_texture
 
 		transferring = true
+		LoadingScreen.show_overlay()
 
 		var progress = get_tree().get_first_node_in_group("game_progress")
 		if progress:
@@ -106,10 +92,8 @@ func update_door_state():
 		var main = get_tree().get_first_node_in_group("split_screen_main")
 		if main:
 			main.call_deferred("go_to_lobby")
-
 		return
 
 	label.text = waiting_text
-
 	if open_inrange_texture:
 		sprite.texture = open_inrange_texture

@@ -13,11 +13,12 @@ extends Control
 
 @onready var pause_menu = $PauseMenu
 @onready var timer_label: Label = $HUD/TimerLabel
+@onready var congratulation = $Congratulation
 
 func _ready():
 	add_to_group("split_screen_main")
-	get_tree().paused = false        
-	GameLock.movement_locked = false  
+	get_tree().paused = false
+	GameLock.movement_locked = false
 	use_split_screen()
 	GameTimer.start()
 
@@ -35,13 +36,12 @@ func use_shared_screen():
 func _process(_delta):
 	if timer_label:
 		timer_label.text = GameTimer.get_formatted()
-
 	if Input.is_action_just_pressed("ui_cancel"):
 		_toggle_pause()
 
 func _toggle_pause():
 	if pause_menu.visible:
-		pause_menu.close()      # resume_timer now happens inside close()
+		pause_menu.close()
 	else:
 		pause_menu.open()
 		GameTimer.pause_timer()
@@ -51,7 +51,7 @@ func _on_pause_pressed() -> void:
 
 func go_to_lobby():
 	print("Changing to lobby")
-	change_shared_room("res://Scenes/Lobby.tscn")
+	change_shared_room("res://Scenes/Lobby.tscn", 1.2)
 
 func go_to_room3():
 	var progress = get_tree().get_first_node_in_group("game_progress")
@@ -72,11 +72,31 @@ func go_to_room5():
 	change_shared_room("res://Scenes/room5.tscn")
 
 func game_complete():
+	LoadingScreen.active = false
+	LoadingScreen.hide()
+	GameProgress.lock_all_rooms()
 	GameTimer.stop()
 	GameTimer.save_score()
-	get_tree().change_scene_to_file("res://Scenes/MAIN UI/mainMenu.tscn")
+	GameLock.movement_locked = true
+	congratulation.open()
 
-func change_shared_room(room_path: String):
+func change_shared_room(room_path: String, min_loading_time: float = 0.3):
+	if not LoadingScreen.active:
+		LoadingScreen.show_overlay()
+
+	await get_tree().process_frame
+
+	ResourceLoader.load_threaded_request(room_path)
+	while true:
+		var status = ResourceLoader.load_threaded_get_status(room_path)
+		if status == ResourceLoader.THREAD_LOAD_LOADED:
+			break
+		elif status == ResourceLoader.THREAD_LOAD_FAILED:
+			push_error("Failed to load: " + room_path)
+			LoadingScreen.hide_overlay()
+			return
+		await get_tree().process_frame
+
 	use_shared_screen()
 	move_players_to_shared_world()
 
@@ -84,7 +104,9 @@ func change_shared_room(room_path: String):
 		if child != shared_camera and child != coder_player and child != analyst_player:
 			child.queue_free()
 
-	var new_room = load(room_path).instantiate()
+	await get_tree().process_frame
+
+	var new_room = ResourceLoader.load_threaded_get(room_path).instantiate()
 	shared_world.add_child(new_room)
 	shared_world.move_child(new_room, 0)
 
@@ -93,9 +115,12 @@ func change_shared_room(room_path: String):
 
 	if coder_spawn == null or analyst_spawn == null:
 		push_error("Spawn points not found in: " + room_path)
+		LoadingScreen.hide_overlay()
 		return
 
 	place_players(coder_spawn.global_position, analyst_spawn.global_position)
+	await get_tree().create_timer(min_loading_time).timeout
+	LoadingScreen.hide_overlay()
 
 func move_players_to_shared_world():
 	if coder_player.get_parent() != shared_world:
