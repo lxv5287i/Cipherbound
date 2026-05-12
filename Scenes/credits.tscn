@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://2ojoslewln26"]
+
+[ext_resource type="Texture2D" uid="uid://clb5gg2aixfxo" path="res://World/credits.png" id="1_1bamb"]
+[ext_resource type="Script" uid="uid://c18akxekky51y" path="res://Script/credits.gd" id="1_xelri"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://World/Buttons/x.png" id="2_xelri"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://World/Buttons/x_pressed.png" id="3_uah1q"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://World/Buttons/x_hovered.png" id="4_7emq5"]
+
+[node name="Credits" type="CanvasLayer" unique_id=531993239]
+script = ExtResource("1_xelri")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1876448800]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.69411767)
+
+[node name="PanelContainer" type="Control" parent="." unique_id=1213410629]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bg" type="TextureRect" parent="PanelContainer" unique_id=535565546]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1bamb")
+
+[node name="Cancel" type="TextureButton" parent="PanelContainer" unique_id=731444529]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture_normal = ExtResource("2_xelri")
+texture_pressed = ExtResource("3_uah1q")
+texture_hover = ExtResource("4_7emq5")
+
+[connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]

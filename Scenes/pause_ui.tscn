@@ -72,10 +72,10 @@ texture_hover = ExtResource("8_043jw")
 
 [node name="TeamLabel" type="Label" parent="PanelContainer" unique_id=78540573]
 layout_mode = 0
-offset_left = 269.0
-offset_top = 118.0
-offset_right = 309.0
-offset_bottom = 141.0
+offset_left = 270.0
+offset_top = 117.0
+offset_right = 310.0
+offset_bottom = 140.0
 text = "-"
 label_settings = ExtResource("9_ipnwg")
 

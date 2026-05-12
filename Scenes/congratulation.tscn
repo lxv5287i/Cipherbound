@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cr455csc5de3r"]
+
+[ext_resource type="Script" uid="uid://cdwnmlumf3foh" path="res://Script/congratulation.gd" id="1_ulro0"]
+[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://World/Buttons/quitToMenu.png" id="2_i0n60"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://World/Buttons/quitToMenu_pressed.png" id="3_3elxb"]
+[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://World/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
+
+[node name="Congratulation" type="CanvasLayer" unique_id=825101189]
+script = ExtResource("1_ulro0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=955553399]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.69411767)
+
+[node name="PanelContainer" type="Control" parent="." unique_id=495138283]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Quit to Menu" type="TextureButton" parent="PanelContainer" unique_id=1014766213]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 232.0
+offset_right = 368.0
+offset_bottom = 272.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_i0n60")
+texture_pressed = ExtResource("3_3elxb")
+texture_hover = ExtResource("4_sudjp")
+
+[connection signal="pressed" from="PanelContainer/Quit to Menu" to="." method="_on_quit_to_menu_pressed"]

@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://ds034udoqe4su" path="res://Scenes/char_info.tscn" id="18_6gd6s"]
 [ext_resource type="PackedScene" uid="uid://opygfsrpi55u" path="res://Scenes/team_name.tscn" id="19_3isct"]
 [ext_resource type="PackedScene" uid="uid://crvyxwuv0yw5v" path="res://Scenes/leaderboard.tscn" id="20_3isct"]
+[ext_resource type="PackedScene" uid="uid://2ojoslewln26" path="res://Scenes/credits.tscn" id="21_5r2fg"]
 
 [node name="MainMenu" type="Node2D" unique_id=701179138]
 script = ExtResource("1_o4oiv")
@@ -130,6 +131,8 @@ metadata/_edit_use_anchors_ = true
 [node name="teamName" parent="." unique_id=1011824385 instance=ExtResource("19_3isct")]
 
 [node name="Leaderboard" parent="." unique_id=282360567 instance=ExtResource("20_3isct")]
+
+[node name="Credits" parent="." unique_id=531993239 instance=ExtResource("21_5r2fg")]
 
 [connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ButtonManager/Credits" to="." method="_on_credits_pressed"]
