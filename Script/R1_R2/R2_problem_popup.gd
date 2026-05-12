@@ -128,10 +128,12 @@ func open_explanation_only():
 
 	question_label.text = """energy = 135
 
-Each battery stores 60 energy units.
+Each battery stores 60 energy 
+units.
 
 135 / 60 = 2 full batteries
-135 % 60 = 15 remaining energy
+135 % 60 = 15 remaining 
+energy
 
 Completed logic:
 

@@ -8,9 +8,7 @@ extends Area2D
 
 @onready var popup_panel: Panel = $CoderPopup/Panel
 
-@onready var code_scroll: ScrollContainer = $CoderPopup/Panel/VBoxContainer/CodeScroll
-@onready var code_label: RichTextLabel = $CoderPopup/Panel/VBoxContainer/CodeScroll/CodeLabel
-
+@onready var code_label: RichTextLabel = $CoderPopup/Panel/CodeLabel
 @onready var explanation_label: RichTextLabel = $CoderPopup/Panel/RichTextLabel
 
 @onready var grid_container: GridContainer = $CoderPopup/Panel/GridContainer
@@ -111,7 +109,6 @@ func open_popup():
 	popup_panel.visible = true
 	GameLock.movement_locked = true
 
-	code_scroll.visible = true
 	code_label.visible = true
 	explanation_label.visible = false
 
@@ -165,6 +162,23 @@ func clean_text(value: String) -> String:
 
 
 func _on_submit_pressed():
+	if clean_text(ans1.text) == "" \
+	and clean_text(ans2.text) == "" \
+	and clean_text(ans3.text) == "" \
+	and clean_text(ans4.text) == "" \
+	and clean_text(ans5.text) == "" \
+	and clean_text(ans6.text) == "" \
+	and clean_text(ans7.text) == "" \
+	and clean_text(ans8.text) == "" \
+	and clean_text(ans9.text) == "" \
+	and clean_text(ans10.text) == "" \
+	and clean_text(ans11.text) == "" \
+	and clean_text(ans12.text) == "":
+		result_label.visible = true
+		result_label.text = "Please input answer"
+		ans1.grab_focus()
+		return
+
 	var correct := true
 	var error_text := ""
 
@@ -221,7 +235,6 @@ func open_explanation_only():
 
 
 func show_explanation_only():
-	code_scroll.visible = false
 	code_label.visible = false
 	explanation_label.visible = true
 
