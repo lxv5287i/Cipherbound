@@ -1,9 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://j3iho06b8dbq"]
-
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="1_vrjoc"]
-
-[resource]
-font = ExtResource("1_vrjoc")
-font_size = 15
-outline_size = 2
-outline_color = Color(0, 0, 0, 1)

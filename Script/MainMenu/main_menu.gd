@@ -5,6 +5,7 @@ extends Node2D
 @onready var team_name_popup = $teamName 
 @onready var leeaderboard = $Leaderboard 
 @onready var credits = $Credits
+@onready var tutorial_info = $tutorial_info
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,3 +43,7 @@ func _on_exit_pressed() -> void:
 
 func open_char_info():
 	char_info.open()
+
+
+func _on_tutorial_pressed() -> void:
+	tutorial_info.open()

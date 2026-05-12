@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://ukv5ff3g3lq8"]
+
+[ext_resource type="Script" uid="uid://bdurt1rntws7h" path="res://split_screen_main.gd" id="1_2bvto"]
+[ext_resource type="Texture2D" uid="uid://u1717sykn1bg" path="res://User Interface/Buttons/pause.png" id="2_sw7fr"]
+[ext_resource type="PackedScene" uid="uid://c5t6av2t1ng7s" path="res://Scenes/Rooms/room1.tscn" id="3_f5yf0"]
+[ext_resource type="Texture2D" uid="uid://cmwjaws35m5iy" path="res://User Interface/Buttons/pause_pressed.png" id="3_w5uyl"]
+[ext_resource type="Texture2D" uid="uid://bjwg6yxxsaqi3" path="res://User Interface/Buttons/pause_hovered.png" id="4_4u5vd"]
+[ext_resource type="Script" uid="uid://cebkgd01i4aem" path="res://coder_camera.gd" id="4_sw7fr"]
+[ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Assets/Characters/Coder/coder_player.tscn" id="5_w5uyl"]
+[ext_resource type="PackedScene" uid="uid://b6sl64d5fpfc" path="res://Scenes/Rooms/room2.tscn" id="6_4u5vd"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://User Interface/Buttons/quitToMenu_pressed.png" id="6_ftovv"]
+[ext_resource type="Script" uid="uid://db0syds1krm8t" path="res://analyst_camera.gd" id="7_ftovv"]
+[ext_resource type="LabelSettings" uid="uid://dyainmr88vpag" path="res://Assets/Fonts/PopupFont.tres" id="7_vtvcs"]
+[ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Assets/Characters/Analyst/analyst_player.tscn" id="8_vtvcs"]
+[ext_resource type="PackedScene" uid="uid://k5ppokrlrys7" path="res://Scenes/Rooms/Lobby.tscn" id="9_43xyp"]
+[ext_resource type="Script" uid="uid://c8qts7423n2wj" path="res://shared_camera.gd" id="10_5qox4"]
+[ext_resource type="PackedScene" uid="uid://c80tbjtbvvlha" path="res://Scenes/Utility/pause_ui.tscn" id="11_wpldl"]
+[ext_resource type="PackedScene" uid="uid://cr455csc5de3r" path="res://Scenes/Utility/congratulation.tscn" id="16_ftovv"]
+
+[node name="SplitScreenMain" type="Control" unique_id=801453013]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = -2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2bvto")
+
+[node name="PauseMenu" parent="." unique_id=2094932446 instance=ExtResource("11_wpldl")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1624996222]
+
+[node name="Pause" type="TextureButton" parent="HUD" unique_id=1157600553]
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 164.0
+offset_bottom = 46.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_sw7fr")
+texture_pressed = ExtResource("3_w5uyl")
+texture_hover = ExtResource("4_4u5vd")
+texture_disabled = ExtResource("6_ftovv")
+
+[node name="TimerLabel" type="Label" parent="HUD" unique_id=108222098]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = 5.0
+offset_right = 93.0
+offset_bottom = 28.0
+grow_horizontal = 2
+text = "This is where timer is located"
+label_settings = ExtResource("7_vtvcs")
+horizontal_alignment = 1
+
+[node name="SplitContainer" type="HBoxContainer" parent="." unique_id=1030092439]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="CoderViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1225091618]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="CoderViewport" type="SubViewport" parent="SplitContainer/CoderViewContainer" unique_id=2099657381]
+handle_input_locally = false
+size = Vector2i(252, 352)
+render_target_update_mode = 4
+
+[node name="CoderWorld" type="Node2D" parent="SplitContainer/CoderViewContainer/CoderViewport" unique_id=1404168340]
+
+[node name="Room1" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=822085381 instance=ExtResource("3_f5yf0")]
+
+[node name="CoderCamera" type="Camera2D" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1104504483 node_paths=PackedStringArray("target")]
+texture_filter = 1
+position = Vector2(256, 176)
+script = ExtResource("4_sw7fr")
+target = NodePath("../CoderPlayer")
+
+[node name="CoderPlayer" parent="SplitContainer/CoderViewContainer/CoderViewport/CoderWorld" unique_id=1699527945 instance=ExtResource("5_w5uyl")]
+z_index = 5
+position = Vector2(338, 343)
+
+[node name="Divider" type="ColorRect" parent="SplitContainer" unique_id=1627566854]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnalystViewContainer" type="SubViewportContainer" parent="SplitContainer" unique_id=1789114351]
+texture_filter = 1
+custom_minimum_size = Vector2(256, 352)
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="AnalystViewport" type="SubViewport" parent="SplitContainer/AnalystViewContainer" unique_id=108729704]
+handle_input_locally = false
+size = Vector2i(256, 352)
+render_target_update_mode = 4
+
+[node name="AnalystWorld" type="Node2D" parent="SplitContainer/AnalystViewContainer/AnalystViewport" unique_id=51533325]
+
+[node name="Room2" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=146614346 instance=ExtResource("6_4u5vd")]
+
+[node name="AnalystCamera" type="Camera2D" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=687167008 node_paths=PackedStringArray("target")]
+texture_filter = 1
+position = Vector2(100, 176)
+script = ExtResource("7_ftovv")
+target = NodePath("../AnalystPlayer")
+
+[node name="AnalystPlayer" parent="SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld" unique_id=2004721522 instance=ExtResource("8_vtvcs")]
+z_index = 5
+position = Vector2(194, 343)
+
+[node name="SharedViewContainer" type="SubViewportContainer" parent="." unique_id=1905845002]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SharedViewport" type="SubViewport" parent="SharedViewContainer" unique_id=1016326554]
+handle_input_locally = false
+size = Vector2i(512, 352)
+render_target_update_mode = 4
+
+[node name="SharedWorld" type="Node2D" parent="SharedViewContainer/SharedViewport" unique_id=1599340501]
+
+[node name="Lobby" parent="SharedViewContainer/SharedViewport/SharedWorld" unique_id=179727676 instance=ExtResource("9_43xyp")]
+
+[node name="SharedCamera" type="Camera2D" parent="SharedViewContainer/SharedViewport/SharedWorld" unique_id=1212806850 node_paths=PackedStringArray("player_1", "player_2")]
+position = Vector2(256, 176)
+script = ExtResource("10_5qox4")
+player_1 = NodePath("../../../../SplitContainer/CoderViewContainer/CoderViewport/CoderWorld/CoderPlayer")
+player_2 = NodePath("../../../../SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer")
+
+[node name="Congratulation" parent="." unique_id=825101189 instance=ExtResource("16_ftovv")]
+
+[connection signal="pressed" from="HUD/Pause" to="." method="_on_pause_pressed"]

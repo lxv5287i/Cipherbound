@@ -1,0 +1,1434 @@
+[gd_scene format=4 uid="uid://cgy8d6o80xk5x"]
+
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_x3cab"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://bcd1gspxao47s" path="res://Assets/World/Objects/R5_Obejcts.png" id="3_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://cpha6rpp3t8db" path="res://Assets/Interactables/R5/inheritancePanel.png" id="6_idjqp"]
+[ext_resource type="Script" uid="uid://dx8j6uunr7jb1" path="res://Script/Rooms/R5/analyst_board.gd" id="6_nk5kx"]
+[ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="7_mlspx"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_3g6xh"]
+[ext_resource type="Texture2D" uid="uid://b71bu6nbgidcn" path="res://Assets/Interactables/R5/repairTerminal.png" id="8_6p5ga"]
+[ext_resource type="Texture2D" uid="uid://myybn5st2pyb" path="res://Assets/Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
+[ext_resource type="Script" uid="uid://dt6xyw12jpobu" path="res://Script/Rooms/R5/coder_terminal.gd" id="8_t37p4"]
+[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="9_cttw5"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
+[ext_resource type="Texture2D" uid="uid://c2wagaq5bhtgq" path="res://Assets/Interactables/R5/statusMonitor.png" id="11_3p68e"]
+[ext_resource type="Script" uid="uid://ghi0br4uuw5f" path="res://Script/Rooms/R5/drone_robot.gd" id="11_gr3ss"]
+[ext_resource type="Texture2D" uid="uid://csioq6jboos4w" path="res://Assets/Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
+[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://User Interface/Buttons/submitButton.png" id="14_kmav1"]
+[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://User Interface/Buttons/submitBTN_pressed.png" id="15_2g4yd"]
+[ext_resource type="Texture2D" uid="uid://bu265yif8fl24" path="res://Assets/Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
+[ext_resource type="Texture2D" uid="uid://b2k0fl82rbwxx" path="res://Assets/Interactables/R5/computerHint.png" id="16_gshci"]
+[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://User Interface/Buttons/submitBTN_hovered.png" id="16_mlspx"]
+[ext_resource type="Script" uid="uid://dokatutmbrne1" path="res://Script/Rooms/R5/computer_hint.gd" id="16_xusyf"]
+[ext_resource type="Texture2D" uid="uid://dpcom1jqp415j" path="res://Assets/Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
+[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://User Interface/Buttons/closeButton.png" id="18_mlspx"]
+[ext_resource type="Script" uid="uid://dqla2vtotbo2i" path="res://Script/Rooms/R5/computer_hint_popup.gd" id="19_4mq8d"]
+[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://User Interface/Buttons/closeBTN_pressed.png" id="19_fv1an"]
+[ext_resource type="LabelSettings" uid="uid://ct60fidahgv05" path="res://Assets/World/Font/16FONT.tres" id="20_mlspx"]
+[ext_resource type="Script" uid="uid://2prrbj308nkf" path="res://Script/Doors/R5exit_door.gd" id="20_tvxs7"]
+[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://User Interface/Buttons/closeBTN_hovered.png" id="20_yqdhs"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="22_440xx"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="23_gmluh"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="23_qa7lu"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
+[ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="29_cttw5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0oo0"]
+texture = ExtResource("1_x3cab")
+1:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nejvw"]
+sources/0 = SubResource("TileSetAtlasSource_w0oo0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ltqot"]
+texture = ExtResource("1_x3cab")
+1:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gmluh"]
+sources/0 = SubResource("TileSetAtlasSource_ltqot")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_idjqp"]
+texture = ExtResource("2_u2i1c")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+18:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+23:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+16:2/0 = 0
+18:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+23:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+16:4/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+1:11/0 = 0
+1:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:11/0 = 0
+2:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:11/0 = 0
+3:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:11/0 = 0
+4:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:11/0 = 0
+5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:12/0 = 0
+1:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:12/0 = 0
+2:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:12/0 = 0
+3:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:12/0 = 0
+4:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:12/0 = 0
+5:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+1:13/0 = 0
+1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:13/0 = 0
+2:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:13/0 = 0
+3:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:13/0 = 0
+4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:13/0 = 0
+5:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+1:14/0 = 0
+1:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+5:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+10:16/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+18:13/0 = 0
+18:14/0 = 0
+18:15/0 = 0
+17:15/0 = 0
+22:12/0 = 0
+22:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+21:13/0 = 0
+21:14/0 = 0
+21:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+20:15/0 = 0
+19:16/0 = 0
+22:13/0 = 0
+22:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+22:14/0 = 0
+22:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+22:15/0 = 0
+21:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nk5kx"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_idjqp")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2i1c"]
+texture = ExtResource("3_u2i1c")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/z_index = -2
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/z_index = -2
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/z_index = -2
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/z_index = -2
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/z_index = -2
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/z_index = -2
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/z_index = -2
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/z_index = -2
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/z_index = -2
+2:3/0 = 0
+2:3/0/z_index = -2
+3:3/0 = 0
+3:3/0/z_index = -2
+4:3/0 = 0
+4:3/0/z_index = -2
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/z_index = -2
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/z_index = -2
+2:4/0 = 0
+2:4/0/z_index = -2
+3:4/0 = 0
+3:4/0/z_index = -2
+4:4/0 = 0
+4:4/0/z_index = -2
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/z_index = -2
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/z_index = -2
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/z_index = -2
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/z_index = -2
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:7/0 = 0
+2:7/0/z_index = -2
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:7/0 = 0
+3:7/0/z_index = -2
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:7/0 = 0
+4:7/0/z_index = -2
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:7/0 = 0
+5:7/0/z_index = -2
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:7/0 = 0
+6:7/0/z_index = -2
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:7/0 = 0
+7:7/0/z_index = -2
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+0:8/0/z_index = -2
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:8/0 = 0
+1:8/0/z_index = -2
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+4:8/0/z_index = -2
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:10/0 = 0
+2:10/0/z_index = -2
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:10/0 = 0
+3:10/0/z_index = -2
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:10/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+5:9/0/z_index = -2
+6:9/0 = 0
+6:9/0/z_index = -2
+7:8/0 = 0
+6:8/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+0:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+5:10/0 = 0
+5:10/0/z_index = -2
+6:10/0 = 0
+6:10/0/z_index = -2
+7:9/0 = 0
+7:10/0 = 0
+7:5/0 = 0
+7:4/0 = 0
+7:4/0/z_index = -2
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:2/0 = 0
+7:2/0/z_index = -2
+7:1/0 = 0
+7:0/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+12:2/0 = 0
+11:2/0 = 0
+10:2/0 = 0
+10:2/0/z_index = -2
+8:4/0 = 0
+8:4/0/z_index = -2
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/z_index = -2
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:5/0 = 0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:4/0 = 0
+12:4/0 = 0
+9:2/0 = 0
+9:2/0/z_index = -2
+8:2/0 = 0
+8:2/0/z_index = -2
+12:1/0 = 0
+11:0/0 = 0
+10:0/0 = 0
+10:1/0 = 0
+9:1/0 = 0
+11:1/0 = 0
+9:0/0 = 0
+8:1/0 = 0
+13:1/0 = 0
+12:0/0 = 0
+8:0/0 = 0
+13:2/0 = 0
+13:3/0 = 0
+13:0/0 = 0
+10:6/0 = 0
+10:6/0/z_index = -2
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:6/0 = 0
+12:6/0 = 0
+13:5/0 = 0
+13:4/0 = 0
+10:4/0 = 0
+10:4/0/z_index = -2
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/z_index = -2
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:5/0 = 0
+9:6/0 = 0
+9:6/0/z_index = -2
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/z_index = -2
+13:6/0 = 0
+12:5/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+13:7/0 = 0
+12:7/0 = 0
+11:7/0 = 0
+10:7/0 = 0
+9:7/0 = 0
+8:7/0 = 0
+8:7/0/z_index = -2
+12:9/0 = 0
+13:9/0 = 0
+11:9/0 = 0
+10:9/0 = 0
+9:9/0 = 0
+8:9/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+10:10/0 = 0
+9:10/0 = 0
+8:10/0 = 0
+13:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_w0oo0"]
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_u2i1c")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idjqp"]
+size = Vector2(28, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kmav1"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("9_cttw5")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mlspx"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("10_fv1an")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fv1an"]
+line_spacing = 1.0
+paragraph_spacing = 3.0
+font = ExtResource("10_fv1an")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gr3ss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p5ga"]
+size = Vector2(12, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17isa"]
+size = Vector2(42.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qryu6"]
+size = Vector2(29, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xusyf"]
+size = Vector2(30, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gshci"]
+size = Vector2(28, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmav1"]
+size = Vector2(29, 20)
+
+[node name="Room5" type="Node2D" unique_id=642504826]
+position = Vector2(48, 48)
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=1976770991]
+position = Vector2(-432, -304)
+tile_map_data = PackedByteArray("AAAbABMAAAAHAAYAAAAbABQAAAAGAAYAAAAbABUAAAAHAAYAAAAbABYAAAAIAAYAAAAbABcAAAAHAAYAAAAbABgAAAAGAAYAAAAbABkAAAAGAAYAAAAbABoAAAAHAAYAAAAbABsAAAAGAAYAAAAbABwAAAAIAAYAAAAbAB0AAAAIAAYAAAAbAB4AAAAHAAYAAAAbAB8AAAAIAAYAAAAbACAAAAAIAAYAAAAbACEAAAAGAAYAAAAbACIAAAAHAAYAAAAcABMAAAAIAAYAAAAcABQAAAAHAAYAAAAcABUAAAAHAAYAAAAcABYAAAAHAAYAAAAcABcAAAAIAAYAAAAcABgAAAAIAAYAAAAcABkAAAAHAAYAAAAcABoAAAAHAAYAAAAcABsAAAAGAAYAAAAcABwAAAAGAAYAAAAcAB0AAAAIAAYAAAAcAB4AAAAHAAYAAAAcAB8AAAAGAAYAAAAcACAAAAAIAAYAAAAcACEAAAAGAAYAAAAcACIAAAAIAAYAAAAdABMAAAAGAAYAAAAdABQAAAAGAAYAAAAdABUAAAAHAAcAAAAdABYAAAAGAAYAAAAdABcAAAAGAAYAAAAdABgAAAAHAAYAAAAdABkAAAAHAAYAAAAdABoAAAAIAAYAAAAdABsAAAAHAAcAAAAdABwAAAAIAAYAAAAdAB0AAAAHAAYAAAAdAB4AAAAGAAYAAAAdAB8AAAAHAAYAAAAdACAAAAAIAAYAAAAdACEAAAAHAAcAAAAdACIAAAAIAAYAAAAeABMAAAAGAAYAAAAeABQAAAAGAAYAAAAeABUAAAAIAAYAAAAeABYAAAAGAAYAAAAeABcAAAAHAAYAAAAeABgAAAAGAAYAAAAeABkAAAAIAAYAAAAeABoAAAAGAAYAAAAeABsAAAAIAAcAAAAeABwAAAAGAAYAAAAeAB0AAAAIAAYAAAAeAB4AAAAIAAcAAAAeAB8AAAAGAAYAAAAeACAAAAAIAAYAAAAeACEAAAAIAAYAAAAeACIAAAAHAAYAAAAfABMAAAAIAAYAAAAfABQAAAAGAAYAAAAfABUAAAAHAAYAAAAfABYAAAAHAAYAAAAfABcAAAAGAAYAAAAfABgAAAAGAAYAAAAfABkAAAAHAAYAAAAfABoAAAAGAAYAAAAfABsAAAAGAAYAAAAfABwAAAAHAAYAAAAfAB0AAAAHAAYAAAAfAB4AAAAHAAYAAAAfAB8AAAAHAAYAAAAfACAAAAAGAAYAAAAfACEAAAAGAAYAAAAfACIAAAAIAAYAAAAgABMAAAAHAAYAAAAgABQAAAAGAAYAAAAgABUAAAAGAAYAAAAgABYAAAAHAAYAAAAgABcAAAAGAAYAAAAgABgAAAAGAAYAAAAgABkAAAAIAAYAAAAgABoAAAAGAAYAAAAgABsAAAAGAAYAAAAgABwAAAAHAAYAAAAgAB0AAAAHAAYAAAAgAB4AAAAHAAYAAAAgAB8AAAAGAAYAAAAgACAAAAAIAAYAAAAgACEAAAAIAAYAAAAgACIAAAAHAAYAAAAhABMAAAAIAAYAAAAhABQAAAAGAAYAAAAhABUAAAAHAAYAAAAhABYAAAAGAAYAAAAhABcAAAAHAAYAAAAhABgAAAAHAAYAAAAhABkAAAAIAAcAAAAhABoAAAAIAAYAAAAhABsAAAAIAAYAAAAhABwAAAAHAAYAAAAhAB0AAAAHAAYAAAAhAB4AAAAHAAcAAAAhAB8AAAAGAAYAAAAhACAAAAAGAAYAAAAhACEAAAAIAAYAAAAhACIAAAAGAAYAAAAiABMAAAAGAAYAAAAiABQAAAAIAAYAAAAiABUAAAAIAAYAAAAiABYAAAAIAAYAAAAiABcAAAAIAAYAAAAiABgAAAAIAAYAAAAiABkAAAAHAAYAAAAiABoAAAAIAAYAAAAiABsAAAAGAAYAAAAiABwAAAAHAAYAAAAiAB0AAAAGAAYAAAAiAB4AAAAHAAYAAAAiAB8AAAAIAAYAAAAiACAAAAAHAAcAAAAiACEAAAAHAAYAAAAiACIAAAAGAAYAAAAjABMAAAAGAAYAAAAjABQAAAAHAAYAAAAjABUAAAAHAAYAAAAjABYAAAAIAAYAAAAjABcAAAAIAAYAAAAjABgAAAAGAAYAAAAjABkAAAAHAAYAAAAjABoAAAAGAAYAAAAjABsAAAAGAAYAAAAjABwAAAAGAAYAAAAjAB0AAAAHAAYAAAAjAB4AAAAHAAYAAAAjAB8AAAAGAAYAAAAjACAAAAAGAAYAAAAjACEAAAAHAAYAAAAjACIAAAAIAAYAAAAkABMAAAAIAAYAAAAkABQAAAAHAAYAAAAkABUAAAAHAAYAAAAkABYAAAAHAAYAAAAkABcAAAAHAAcAAAAkABgAAAAGAAYAAAAkABkAAAAHAAYAAAAkABoAAAAGAAYAAAAkABsAAAAHAAYAAAAkABwAAAAHAAYAAAAkAB0AAAAGAAYAAAAkAB4AAAAIAAYAAAAkAB8AAAAHAAYAAAAkACAAAAAIAAYAAAAkACEAAAAHAAYAAAAkACIAAAAGAAYAAAAlABMAAAAGAAYAAAAlABQAAAAHAAYAAAAlABUAAAAIAAYAAAAlABYAAAAHAAYAAAAlABcAAAAGAAYAAAAlABgAAAAHAAYAAAAlABkAAAAHAAYAAAAlABoAAAAHAAYAAAAlABsAAAAHAAYAAAAlABwAAAAGAAYAAAAlAB0AAAAIAAYAAAAlAB4AAAAHAAYAAAAlAB8AAAAHAAYAAAAlACAAAAAGAAYAAAAlACEAAAAIAAYAAAAlACIAAAAHAAYAAAAmABMAAAAHAAYAAAAmABQAAAAGAAYAAAAmABUAAAAIAAYAAAAmABYAAAAIAAYAAAAmABcAAAAHAAYAAAAmABgAAAAHAAYAAAAmABkAAAAIAAcAAAAmABoAAAAIAAYAAAAmABsAAAAIAAYAAAAmABwAAAAGAAYAAAAmAB0AAAAHAAcAAAAmAB4AAAAHAAYAAAAmAB8AAAAGAAYAAAAmACAAAAAGAAYAAAAmACEAAAAGAAYAAAAmACIAAAAGAAYAAAAnABMAAAAHAAYAAAAnABQAAAAHAAYAAAAnABUAAAAGAAYAAAAnABYAAAAIAAYAAAAnABcAAAAGAAYAAAAnABgAAAAHAAYAAAAnABkAAAAGAAYAAAAnABoAAAAGAAYAAAAnABsAAAAHAAYAAAAnABwAAAAGAAYAAAAnAB0AAAAIAAYAAAAnAB4AAAAIAAYAAAAnAB8AAAAHAAYAAAAnACAAAAAIAAYAAAAnACEAAAAIAAYAAAAnACIAAAAIAAYAAAAoABMAAAAGAAYAAAAoABQAAAAGAAYAAAAoABUAAAAGAAYAAAAoABYAAAAIAAYAAAAoABcAAAAGAAYAAAAoABgAAAAGAAYAAAAoABkAAAAIAAYAAAAoABoAAAAIAAYAAAAoABsAAAAGAAYAAAAoABwAAAAHAAYAAAAoAB0AAAAHAAYAAAAoAB4AAAAGAAYAAAAoAB8AAAAGAAYAAAAoACAAAAAIAAYAAAAoACEAAAAIAAYAAAAoACIAAAAHAAYAAAApABMAAAAHAAYAAAApABQAAAAHAAYAAAApABUAAAAGAAYAAAApABYAAAAIAAYAAAApABcAAAAHAAYAAAApABgAAAAGAAYAAAApABkAAAAHAAYAAAApABoAAAAIAAYAAAApABsAAAAGAAYAAAApABwAAAAIAAYAAAApAB0AAAAIAAYAAAApAB4AAAAIAAYAAAApAB8AAAAHAAYAAAApACAAAAAIAAYAAAApACEAAAAHAAYAAAApACIAAAAGAAYAAAAqABMAAAAHAAYAAAAqABQAAAAHAAYAAAAqABUAAAAGAAYAAAAqABYAAAAGAAYAAAAqABcAAAAHAAcAAAAqABgAAAAIAAYAAAAqABkAAAAIAAYAAAAqABoAAAAIAAYAAAAqABsAAAAIAAcAAAAqABwAAAAIAAYAAAAqAB0AAAAGAAYAAAAqAB4AAAAGAAYAAAAqAB8AAAAGAAYAAAAqACAAAAAGAAYAAAAqACEAAAAIAAYAAAAqACIAAAAHAAYAAAArABMAAAAHAAYAAAArABQAAAAHAAYAAAArABUAAAAGAAYAAAArABYAAAAGAAYAAAArABcAAAAHAAcAAAArABgAAAAIAAYAAAArABkAAAAHAAcAAAArABoAAAAHAAYAAAArABsAAAAHAAYAAAArABwAAAAGAAYAAAArAB0AAAAIAAYAAAArAB4AAAAHAAYAAAArAB8AAAAIAAYAAAArACAAAAAHAAcAAAArACEAAAAIAAYAAAArACIAAAAIAAYAAAAsABMAAAAHAAYAAAAsABQAAAAHAAYAAAAsABUAAAAGAAYAAAAsABYAAAAIAAYAAAAsABcAAAAHAAYAAAAsABgAAAAIAAcAAAAsABkAAAAGAAYAAAAsABoAAAAGAAYAAAAsABsAAAAHAAYAAAAsABwAAAAHAAYAAAAsAB0AAAAGAAYAAAAsAB4AAAAGAAYAAAAsAB8AAAAGAAYAAAAsACAAAAAGAAYAAAAsACEAAAAIAAYAAAAsACIAAAAGAAYAAAAtABMAAAAIAAYAAAAtABQAAAAGAAYAAAAtABUAAAAHAAcAAAAtABYAAAAHAAYAAAAtABcAAAAIAAcAAAAtABgAAAAGAAYAAAAtABkAAAAHAAcAAAAtABoAAAAIAAYAAAAtABsAAAAHAAYAAAAtABwAAAAGAAYAAAAtAB0AAAAHAAcAAAAtAB4AAAAGAAYAAAAtAB8AAAAIAAYAAAAtACAAAAAIAAYAAAAtACEAAAAIAAYAAAAtACIAAAAHAAYAAAAuABMAAAAGAAYAAAAuABQAAAAIAAYAAAAuABUAAAAHAAYAAAAuABYAAAAHAAYAAAAuABcAAAAIAAYAAAAuABgAAAAGAAYAAAAuABkAAAAGAAYAAAAuABoAAAAIAAYAAAAuABsAAAAGAAYAAAAuABwAAAAHAAYAAAAuAB0AAAAGAAYAAAAuAB4AAAAHAAYAAAAuAB8AAAAGAAYAAAAuACAAAAAGAAYAAAAuACEAAAAIAAcAAAAuACIAAAAHAAYAAAAvABMAAAAGAAYAAAAvABQAAAAHAAYAAAAvABUAAAAHAAYAAAAvABYAAAAGAAYAAAAvABcAAAAIAAYAAAAvABgAAAAIAAYAAAAvABkAAAAHAAYAAAAvABoAAAAIAAYAAAAvABsAAAAGAAYAAAAvABwAAAAHAAYAAAAvAB0AAAAHAAYAAAAvAB4AAAAIAAYAAAAvAB8AAAAGAAYAAAAvACAAAAAGAAYAAAAvACEAAAAIAAYAAAAvACIAAAAGAAYAAAAwABMAAAAIAAYAAAAwABQAAAAIAAYAAAAwABUAAAAIAAcAAAAwABYAAAAIAAYAAAAwABcAAAAGAAYAAAAwABgAAAAGAAYAAAAwABkAAAAIAAYAAAAwABoAAAAHAAYAAAAwABsAAAAHAAYAAAAwABwAAAAHAAYAAAAwAB0AAAAGAAYAAAAwAB4AAAAIAAYAAAAwAB8AAAAIAAYAAAAwACAAAAAHAAYAAAAwACEAAAAIAAYAAAAwACIAAAAIAAYAAAAxABMAAAAIAAYAAAAxABQAAAAGAAYAAAAxABUAAAAHAAYAAAAxABYAAAAIAAYAAAAxABcAAAAGAAYAAAAxABgAAAAIAAcAAAAxABkAAAAGAAYAAAAxABoAAAAHAAYAAAAxABsAAAAGAAYAAAAxABwAAAAHAAYAAAAxAB0AAAAIAAcAAAAxAB4AAAAGAAYAAAAxAB8AAAAHAAcAAAAxACAAAAAGAAYAAAAxACEAAAAHAAYAAAAxACIAAAAGAAYAAAAyABMAAAAGAAYAAAAyABQAAAAGAAYAAAAyABUAAAAGAAYAAAAyABYAAAAHAAYAAAAyABcAAAAHAAYAAAAyABgAAAAGAAYAAAAyABkAAAAGAAYAAAAyABoAAAAGAAYAAAAyABsAAAAHAAYAAAAyABwAAAAHAAYAAAAyAB0AAAAIAAYAAAAyAB4AAAAGAAYAAAAyAB8AAAAHAAYAAAAyACAAAAAHAAYAAAAyACEAAAAIAAYAAAAyACIAAAAGAAYAAAAzABMAAAAIAAYAAAAzABQAAAAIAAYAAAAzABUAAAAHAAcAAAAzABYAAAAHAAYAAAAzABcAAAAIAAYAAAAzABgAAAAIAAYAAAAzABkAAAAGAAYAAAAzABoAAAAIAAYAAAAzABsAAAAHAAcAAAAzABwAAAAGAAYAAAAzAB0AAAAGAAYAAAAzAB4AAAAIAAYAAAAzAB8AAAAGAAYAAAAzACAAAAAGAAYAAAAzACEAAAAGAAYAAAAzACIAAAAHAAcAAAA0ABMAAAAIAAYAAAA0ABQAAAAHAAYAAAA0ABUAAAAIAAYAAAA0ABYAAAAIAAYAAAA0ABcAAAAIAAYAAAA0ABgAAAAHAAYAAAA0ABkAAAAIAAYAAAA0ABoAAAAHAAYAAAA0ABsAAAAGAAYAAAA0ABwAAAAGAAYAAAA0AB0AAAAIAAYAAAA0AB4AAAAIAAYAAAA0AB8AAAAIAAYAAAA0ACAAAAAHAAYAAAA0ACEAAAAIAAYAAAA0ACIAAAAIAAYAAAA=")
+tile_set = SubResource("TileSet_nejvw")
+
+[node name="Entrance" type="TileMapLayer" parent="." unique_id=1878646223]
+z_index = 6
+tile_map_data = PackedByteArray("AAAIAA8AAAAGAAoAAAAJAA8AAAAHAAoAAAAKAA8AAAAIAAoAAAANAA8AAAAGAAoAAAAOAA8AAAAHAAoAAAAPAA8AAAAIAAoAAAA=")
+tile_set = SubResource("TileSet_gmluh")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=293847607]
+position = Vector2(-432, -304)
+tile_map_data = PackedByteArray("AAAbABIAAAABAAsAAAAbABMAAAABAAwAAAAbABQAAAABAA0AAAAbABUAAAABAA4AAAAcABIAAAACAAsAAAAcABMAAAACAAwAAAAcABQAAAACAA0AAAAcABUAAAACAA4AAAAdABIAAAADAAsAAAAdABMAAAADAAwAAAAdABQAAAADAA0AAAAdABUAAAADAA4AAAAeABIAAAAEAAsAAAAeABMAAAAEAAwAAAAeABQAAAAEAA0AAAAeABUAAAAEAA4AAAAfABIAAAADAAsAAAAfABMAAAADAAwAAAAfABQAAAADAA0AAAAfABUAAAADAA4AAAAgABIAAAAEAAsAAAAgABMAAAAEAAwAAAAgABQAAAAEAA0AAAAgABUAAAAEAA4AAAAhABIAAAADAAsAAAAhABMAAAADAAwAAAAhABQAAAADAA0AAAAhABUAAAADAA4AAAAiABIAAAAEAAsAAAAiABMAAAAEAAwAAAAiABQAAAAEAA0AAAAiABUAAAAEAA4AAAAjABIAAAADAAsAAAAjABMAAAADAAwAAAAjABQAAAADAA0AAAAjABUAAAADAA4AAAAkABIAAAAEAAsAAAAkABMAAAAEAAwAAAAkABQAAAAEAA0AAAAkABUAAAAEAA4AAAAlABIAAAAEAAsAAAAlABMAAAAEAAwAAAAlABQAAAAEAA0AAAAlABUAAAAEAA4AAAAmABIAAAAFAAsAAAAmABMAAAAFAAwAAAAmABQAAAAFAA0AAAAmABUAAAAFAA4AAAApABIAAAAFAAsAABApABMAAAAFAAwAABApABQAAAAFAA0AABApABUAAAAFAA4AABAqABIAAAAEAAsAABAqABMAAAAEAAwAABAqABQAAAAEAA0AABAqABUAAAAEAA4AABArABIAAAADAAsAAAArABMAAAADAAwAAAArABQAAAADAA0AAAArABUAAAADAA4AAAAsABIAAAAEAAsAAAAsABMAAAAEAAwAAAAsABQAAAAEAA0AAAAsABUAAAAEAA4AAAAtABIAAAADAAsAAAAtABMAAAADAAwAAAAtABQAAAADAA0AAAAtABUAAAADAA4AAAAuABIAAAAEAAsAAAAuABMAAAAEAAwAAAAuABQAAAAEAA0AAAAuABUAAAAEAA4AAAAvABIAAAADAAsAAAAvABMAAAADAAwAAAAvABQAAAADAA0AAAAvABUAAAADAA4AAAAwABIAAAAEAAsAAAAwABMAAAAEAAwAAAAwABQAAAAEAA0AAAAwABUAAAAEAA4AAAAxABIAAAADAAsAAAAxABMAAAADAAwAAAAxABQAAAADAA0AAAAxABUAAAADAA4AAAAyABIAAAADAAsAAAAyABMAAAADAAwAAAAyABQAAAADAA0AAAAyABUAAAADAA4AAAAzABIAAAAEAAsAAAAzABMAAAAEAAwAAAAzABQAAAAEAA0AAAAzABUAAAAEAA4AAAA0ABIAAAAFAAsAAAA0ABMAAAAFAAwAAAA0ABQAAAAFAA0AAAA0ABUAAAAFAA4AAAA1ABIAAAAWAAwAAAAaABIAAAAWAAwAABA1ABMAAAAWAA0AAAA1ABQAAAAWAA0AAAA1ABUAAAAWAA0AAAA1ABYAAAAWAA0AAAA1ABcAAAAWAA0AAAA1ABgAAAAWAA0AAAA1ABkAAAAWAA0AAAA1ABoAAAAWAA0AAAA1ABsAAAAWAA0AAAA1ABwAAAAWAA0AAAA1AB0AAAAWAA0AAAA1AB4AAAAWAA0AAAA1AB8AAAAWAA0AAAA1ACAAAAAWAA0AAAA1ACEAAAAWAA0AAAA1ACIAAAAWAA0AAAA1ACMAAAAWAA4AAAAbACMAAAAVAA4AAAAcACMAAAAVAA4AAAAdACMAAAAVAA4AAAAeACMAAAAVAA4AAAAfACMAAAAVAA4AAAAgACMAAAAVAA4AAAAhACMAAAAVAA4AAAAiACMAAAAVAA4AAAAjACMAAAAVAA4AAAAkACMAAAAVAA4AAAAlACMAAAAVAA4AAAAmACMAAAAVAA4AAAAnACMAAAAVAA4AAAAoACMAAAAVAA4AAAApACMAAAAVAA4AAAAqACMAAAAVAA4AAAArACMAAAAVAA4AAAAsACMAAAAVAA4AAAAtACMAAAAVAA4AAAAuACMAAAAVAA4AAAAvACMAAAAVAA4AAAAwACMAAAAVAA4AAAAxACMAAAAVAA4AAAAyACMAAAAVAA4AAAAzACMAAAAVAA4AAAA0ACMAAAAVAA4AAAAaACMAAAAWAA4AABAaABMAAAAWAA0AABAaABQAAAAWAA0AABAaABUAAAAWAA0AABAaABYAAAAWAA0AABAaABcAAAAWAA0AABAaABgAAAAWAA0AABAaABkAAAAWAA0AABAaABoAAAAWAA0AABAaABsAAAAWAA0AABAaABwAAAAWAA0AABAaAB0AAAAWAA0AABAaAB4AAAAWAA0AABAaAB8AAAAWAA0AABAaACAAAAAWAA0AABAaACEAAAAWAA0AABAaACIAAAAWAA0AABAnABIAAAAWAAwAAAAoABIAAAAWAAwAABAnABMAAAAWAA0AAAAnABQAAAAWAA0AAAAnABUAAAAWAA0AAAAnABYAAAAWAA0AAAAnABcAAAAWAA0AAAAoABMAAAAWAA0AABAoABQAAAAWAA0AABAoABUAAAAWAA0AABAoABYAAAAWAA0AABAoABcAAAAWAA0AABAnABgAAAAVAA0AAAAoABgAAAAVAA0AABAnABkAAAACAAwAAAAnABoAAAACAA0AAAAoABkAAAADAAwAAAAoABoAAAADAA0AAAAnABsAAAACAA0AAAAnABwAAAACAA4AAAAoABsAAAADAA0AAAAoABwAAAADAA4AAAA=")
+tile_set = SubResource("TileSet_nk5kx")
+
+[node name="Objects" type="TileMapLayer" parent="." unique_id=1177113708]
+z_index = 6
+tile_map_data = PackedByteArray("AAADAAIAAAAAAAMAAAADAAMAAAAAAAQAAAAEAAIAAAABAAMAAAAEAAMAAAABAAQAAAAFAAIAAAACAAMAAAAFAAMAAAACAAQAAAAGAAIAAAADAAMAAAAGAAMAAAADAAQAAAAHAAIAAAAEAAMAAAAHAAMAAAAEAAQAAAAPAAQAAAAFAAMAAAAPAAUAAAAFAAQAAAAPAAYAAAAFAAUAAAAQAAQAAAAGAAMAAAAQAAUAAAAGAAQAAAAQAAYAAAAGAAUAAAATAAQAAAAFAAMAAAATAAUAAAAFAAQAAAATAAYAAAAFAAUAAAAUAAQAAAAGAAMAAAAUAAUAAAAGAAQAAAAUAAYAAAAGAAUAAAAXAAQAAAAFAAMAAAAXAAUAAAAFAAQAAAAXAAYAAAAFAAUAAAAYAAQAAAAGAAMAAAAYAAUAAAAGAAQAAAAYAAYAAAAGAAUAAAAJAAYAAAACAAUAAAAJAAcAAAACAAYAAAAJAAgAAAACAAcAAAAKAAYAAAADAAUAAAAKAAcAAAADAAYAAAAKAAgAAAADAAcAAAALAAYAAAAEAAUAAAALAAcAAAAEAAYAAAALAAgAAAAEAAcAAAABAAEAAAACAAgAAAABAAIAAAACAAkAAAABAAMAAAACAAoAAAACAAEAAAADAAgAAAACAAIAAAADAAkAAAACAAMAAAADAAoAAAARAAkAAAAAAAcAAAARAAoAAAAAAAgAAAASAAkAAAABAAcAAAASAAoAAAABAAgAAAALAAUAAAAEAAgAAAAAAAMAAAAFAAcAAAAAAAIAAAAFAAYAAAALAAIAAAAFAAYAAAALAAMAAAAFAAcAAAAOAAIAAAAFAAYAAAAOAAMAAAAFAAcAAAAZAAIAAAAFAAYAAAAZAAMAAAAFAAcAAAAIAAcAAAAFAAkAAAAIAAgAAAAFAAoAAAAAAAYAAAAHAAMAAAAAAAcAAAAHAAQAAAABAAYAAAAIAAMAAAABAAcAAAAIAAQAAAACAAYAAAAJAAMAAAACAAcAAAAJAAQAAAADAAYAAAAKAAMAAAADAAcAAAAKAAQAAAAAAAkAAAAJAAMAAAAAAAoAAAAJAAQAAAABAAkAAAAKAAMAAAABAAoAAAAKAAQAAAACAAkAAAAHAAMAAAACAAoAAAAHAAQAAAADAAkAAAAIAAMAAAADAAoAAAAIAAQAAAAAAA4AAAAFAAYAAAAAAA8AAAAFAAcAAAAZAA4AAAAFAAYAAAAZAA8AAAAFAAcAAAAWAAkAAAAJAAUAAAAWAAoAAAAJAAYAAAAXAAkAAAAKAAUAAAAXAAoAAAAKAAYAAAAWAAwAAAAJAAUAAAAWAA0AAAAJAAYAAAAXAAwAAAAKAAUAAAAXAA0AAAAKAAYAAAAVAAsAAAAIAAUAAAAVAAwAAAAIAAYAAAAVAA0AAAAIAAcAAAAVAAkAAAAIAAYAAAAVAAoAAAAIAAcAAAAYAAgAAAAIAAUAABAYAAkAAAAIAAYAABAYAAoAAAAIAAcAABAYAAsAAAAIAAUAABAYAAwAAAAIAAYAABAYAA0AAAAIAAcAABAXAAAAAAALAAEAAAAXAAEAAAALAAIAAAAYAAAAAAAMAAEAAAAYAAEAAAAMAAIAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAEAAAANAAgAAAABAAAAAAANAAkAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_w0oo0")
+
+[node name="CoderSpawn" type="Marker2D" parent="." unique_id=1159136031]
+position = Vector2(144, 240)
+
+[node name="AnalystSpawn" type="Marker2D" parent="." unique_id=1721068868]
+position = Vector2(224, 240)
+
+[node name="AnalystBoard" type="Area2D" parent="." unique_id=1462649593 groups=["analyst_interactable"]]
+position = Vector2(287, 17)
+collision_layer = 4
+script = ExtResource("6_nk5kx")
+normal_texture = ExtResource("6_idjqp")
+inrange_texture = ExtResource("8_17isa")
+
+[node name="Sprite2D" type="Sprite2D" parent="AnalystBoard" unique_id=271836939]
+texture = ExtResource("6_idjqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnalystBoard" unique_id=1017017663]
+position = Vector2(1, 20)
+shape = SubResource("RectangleShape2D_idjqp")
+
+[node name="PromptLabel" type="Label" parent="AnalystBoard" unique_id=1582229894]
+offset_left = -41.0
+offset_top = -32.0
+offset_right = 43.0
+offset_bottom = -9.0
+text = "[space]"
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="AnalystPopup" type="CanvasLayer" parent="AnalystBoard" unique_id=553521389]
+visible = false
+
+[node name="Panel" type="Panel" parent="AnalystBoard/AnalystPopup" unique_id=1886851924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = 95.0
+offset_right = -132.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="NinePatchRect" parent="AnalystBoard/AnalystPopup/Panel" unique_id=1768755551]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -39.0
+offset_right = 298.0
+offset_bottom = 198.0
+texture = ExtResource("8_3g6xh")
+region_rect = Rect2(49, 33, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Clean" type="VBoxContainer" parent="AnalystBoard/AnalystPopup/Panel" unique_id=756404718]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -10.0
+offset_right = 251.0
+offset_bottom = 163.0
+
+[node name="TitleLabel" type="Label" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=204831848]
+layout_mode = 2
+text = "Robot Inheritance Chain"
+label_settings = SubResource("LabelSettings_kmav1")
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=1721180519]
+layout_mode = 2
+text = "Identify the Parent, SubClass, SubClass"
+label_settings = SubResource("LabelSettings_mlspx")
+horizontal_alignment = 1
+
+[node name="ParentOption" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=912920200]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 4
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+flat = true
+item_count = 3
+popup/item_0/text = "Machine"
+popup/item_0/id = 0
+popup/item_1/text = "CombatRobot"
+popup/item_1/id = 1
+popup/item_2/text = "Drone"
+popup/item_2/id = 2
+
+[node name="SubClass1Option" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=1433942446]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+flat = true
+item_count = 3
+popup/item_0/text = "Machine"
+popup/item_0/id = 0
+popup/item_1/text = "CombatRobot"
+popup/item_1/id = 1
+popup/item_2/text = "Drone"
+popup/item_2/id = 2
+
+[node name="SubClass2Option" type="OptionButton" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=654315829]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+flat = true
+item_count = 3
+popup/item_0/text = "Drone"
+popup/item_0/id = 2
+popup/item_1/text = "Machine"
+popup/item_1/id = 0
+popup/item_2/text = "CombatRobot"
+popup/item_2/id = 1
+
+[node name="Submit" type="TextureButton" parent="AnalystBoard/AnalystPopup/Panel" unique_id=787831024]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 148.0
+offset_right = 350.0
+offset_bottom = 180.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("14_kmav1")
+
+[node name="Result" type="Label" parent="AnalystBoard/AnalystPopup/Panel" unique_id=814345725]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 118.0
+offset_right = 95.0
+offset_bottom = 141.0
+text = "result"
+label_settings = SubResource("LabelSettings_fv1an")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Close" type="TextureButton" parent="AnalystBoard/AnalystPopup/Panel" unique_id=1106487546]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 164.0
+offset_right = 350.0
+offset_bottom = 196.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_mlspx")
+texture_pressed = ExtResource("19_fv1an")
+texture_hover = ExtResource("20_yqdhs")
+
+[node name="ExplanationLabel" type="RichTextLabel" parent="AnalystBoard/AnalystPopup/Panel" unique_id=595970342]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -15.0
+offset_right = 282.0
+offset_bottom = 147.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("10_fv1an")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[color=#170C79]Hierarchical inheritance[/color] in Java is a type of inheritance where multiple child classes inherit from a single parent class.
+
+The [color=#170C79]parent class[/color] contains common properties and behaviors, while the child classes inherit those features and can also have their own unique features.
+
+Example:
+A parent class called [color=#170C79]“Animal”[/color] can be inherited by child classes like [color=#170C79]“Dog,” “Cat,” and “Bird.”[/color] All of them share common behaviors from [color=#170C79]“Animal”[/color], but each also has its own specific behavior.
+
+This is called [color=#170C79]hierarchical inheritance[/color] because one superclass is connected to several subclasses in a hierarchy structure."
+
+[node name="Blocker" type="StaticBody2D" parent="AnalystBoard" unique_id=219812962]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnalystBoard/Blocker" unique_id=797745646]
+shape = SubResource("RectangleShape2D_gr3ss")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+
+[node name="CoderTerminal" type="Area2D" parent="." unique_id=1787165762 groups=["coder_interactable"]]
+position = Vector2(152, 38)
+collision_layer = 4
+script = ExtResource("8_t37p4")
+normal_texture = ExtResource("8_6p5ga")
+inrange_texture = ExtResource("11_qryu6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CoderTerminal" unique_id=238007736]
+texture = ExtResource("8_6p5ga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoderTerminal" unique_id=957842281]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_6p5ga")
+
+[node name="Label" type="Label" parent="CoderTerminal" unique_id=695974621]
+offset_left = -36.0
+offset_top = -41.0
+offset_right = 39.0
+offset_bottom = -18.0
+text = "[Locked]"
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="CoderPopup" type="CanvasLayer" parent="CoderTerminal" unique_id=893134837]
+visible = false
+
+[node name="Panel" type="Panel" parent="CoderTerminal/CoderPopup" unique_id=860654345]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 78.0
+offset_top = 77.0
+offset_right = -134.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="NinePatchRect" parent="CoderTerminal/CoderPopup/Panel" unique_id=12797764]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -24.0
+offset_right = 339.0
+offset_bottom = 221.0
+texture = ExtResource("8_3g6xh")
+region_rect = Rect2(49, 17, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="CodeLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel" unique_id=895485282]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -11.0
+offset_right = 325.0
+offset_bottom = 108.0
+size_flags_vertical = 0
+theme_override_fonts/normal_font = ExtResource("10_fv1an")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "public class Machine {
+    String name
+    Machine (String name) {
+       [color=#FF0000][u]1     [/u][/color].name = name;         
+    }
+  void [color=#FF0000][u]2    [/u][/color] {
+   System.out.println(name + \": SYSTEM ONLINE\");
+    }
+}
+
+class CombatRobot [color=#FF0000][u]3   [/u][/color] Machine {    
+    CombatRobot(String name) {
+        [color=#FF0000][u]4   [/u][/color](name);               
+    }
+       [color=#FF0000][u]5    [/u][/color]{
+        System.out.println(name + \": FIRING WEAPONS\");
+    }
+}
+
+class Drone [color=#FF0000][u]6    [/u][/color] CombatRobot {      
+    Drone([color=#FF0000][u]7    [/u][/color]) {
+        super(name);
+    }
+    void fly() {
+       [color=#FF0000][u]8    [/u][/color](name + \": TAKING FLIGHT\");
+    }
+}
+
+[color=#FF0000][u]9     [/u][/color] {
+   [color=#FF0000][u]10    [/u][/color] (String[] args) {
+       [color=#FF0000][u]11   [/u][/color] d = new Drone(\"UNIT-7\");
+        d.powerOn();  
+        d.attack();   
+        d.[color=#FF0000][u]12   [/u][/color]();
+    }
+}"
+tab_size = 3
+
+[node name="GridContainer" type="GridContainer" parent="CoderTerminal/CoderPopup/Panel" unique_id=1444894758]
+custom_minimum_size = Vector2(31, 15)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 114.0
+offset_right = 373.0
+offset_bottom = 194.0
+scale = Vector2(0.8, 0.8)
+columns = 4
+
+[node name="Ans1" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=824804772]
+custom_minimum_size = Vector2(80, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "1"
+alignment = 1
+
+[node name="Ans2" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=651914445]
+custom_minimum_size = Vector2(80, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "2"
+alignment = 1
+
+[node name="Ans3" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1663684961]
+custom_minimum_size = Vector2(80, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "3"
+alignment = 1
+
+[node name="Ans4" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=267012876]
+custom_minimum_size = Vector2(80, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "4"
+alignment = 1
+
+[node name="Ans5" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=119894330]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "5"
+alignment = 1
+
+[node name="Ans6" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1774023822]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "6"
+alignment = 1
+
+[node name="Ans7" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=956399981]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "7"
+alignment = 1
+
+[node name="Ans8" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=710915202]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "8"
+alignment = 1
+
+[node name="Ans9" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=935535062]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "9"
+alignment = 1
+
+[node name="Ans10" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=933093598]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "10"
+alignment = 1
+
+[node name="Ans11" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1213873180]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "11"
+alignment = 1
+
+[node name="Ans12" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1899465360]
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_fv1an")
+theme_override_font_sizes/font_size = 16
+text = "12"
+alignment = 1
+
+[node name="SubmitButton" type="TextureButton" parent="CoderTerminal/CoderPopup/Panel" unique_id=307890119]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 194.0
+offset_right = 302.0
+offset_bottom = 213.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("14_kmav1")
+texture_pressed = ExtResource("15_2g4yd")
+texture_hover = ExtResource("16_mlspx")
+
+[node name="ResultLabel" type="Label" parent="CoderTerminal/CoderPopup/Panel" unique_id=8988253]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 188.0
+offset_right = 194.0
+offset_bottom = 211.0
+text = "RESULT"
+label_settings = ExtResource("20_mlspx")
+horizontal_alignment = 1
+
+[node name="CloseButton" type="TextureButton" parent="CoderTerminal/CoderPopup/Panel" unique_id=1359002387]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 194.0
+offset_right = 416.0
+offset_bottom = 226.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_mlspx")
+texture_pressed = ExtResource("19_fv1an")
+texture_hover = ExtResource("20_yqdhs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel" unique_id=2052299372]
+layout_mode = 0
+offset_left = 27.0
+offset_top = -3.0
+offset_right = 323.0
+offset_bottom = 185.0
+theme_override_fonts/normal_font = ExtResource("10_fv1an")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "This code demonstrates inheritance in Java. Three classes are connected:
+
+[color=#170C79]Machine[/color] → parent class
+[color=#170C79]CombatRobot[/color] → child of [color=#170C79]Machine[/color]
+[color=#170C79]Drone[/color] → child of [color=#170C79]CombatRobot[/color]
+
+This creates multilevel inheritance because one class inherits from another repeatedly.
+Flow of inheritance:
+
+[color=#170C79]Machine → CombatRobot → Drone[/color]
+
+[color=#170C79]Machine[/color]
+This is the main parent class.
+ It contains:
+  - a variable called [color=#170C79]name[/color]
+  - a constructor that stores the machine name
+  - a method that prints [color=#170C79]“SYSTEM ONLINE”[/color]
+
+[color=#170C79]this.name = name[/color]
+- [color=#170C79]this[/color] refers to the current object.
+- The left [color=#170C79]name[/color] is the class variable.
+- The right [color=#170C79]name[/color] is the parameter from the constructor.
+- It stores the passed value into the object’s variable.
+
+[color=#170C79]CombatRobot[/color]
+- Inherits everything from [color=#170C79]Machine[/color].
+- Uses [color=#170C79]extends Machine[/color].
+- Can access the [color=#170C79]name[/color] variable and [color=#170C79]powerOn()[/color] method.
+- Adds its own method called [color=#170C79]attack()[/color].
+
+[color=#170C79]super(name)[/color]
+- Calls the constructor of the parent class ([color=#170C79]Machine[/color]).
+- Used so the inherited [color=#170C79]name[/color] variable gets initialized properly.
+
+[color=#170C79]Drone[/color]
+- Inherits from [color=#170C79]CombatRobot[/color].
+- Since [color=#170C79]CombatRobot[/color] already inherited from [color=#170C79]Machine[/color], [color=#170C79]Drone[/color] also gets all methods from both classes.
+- Adds a new method called [color=#170C79]fly()[/color].
+
+[color=#170C79]System.out.println(...)[/color]
+- Prints output to the console.
+
+[color=#170C79]main()[/color]
+- Entry point of the program.
+- Creates a [color=#170C79]Drone[/color] object named [color=#170C79]\"UNIT-7\"[/color].
+
+[color=#170C79]Drone d = new Drone(\"UNIT-7\");[/color]
+- Creates an object [color=#170C79]d[/color].
+- [color=#170C79]\"UNIT-7\"[/color] becomes the value of [color=#170C79]name[/color].
+
+Method calls:
+[color=#170C79]d.powerOn();[/color]
+  → inherited from [color=#170C79]Machine[/color]
+
+ [color=#170C79]d.attack();[/color]
+  → inherited from [color=#170C79]CombatRobot[/color]
+
+ [color=#170C79]d.fly();[/color]
+  → method from [color=#170C79]Drone[/color]
+
+Expected output:
+[color=#170C79]UNIT-7: SYSTEM ONLINE
+UNIT-7: FIRING WEAPONS
+UNIT-7: TAKING FLIGHT[/color]
+
+Main concept:
+1.[color=#170C79]Child[/color]classes inherit variables and methods from parent classes.
+2. [color=#170C79]extends[/color] is used for inheritance.
+3. [color=#170C79]super()[/color] calls the parent constructor.
+4. A [color=#170C79]subclass[/color] can use methods from all classes above it in the hierarchy."
+scroll_following = true
+
+[node name="Blocker" type="StaticBody2D" parent="CoderTerminal" unique_id=1184216624]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoderTerminal/Blocker" unique_id=1521205859]
+position = Vector2(0.75, 7)
+shape = SubResource("RectangleShape2D_17isa")
+
+[node name="DroneRobot" type="Node2D" parent="." unique_id=344174115]
+position = Vector2(352, 31)
+script = ExtResource("11_gr3ss")
+broken_texture = ExtResource("11_3p68e")
+online_texture = ExtResource("15_eh4pa")
+
+[node name="Label" type="Label" parent="DroneRobot" unique_id=443838776]
+z_index = 9
+offset_left = -31.0
+offset_top = -27.0
+offset_right = 36.0
+offset_bottom = -4.0
+text = "[BROKEN]"
+label_settings = ExtResource("7_mlspx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="DroneRobot" unique_id=237513084]
+texture = ExtResource("11_3p68e")
+
+[node name="Blocker" type="StaticBody2D" parent="DroneRobot" unique_id=256186492]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DroneRobot/Blocker" unique_id=190464127]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_qryu6")
+debug_color = Color(0.94089234, 1.155138e-05, 0.61519563, 0.41960785)
+
+[node name="ComputerHint" type="Area2D" parent="." unique_id=1587964772 groups=["analyst_interactable"]]
+position = Vector2(47, 223)
+collision_layer = 4
+script = ExtResource("16_xusyf")
+normal_texture = ExtResource("16_gshci")
+inrange_texture = ExtResource("18_as0qb")
+
+[node name="Sprite2D" type="Sprite2D" parent="ComputerHint" unique_id=1542836165]
+texture = ExtResource("16_gshci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerHint" unique_id=1527243151]
+position = Vector2(1, 21)
+shape = SubResource("RectangleShape2D_xusyf")
+
+[node name="Label" type="Label" parent="ComputerHint" unique_id=1025688572]
+offset_left = -21.0
+offset_top = -28.0
+offset_right = 23.0
+offset_bottom = -5.0
+text = "[hint]"
+label_settings = ExtResource("7_mlspx")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ComputerHint" unique_id=1969177992]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerHint/StaticBody2D" unique_id=1288833972]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_gshci")
+debug_color = Color(0.8200989, 0.4034578, 0, 0.41960785)
+
+[node name="ComputerHintPopup" type="CanvasLayer" parent="ComputerHint" unique_id=1427164895 groups=["info_group"]]
+visible = false
+script = ExtResource("19_4mq8d")
+
+[node name="Panel" type="Panel" parent="ComputerHint/ComputerHintPopup" unique_id=512408390]
+offset_left = 149.0
+offset_top = 113.0
+offset_right = 349.0
+offset_bottom = 227.0
+
+[node name="Background" type="NinePatchRect" parent="ComputerHint/ComputerHintPopup/Panel" unique_id=1474171754]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -34.0
+offset_right = 259.0
+offset_bottom = 175.0
+texture = ExtResource("8_3g6xh")
+region_rect = Rect2(1, 49, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label" type="RichTextLabel" parent="ComputerHint/ComputerHintPopup/Panel" unique_id=535247790]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -7.0
+offset_right = 238.0
+offset_bottom = 148.0
+theme_override_fonts/normal_font = ExtResource("10_fv1an")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "The most general class is the 
+[color=#170C79]parent (superclass)[/color]
+
+A [color=#170C79]child class[/color] uses the keyword  
+[color=#170C79]extends[/color] to inherit from its parent
+
+A child class can use [color=#170C79]super()[/color]  
+to call the parent's constructor"
+
+[node name="ExitDoor" type="Area2D" parent="." unique_id=1811905935 groups=["analyst_interactable", "coder_interactable"]]
+z_index = 6
+position = Vector2(89, 20)
+collision_layer = 4
+script = ExtResource("20_tvxs7")
+closed_texture = ExtResource("23_gmluh")
+closed_inrange_texture = ExtResource("22_440xx")
+open_texture = ExtResource("23_qa7lu")
+open_inrange_texture = ExtResource("24_ltqot")
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitDoor" unique_id=1095976003]
+z_index = 6
+texture = ExtResource("23_gmluh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=590072367]
+z_index = 6
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_kmav1")
+
+[node name="Label" type="Label" parent="ExitDoor" unique_id=715977786]
+z_index = 6
+offset_left = -29.0
+offset_top = -30.0
+offset_right = 31.0
+offset_bottom = -7.0
+text = "[LOCKED]"
+label_settings = ExtResource("7_mlspx")
+metadata/_edit_use_anchors_ = true
+
+[node name="RobotInteractable" parent="." unique_id=1239817990 instance=ExtResource("29_cttw5")]
+z_index = 14
+position = Vector2(168, 144)
+popup_text = "“Welcome to the Final Room. The last system awaits. Combine everything you have learned and work together to build objects that behave exactly as required."
+
+[node name="CollisionShape2D" parent="RobotInteractable" index="1" unique_id=780611906]
+position = Vector2(0, 15)
+
+[node name="Label" parent="RobotInteractable" index="2" unique_id=306761151]
+offset_left = -34.0
+offset_top = -24.0
+offset_right = 44.0
+offset_bottom = -1.0
+
+[node name="CanvasLayer" parent="RobotInteractable" index="3" unique_id=1533831507]
+visible = false
+
+[node name="Panel" parent="RobotInteractable/CanvasLayer" index="0" unique_id=1976795389]
+offset_left = 295.0
+offset_top = 160.0
+offset_right = 414.0
+offset_bottom = 248.0
+
+[node name="RichTextLabel" parent="RobotInteractable/CanvasLayer/Panel" index="1" unique_id=1074240285]
+anchor_left = 0.29411766
+anchor_top = -0.17045455
+anchor_right = 0.29411766
+theme_override_fonts/normal_font = ExtResource("10_fv1an")
+theme_override_font_sizes/normal_font_size = 16
+text = "“Welcome to the Final Room. The last system awaits. Combine everything you have learned and work together to build objects that behave exactly as required.”
+"
+
+[editable path="RobotInteractable"]

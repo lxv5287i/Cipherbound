@@ -1,8 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://dyainmr88vpag"]
-
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="1_tsmvl"]
-
-[resource]
-line_spacing = 1.0
-paragraph_spacing = 5.0
-font = ExtResource("1_tsmvl")
