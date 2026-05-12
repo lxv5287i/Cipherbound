@@ -1,29 +1,37 @@
 extends CanvasLayer
 
-@onready var team_label: Label = $PanelContainer/TeamLabel
+@onready var panel = $PanelContainer
 
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func open():
-	if team_label:
-		team_label.text = GameProgress.team_name
 	show()
+	var screen_height = get_viewport().get_visible_rect().size.y
+	panel.position.y = screen_height
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_BACK)
+	tween.tween_property(panel, "position:y", 0, 0.4)
 	get_tree().paused = true
 	GameLock.movement_locked = true
 
 func close():
+	var screen_height = get_viewport().get_visible_rect().size.y
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_BACK)
+	tween.tween_property(panel, "position:y", screen_height, 0.3)
+	await tween.finished
 	hide()
 	get_tree().paused = false
 	GameLock.movement_locked = false
-	GameTimer.resume_timer()
 
-func _on_resume_pressed():
+func _on_resume_pressed() -> void:
 	close()
 
-func _on_quit_to_menu_pressed():
+func _on_quit_to_menu_pressed() -> void:
 	get_tree().paused = false
 	GameLock.movement_locked = false
-	GameTimer.stop()
 	get_tree().change_scene_to_file("res://Scenes/MAIN UI/mainMenu.tscn")
