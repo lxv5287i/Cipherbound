@@ -6,22 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Interactables/LOBBY/folder.png" id="4_nsj2m"]
 [ext_resource type="Script" uid="uid://daepisdlnnwhs" path="res://Script/Lobby/folder_interactable.gd" id="4_yg8gm"]
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Lobby/folder_popup.gd" id="5_s3paf"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/Lobby/folder_inrange.png" id="6_sup6t"]
-[ext_resource type="Texture2D" uid="uid://cdxfvpqo3tmtt" path="res://Interactables/Lobby/Banner.png" id="6_vmftg"]
-[ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://World/Font/interact.tres" id="8_amwwa"]
-=======
 [ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
-[ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Interactables/Lobby/Banner.png" id="6_vmftg"]
->>>>>>> c7e75a9f113b8e03402af0aeca77ccd53e77e370
+[ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Interactables/LOBBY/Banner.png" id="6_vmftg"]
+[ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://World/Font/interact.tres" id="8_amwwa"]
 [ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Lobby/banner_interactable.gd" id="10_b6u2u"]
 [ext_resource type="Script" uid="uid://64dxsjgcaueb" path="res://Script/Lobby/banner_popup.gd" id="11_idhfa"]
 [ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Interactables/LOBBY/box.png" id="11_r753w"]
 [ext_resource type="Texture2D" uid="uid://df5na580d4cia" path="res://Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
 [ext_resource type="Script" uid="uid://bt5uxn1sf0sps" path="res://Script/Lobby/box.gd" id="14_kr8xt"]
-[ext_resource type="Texture2D" uid="uid://csuiv884sq50b" path="res://Interactables/Lobby/experiment.png" id="15_yesx4"]
-[ext_resource type="Texture2D" uid="uid://d3qs3n11kox6m" path="res://Interactables/Lobby/box_inrange.png" id="16_qsv27"]
+[ext_resource type="Texture2D" uid="uid://csuiv884sq50b" path="res://Interactables/LOBBY/experiment.png" id="15_yesx4"]
+[ext_resource type="Texture2D" uid="uid://d3qs3n11kox6m" path="res://Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
 [ext_resource type="Script" uid="uid://c6ev3iv2f6ew5" path="res://Script/Lobby/box_popup.gd" id="17_6n5of"]
 [ext_resource type="Script" uid="uid://dfhdigndf2jie" path="res://Script/Lobby/experiment_interactable.gd" id="18_y5q1o"]
 [ext_resource type="Texture2D" uid="uid://rjqgk0dojq8t" path="res://Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
@@ -42,16 +37,14 @@
 [ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Interactables/dooropen.png" id="34_6msik"]
 [ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
-[ext_resource type="Texture2D" uid="uid://d3knvppoi70gn" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
-[ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Character/Analyst/analyst_player.tscn" id="38_8isgd"]
-[ext_resource type="Texture2D" uid="uid://c8ehhfdxmtf2i" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
-[ext_resource type="Texture2D" uid="uid://vacqejprdup" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
-[ext_resource type="Texture2D" uid="uid://dxqtsvl8t5wnm" path="res://Interactables/R1/computerOFF.png" id="42_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="Texture2D" uid="uid://crf15klxa40et" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
+[ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
+[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Interactables/R1/computerOFF.png" id="42_ngjh1"]
 [ext_resource type="Script" uid="uid://b6iwanu4b72ek" path="res://Character/tutorial_coder.gd" id="43_njw7c"]
 [ext_resource type="Texture2D" uid="uid://bcspqohj0wkqg" path="res://Interactables/coderBG.png" id="44_23gij"]
-[ext_resource type="Texture2D" uid="uid://cveitt308ex70" path="res://Interactables/R3/status.png" id="45_17xsj"]
+[ext_resource type="Texture2D" uid="uid://bub2e7lf4xc7g" path="res://Interactables/R3/status.png" id="45_17xsj"]
 [ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://World/Buttons/closeButton.png" id="46_m5vw4"]
 [ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://World/Buttons/closeBTN_pressed.png" id="47_pbrio"]
 [ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://World/Buttons/closeBTN_hovered.png" id="48_njw7c"]
@@ -59,15 +52,8 @@
 [ext_resource type="LabelSettings" uid="uid://dsfn5qc1fp8je" path="res://World/Font/robot.tres" id="50_d3qyh"]
 [ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://World/Buttons/submitButton.png" id="51_yhg2o"]
 [ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://World/Buttons/submitBTN_pressed.png" id="52_fdlhk"]
-[ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Character/Coder/coder_player.tscn" id="52_higy8"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Interactables/Infobot/robot_interactable.tscn" id="53_n17ht"]
 [ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://World/Buttons/submitBTN_hovered.png" id="53_u03w5"]
-=======
-[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
-[ext_resource type="Texture2D" uid="uid://crf15klxa40et" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
-[ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
-[ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
->>>>>>> c7e75a9f113b8e03402af0aeca77ccd53e77e370
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -2645,7 +2631,7 @@ texture = ExtResource("34_wagpd")
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_8isgd")
 
-[node name="Label" type="Label" parent="DoortoRoom5" unique_id=541639695]
+[node name="R5Tag" type="Label" parent="DoortoRoom5" unique_id=541639695]
 offset_left = -18.0
 offset_top = -25.0
 offset_right = 22.0
@@ -2656,10 +2642,6 @@ label_settings = SubResource("LabelSettings_ngjh1")
 position = Vector2(0, -22)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("40_amwwa")
-<<<<<<< HEAD
-
-[node name="AnalystPlayer" parent="." unique_id=2004721522 instance=ExtResource("38_8isgd")]
-position = Vector2(384, 258)
 
 [node name="TutorialCoder" type="Area2D" parent="." unique_id=334212616 groups=["coder_interactable"]]
 z_index = 10
@@ -2931,16 +2913,13 @@ position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_n17ht")
 debug_color = Color(0.76886576, 0.43009564, 0.33030665, 0.41960785)
 
-[node name="CoderPlayer" parent="." unique_id=1699527945 instance=ExtResource("52_higy8")]
-position = Vector2(53, 184)
-
 [node name="RobotInteractable" parent="." unique_id=1239817990 instance=ExtResource("53_n17ht")]
 z_index = 10
 position = Vector2(305, 164)
 popup_text = "The answer is a greeting with two words. It is one of the most common examples used by beginners in programming. Many programmers use it first to check if their code works properly."
 
 [node name="RichTextLabel" parent="RobotInteractable/CanvasLayer/Panel" parent_id_path=PackedInt32Array(1239817990, 1976795389) index="1" unique_id=1074240285]
-anchor_left = 0.5294118
+anchor_left = 0.14285715
 anchor_top = -0.17045455
 anchor_right = 0.14285715
 anchor_bottom = -0.17045455
@@ -2948,5 +2927,3 @@ text = "The answer is a greeting with two words. It is one of the most common ex
 horizontal_alignment = 1
 
 [editable path="RobotInteractable"]
-=======
->>>>>>> c7e75a9f113b8e03402af0aeca77ccd53e77e370
