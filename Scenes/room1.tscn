@@ -1,39 +1,39 @@
 [gd_scene format=4 uid="uid://c5t6av2t1ng7s"]
 
-[ext_resource type="Texture2D" uid="uid://dgc4veij83fyj" path="res://World/Floor/FLOOR.png" id="1_t1d84"]
-[ext_resource type="Texture2D" uid="uid://b4pul514idto4" path="res://World/Wall/WALL.png" id="2_hbc0m"]
-[ext_resource type="Texture2D" uid="uid://w4lewnffxjc7" path="res://World/Objects/R1_2_Objects.png" id="3_t1d84"]
-[ext_resource type="Texture2D" uid="uid://dtlttah7y11iq" path="res://Interactables/R1/poweroff.png" id="5_4yq2u"]
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://World/Floor/FLOOR.png" id="1_t1d84"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://World/Wall/WALL.png" id="2_hbc0m"]
+[ext_resource type="Texture2D" uid="uid://bmq2wflqoenr5" path="res://World/Objects/R1_2_Objects.png" id="3_t1d84"]
+[ext_resource type="Texture2D" uid="uid://darg23jhsvpgt" path="res://Interactables/R1/poweroff.png" id="5_4yq2u"]
 [ext_resource type="Script" uid="uid://gw2krwwhlb8c" path="res://Script/R1_R2/powercabinet.gd" id="6_53ype"]
-[ext_resource type="Texture2D" uid="uid://kny3a0gcynbb" path="res://Interactables/R1/poweroff_inrange.png" id="6_ksc4w"]
-[ext_resource type="Texture2D" uid="uid://bgc351f8g51ax" path="res://Interactables/R1/poweron.png" id="6_t1d84"]
-[ext_resource type="Texture2D" uid="uid://dfnfgv2cvagld" path="res://Interactables/UI_Popups/UI.png" id="7_hbc0m"]
+[ext_resource type="Texture2D" uid="uid://cv3gq05ab26t1" path="res://Interactables/R1/poweroff_inrange.png" id="6_ksc4w"]
+[ext_resource type="Texture2D" uid="uid://cisycy7f4ft8h" path="res://Interactables/R1/poweron.png" id="6_t1d84"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Interactables/UI_Popups/UI.png" id="7_hbc0m"]
 [ext_resource type="Script" uid="uid://cgln0sbfoqy0e" path="res://Script/R1_R2/R2_problem_popup.gd" id="8_4yq2u"]
-[ext_resource type="Texture2D" uid="uid://t6jbhfehhqq" path="res://Interactables/R1/poweron_inrange.png" id="8_61qh4"]
+[ext_resource type="Texture2D" uid="uid://2uyocsqub7o" path="res://Interactables/R1/poweron_inrange.png" id="8_61qh4"]
 [ext_resource type="Texture2D" uid="uid://crpg2x6ibet5g" path="res://Interactables/UI_Popups/Popup Overlays/wires.png" id="11_l17w2"]
 [ext_resource type="Script" uid="uid://csaqyhlomfa2k" path="res://Script/FilteredLineEdit.gd" id="11_t1d84"]
-[ext_resource type="Texture2D" uid="uid://otqfdtkynhyw" path="res://Interactables/UI_Popups/Popup Overlays/electric.png" id="12_drf2a"]
+[ext_resource type="Texture2D" uid="uid://chn224j5phf5m" path="res://Interactables/UI_Popups/Popup Overlays/electric.png" id="12_drf2a"]
 [ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://World/Font/NicoClean-Regular.otf" id="12_l17w2"]
 [ext_resource type="Texture2D" uid="uid://bv7eahac77i2d" path="res://Interactables/UI_Popups/Popup Overlays/wires2.png" id="13_drf2a"]
-[ext_resource type="Texture2D" uid="uid://dxqtsvl8t5wnm" path="res://Interactables/R1/computerOFF.png" id="13_ksc4w"]
+[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Interactables/R1/computerOFF.png" id="13_ksc4w"]
 [ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="14_gs4k2"]
-[ext_resource type="Texture2D" uid="uid://vh407unumnhr" path="res://Interactables/R1/computerOFF_inrange.png" id="15_cfaiu"]
+[ext_resource type="Texture2D" uid="uid://blfel0o8abhfs" path="res://Interactables/R1/computerOFF_inrange.png" id="15_cfaiu"]
 [ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://World/Buttons/submitButton.png" id="16_j72vs"]
-[ext_resource type="Texture2D" uid="uid://bapbvlkfm01m2" path="res://Interactables/R1/computerON.png" id="16_l1rno"]
+[ext_resource type="Texture2D" uid="uid://curbg4fxns0c3" path="res://Interactables/R1/computerON.png" id="16_l1rno"]
 [ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://World/Buttons/submitBTN_pressed.png" id="17_gs4k2"]
-[ext_resource type="Texture2D" uid="uid://d3kkvqo51gilb" path="res://Interactables/R1/computerON_inrange.png" id="17_uaei7"]
+[ext_resource type="Texture2D" uid="uid://crduc4l1ya1yl" path="res://Interactables/R1/computerON_inrange.png" id="17_uaei7"]
 [ext_resource type="Script" uid="uid://c5rl46ux6gck4" path="res://Script/R1_R2/computer_switch.gd" id="17_voffe"]
 [ext_resource type="Script" uid="uid://d38og00u5uywp" path="res://Script/Doors/R1exit_door.gd" id="18_ufxwj"]
 [ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://World/Buttons/submitBTN_hovered.png" id="18_uljo1"]
 [ext_resource type="Texture2D" uid="uid://bie28n1r66rd6" path="res://World/Buttons/nextButton.png" id="19_faung"]
 [ext_resource type="Texture2D" uid="uid://bsqfrovbsps5c" path="res://World/Buttons/nextBTN_pressed.png" id="20_kw4da"]
-[ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="20_roffw"]
-[ext_resource type="Texture2D" uid="uid://beyw35jgohxp7" path="res://Interactables/doorclose_inrange.png" id="21_4ys52"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Interactables/doorclose.png" id="20_roffw"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Interactables/doorclose_inrange.png" id="21_4ys52"]
 [ext_resource type="Texture2D" uid="uid://cer8jop48qgyw" path="res://World/Buttons/nextBTN_hovered.png" id="21_hfggf"]
 [ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://World/Buttons/closeButton.png" id="22_hupe5"]
-[ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="22_xta8d"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Interactables/dooropen.png" id="22_xta8d"]
 [ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://World/Buttons/closeBTN_pressed.png" id="23_dvaie"]
-[ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="23_petlm"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Interactables/dooropen_inrange.png" id="23_petlm"]
 [ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://World/Buttons/closeBTN_hovered.png" id="24_dyxol"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Interactables/Infobot/robot_interactable.tscn" id="26_nsosf"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://World/Font/interact.tres" id="31_uljo1"]
@@ -638,6 +638,91 @@ texture = ExtResource("3_t1d84")
 [sub_resource type="TileSet" id="TileSet_ps245"]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_61qh4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uljo1"]
+texture = ExtResource("1_t1d84")
+1:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+6:10/0 = 0
+6:10/0/z_index = 1
+7:10/0 = 0
+7:10/0/z_index = 1
+8:10/0 = 0
+8:10/0/z_index = 1
+
+[sub_resource type="TileSet" id="TileSet_faung"]
+sources/0 = SubResource("TileSetAtlasSource_uljo1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dl1m8"]
 size = Vector2(14, 14)
@@ -1439,6 +1524,12 @@ z_index = 6
 tile_map_data = PackedByteArray("AAABAAoAAAACAAUAAAABAAsAAAACAAYAAAACAAoAAAADAAUAAAACAAsAAAADAAYAAAADAAoAAAAEAAUAAAADAAsAAAAEAAYAAAAEAAoAAAAFAAUAAAAEAAsAAAAFAAYAAAAFAAoAAAAIAAUAAAAFAAsAAAAIAAYAAAAGAAoAAAAJAAUAAAAGAAsAAAAJAAYAAAAHAAoAAAAGAAUAAAAHAAsAAAAGAAYAAAAIAAoAAAAHAAUAAAAIAAsAAAAHAAYAAAAFAA0AAAAFAAMAAAAFAA4AAAAFAAQAAAAGAA0AAAAGAAMAAAAGAA4AAAAGAAQAAAACABAAAAAHAAMAAAACABEAAAAHAAQAAAADABAAAAAIAAMAAAADABEAAAAIAAQAAAAIABEAAAAHAAQAAAAJABAAAAAIAAMAAAAJABEAAAAIAAQAAAACABQAAAAFAAQAAAADABQAAAAGAAQAAAABAAIAAAACAAcAAAABAAMAAAACAAgAAAACAAIAAAADAAcAAAACAAMAAAADAAgAAAADAAIAAAACAAcAAAADAAMAAAACAAgAAAAEAAIAAAADAAcAAAAEAAMAAAADAAgAAAAFAAIAAAACAAcAAAAFAAMAAAACAAgAAAAGAAIAAAADAAcAAAAGAAMAAAADAAgAAAAHAAIAAAAAAAcAAAAHAAMAAAAAAAgAAAAIAAIAAAABAAcAAAAIAAMAAAABAAgAAAAJAAsAAAAHAAEAAAAJAAwAAAAHAAIAAAAAAAsAAAAHAAEAAAAAAAwAAAAHAAIAAAAAAAMAAAAHAAEAAAAAAAQAAAAHAAIAAAAAABQAAAAHAAEAAAAAABUAAAAHAAIAAAANAAIAAAAJAAMAAAANAAMAAAAJAAQAAAAOAAIAAAAKAAMAAAAOAAMAAAAKAAQAAAADAAUAAAAIAAUAAAADAAYAAAAIAAYAAAAEAAUAAAAJAAUAAAAEAAYAAAAJAAYAAAAFAAUAAAAGAAUAAAAFAAYAAAAGAAYAAAAGAAUAAAAHAAUAAAAGAAYAAAAHAAYAAAAHAAUAAAAGAAUAAAAHAAYAAAAGAAYAAAAIAAUAAAAHAAUAAAAIAAYAAAAHAAYAAAAJAAUAAAAIAAUAAAAJAAYAAAAIAAYAAAAKAAUAAAAJAAUAAAAKAAYAAAAJAAYAAAALAA0AAAAHAAMAAAALAA4AAAAHAAQAAAAMAA0AAAAIAAMAAAAMAA4AAAAIAAQAAAAOAA0AAAAFAAMAAAAOAA4AAAAFAAQAAAAPAA0AAAAGAAMAAAAPAA4AAAAGAAQAAAAOABMAAAAFAAMAAAAOABQAAAAFAAQAAAAPABMAAAAGAAMAAAAPABQAAAAGAAQAAAAJAAMAAAACAAQAAAABAA4AAAACAAQAAAABAAAAAAAJAAAAAAACAAAAAAANAAEAAAADAAAAAAAOAAEAAAAEAAAAAAAPAAEAAAAFAAAAAAAQAAEAAAAGAAAAAAANAAEAAAAHAAAAAAAOAAEAAAAIAAAAAAAPAAEAAAAJAAAAAAAQAAEAAAAKAAAAAAANAAEAAAALAAAAAAAOAAEAAAAMAAAAAAAPAAEAAAANAAAAAAAQAAEAAAAOAAAAAAANAAEAAAAPAAAAAAAOAAEAAAAQAAAAAAAPAAEAAAARAAAAAAAQAAEAAAASAAAAAAANAAEAAAATAAAAAAAOAAEAAAAUAAAAAAAPAAEAAAAVAAAAAAAQAAEAAAAWAAAAAAANAAEAAAAXAAAAAAAOAAEAAAAYAAAAAAAPAAEAAAAZAAAAAAAQAAEAAAAaAAAAAAAJAAAAAAARAAgAAAAAAAEAABARAAkAAAAAAAIAABARAAoAAAAAAAMAABATAAkAAAAAAAIAAAATAAoAAAAAAAMAAAAUAAkAAAADAAIAAAAUAAoAAAADAAMAAAAWAAQAAAAAAAEAABAWAAUAAAAAAAIAABAWAAYAAAAAAAMAABAWAAgAAAAAAAEAABAWAAkAAAAAAAIAABAWAAoAAAAAAAMAABAWAA8AAAANAAQAAAAXAA4AAAAOAAMAAAAXAA8AAAAOAAQAAAAYAAUAAAAAAAIAAAAYAAYAAAAAAAMAAAAYAAkAAAAAAAIAAAAYAAoAAAAAAAMAAAAZAAMAAAAEAAQAAAAZAAUAAAADAAIAAAAZAAYAAAADAAMAAAAZAAkAAAABAAIAAAAZAAoAAAABAAMAAAAaAAMAAAADAAQAAAAbAAMAAAAEAAQAAAAbAAQAAAAAAAEAABAbAAUAAAAAAAIAABAbAAYAAAAAAAMAABAbAAgAAAAAAAEAABAbAAkAAAAAAAIAABAbAAoAAAAAAAMAABAcAAMAAAAHAAEAAAAOAAgAAAAAAAEAAAAOAAkAAAAAAAIAAAAOAAoAAAAAAAMAAAAPAAkAAAABAAIAAAAPAAoAAAABAAMAAAAQAAkAAAACAAIAAAAQAAoAAAACAAMAAAAQABQAAAACAAQAAAATAAQAAAAAAAEAAAATAAUAAAAAAAIAAAATAAYAAAAAAAMAAAATAAgAAAAAAAEAAAAUAAUAAAABAAIAAAAUAAYAAAABAAMAAAAUAA4AAAAJAAMAAAAUAA8AAAAJAAQAAAAVAAUAAAACAAIAAAAVAAYAAAACAAMAAAAVAAkAAAAEAAIAAAAVAAoAAAAEAAMAAAAVAA4AAAAKAAMAAAAVAA8AAAAKAAQAAAAWAAMAAAADAAQAAAAWAA4AAAANAAMAAAAXAAMAAAAEAAQAAAAXAA0AAAAOAAIAAAAYAAMAAAADAAQAAAAYAAQAAAAAAAEAAAAYAAgAAAAAAAEAAAAYABEAAAAAAAEAAAAYABIAAAAAAAIAAAAYABMAAAAAAAMAAAAZABIAAAADAAIAAAAZABMAAAADAAMAAAAaAAUAAAAEAAIAAAAaAAYAAAAEAAMAAAAaAAkAAAACAAIAAAAaAAoAAAACAAMAAAAaABAAAAACAAAAAAAaABEAAAACAAEAAAAaABIAAAAEAAIAAAAaABMAAAAEAAMAAAAbAA8AAAACAAQAAAAcAAQAAAAHAAIAAAAcAA8AAAAHAAEAAAAcABAAAAAHAAIAAAAcABQAAAAHAAEAAAAcABUAAAAHAAIAAAAaAA0AAAAKAAkAAAAaAA4AAAAKAAoAAAAbAA0AAAALAAkAAAAbAA4AAAALAAoAAAALABEAAAAFAAQAAAAMABEAAAAGAAQAAAADABMAAAAGAAMAAAACABMAAAAFAAMAAAAMABAAAAAGAAMAAAALABAAAAAFAAMAAAAIABAAAAAHAAMAAAAIABQAAAAFAAQAAAAIABMAAAAFAAMAAAAJABMAAAAGAAMAAAAJABQAAAAGAAQAAAAFABAAAAAFAAMAAAAFABEAAAAFAAQAAAAGABAAAAAGAAMAAAAGABEAAAAGAAQAAAALABMAAAAFAAMAAAALABQAAAAFAAQAAAAMABMAAAAGAAMAAAAMABQAAAAGAAQAAAAOABAAAAAFAAMAAAAOABEAAAAFAAQAAAAPABAAAAAGAAMAAAAPABEAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_ps245")
 
+[node name="Entrance" type="TileMapLayer" parent="." unique_id=1605722128]
+z_index = 6
+z_as_relative = false
+tile_map_data = PackedByteArray("AAAUABUAAAAGAAoAAAAVABUAAAAHAAoAAAAWABUAAAAIAAoAAAA=")
+tile_set = SubResource("TileSet_faung")
+
 [node name="PowerCabinet" type="Area2D" parent="." unique_id=840210815 groups=["coder_interactable"]]
 position = Vector2(400, 225)
 collision_layer = 4
@@ -1775,9 +1866,10 @@ label_settings = SubResource("LabelSettings_tkm52")
 uppercase = true
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1214778318]
-position = Vector2(304, 304)
+position = Vector2(336, 336)
 
 [node name="RobotInteractable" parent="." unique_id=1239817990 instance=ExtResource("26_nsosf")]
+z_index = 4
 position = Vector2(312, 255)
 popup_text = "Welcome, Coder. You have entered Room 1, a place built around logic and interpretation. Solve the problem through the help of Analyst!"
 
