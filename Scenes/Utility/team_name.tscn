@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://opygfsrpi55u"]
 
 [ext_resource type="Script" uid="uid://3losllqud5fe" path="res://Script/Utility/team_name.gd" id="1_up8yl"]
-[ext_resource type="Texture2D" uid="uid://cduq0wwhkm3dk" path="res://User Interface/Popups/enter_team_name.png" id="2_k671f"]
-[ext_resource type="Texture2D" uid="uid://b2gt102k2wcy2" path="res://User Interface/Buttons/enterGame.png" id="3_elarw"]
-[ext_resource type="Texture2D" uid="uid://dt1gx06vniu3p" path="res://User Interface/Buttons/enterGame_pressed.png" id="4_menai"]
-[ext_resource type="Texture2D" uid="uid://ceh2sy54eq83p" path="res://User Interface/Buttons/enterGame_hovered.png" id="5_kw202"]
-[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://User Interface/Buttons/x.png" id="6_fioxr"]
+[ext_resource type="Texture2D" uid="uid://cduq0wwhkm3dk" path="res://Assets/User Interface/Popups/enter_team_name.png" id="2_k671f"]
+[ext_resource type="Texture2D" uid="uid://b2gt102k2wcy2" path="res://Assets/User Interface/Buttons/enterGame.png" id="3_elarw"]
+[ext_resource type="Texture2D" uid="uid://dt1gx06vniu3p" path="res://Assets/User Interface/Buttons/enterGame_pressed.png" id="4_menai"]
+[ext_resource type="Texture2D" uid="uid://ceh2sy54eq83p" path="res://Assets/User Interface/Buttons/enterGame_hovered.png" id="5_kw202"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="6_fioxr"]
 [ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="6_menai"]
-[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://User Interface/Buttons/x_pressed.png" id="7_108ow"]
-[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://User Interface/Buttons/x_hovered.png" id="8_ylqyk"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_108ow"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_ylqyk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kw202"]
 

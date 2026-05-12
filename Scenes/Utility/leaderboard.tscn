@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://crvyxwuv0yw5v"]
 
 [ext_resource type="Script" uid="uid://i5nwdp5pk5t" path="res://Script/Utility/leaderboard.gd" id="1_n70i8"]
-[ext_resource type="Texture2D" uid="uid://nv3lep3ar3em" path="res://User Interface/Popups/leaderboard.png" id="1_pobhu"]
-[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://User Interface/Buttons/x.png" id="2_n70i8"]
-[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://User Interface/Buttons/x_pressed.png" id="3_eg6uk"]
-[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://User Interface/Buttons/x_hovered.png" id="4_ay5h3"]
+[ext_resource type="Texture2D" uid="uid://nv3lep3ar3em" path="res://Assets/User Interface/Popups/leaderboard.png" id="1_pobhu"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="2_n70i8"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="3_eg6uk"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="4_ay5h3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n70i8"]
 
