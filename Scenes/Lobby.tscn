@@ -1,46 +1,46 @@
 [gd_scene format=4 uid="uid://k5ppokrlrys7"]
 
-[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://World/Floor/FLOOR.png" id="1_wgubu"]
-[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://World/Wall/WALL.png" id="2_lolwk"]
-[ext_resource type="Texture2D" uid="uid://dycw2klcfp71e" path="res://World/Objects/Lobby_Objects.png" id="3_wgubu"]
-[ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Interactables/LOBBY/folder.png" id="4_nsj2m"]
+[ext_resource type="Texture2D" uid="uid://dgc4veij83fyj" path="res://World/Floor/FLOOR.png" id="1_wgubu"]
+[ext_resource type="Texture2D" uid="uid://b4pul514idto4" path="res://World/Wall/WALL.png" id="2_lolwk"]
+[ext_resource type="Texture2D" uid="uid://dmmp8tosuagvk" path="res://World/Objects/Lobby_Objects.png" id="3_wgubu"]
+[ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Interactables/Lobby/folder.png" id="4_nsj2m"]
 [ext_resource type="Script" uid="uid://daepisdlnnwhs" path="res://Script/Lobby/folder_interactable.gd" id="4_yg8gm"]
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Lobby/folder_popup.gd" id="5_s3paf"]
-[ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
-[ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Interactables/LOBBY/Banner.png" id="6_vmftg"]
+[ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Interactables/Lobby/folder_inrange.png" id="6_sup6t"]
+[ext_resource type="Texture2D" uid="uid://cdxfvpqo3tmtt" path="res://Interactables/LOBBY/Banner.png" id="6_vmftg"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://World/Font/interact.tres" id="8_amwwa"]
 [ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Scenes/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Lobby/banner_interactable.gd" id="10_b6u2u"]
 [ext_resource type="Script" uid="uid://64dxsjgcaueb" path="res://Script/Lobby/banner_popup.gd" id="11_idhfa"]
-[ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Interactables/LOBBY/box.png" id="11_r753w"]
-[ext_resource type="Texture2D" uid="uid://df5na580d4cia" path="res://Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
+[ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Interactables/Lobby/box.png" id="11_r753w"]
+[ext_resource type="Texture2D" uid="uid://df5na580d4cia" path="res://Interactables/Lobby/banner_inrange.png" id="12_03jl0"]
 [ext_resource type="Script" uid="uid://bt5uxn1sf0sps" path="res://Script/Lobby/box.gd" id="14_kr8xt"]
-[ext_resource type="Texture2D" uid="uid://csuiv884sq50b" path="res://Interactables/LOBBY/experiment.png" id="15_yesx4"]
-[ext_resource type="Texture2D" uid="uid://d3qs3n11kox6m" path="res://Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
+[ext_resource type="Texture2D" uid="uid://ken3mleqsjcr" path="res://Interactables/LOBBY/experiment.png" id="15_yesx4"]
+[ext_resource type="Texture2D" uid="uid://dqi5lve10qvd2" path="res://Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
 [ext_resource type="Script" uid="uid://c6ev3iv2f6ew5" path="res://Script/Lobby/box_popup.gd" id="17_6n5of"]
 [ext_resource type="Script" uid="uid://dfhdigndf2jie" path="res://Script/Lobby/experiment_interactable.gd" id="18_y5q1o"]
-[ext_resource type="Texture2D" uid="uid://rjqgk0dojq8t" path="res://Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
+[ext_resource type="Texture2D" uid="uid://rjqgk0dojq8t" path="res://Interactables/Lobby/experiment_inrange.png" id="20_cpovp"]
 [ext_resource type="Script" uid="uid://ds87xmk73jeq7" path="res://Script/Lobby/experiment_popup.gd" id="20_u60dt"]
 [ext_resource type="Script" uid="uid://cvr77d4hgkttv" path="res://Script/Lobby/simple_info_interactable.gd" id="22_7yj0t"]
-[ext_resource type="Texture2D" uid="uid://coe7nodwocgd5" path="res://Interactables/LOBBY/organizer.png" id="22_sy2g3"]
-[ext_resource type="Texture2D" uid="uid://6o14f31m7thc" path="res://Interactables/LOBBY/table.png" id="23_4sjms"]
-[ext_resource type="Texture2D" uid="uid://c1r6dvpsrmjsh" path="res://Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
-[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Interactables/UI_Popups/UI.png" id="24_yoplv"]
+[ext_resource type="Texture2D" uid="uid://coe7nodwocgd5" path="res://Interactables/Lobby/organizer.png" id="22_sy2g3"]
+[ext_resource type="Texture2D" uid="uid://6o14f31m7thc" path="res://Interactables/Lobby/table.png" id="23_4sjms"]
+[ext_resource type="Texture2D" uid="uid://c1r6dvpsrmjsh" path="res://Interactables/Lobby/tableUp.png" id="24_dpjhh"]
+[ext_resource type="Texture2D" uid="uid://dfnfgv2cvagld" path="res://Interactables/UI_Popups/UI.png" id="24_yoplv"]
 [ext_resource type="Script" uid="uid://d1677ki88bmov" path="res://Script/Lobby/simple_info_popup.gd" id="25_5g874"]
-[ext_resource type="Texture2D" uid="uid://bmhnqbuyg1ld6" path="res://Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
-[ext_resource type="Texture2D" uid="uid://d32bajtu4nh3a" path="res://Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
+[ext_resource type="Texture2D" uid="uid://bmhnqbuyg1ld6" path="res://Interactables/Lobby/organizer_inrange.png" id="27_iexsg"]
+[ext_resource type="Texture2D" uid="uid://d32bajtu4nh3a" path="res://Interactables/Lobby/table_inrange.png" id="29_7ecbt"]
 [ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://World/Font/NicoClean-Regular.otf" id="29_8bywp"]
-[ext_resource type="Texture2D" uid="uid://cr6v1pingboiv" path="res://Interactables/LOBBY/tableUp_inrange.png" id="31_3u0wr"]
+[ext_resource type="Texture2D" uid="uid://cr6v1pingboiv" path="res://Interactables/Lobby/tableUp_inrange.png" id="31_3u0wr"]
 [ext_resource type="Script" uid="uid://bc5gaifio4jf7" path="res://Script/Doors/door_to_room3.gd" id="31_hqvxi"]
 [ext_resource type="Script" uid="uid://cnysnopm06dor" path="res://Script/Doors/door_to_room4.gd" id="33_1al0n"]
-[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Interactables/doorclose_inrange.png" id="33_xfaes"]
-[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Interactables/dooropen.png" id="34_6msik"]
-[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Interactables/doorclose.png" id="34_wagpd"]
+[ext_resource type="Texture2D" uid="uid://beyw35jgohxp7" path="res://Interactables/doorclose_inrange.png" id="33_xfaes"]
+[ext_resource type="Texture2D" uid="uid://0btsfb2ne1h5" path="res://Interactables/dooropen.png" id="34_6msik"]
+[ext_resource type="Texture2D" uid="uid://b5ok8fyit7ckb" path="res://Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
-[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
-[ext_resource type="Texture2D" uid="uid://crf15klxa40et" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
-[ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
-[ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
+[ext_resource type="Texture2D" uid="uid://beesw532rilyk" path="res://Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="Texture2D" uid="uid://d3knvppoi70gn" path="res://World/Wall/room3TAG.png" id="36_2n0gg"]
+[ext_resource type="Texture2D" uid="uid://c8ehhfdxmtf2i" path="res://World/Wall/room4TAG.png" id="38_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://vacqejprdup" path="res://World/Wall/room5TAG.png" id="40_amwwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -1781,7 +1781,6 @@ position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_r753w")
 
 [node name="FolderPopup" type="CanvasLayer" parent="Folders" unique_id=763621968 groups=["info_popup"]]
-visible = false
 script = ExtResource("5_s3paf")
 
 [node name="Panel" type="Panel" parent="Folders/FolderPopup" unique_id=27417051]
@@ -1910,7 +1909,6 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_r753w")
 
 [node name="BannerPopup" type="CanvasLayer" parent="Banners" unique_id=933229954 groups=["info_popup"]]
-visible = false
 script = ExtResource("11_idhfa")
 
 [node name="Panel" type="Panel" parent="Banners/BannerPopup" unique_id=424747828]
@@ -1995,7 +1993,6 @@ position = Vector2(2.25, 0.75)
 shape = SubResource("RectangleShape2D_03jl0")
 
 [node name="BoxPopup" type="CanvasLayer" parent="Box" unique_id=1053859485 groups=["info_popup"]]
-visible = false
 script = ExtResource("17_6n5of")
 
 [node name="Panel" type="Panel" parent="Box/BoxPopup" unique_id=92591679]
@@ -2162,7 +2159,6 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_03jl0")
 
 [node name="ExperimentPopup" type="CanvasLayer" parent="Experiment" unique_id=1497004670 groups=["info_popup"]]
-visible = false
 script = ExtResource("20_u60dt")
 
 [node name="Panel" type="Panel" parent="Experiment/ExperimentPopup" unique_id=398311477]
@@ -2271,7 +2267,6 @@ position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_4sjms")
 
 [node name="OrganizerPopup" type="CanvasLayer" parent="Organizer" unique_id=860077000 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="Organizer/OrganizerPopup" unique_id=1449356476]
@@ -2371,7 +2366,6 @@ position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_cpovp")
 
 [node name="TablePopup" type="CanvasLayer" parent="Table" unique_id=1695153079 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="Table/TablePopup" unique_id=746675410]
@@ -2471,7 +2465,6 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_dy145")
 
 [node name="TableUpPopup" type="CanvasLayer" parent="TableUp" unique_id=915280982 groups=["info_popup"]]
-visible = false
 script = ExtResource("25_5g874")
 
 [node name="Panel" type="Panel" parent="TableUp/TableUpPopup" unique_id=745866324]
@@ -2541,6 +2534,7 @@ position = Vector2(-0.5, 11.25)
 shape = SubResource("RectangleShape2D_xfaes")
 
 [node name="Label" type="Label" parent="DoortoRoom3" unique_id=1160320166]
+z_index = 5
 offset_left = -19.0
 offset_top = -25.0
 offset_right = 22.0
@@ -2549,7 +2543,7 @@ label_settings = SubResource("LabelSettings_2n0gg")
 
 [node name="R3Tag" type="Sprite2D" parent="DoortoRoom3" unique_id=139625766]
 position = Vector2(1, -22)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("36_2n0gg")
 
 [node name="DoortoRoom4" type="Area2D" parent="." unique_id=1902803123]
@@ -2569,6 +2563,7 @@ position = Vector2(424, 154)
 shape = SubResource("RectangleShape2D_xfaes")
 
 [node name="Label" type="Label" parent="DoortoRoom4" unique_id=1494120254]
+z_index = 5
 offset_left = 406.0
 offset_top = 117.0
 offset_right = 447.0
@@ -2577,7 +2572,7 @@ label_settings = SubResource("LabelSettings_2n0gg")
 
 [node name="R4Tag" type="Sprite2D" parent="DoortoRoom4" unique_id=327676543]
 position = Vector2(425, 120)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("38_ngjh1")
 
 [node name="DoortoRoom5" type="Area2D" parent="." unique_id=2068480091]
@@ -2597,6 +2592,7 @@ position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_8isgd")
 
 [node name="R5Tag" type="Label" parent="DoortoRoom5" unique_id=541639695]
+z_index = 5
 offset_left = -18.0
 offset_top = -25.0
 offset_right = 22.0
@@ -2605,5 +2601,5 @@ label_settings = SubResource("LabelSettings_ngjh1")
 
 [node name="Room5tag" type="Sprite2D" parent="DoortoRoom5" unique_id=113460320]
 position = Vector2(0, -22)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("40_amwwa")

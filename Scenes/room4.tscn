@@ -1092,7 +1092,7 @@ offset_bottom = 175.0
 text = "public class Main {
   public static void main(String[] args) {
 
-               (int i =           ; i<=            ;            ) {
+               (int i =           ; i<=           ;           ) {
             for (int j = 1; j <= i; j++) {
                                                                ;
           }
@@ -1143,9 +1143,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Ans3" type="LineEdit" parent="SciCompPopup/Panel" unique_id=1314204350]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.113636434
+anchor_left = 0.10454545
 anchor_top = -0.09374998
-anchor_right = 0.13181825
+anchor_right = 0.122727275
 anchor_bottom = -0.056249976
 offset_left = 161.0
 offset_top = 46.0
@@ -1161,9 +1161,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Ans4" type="LineEdit" parent="SciCompPopup/Panel" unique_id=872437606]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.13636364
+anchor_left = 0.11363637
 anchor_top = -0.081249975
-anchor_right = 0.15454546
+anchor_right = 0.13181818
 anchor_bottom = -0.056249976
 offset_left = 210.0
 offset_top = 45.0
@@ -1258,9 +1258,9 @@ texture_hover = ExtResource("27_abn4r")
 [node name="ExplanationLabel" type="RichTextLabel" parent="SciCompPopup/Panel" unique_id=1091549926]
 layout_mode = 0
 offset_left = 11.0
-offset_top = -2.0
-offset_right = 303.0
-offset_bottom = 159.0
+offset_top = -12.0
+offset_right = 306.0
+offset_bottom = 167.0
 theme_override_fonts/normal_font = ExtResource("9_4bm6g")
 theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
@@ -1371,9 +1371,7 @@ position = Vector2(0, 13)
 
 [node name="Label" parent="RobotInteractable" index="2" unique_id=306761151]
 offset_left = -40.0
-offset_top = -26.0
 offset_right = 38.0
-offset_bottom = -3.0
 
 [node name="Panel" parent="RobotInteractable/CanvasLayer" parent_id_path=PackedInt32Array(1239817990, 1533831507) index="0" unique_id=1976795389]
 offset_left = 269.0

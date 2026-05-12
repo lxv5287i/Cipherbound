@@ -1,28 +1,28 @@
 [gd_scene format=3 uid="uid://b768p582nwe5y"]
 
 [ext_resource type="Script" uid="uid://p7blq35yp0o3" path="res://Script/MainMenu/main_menu.gd" id="1_o4oiv"]
-[ext_resource type="Texture2D" uid="uid://lmi4vwhdeadp" path="res://Scenes/MAIN UI/Buttons/startButton.png" id="2_4agm1"]
-[ext_resource type="Texture2D" uid="uid://1rd308g88gpe" path="res://Scenes/MAIN UI/Background/floorBG.png" id="2_qxkgs"]
-[ext_resource type="Texture2D" uid="uid://dp4s0qkoylhrn" path="res://Scenes/MAIN UI/Background/wallBG.png" id="2_xgent"]
-[ext_resource type="Texture2D" uid="uid://dh4b0rfhbfjjd" path="res://Scenes/MAIN UI/Buttons/startButton_Pressed.png" id="3_u21yi"]
-[ext_resource type="Texture2D" uid="uid://dwm7ax5hglufw" path="res://Scenes/MAIN UI/Background/ObjectBG.png" id="4_1jfh7"]
-[ext_resource type="Texture2D" uid="uid://b5apl0n0w3lsi" path="res://Scenes/MAIN UI/Buttons/startButton_Hovered.png" id="4_qxkgs"]
-[ext_resource type="Texture2D" uid="uid://jthh35w1fif0" path="res://Scenes/MAIN UI/Background/TitleBG.png" id="5_gerqo"]
-[ext_resource type="Texture2D" uid="uid://42jejy041b38" path="res://Scenes/MAIN UI/Buttons/creditButton.png" id="9_l30fp"]
-[ext_resource type="Texture2D" uid="uid://bmynxe46fx856" path="res://Scenes/MAIN UI/Buttons/leaderboardButton.png" id="9_vhqic"]
-[ext_resource type="Texture2D" uid="uid://7qo0idteinol" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Pressed.png" id="10_ajx5d"]
-[ext_resource type="Texture2D" uid="uid://02yeondfmpal" path="res://Scenes/MAIN UI/Buttons/creditButton_Pressed.png" id="10_gh2x4"]
-[ext_resource type="Texture2D" uid="uid://dm6f8gobl7n5c" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Hovered.png" id="11_2x10c"]
-[ext_resource type="Texture2D" uid="uid://be43g8qhkh6kv" path="res://Scenes/MAIN UI/Buttons/creditButton_Hovered.png" id="11_6gd6s"]
-[ext_resource type="Texture2D" uid="uid://c7r7hfb26g1ge" path="res://Scenes/MAIN UI/Buttons/exitButton.png" id="12_l30fp"]
-[ext_resource type="Texture2D" uid="uid://cnye2wqkjjqwy" path="res://Scenes/MAIN UI/Buttons/exitButton_Pressed.png" id="13_gh2x4"]
-[ext_resource type="Texture2D" uid="uid://rgf5gwy6wrh8" path="res://Scenes/MAIN UI/Buttons/exitButton_Hovered.png" id="14_6gd6s"]
-[ext_resource type="Texture2D" uid="uid://dcyh4aveh82g" path="res://World/Buttons/tutorial.png" id="18_3uyup"]
+[ext_resource type="Texture2D" uid="uid://dbqquix7ko182" path="res://Scenes/MAIN UI/Buttons/startButton.png" id="2_4agm1"]
+[ext_resource type="Texture2D" uid="uid://bwi6wf8mqo1a5" path="res://Scenes/MAIN UI/Background/floorBG.png" id="2_qxkgs"]
+[ext_resource type="Texture2D" uid="uid://bidl7np0museg" path="res://Scenes/MAIN UI/Background/wallBG.png" id="2_xgent"]
+[ext_resource type="Texture2D" uid="uid://banma8s0pmuno" path="res://Scenes/MAIN UI/Buttons/startButton_Pressed.png" id="3_u21yi"]
+[ext_resource type="Texture2D" uid="uid://m5wey1mj5pap" path="res://Scenes/MAIN UI/Background/ObjectBG.png" id="4_1jfh7"]
+[ext_resource type="Texture2D" uid="uid://bh2nw6wsbr0kx" path="res://Scenes/MAIN UI/Buttons/startButton_Hovered.png" id="4_qxkgs"]
+[ext_resource type="Texture2D" uid="uid://cf4ny7pgm05sm" path="res://Scenes/MAIN UI/Background/TitleBG.png" id="5_gerqo"]
+[ext_resource type="Texture2D" uid="uid://cbbk5niv4faty" path="res://Scenes/MAIN UI/Buttons/creditButton.png" id="9_l30fp"]
+[ext_resource type="Texture2D" uid="uid://5hl13jlidamh" path="res://Scenes/MAIN UI/Buttons/leaderboardButton.png" id="9_vhqic"]
+[ext_resource type="Texture2D" uid="uid://fpe7ypoi6wnq" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Pressed.png" id="10_ajx5d"]
+[ext_resource type="Texture2D" uid="uid://b0uchlq30ygjc" path="res://Scenes/MAIN UI/Buttons/creditButton_Pressed.png" id="10_gh2x4"]
+[ext_resource type="Texture2D" uid="uid://cwy71k2oi1ilq" path="res://Scenes/MAIN UI/Buttons/leaderboardButton_Hovered.png" id="11_2x10c"]
+[ext_resource type="Texture2D" uid="uid://ch6r7s25ss5wf" path="res://Scenes/MAIN UI/Buttons/creditButton_Hovered.png" id="11_6gd6s"]
+[ext_resource type="Texture2D" uid="uid://cfximcukhykih" path="res://Scenes/MAIN UI/Buttons/exitButton.png" id="12_l30fp"]
+[ext_resource type="Texture2D" uid="uid://becppw085g6p1" path="res://Scenes/MAIN UI/Buttons/exitButton_Pressed.png" id="13_gh2x4"]
+[ext_resource type="Texture2D" uid="uid://cpwh31ek6shse" path="res://Scenes/MAIN UI/Buttons/exitButton_Hovered.png" id="14_6gd6s"]
+[ext_resource type="Texture2D" uid="uid://vajb2x7qm3uc" path="res://World/Buttons/tutorial.png" id="18_3uyup"]
 [ext_resource type="PackedScene" uid="uid://ds034udoqe4su" path="res://Scenes/char_info.tscn" id="18_6gd6s"]
 [ext_resource type="PackedScene" uid="uid://opygfsrpi55u" path="res://Scenes/team_name.tscn" id="19_3isct"]
-[ext_resource type="Texture2D" uid="uid://ckorgnyejaqsc" path="res://World/Buttons/tutorial_pressed.png" id="19_gq2xb"]
+[ext_resource type="Texture2D" uid="uid://f33dlrp3yrte" path="res://World/Buttons/tutorial_pressed.png" id="19_gq2xb"]
 [ext_resource type="PackedScene" uid="uid://crvyxwuv0yw5v" path="res://Scenes/leaderboard.tscn" id="20_3isct"]
-[ext_resource type="Texture2D" uid="uid://dbvcai8kdmxgy" path="res://World/Buttons/tutorial_hovered.png" id="20_8niug"]
+[ext_resource type="Texture2D" uid="uid://d2xubw5bc81bl" path="res://World/Buttons/tutorial_hovered.png" id="20_8niug"]
 [ext_resource type="PackedScene" uid="uid://2ojoslewln26" path="res://Scenes/credits.tscn" id="21_5r2fg"]
 
 [node name="MainMenu" type="Node2D" unique_id=701179138]
@@ -98,7 +98,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Leaderboard" type="TextureButton" parent="ButtonManager" unique_id=1221367758]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.0
+anchor_left = 0.6
 anchor_top = 0.6
 anchor_right = 0.6
 anchor_bottom = 0.6
@@ -141,16 +141,12 @@ texture_pressed = ExtResource("19_gq2xb")
 texture_hover = ExtResource("20_8niug")
 
 [node name="charInfo" parent="." unique_id=1161544681 instance=ExtResource("18_6gd6s")]
-visible = false
 
 [node name="teamName" parent="." unique_id=1011824385 instance=ExtResource("19_3isct")]
-visible = false
 
 [node name="Leaderboard" parent="." unique_id=282360567 instance=ExtResource("20_3isct")]
-visible = false
 
 [node name="Credits" parent="." unique_id=531993239 instance=ExtResource("21_5r2fg")]
-visible = false
 
 [connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ButtonManager/Credits" to="." method="_on_credits_pressed"]

@@ -26,7 +26,7 @@ func _ready():
 
 func show_prompt():
 	prompt_label.visible = true
-	prompt_label.text = "SPACE / E"
+	prompt_label.text = "[WELCOME]"
 
 
 func hide_prompt():

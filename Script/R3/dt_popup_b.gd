@@ -72,8 +72,16 @@ func close_popup():
 func _on_submit_pressed():
 	var user_answer := answer_input.text.strip_edges().to_lower()
 
+	if user_answer == "":
+		result_label.visible = true
+		result_label.text = "Please input answer"
+		answer_input.grab_focus()
+		return
+
 	if user_answer == "if else" or user_answer == "ifelse":
+		result_label.visible = true
 		result_label.text = "Correct"
+
 		solved = true
 
 		var progress = get_tree().get_first_node_in_group("game_progress")
@@ -82,12 +90,16 @@ func _on_submit_pressed():
 		if progress and progress.has_method("solve_analyst"):
 			progress.solve_analyst()
 
-		show_explanation()
-	else:
-		result_label.text = "Try again"
-		answer_input.grab_focus()
+		submit_button.visible = false
+		close_button.visible = true
+		answer_input.visible = false
 
+		return
 
+	result_label.visible = true
+	result_label.text = "Try again"
+	answer_input.grab_focus()
+	
 func show_explanation():
 	is_open = true
 	GameLock.movement_locked = true
