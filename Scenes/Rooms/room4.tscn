@@ -1,39 +1,42 @@
 [gd_scene format=4 uid="uid://t8u2trrawyd"]
 
-[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_ue16m"]
-[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_3x6hs"]
-[ext_resource type="Texture2D" uid="uid://bovrm8itsg65y" path="res://Assets/World/Objects/R4_Objects.png" id="3_ue16m"]
-[ext_resource type="Texture2D" uid="uid://cr6fcpni417yt" path="res://Assets/Interactables/R4/yesBREAK.png" id="4_3x6hs"]
+[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_ue16m"]
+[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_3x6hs"]
+[ext_resource type="Texture2D" uid="uid://di8wv4fyp7ou7" path="res://Assets/World/Objects/R4_Objects.png" id="3_ue16m"]
+[ext_resource type="Texture2D" uid="uid://b5557svtw70h0" path="res://Assets/Interactables/R4/yesBREAK.png" id="4_3x6hs"]
 [ext_resource type="Script" uid="uid://c0hcvtbtdtbfq" path="res://Script/Rooms/R4/glass.gd" id="4_lqko1"]
-[ext_resource type="Texture2D" uid="uid://bimwu5vx4lowb" path="res://Assets/Interactables/R4/sciComp.png" id="5_7mbuy"]
+[ext_resource type="Texture2D" uid="uid://qunu8w428d4h" path="res://Assets/Interactables/R4/sciComp.png" id="5_7mbuy"]
 [ext_resource type="Script" uid="uid://dmcfpwxbrtieq" path="res://Script/Rooms/R4/glass_popup.gd" id="6_a2mbq"]
-[ext_resource type="Texture2D" uid="uid://c7pabikgwv67h" path="res://Assets/Interactables/R4/yesBREAK_inrange.png" id="6_avhjg"]
-[ext_resource type="Texture2D" uid="uid://id85gvdt1ft7" path="res://Assets/Interactables/R4/sciKIOSK.png" id="6_s38dd"]
+[ext_resource type="Texture2D" uid="uid://0tc6vw2kcn4i" path="res://Assets/Interactables/R4/yesBREAK_inrange.png" id="6_avhjg"]
+[ext_resource type="Texture2D" uid="uid://03y48aub50hu" path="res://Assets/Interactables/R4/sciKIOSK.png" id="6_s38dd"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="7_4bm6g"]
-[ext_resource type="Texture2D" uid="uid://jntdfay3j40f" path="res://Assets/Interactables/R4/holotech.png" id="8_65fho"]
-[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_vq0d5"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_4bm6g"]
+[ext_resource type="Texture2D" uid="uid://ti1xdrbbdcyw" path="res://Assets/Interactables/R4/holotech.png" id="8_65fho"]
+[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_vq0d5"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_4bm6g"]
 [ext_resource type="LabelSettings" uid="uid://dyainmr88vpag" path="res://Assets/Fonts/PopupFont.tres" id="9_gs4d0"]
 [ext_resource type="Script" uid="uid://da8i66ys3tg5o" path="res://Script/Rooms/R4/kiosk.gd" id="11_xbk4l"]
 [ext_resource type="Script" uid="uid://ccqplvuw8ly6m" path="res://Script/Rooms/R4/brown_hint.gd" id="12_tu5f7"]
 [ext_resource type="Script" uid="uid://fa5hskx6eqqo" path="res://Script/Rooms/R4/kiosk_popup.gd" id="13_drwv6"]
-[ext_resource type="Texture2D" uid="uid://bpv7g25djr66b" path="res://Assets/Interactables/R4/sciKIOSK_inrange.png" id="13_sowe0"]
+[ext_resource type="Texture2D" uid="uid://babo8grpkn1b2" path="res://Assets/Interactables/R4/sciKIOSK_inrange.png" id="13_sowe0"]
 [ext_resource type="Script" uid="uid://cu8u5wj0vq46m" path="res://Script/Rooms/R4/brown_popup.gd" id="14_0m4uv"]
 [ext_resource type="Script" uid="uid://bb5dseld3njxm" path="res://Script/Rooms/R4/sci_comp.gd" id="18_ii7p1"]
-[ext_resource type="Texture2D" uid="uid://d23e0yes6inui" path="res://Assets/Interactables/R4/sciComp_inrange.png" id="20_0u70n"]
-[ext_resource type="Texture2D" uid="uid://cnxae37j2tkmu" path="res://Assets/Interactables/R4/holotech_inrange.png" id="20_45y14"]
+[ext_resource type="Texture2D" uid="uid://jnrfb2sotu50" path="res://Assets/Interactables/R4/sciComp_inrange.png" id="20_0u70n"]
+[ext_resource type="Texture2D" uid="uid://clbnaa8qb6wwr" path="res://Assets/Interactables/R4/holotech_inrange.png" id="20_45y14"]
 [ext_resource type="Script" uid="uid://cej7ptkadx4ji" path="res://Script/Rooms/R4/sci_comp_popup.gd" id="20_gled6"]
-[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="23_rxqb6"]
-[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="24_4bm6g"]
+[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="23_rxqb6"]
+[ext_resource type="Texture2D" uid="uid://c6tohceggejk6" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="24_4bm6g"]
 [ext_resource type="Script" uid="uid://bwfdqxkd7bu3g" path="res://Script/Doors/R4exit_door.gd" id="25_45y14"]
-[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="25_a0vq3"]
-[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="26_a0vq3"]
-[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="27_abn4r"]
-[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="27_vq0d5"]
-[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="28_ap4fu"]
-[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="28_gs4d0"]
+[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="25_a0vq3"]
+[ext_resource type="Texture2D" uid="uid://v5ibtxuvurt1" path="res://Assets/User Interface/Buttons/closeButton.png" id="26_a0vq3"]
+[ext_resource type="Texture2D" uid="uid://q2f6gqjb4dp2" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="27_abn4r"]
+[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="27_vq0d5"]
+[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="28_ap4fu"]
+[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="28_gs4d0"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="28_jg6dp"]
-[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="29_bkcjs"]
+[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="29_bkcjs"]
+[ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="35_moa77"]
+[ext_resource type="AudioStream" uid="uid://bb0yr231glh0u" path="res://World/Music/room 1-4(10).wav" id="36_1uale"]
+[ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="37_1uale"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mbuy"]
 texture = ExtResource("1_ue16m")
@@ -1038,13 +1041,12 @@ script = ExtResource("20_gled6")
 question_text = "public class Main {
   public static void main(String[] args) {
 
-                (int i =              ; i<=              ;               ) {
+               (int i =           ; i<=           ;           ) {
             for (int j = 1; j <= i; j++) {
-                                                                 ;
+                                                               ;
           }
-                                                                 ;
+                                                               ;
         }
-
     }
 "
 
@@ -1052,10 +1054,10 @@ question_text = "public class Main {
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 100.0
-offset_top = 88.0
-offset_right = -192.0
-offset_bottom = -104.0
+offset_left = 109.0
+offset_top = 87.0
+offset_right = -183.0
+offset_bottom = -105.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -1126,9 +1128,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.07727269
-anchor_top = -0.0875
+anchor_top = -0.1
 anchor_right = 0.095454544
-anchor_bottom = -0.05
+anchor_bottom = -0.0625
 offset_left = 96.0
 offset_top = 45.0
 offset_right = 136.0
@@ -1144,9 +1146,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.10454545
-anchor_top = -0.09374998
+anchor_top = -0.112499975
 anchor_right = 0.122727275
-anchor_bottom = -0.056249976
+anchor_bottom = -0.07499997
 offset_left = 161.0
 offset_top = 46.0
 offset_right = 201.0
@@ -1162,9 +1164,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.11363637
-anchor_top = -0.081249975
+anchor_top = -0.10624997
 anchor_right = 0.13181818
-anchor_bottom = -0.056249976
+anchor_bottom = -0.081249975
 offset_left = 210.0
 offset_top = 45.0
 offset_right = 250.0
@@ -1364,7 +1366,8 @@ metadata/_edit_use_anchors_ = true
 [node name="RobotInteractable" parent="." unique_id=1239817990 instance=ExtResource("28_jg6dp")]
 z_index = 15
 position = Vector2(200, 176)
-popup_text = "Welcome to Loop Room. Patterns repeat endlessly here. Observe the cycle, optimize your actions, and use looping logic to move forward"
+popup_text = "     [color=#093C5D]Welcome to Loop Room!![/color]
+Patterns repeat endlessly here. Observe the cycle, optimize your actions, and use looping logic to move forward"
 
 [node name="CollisionShape2D" parent="RobotInteractable" index="1" unique_id=780611906]
 position = Vector2(0, 13)
@@ -1375,18 +1378,41 @@ offset_right = 38.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" parent="RobotInteractable/CanvasLayer" parent_id_path=PackedInt32Array(1239817990, 1533831507) index="0" unique_id=1976795389]
-offset_left = 269.0
-offset_top = 158.0
-offset_right = 388.0
-offset_bottom = 246.0
+offset_left = 264.0
+offset_top = 128.0
+offset_right = 383.0
+offset_bottom = 216.0
+
+[node name="NinePatchRect" parent="RobotInteractable/CanvasLayer/Panel" index="0" unique_id=784274997]
+anchor_bottom = 0.59090906
 
 [node name="RichTextLabel" parent="RobotInteractable/CanvasLayer/Panel" index="1" unique_id=1074240285]
-anchor_left = 0.2857143
-anchor_top = -0.14772727
-anchor_right = 0.2857143
-anchor_bottom = -0.14772727
+anchor_left = -0.033613447
+anchor_top = -0.09090909
+anchor_right = 0.12605043
+anchor_bottom = -0.09090909
 theme_override_fonts/normal_font = ExtResource("9_4bm6g")
-theme_override_font_sizes/normal_font_size = 16
-text = "\"Welcome to Room 4. Patterns repeat endlessly here. Observe the cycle, optimize your actions, and use looping logic to move forward.\""
+text = "Welcome to Room 4!! Patterns repeat endlessly here. Observe the cycle, optimize your actions, and use looping logic to move forward."
+
+[node name="Label" parent="RobotInteractable/CanvasLayer/Panel" index="2" unique_id=438167303]
+anchor_left = 0.05882353
+anchor_top = 1.0909091
+anchor_right = 0.05882353
+anchor_bottom = 1.0909091
+
+[node name="TextureRect" parent="RobotInteractable/CanvasLayer/Panel" index="3" unique_id=1038492711]
+anchor_left = 0.05882353
+anchor_top = 1.0909091
+anchor_right = 0.05882353
+anchor_bottom = 1.0909091
+
+[node name="RoomMusicController" type="Node" parent="." unique_id=1016288904]
+script = ExtResource("35_moa77")
+music = ExtResource("36_1uale")
+target_volume = -15.0
+fade_time = 3.0
+start_volume = -20.0
+
+[node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("37_1uale")]
 
 [editable path="RobotInteractable"]

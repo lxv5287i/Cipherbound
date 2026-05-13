@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal puzzle_correct
 
+@onready var answer_sfx = $"../../AnswerSFX"
+
 @onready var panel: Panel = $Panel
 @onready var question_label: Label = $Panel/QuestionLabel
 @onready var ans1: LineEdit = $Panel/Ans1
@@ -61,6 +63,9 @@ func _on_submit_pressed():
 	var a2 := ans2.text.strip_edges()
 
 	if a1 == "2" and a2 == "15":
+
+		answer_sfx.play_correct()
+
 		result_label.text = "Correct"
 
 		var progress = get_tree().get_first_node_in_group("game_progress")
@@ -73,7 +78,11 @@ func _on_submit_pressed():
 
 		await get_tree().create_timer(0.4).timeout
 		close_popup()
+
 	else:
+
+		answer_sfx.play_wrong()
+
 		result_label.text = "Try again"
 		ans1.grab_focus()
 

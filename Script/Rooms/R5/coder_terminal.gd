@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var answer_sfx = $"../AnswerSFX"
+
 @export var normal_texture: Texture2D
 @export var inrange_texture: Texture2D
 
@@ -174,6 +176,9 @@ func _on_submit_pressed():
 	and clean_text(ans10.text) == "" \
 	and clean_text(ans11.text) == "" \
 	and clean_text(ans12.text) == "":
+
+		answer_sfx.play_wrong()
+
 		result_label.visible = true
 		result_label.text = "Please input answer"
 		ans1.grab_focus()
@@ -220,10 +225,17 @@ func _on_submit_pressed():
 		error_text = "Answer 12 is wrong."
 
 	if correct:
+
+		answer_sfx.play_correct()
+
 		solved = true
 		GameProgress.solve_room5_coder()
 		show_explanation_only()
+
 	else:
+
+		answer_sfx.play_wrong()
+
 		result_label.visible = true
 		result_label.text = error_text
 

@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cr455csc5de3r"]
 
 [ext_resource type="Script" uid="uid://cdwnmlumf3foh" path="res://Script/Utility/congratulation.gd" id="1_ulro0"]
-[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://Assets/User Interface/Buttons/quitToMenu.png" id="2_i0n60"]
-[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://Assets/User Interface/Buttons/quitToMenu_pressed.png" id="3_3elxb"]
-[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
-[ext_resource type="Texture2D" uid="uid://d4ef0maki1oh0" path="res://Assets/User Interface/Popups/congratulations.png" id="5_3elxb"]
+[ext_resource type="Texture2D" uid="uid://bxv7vga14vdtq" path="res://Assets/User Interface/Buttons/quitToMenu.png" id="2_i0n60"]
+[ext_resource type="Texture2D" uid="uid://beywda60od1g" path="res://Assets/User Interface/Buttons/quitToMenu_pressed.png" id="3_3elxb"]
+[ext_resource type="Texture2D" uid="uid://de5ybeijitdu7" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
+[ext_resource type="Texture2D" uid="uid://dd7wneywsi04a" path="res://Assets/User Interface/Popups/congratulations.png" id="5_3elxb"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_78uih"]
+[ext_resource type="AudioStream" uid="uid://rn3ek80pprve" path="res://World/Music/correctAnswerLong.wav" id="7_e53f5"]
 
 [node name="Congratulation" type="CanvasLayer" unique_id=825101189]
 script = ExtResource("1_ulro0")
@@ -39,5 +41,30 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_i0n60")
 texture_pressed = ExtResource("3_3elxb")
 texture_hover = ExtResource("4_sudjp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=1772238217]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 99.0
+offset_right = 452.0
+offset_bottom = 234.0
+theme_override_fonts/normal_font = ExtResource("6_78uih")
+theme_override_fonts/bold_font = ExtResource("6_78uih")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 18
+bbcode_enabled = true
+text = "[b][color=#0992C2]CIPHERBOUND COMPLETED[/color][/b]
+
+All encrypted systems have been decoded successfully. Every puzzle was solved correctly, and the facility lockdown has been terminated.
+You and your team escaped the Cipherbound simulation through logic, teamwork, and precision.
+
+[b][color=#0992C2]MISSION STATUS: SUCCESS[/color][/b]
+“The code was never the enemy. Failure to think was.”
+"
+horizontal_alignment = 1
+
+[node name="CongratulationBG" type="AudioStreamPlayer" parent="." unique_id=1470866121]
+stream = ExtResource("7_e53f5")
+autoplay = true
 
 [connection signal="pressed" from="PanelContainer/Quit to Menu" to="." method="_on_quit_to_menu_pressed"]

@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal puzzle_correct
 
+@onready var answer_sfx = $"../AnswerSFX"
+
 @export var exit_door_path: NodePath
 
 @export_multiline var progress_text_template := """Correct
@@ -134,6 +136,7 @@ func _on_submit_pressed():
 	var a6 := ans6.text.strip_edges()
 
 	if a1 != "public class Main":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 1 is wrong."
 		ans1.grab_focus()
 		return
@@ -143,6 +146,7 @@ func _on_submit_pressed():
 		a2 != "public static void main (String[] args)" and
 		a2 != "public static void main (String args)"
 	):
+		answer_sfx.play_wrong()
 		result_label.text = "Line 2 is wrong."
 		ans2.grab_focus()
 		return
@@ -159,26 +163,32 @@ func _on_submit_pressed():
 		score_result = "PASS"
 		checked_75 = true
 	else:
+		answer_sfx.play_wrong()
 		result_label.text = "Line 3 is wrong."
 		ans3.grab_focus()
 		return
 
 	if a4 != ">=":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 4 is wrong."
 		ans4.grab_focus()
 		return
 
 	if a5 != "PASS":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 5 is wrong."
 		ans5.grab_focus()
 		return
 
 	if a6 != "FAIL":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 6 is wrong."
 		ans6.grab_focus()
 		return
 
 	if checked_90 and checked_71 and checked_75:
+		answer_sfx.play_correct()
+
 		if not already_solved:
 			already_solved = true
 			puzzle_correct.emit()

@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var answer_sfx = $"../AnswerSFX"
+
 @export var normal_texture: Texture2D
 @export var inrange_texture: Texture2D
 
@@ -120,6 +122,8 @@ func _on_submit_pressed():
 	and subclass1_answer == "CombatRobot" \
 	and subclass2_answer == "Drone":
 
+		answer_sfx.play_correct()
+
 		solved = true
 		GameProgress.solve_room5_analyst()
 
@@ -127,7 +131,11 @@ func _on_submit_pressed():
 		result_label.text = "CHAIN RESTORED"
 
 		show_explanation()
+
 	else:
+
+		answer_sfx.play_wrong()
+
 		result_label.visible = true
 		result_label.text = "WRONG HIERARCHY"
 

@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal puzzle_correct
 
+@onready var answer_sfx =$"../AnswerSFX"
+
 @onready var panel: Panel = $Panel
 @onready var question_label: Label = $Panel/QuestionLabel
 
@@ -76,13 +78,20 @@ func _on_submit_pressed():
 	var a3 := ans3.text.strip_edges()
 
 	if a1 == correct_answers[0] and a2 == correct_answers[1] and a3 == correct_answers[2]:
+
+		answer_sfx.play_correct()
+
 		result_label.text = "Correct"
 
 		puzzle_correct.emit()
 
 		next_button.visible = true
 		submit_button.visible = false
+
 	else:
+
+		answer_sfx.play_wrong()
+
 		result_label.text = "Try again"
 		ans1.grab_focus()
 

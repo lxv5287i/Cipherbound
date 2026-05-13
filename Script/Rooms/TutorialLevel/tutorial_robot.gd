@@ -21,8 +21,10 @@ func _ready():
 	rich_text_label.bbcode_enabled = true
 	rich_text_label.text = popup_text
 
-	sprite.play(default_animation)
-
+	if sprite.sprite_frames.has_animation(default_animation):
+		sprite.play(default_animation)
+	else:
+		print("MISSING DEFAULT ANIMATION: ", default_animation)
 
 func show_prompt():
 	prompt_label.visible = true
@@ -32,19 +34,17 @@ func show_prompt():
 func hide_prompt():
 	prompt_label.visible = false
 	close_popup()
-
 	sprite.play(default_animation)
 
 
 func interact(player: Node2D = null):
-	if player == null:
-		player = get_nearest_player()
+	var real_player := get_nearest_player()
 
-	if player == null:
-		print("NO PLAYER FOUND")
+	if real_player == null:
+		print("NO REAL PLAYER FOUND")
 		return
 
-	face_player(player)
+	face_player(real_player)
 
 	popup_open = true
 	popup_canvas.visible = true
@@ -55,39 +55,11 @@ func interact(player: Node2D = null):
 		level.unlock_analyst()
 
 
-func close_popup():
-	popup_open = false
-	popup_canvas.visible = false
-
-
-func get_nearest_player() -> Node2D:
-	var analyst = get_tree().get_first_node_in_group("analyst_player")
-	var coder = get_tree().get_first_node_in_group("coder_player")
-
-	var nearest_player: Node2D = null
-	var nearest_distance := 999999.0
-
-	if analyst != null:
-		var analyst_distance = global_position.distance_to(analyst.global_position)
-
-		if analyst_distance < nearest_distance:
-			nearest_distance = analyst_distance
-			nearest_player = analyst
-
-	if coder != null:
-		var coder_distance = global_position.distance_to(coder.global_position)
-
-		if coder_distance < nearest_distance:
-			nearest_distance = coder_distance
-			nearest_player = coder
-
-	return nearest_player
-
-
 func face_player(player: Node2D):
-	var direction: Vector2 = player.global_position - sprite.global_position
+	var direction: Vector2 = player.global_position - global_position
 
-	print("PLAYER: ", player.name)
+	print("ROBOT POS: ", global_position)
+	print("REAL PLAYER POS: ", player.global_position)
 	print("DIRECTION: ", direction)
 
 	if abs(direction.x) > abs(direction.y):
@@ -100,3 +72,32 @@ func face_player(player: Node2D):
 			sprite.play("down")
 		else:
 			sprite.play("up")
+
+func close_popup():
+	popup_open = false
+	popup_canvas.visible = false
+
+
+func get_nearest_player() -> Node2D:
+	var players: Array[Node] = []
+
+	players.append_array(get_tree().get_nodes_in_group("analyst_player"))
+	players.append_array(get_tree().get_nodes_in_group("coder_player"))
+
+	var nearest_player: Node2D = null
+	var nearest_distance := INF
+
+	for p in players:
+		if p == self:
+			continue
+
+		if not p is Node2D:
+			continue
+
+		var distance := global_position.distance_to(p.global_position)
+
+		if distance < nearest_distance:
+			nearest_distance = distance
+			nearest_player = p
+
+	return nearest_player

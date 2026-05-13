@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ct7yhprhri7u3"]
 
 [ext_resource type="Script" uid="uid://c7btladcdfj66" path="res://Script/Utility/loading_screen.gd" id="1_oobaa"]
-[ext_resource type="Texture2D" uid="uid://bfcy8q24crjbr" path="res://Assets/World/placeholder.png" id="2_nfm0g"]
-[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="3_fayou"]
+[ext_resource type="Texture2D" uid="uid://dn6tvc8sxhie5" path="res://Assets/World/placeholder.png" id="2_nfm0g"]
+[ext_resource type="FontFile" uid="uid://c3v2pti167hee" path="res://Assets/World/Font/NicoClean-Regular.otf" id="3_fayou"]
 
 [sub_resource type="Animation" id="Animation_h5lxv"]
 length = 0.001

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var main_menu_scene: String = "res://Assets/MAIN UI/mainMenu.tscn"
+@export var main_menu_scene: String = "res://Assets/Main Menu/mainMenu.tscn"
 
 @export var closed_texture: Texture2D
 @export var closed_inrange_texture: Texture2D

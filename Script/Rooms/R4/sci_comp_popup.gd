@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal puzzle_correct
 
+@onready var answer_sfx = $"../AnswerSFX"
+
 @export_multiline var question_text: String = ""
 @export_multiline var result_text: String = ""
 
@@ -99,34 +101,42 @@ func close_popup():
 
 func _on_submit_pressed():
 	if ans1.text.strip_edges() != "for":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 1 is wrong."
 		ans1.grab_focus()
 		return
 
 	if ans2.text.strip_edges() != "1":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 2 is wrong."
 		ans2.grab_focus()
 		return
 
 	if ans3.text.strip_edges() != "3":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 3 is wrong."
 		ans3.grab_focus()
 		return
 
 	if ans4.text.strip_edges() != "i++":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 4 is wrong."
 		ans4.grab_focus()
 		return
 
 	if ans5.text.strip_edges() != "System.out.print(\"*\")":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 5 is wrong."
 		ans5.grab_focus()
 		return
 
 	if ans6.text.strip_edges() != "System.out.println()":
+		answer_sfx.play_wrong()
 		result_label.text = "Line 6 is wrong."
 		ans6.grab_focus()
 		return
+
+	answer_sfx.play_correct()
 
 	if not already_solved:
 		already_solved = true

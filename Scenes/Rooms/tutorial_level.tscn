@@ -1,36 +1,38 @@
 [gd_scene format=4 uid="uid://j58fxft6ma3f"]
 
 [ext_resource type="Script" uid="uid://1kyfvnddoueh" path="res://Script/Rooms/TutorialLevel/tutorial_level.gd" id="1_81cua"]
-[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_hy7s5"]
-[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_0jq2i"]
+[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_hy7s5"]
+[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_0jq2i"]
 [ext_resource type="Script" uid="uid://b6iwanu4b72ek" path="res://Script/Rooms/TutorialLevel/tutorial_coder.gd" id="3_lqt5r"]
-[ext_resource type="Texture2D" uid="uid://bub2e7lf4xc7g" path="res://Assets/Interactables/R3/status.png" id="4_81cua"]
-[ext_resource type="Texture2D" uid="uid://bmq2wflqoenr5" path="res://Assets/World/Objects/R1_2_Objects.png" id="4_q1olv"]
-[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Assets/Interactables/R1/computerOFF.png" id="5_q1s2v"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_yhs6i"]
+[ext_resource type="Texture2D" uid="uid://bilxfawaaqis0" path="res://Assets/Interactables/R3/status.png" id="4_81cua"]
+[ext_resource type="Texture2D" uid="uid://ulcbxbmy18vk" path="res://Assets/World/Objects/R1_2_Objects.png" id="4_q1olv"]
+[ext_resource type="Texture2D" uid="uid://7go41d785j2j" path="res://Assets/Interactables/R1/computerOFF.png" id="5_q1s2v"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_yhs6i"]
 [ext_resource type="LabelSettings" uid="uid://dsfn5qc1fp8je" path="res://Assets/World/Font/robot.tres" id="8_3h0wn"]
-[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="9_pqrgu"]
-[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="10_or8a6"]
-[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="11_la5i4"]
-[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="12_8uvx6"]
-[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="13_gjt4w"]
-[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="14_h8rrn"]
+[ext_resource type="Texture2D" uid="uid://v5ibtxuvurt1" path="res://Assets/User Interface/Buttons/closeButton.png" id="9_pqrgu"]
+[ext_resource type="Texture2D" uid="uid://c6tohceggejk6" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="10_or8a6"]
+[ext_resource type="Texture2D" uid="uid://q2f6gqjb4dp2" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="11_la5i4"]
+[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="12_8uvx6"]
+[ext_resource type="Texture2D" uid="uid://c06xvt447pogj" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="13_gjt4w"]
+[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="14_h8rrn"]
 [ext_resource type="PackedScene" uid="uid://bya3sndp5315d" path="res://Assets/Characters/Analyst/analyst_player.tscn" id="15_lqt5r"]
 [ext_resource type="Script" uid="uid://762owe7rogfk" path="res://Script/Rooms/TutorialLevel/tutorial_analyst.gd" id="15_otetg"]
 [ext_resource type="PackedScene" uid="uid://wfuwrcp0130k" path="res://Assets/Characters/Coder/coder_player.tscn" id="16_81cua"]
-[ext_resource type="Texture2D" uid="uid://de4d4v2gi3h15" path="res://Assets/World/underline.png" id="17_h8rrn"]
+[ext_resource type="Texture2D" uid="uid://b6f1r030nv1rf" path="res://Assets/World/underline.png" id="17_h8rrn"]
 [ext_resource type="Script" uid="uid://bagd8ubx41rjq" path="res://Script/Rooms/TutorialLevel/tutorial_robot.gd" id="19_3h0wn"]
-[ext_resource type="Texture2D" uid="uid://d1nyvubejvss5" path="res://Assets/Interactables/Infobot/bot_facedown.png" id="19_81cua"]
-[ext_resource type="Texture2D" uid="uid://uthho4fd2sjo" path="res://Assets/Interactables/Infobot/bot_faceleft.png" id="20_0l1o8"]
-[ext_resource type="Texture2D" uid="uid://d38sto51d24ba" path="res://Assets/Interactables/Infobot/bot_faceright.png" id="21_3h0wn"]
-[ext_resource type="Texture2D" uid="uid://bwta0jrqe6kr7" path="res://Assets/Interactables/Infobot/bot_faceup.png" id="22_pqrgu"]
-[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="23_h8rrn"]
-[ext_resource type="Texture2D" uid="uid://ilu6kl3t1gey" path="res://Assets/Interactables/Infobot/tail.png" id="24_otetg"]
+[ext_resource type="Texture2D" uid="uid://bquk1bkh8ayv8" path="res://Assets/Interactables/Infobot/bot_facedown.png" id="19_81cua"]
+[ext_resource type="Texture2D" uid="uid://le123p3jxjp8" path="res://Assets/Interactables/Infobot/bot_faceleft.png" id="20_0l1o8"]
+[ext_resource type="Texture2D" uid="uid://i305yeem4u1r" path="res://Assets/Interactables/Infobot/bot_faceright.png" id="21_3h0wn"]
+[ext_resource type="Texture2D" uid="uid://ckctaot51fkee" path="res://Assets/Interactables/Infobot/bot_faceup.png" id="22_pqrgu"]
+[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="23_h8rrn"]
+[ext_resource type="Texture2D" uid="uid://cyk2qpobclnpm" path="res://Assets/Interactables/Infobot/tail.png" id="24_otetg"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="24_pqrgu"]
 [ext_resource type="Script" uid="uid://dqt5dcl5mrlqo" path="res://Script/Rooms/TutorialLevel/tutorial_door.gd" id="25_la5i4"]
-[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="25_or8a6"]
-[ext_resource type="Texture2D" uid="uid://d3eit7p8fqwv8" path="res://Assets/Interactables/Infobot/bot.png" id="25_otetg"]
-[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="28_otetg"]
+[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="25_or8a6"]
+[ext_resource type="Texture2D" uid="uid://bri876npxojlj" path="res://Assets/Interactables/Infobot/bot.png" id="25_otetg"]
+[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="28_otetg"]
+[ext_resource type="AudioStream" uid="uid://cbl10e1n5c0b5" path="res://World/Music/tutorialRoom.wav" id="32_80k1a"]
+[ext_resource type="Script" uid="uid://c6v8pkxgiia4c" path="res://Scenes/backGroundAudio/tutorial_bg.gd" id="32_gyj5r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7qun"]
 texture = ExtResource("1_hy7s5")
@@ -373,6 +375,7 @@ texture = ExtResource("4_q1olv")
 2:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:1/0 = 0
 8:1/0 = 0
 9:1/0 = 0
@@ -388,6 +391,7 @@ texture = ExtResource("4_q1olv")
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:2/0 = 0
 8:2/0 = 0
 9:2/0 = 0
@@ -689,27 +693,11 @@ texture = ExtResource("17_h8rrn")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci7yp"]
 size = Vector2(16, 11)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q1s2v"]
-atlas = ExtResource("19_81cua")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_or8a6"]
-atlas = ExtResource("20_0l1o8")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_la5i4"]
-atlas = ExtResource("21_3h0wn")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8uvx6"]
-atlas = ExtResource("22_pqrgu")
-region = Rect2(0, 0, 16, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_yhs6i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q1s2v")
+"texture": ExtResource("19_81cua")
 }],
 "loop": true,
 "name": &"down",
@@ -717,7 +705,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_or8a6")
+"texture": ExtResource("20_0l1o8")
 }],
 "loop": true,
 "name": &"left",
@@ -725,7 +713,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_la5i4")
+"texture": ExtResource("21_3h0wn")
 }],
 "loop": true,
 "name": &"right",
@@ -733,7 +721,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8uvx6")
+"texture": ExtResource("22_pqrgu")
 }],
 "loop": true,
 "name": &"up",
@@ -811,7 +799,6 @@ label_settings = SubResource("LabelSettings_m2gal")
 metadata/_edit_use_anchors_ = true
 
 [node name="CoderPopup" type="CanvasLayer" parent="TutorialCoder" unique_id=658487690]
-visible = false
 
 [node name="Panel" type="Panel" parent="TutorialCoder/CoderPopup" unique_id=516294843]
 anchors_preset = 15
@@ -966,7 +953,6 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="AnalystPopup" type="CanvasLayer" parent="TutorialAnalyst" unique_id=132604396]
-visible = false
 
 [node name="Panel" type="Panel" parent="TutorialAnalyst/AnalystPopup" unique_id=1584960288]
 anchors_preset = -1
@@ -984,9 +970,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Background" type="NinePatchRect" parent="TutorialAnalyst/AnalystPopup/Panel" unique_id=1873017427]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.104166664
+anchor_left = 0.045833334
 anchor_top = -0.0375
-anchor_right = 0.104166664
+anchor_right = 0.045833334
 anchor_bottom = -0.0375
 offset_left = -40.0
 offset_top = -26.0
@@ -1102,12 +1088,12 @@ debug_color = Color(0.76886576, 0.43009564, 0.33030665, 0.41960785)
 [node name="TutorialRobot" type="Area2D" parent="." unique_id=1848981704 groups=["analyst_interactable", "analyst_player", "coder_interactable", "coder_player"]]
 z_index = 11
 position = Vector2(216, 176)
-collision_layer = 4
+collision_layer = 6
 script = ExtResource("19_3h0wn")
 popup_text = "The answer is a greeting with two words. It is one of the most common examples used by beginners in programming. Many programmers use it first to check if their code works properly.
 "
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TutorialRobot" unique_id=662264962]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TutorialRobot" unique_id=662264962 groups=["analyst_interactable", "coder_interactable"]]
 sprite_frames = SubResource("SpriteFrames_yhs6i")
 animation = &"down"
 
@@ -1127,7 +1113,6 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="TutorialRobot" unique_id=1127288537]
-visible = false
 
 [node name="Panel" type="Panel" parent="TutorialRobot/CanvasLayer" unique_id=1880339384]
 offset_left = 65.0
@@ -1242,3 +1227,7 @@ position = Vector2(240, 240)
 position = Vector2(24, 8)
 anchor_mode = 0
 zoom = Vector2(1.3, 1.3)
+
+[node name="TutorialBG" type="AudioStreamPlayer" parent="." unique_id=2039508394]
+stream = ExtResource("32_80k1a")
+script = ExtResource("32_gyj5r")

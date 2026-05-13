@@ -40,4 +40,4 @@ func _on_cancel_pressed() -> void:
 func _on_enter_tutorial_pressed() -> void:
 	close()
 	await get_tree().create_timer(0.3).timeout
-	LoadingScreen.load_scene("res://Scenes/tutorial_level.tscn")
+	LoadingScreen.load_scene("res://Scenes/Rooms/tutorial_level.tscn")

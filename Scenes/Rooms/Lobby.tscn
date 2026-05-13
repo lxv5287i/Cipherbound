@@ -1,46 +1,45 @@
 [gd_scene format=4 uid="uid://k5ppokrlrys7"]
 
-[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_wgubu"]
-[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_lolwk"]
-[ext_resource type="Texture2D" uid="uid://dycw2klcfp71e" path="res://Assets/World/Objects/Lobby_Objects.png" id="3_wgubu"]
-[ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Assets/Interactables/LOBBY/folder.png" id="4_nsj2m"]
+[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_wgubu"]
+[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_lolwk"]
+[ext_resource type="Texture2D" uid="uid://b7ujp15boku7s" path="res://Assets/World/Objects/Lobby_Objects.png" id="3_wgubu"]
+[ext_resource type="Texture2D" uid="uid://6gh4gga0ey3g" path="res://Assets/Interactables/LOBBY/folder.png" id="4_nsj2m"]
 [ext_resource type="Script" uid="uid://daepisdlnnwhs" path="res://Script/Rooms/Lobby/folder_interactable.gd" id="4_yg8gm"]
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Rooms/Lobby/folder_popup.gd" id="5_s3paf"]
-[ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Assets/Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
-[ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Assets/Interactables/LOBBY/Banner.png" id="6_vmftg"]
+[ext_resource type="Texture2D" uid="uid://xjxdgcxovamy" path="res://Assets/Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
+[ext_resource type="Texture2D" uid="uid://bk0nw4opkx7e3" path="res://Assets/Interactables/LOBBY/Banner.png" id="6_vmftg"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="8_amwwa"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Rooms/Lobby/banner_interactable.gd" id="10_b6u2u"]
 [ext_resource type="Script" uid="uid://64dxsjgcaueb" path="res://Script/Rooms/Lobby/banner_popup.gd" id="11_idhfa"]
-[ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Assets/Interactables/LOBBY/box.png" id="11_r753w"]
-[ext_resource type="Texture2D" uid="uid://df5na580d4cia" path="res://Assets/Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
+[ext_resource type="Texture2D" uid="uid://duhsledsrwod6" path="res://Assets/Interactables/LOBBY/box.png" id="11_r753w"]
+[ext_resource type="Texture2D" uid="uid://brgi1ah31sb0v" path="res://Assets/Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
 [ext_resource type="Script" uid="uid://bt5uxn1sf0sps" path="res://Script/Rooms/Lobby/box.gd" id="14_kr8xt"]
-[ext_resource type="Texture2D" uid="uid://csuiv884sq50b" path="res://Assets/Interactables/LOBBY/experiment.png" id="15_yesx4"]
-[ext_resource type="Texture2D" uid="uid://d3qs3n11kox6m" path="res://Assets/Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
+[ext_resource type="Texture2D" uid="uid://cq5ww278xrxhj" path="res://Assets/Interactables/LOBBY/experiment.png" id="15_yesx4"]
+[ext_resource type="Texture2D" uid="uid://bp7o5b5f5qfrm" path="res://Assets/Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
 [ext_resource type="Script" uid="uid://c6ev3iv2f6ew5" path="res://Script/Rooms/Lobby/box_popup.gd" id="17_6n5of"]
 [ext_resource type="Script" uid="uid://dfhdigndf2jie" path="res://Script/Rooms/Lobby/experiment_interactable.gd" id="18_y5q1o"]
-[ext_resource type="Texture2D" uid="uid://rjqgk0dojq8t" path="res://Assets/Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
+[ext_resource type="Texture2D" uid="uid://w3a3rs4gphkl" path="res://Assets/Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
 [ext_resource type="Script" uid="uid://ds87xmk73jeq7" path="res://Script/Rooms/Lobby/experiment_popup.gd" id="20_u60dt"]
 [ext_resource type="Script" uid="uid://cvr77d4hgkttv" path="res://Script/Rooms/Lobby/simple_info_interactable.gd" id="22_7yj0t"]
-[ext_resource type="Texture2D" uid="uid://coe7nodwocgd5" path="res://Assets/Interactables/LOBBY/organizer.png" id="22_sy2g3"]
-[ext_resource type="Texture2D" uid="uid://6o14f31m7thc" path="res://Assets/Interactables/LOBBY/table.png" id="23_4sjms"]
-[ext_resource type="Texture2D" uid="uid://c1r6dvpsrmjsh" path="res://Assets/Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
-[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="24_yoplv"]
+[ext_resource type="Texture2D" uid="uid://c6gg7w3lmtjwl" path="res://Assets/Interactables/LOBBY/organizer.png" id="22_sy2g3"]
+[ext_resource type="Texture2D" uid="uid://d3y0hjnneq7v7" path="res://Assets/Interactables/LOBBY/table.png" id="23_4sjms"]
+[ext_resource type="Texture2D" uid="uid://cm1dx22tm24ht" path="res://Assets/Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
+[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="24_yoplv"]
 [ext_resource type="Script" uid="uid://d1677ki88bmov" path="res://Script/Rooms/Lobby/simple_info_popup.gd" id="25_5g874"]
-[ext_resource type="Texture2D" uid="uid://bmhnqbuyg1ld6" path="res://Assets/Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
-[ext_resource type="Texture2D" uid="uid://d32bajtu4nh3a" path="res://Assets/Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
-[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="29_8bywp"]
-[ext_resource type="Texture2D" uid="uid://cr6v1pingboiv" path="res://Assets/Interactables/LOBBY/tableUp_inrange.png" id="31_3u0wr"]
+[ext_resource type="Texture2D" uid="uid://dsj35cwnsbioq" path="res://Assets/Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
+[ext_resource type="Texture2D" uid="uid://bgs6jr4txk7ci" path="res://Assets/Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
+[ext_resource type="Texture2D" uid="uid://cpyutbv6x17er" path="res://Assets/Interactables/LOBBY/tableUp_inrange.png" id="31_3u0wr"]
 [ext_resource type="Script" uid="uid://bc5gaifio4jf7" path="res://Script/Doors/door_to_room3.gd" id="31_hqvxi"]
 [ext_resource type="Script" uid="uid://cnysnopm06dor" path="res://Script/Doors/door_to_room4.gd" id="33_1al0n"]
-[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="33_xfaes"]
-[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="34_6msik"]
-[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="34_wagpd"]
+[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="33_xfaes"]
+[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="34_6msik"]
+[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
-[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="35_8isgd"]
-[ext_resource type="Texture2D" uid="uid://crf15klxa40et" path="res://Assets/World/Wall/room3TAG.png" id="36_2n0gg"]
-[ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
-[ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
+[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="Texture2D" uid="uid://cfrh0v803iakj" path="res://Assets/World/Wall/room3TAG.png" id="36_2n0gg"]
+[ext_resource type="Texture2D" uid="uid://diutt8oqcb37n" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://8xevdhxc3uyc" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -1787,10 +1786,10 @@ script = ExtResource("5_s3paf")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 137.0
+offset_top = 104.0
+offset_right = -175.0
+offset_bottom = -108.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1810,12 +1809,14 @@ patch_margin_bottom = 6
 [node name="Label" type="RichTextLabel" parent="Folders/FolderPopup/Panel" unique_id=315295486]
 layout_mode = 0
 offset_left = -9.0
-offset_top = 11.0
-offset_right = 209.0
-offset_bottom = 157.0
+offset_top = 4.0
+offset_right = 212.0
+offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "just based here and the folder a and b will automatically basd here"
 
@@ -1873,11 +1874,11 @@ inrange_texture = ExtResource("12_03jl0")
 banner_text = "[b][color=#093C5D]Arithmetic Operators[/color][/b]
 
 Operator  Meaning
-+  Addition
--  Subtraction
-*  Multiplication
-/  Division
-%  Modulus
++               Addition
+-               Subtraction
+*               Multiplication
+/                Division
+%              Modulus
 
 Example:
 int [color=#FF70BF]total[/color] = 5 + 3;
@@ -1915,19 +1916,19 @@ script = ExtResource("11_idhfa")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 138.0
+offset_top = 108.0
+offset_right = -174.0
+offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Banners/BannerPopup/Panel" unique_id=1637846818]
 layout_mode = 0
-offset_left = -32.0
-offset_top = -6.0
-offset_right = 216.0
-offset_bottom = 181.0
+offset_left = -46.0
+offset_top = -17.0
+offset_right = 248.0
+offset_bottom = 195.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -1937,13 +1938,15 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Banners/BannerPopup/Panel" unique_id=784801159]
 layout_mode = 0
-offset_left = -14.0
-offset_top = 11.0
-offset_right = 196.0
-offset_bottom = 163.0
+offset_left = -29.0
+offset_top = -4.0
+offset_right = 235.0
+offset_bottom = 177.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "just based here and the folder a and b will automatically basd here"
 
@@ -1955,16 +1958,16 @@ collision_layer = 4
 script = ExtResource("14_kr8xt")
 normal_texture = ExtResource("11_r753w")
 inrange_texture = ExtResource("16_qsv27")
-box_text = "[b][color=#093C5D]Programming Tips for Beginners[/color][/b]
+box_text = "[b][color=#093C5D]Data Types[/color][/b]
+Data types define what kind of value a variable stores.
 
-1. [color=#3B7597]Understand [/color]logic before memorizing syntax
-2. [color=#3B7597]Practice[/color] writing small programs daily
-3. [color=#3B7597]Read [/color]errors carefully
-4. Break large problems into smaller steps
-5. Use [color=#3B7597]pseudocode[/color]before coding
-6. [color=#3B7597]Trace[/color] programs line by line
-7. [color=#3B7597]Focus on problem-solving skills[/color]
-"
+Common data types:
+[b][color=#093C5D]Data Type[/color][/b]  [b][color=#093C5D]Description[/color][/b]  [b][color=#093C5D]Example[/color][/b]
+int               Whole numbers         10
+double    Decimal numbers       5.5
+char        Single character      'A'
+String              Text           \"Hello\"
+boolean     True or False    true"
 
 [node name="Sprite2D" type="Sprite2D" parent="Box/Box" unique_id=882635554]
 position = Vector2(6, 0)
@@ -1999,19 +2002,19 @@ script = ExtResource("17_6n5of")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 131.0
+offset_top = 96.0
+offset_right = -181.0
+offset_bottom = -116.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Box/BoxPopup/Panel" unique_id=2139353413]
 layout_mode = 0
-offset_left = -26.0
-offset_top = -6.0
-offset_right = 234.0
-offset_bottom = 180.0
+offset_left = -43.0
+offset_top = -16.0
+offset_right = 287.0
+offset_bottom = 193.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2021,36 +2024,26 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Box/BoxPopup/Panel" unique_id=707692522]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 16.0
-offset_right = 215.0
-offset_bottom = 163.0
+offset_left = -27.0
+offset_right = 261.0
+offset_bottom = 176.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
-text = "[b]Conditional Statements[/b]
-Used for decision-making.
+text = "[b]Data Types[/b]
 
-[b]if Statement[/b]
-Executes code if a condition is true.
+Data types define what kind of value a variable stores.
 
-Example:
-if (score >= 75) {
-   System.out.println(\"PASS\");
-}
-
-[b]if-else Statement[/b]
-Executes one block if true and another if false.
-
-Example:
-if (score >= 75) {
-   System.out.println(\"PASS\");
-} else {
-   System.out.println(\"FAIL\");
-}
-
-"
+Common data types:
+[b]Data Type[/b]  [b]Description[/b]  [b]Example[/b]
+int               Whole numbers         10
+double    Decimal numbers       5.5
+char        Single character      'A'
+String              Text           \"Hello\"
+boolean     True or False    true"
 
 [node name="Experiment" type="Node2D" parent="." unique_id=1209693589]
 
@@ -2113,24 +2106,15 @@ collision_layer = 4
 script = ExtResource("18_y5q1o")
 normal_texture = ExtResource("15_yesx4")
 inrange_texture = ExtResource("20_cpovp")
-experiment_text = "[b][color=#093C5D]Arrays[/color][/b]
-An [color=#3B7597]array[/color] stores multiple values in one variable.
+experiment_text = "[b][color=#093C5D]Programming Tips for Beginners[/color][/b]
 
-Example:
- [color=#831C91]int[] numbers [/color]= {1,2,3,4,5};
-
-[b][color=#093C5D]Methods[/color][/b]
-A [color=#3B7597]method[/color] is a block of code that performs a task.
-
-Purpose:
-Reuse code
-Organize programs
-
-Example:
-void [color=#FF70BF]greet()[/color] {
-   [color=#831C91]System.out.println[/color](\"Hello\");
-}
-
+1. [color=#3B7597]Understand [/color]logic before memorizing syntax
+2. [color=#3B7597]Practice[/color] writing small programs daily
+3. [color=#3B7597]Read [/color]errors carefully
+4. Break large problems into smaller steps
+5. Use [color=#3B7597]pseudocode[/color]before coding
+6. [color=#3B7597]Trace[/color] programs line by line
+7. [color=#3B7597]Focus on problem-solving skills[/color]
 "
 
 [node name="Sprite2D" type="Sprite2D" parent="Experiment/ExperimentB" unique_id=1549160290]
@@ -2165,19 +2149,19 @@ script = ExtResource("20_u60dt")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 133.0
+offset_top = 95.0
+offset_right = -179.0
+offset_bottom = -117.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Experiment/ExperimentPopup/Panel" unique_id=907298561]
 layout_mode = 0
-offset_left = -22.0
+offset_left = -39.0
 offset_top = -7.0
-offset_right = 216.0
-offset_bottom = 171.0
+offset_right = 253.0
+offset_bottom = 200.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2187,13 +2171,15 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Experiment/ExperimentPopup/Panel" unique_id=1796320584]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 9.0
-offset_right = 196.0
-offset_bottom = 149.0
+offset_left = -22.0
+offset_top = 6.0
+offset_right = 237.0
+offset_bottom = 185.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "ahdhakhsdjh  hfixed here and two experiment will based through size anf fonts"
 
@@ -2273,19 +2259,19 @@ script = ExtResource("25_5g874")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 145.0
+offset_top = 103.0
+offset_right = -167.0
+offset_bottom = -109.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Organizer/OrganizerPopup/Panel" unique_id=1691963805]
 layout_mode = 0
-offset_left = -30.0
+offset_left = -49.0
 offset_top = -6.0
-offset_right = 212.0
-offset_bottom = 180.0
+offset_right = 243.0
+offset_bottom = 202.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2295,13 +2281,15 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Organizer/OrganizerPopup/Panel" unique_id=1283123832]
 layout_mode = 0
-offset_left = -15.0
-offset_top = 10.0
-offset_right = 195.0
-offset_bottom = 162.0
+offset_left = -32.0
+offset_top = 7.0
+offset_right = 230.0
+offset_bottom = 187.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "[b][color=#093C5D]Basic Program Structure in Java[/color][/b]
 
@@ -2372,19 +2360,19 @@ script = ExtResource("25_5g874")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 139.0
+offset_top = 101.0
+offset_right = -173.0
+offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="Table/TablePopup/Panel" unique_id=1258139330]
 layout_mode = 0
-offset_left = -24.0
+offset_left = -38.0
 offset_top = -8.0
-offset_right = 224.0
-offset_bottom = 175.0
+offset_right = 231.0
+offset_bottom = 197.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2394,13 +2382,15 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="Table/TablePopup/Panel" unique_id=398938764]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 10.0
-offset_right = 205.0
-offset_bottom = 155.0
+offset_left = -21.0
+offset_top = 7.0
+offset_right = 219.0
+offset_bottom = 182.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "[b]Flowchart[/b]
 
@@ -2471,19 +2461,19 @@ script = ExtResource("25_5g874")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 140.0
-offset_top = 116.0
-offset_right = -172.0
-offset_bottom = -96.0
+offset_left = 138.0
+offset_top = 98.0
+offset_right = -174.0
+offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="NinePatchRect" parent="TableUp/TableUpPopup/Panel" unique_id=37646490]
 layout_mode = 0
-offset_left = -29.0
+offset_left = -40.0
 offset_top = -6.0
-offset_right = 212.0
-offset_bottom = 182.0
+offset_right = 226.0
+offset_bottom = 199.0
 texture = ExtResource("24_yoplv")
 region_rect = Rect2(17, 49, 14, 14)
 patch_margin_left = 6
@@ -2493,14 +2483,15 @@ patch_margin_bottom = 6
 
 [node name="Label" type="RichTextLabel" parent="TableUp/TableUpPopup/Panel" unique_id=1477481088]
 layout_mode = 0
-offset_left = -7.0
-offset_top = 11.0
-offset_right = 189.0
-offset_bottom = 161.0
+offset_left = -23.0
+offset_top = 10.0
+offset_right = 213.0
+offset_bottom = 185.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("29_8bywp")
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 10
+theme_override_fonts/normal_font = ExtResource("9_6msik")
+theme_override_fonts/bold_font = ExtResource("9_6msik")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
 bbcode_enabled = true
 text = "[b]Data Types[/b]
 

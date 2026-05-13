@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var answer_sfx = $"../AnswerSFX"
+
 @onready var panel: Panel = $Panel
 
 @onready var question_label: Label = $Panel/QuestionLabel
@@ -73,12 +75,18 @@ func _on_submit_pressed():
 	var user_answer := answer_input.text.strip_edges().to_lower()
 
 	if user_answer == "":
+		answer_sfx.play_wrong()
+
 		result_label.visible = true
 		result_label.text = "Please input answer"
+
 		answer_input.grab_focus()
 		return
 
 	if user_answer == "if else" or user_answer == "ifelse":
+
+		answer_sfx.play_correct()
+
 		result_label.visible = true
 		result_label.text = "Correct"
 
@@ -96,10 +104,14 @@ func _on_submit_pressed():
 
 		return
 
+	answer_sfx.play_wrong()
+
 	result_label.visible = true
 	result_label.text = "Try again"
+
 	answer_input.grab_focus()
-	
+
+
 func show_explanation():
 	is_open = true
 	GameLock.movement_locked = true

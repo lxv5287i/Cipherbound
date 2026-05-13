@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://ds034udoqe4su"]
 
 [ext_resource type="Script" uid="uid://d3ktqdkx7i73x" path="res://Script/Utility/char_info.gd" id="1_ql3g4"]
-[ext_resource type="Texture2D" uid="uid://qgtcgo7562ui" path="res://Assets/User Interface/Popups/characterUD.png" id="2_cdf3l"]
-[ext_resource type="Texture2D" uid="uid://dtu6c6dqn4chl" path="res://Assets/User Interface/Buttons/continue.png" id="3_7l5mn"]
-[ext_resource type="Texture2D" uid="uid://l6hlcgc1vof7" path="res://Assets/User Interface/Buttons/continue_pressed.png" id="4_vh0g3"]
-[ext_resource type="Texture2D" uid="uid://df11iptj06yil" path="res://Assets/User Interface/Buttons/continue_hovered.png" id="5_tye78"]
-[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="6_vh0g3"]
-[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_tye78"]
-[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_iieth"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_tye78"]
+[ext_resource type="Texture2D" uid="uid://jx7u73qiwoea" path="res://Assets/User Interface/Popups/characterUD.png" id="2_cdf3l"]
+[ext_resource type="Texture2D" uid="uid://cwslre6br33ch" path="res://Assets/User Interface/Buttons/continue.png" id="3_7l5mn"]
+[ext_resource type="Texture2D" uid="uid://df5ktpmt6tj6g" path="res://Assets/User Interface/Buttons/continue_pressed.png" id="4_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://cmnj65m0tc631" path="res://Assets/User Interface/Buttons/continue_hovered.png" id="5_tye78"]
+[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="6_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_tye78"]
+[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_iieth"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_tye78"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iieth"]
 font = ExtResource("9_tye78")
@@ -27,15 +27,6 @@ font_size = 9
 line_spacing = 0.0
 font = ExtResource("9_tye78")
 font_size = 9
-
-[sub_resource type="LabelSettings" id="LabelSettings_txog0"]
-line_spacing = 0.0
-font = ExtResource("9_tye78")
-font_size = 8
-
-[sub_resource type="LabelSettings" id="LabelSettings_je7cn"]
-font = ExtResource("9_tye78")
-font_size = 12
 
 [node name="charInfo" type="CanvasLayer" unique_id=1161544681]
 script = ExtResource("1_ql3g4")
@@ -106,50 +97,60 @@ and environmental
 objects"
 label_settings = SubResource("LabelSettings_jtnfy")
 
-[node name="CoderInfo" type="Label" parent="PanelContainer" unique_id=902070646]
+[node name="CoderInfo" type="RichTextLabel" parent="PanelContainer" unique_id=620301569]
 z_index = 1
 layout_mode = 0
-offset_left = 373.0
-offset_top = 280.0
-offset_right = 472.0
-offset_bottom = 319.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Coder: Executes code,
- inputs solutions, and 
-unlocks digital pathways."
-label_settings = SubResource("LabelSettings_txog0")
+offset_left = 370.0
+offset_top = 274.0
+offset_right = 488.0
+offset_bottom = 313.0
+theme_override_fonts/normal_font = ExtResource("9_tye78")
+theme_override_fonts/bold_font = ExtResource("9_tye78")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 9
+bbcode_enabled = true
+text = "                [b][color=#6FD1D7]Coder[/color][/b] 
+Executes code, inputs solutions, and unlocks digital pathways."
 
-[node name="AnalystInfo" type="Label" parent="PanelContainer" unique_id=1989114847]
+[node name="AnalystInfo" type="RichTextLabel" parent="PanelContainer" unique_id=463949687]
 z_index = 1
 layout_mode = 0
-offset_left = 71.0
+offset_left = 68.0
 offset_top = 279.0
-offset_right = 170.0
+offset_right = 177.0
 offset_bottom = 309.0
-text = "Analyst: Interprets 
-hints and guides 
-puzzle-solving strategies."
-label_settings = SubResource("LabelSettings_txog0")
+theme_override_fonts/normal_font = ExtResource("9_tye78")
+theme_override_fonts/bold_font = ExtResource("9_tye78")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 9
+bbcode_enabled = true
+text = "             [b][color=#6FD1D7]Analyst[/color][/b]
+Interprets hints and guides puzzle-solving strategies."
 
-[node name="Controls2" type="Label" parent="PanelContainer" unique_id=2032723459]
+[node name="Controls2" type="RichTextLabel" parent="PanelContainer" unique_id=1230185230]
 z_index = 1
 layout_mode = 0
 offset_left = 286.0
 offset_top = 192.0
 offset_right = 352.0
 offset_bottom = 215.0
-text = "Controls"
-label_settings = SubResource("LabelSettings_je7cn")
+theme_override_fonts/bold_font = ExtResource("9_tye78")
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "[b][color=#6FD1D7]Controls[/color][/b]"
 
-[node name="Controls" type="Label" parent="PanelContainer" unique_id=755088810]
+[node name="Controls" type="RichTextLabel" parent="PanelContainer" unique_id=1409823519]
 z_index = 1
 layout_mode = 0
 offset_left = 62.0
 offset_top = 191.0
 offset_right = 128.0
 offset_bottom = 214.0
-text = "Controls"
-label_settings = SubResource("LabelSettings_je7cn")
+theme_override_fonts/bold_font = ExtResource("9_tye78")
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+text = "[b][color=#6FD1D7]Controls[/color][/b]"
 
 [node name="TeamWork" type="RichTextLabel" parent="PanelContainer" unique_id=623769357]
 z_index = 1

@@ -1,22 +1,45 @@
 extends CanvasLayer
 
 @onready var panel = $PanelContainer
+@onready var congratulation_bg: AudioStreamPlayer = $CongratulationBG
 
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	congratulation_bg.volume_db = 0
 
 func open():
 	show()
+
+	MusicManager.volume_db = -30
+
+	congratulation_bg.volume_db = -40
+	congratulation_bg.play()
+
+	var fade_in = create_tween()
+	fade_in.tween_property(congratulation_bg, "volume_db", -10, 2.0)
+
 	var screen_height = get_viewport().get_visible_rect().size.y
 	panel.position.y = screen_height
+
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(panel, "position:y", 0, 0.6)
 
+
 func _on_quit_to_menu_pressed() -> void:
+	var fade_out = create_tween()
+	fade_out.tween_property(congratulation_bg, "volume_db", -40, 1.0)
+
+	await fade_out.finished
+
+	congratulation_bg.stop()
+
 	get_tree().paused = false
 	GameLock.movement_locked = false
 	GameProgress.full_reset()
-	get_tree().change_scene_to_file("res://Assets/MAIN UI/mainMenu.tscn")
+
+	MusicManager.volume_db = -10
+
+	get_tree().change_scene_to_file("res://Assets/Main Menu/mainMenu.tscn")

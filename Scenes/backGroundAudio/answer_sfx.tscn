@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cy143gfep0iuc"]
+
+[ext_resource type="Script" uid="uid://k5cmxupipkyl" path="res://Scenes/backGroundAudio/answer_sfx.gd" id="1_c67hd"]
+[ext_resource type="AudioStream" uid="uid://rn3ek80pprve" path="res://World/Music/correctAnswerLong.wav" id="2_h01xm"]
+[ext_resource type="AudioStream" uid="uid://1ckxh2ay5wjy" path="res://World/Music/wrongAnswer.wav" id="3_gbe68"]
+
+[node name="AnswerSFX" type="Node" unique_id=218458408]
+script = ExtResource("1_c67hd")
+correct_sound = ExtResource("2_h01xm")
+wrong_sound = ExtResource("3_gbe68")
+
+[node name="CorrectSFX" type="AudioStreamPlayer" parent="." unique_id=711936006]
+
+[node name="WrongSFX" type="AudioStreamPlayer" parent="." unique_id=1659773755]

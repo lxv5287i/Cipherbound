@@ -8,7 +8,6 @@ var coder_done := false
 func _ready():
 	add_to_group("tutorial_level")
 
-
 func unlock_analyst():
 	robot_done = true
 
