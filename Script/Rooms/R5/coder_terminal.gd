@@ -29,6 +29,8 @@ signal unlock_next_interactable
 
 var solved := false
 
+var x := 0
+var i := 5
 
 func _ready():
 	add_to_group("coder_interactable")
@@ -199,7 +201,14 @@ func _on_submit_pressed():
 
 	else:
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 
 
 func open_explanation_only():

@@ -33,6 +33,8 @@ var checked_90 := false
 var checked_71 := false
 var checked_75 := false
 
+var x := 0
+var i := 5
 
 func _ready():
 	add_to_group("coder_popup")
@@ -162,7 +164,14 @@ func _on_submit_pressed():
 
 	if a1 != "publicclassmain":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 1 is wrong."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 1 is incorrect.\n+" + str(i) + " SECONDS"
 		ans1.grab_focus()
 		return
 
@@ -172,7 +181,14 @@ func _on_submit_pressed():
 		a2 != "publicstaticvoidmain(stringargs)"
 	):
 		answer_sfx.play_wrong()
-		result_label.text = "Line 2 is wrong."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 2 is incorrect.\n+" + str(i) + " SECONDS"
 		ans2.grab_focus()
 		return
 
@@ -184,13 +200,27 @@ func _on_submit_pressed():
 		checked_75 = true
 	else:
 		answer_sfx.play_wrong()
-		result_label.text = "Line 3 is wrong."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 3 is incorrect.\n+" + str(i) + " SECONDS"
 		ans3.grab_focus()
 		return
 
 	if a4 != ">=":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 4 is wrong."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 4 is incorrect.\n+" + str(i) + " SECONDS"
 		ans4.grab_focus()
 		return
 

@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://c8qts7423n2wj" path="res://Script/Utility/shared_camera.gd" id="10_5qox4"]
 [ext_resource type="PackedScene" uid="uid://c80tbjtbvvlha" path="res://Scenes/Utility/pause_ui.tscn" id="11_wpldl"]
 [ext_resource type="PackedScene" uid="uid://cr455csc5de3r" path="res://Scenes/Utility/congratulation.tscn" id="16_ftovv"]
+[ext_resource type="PackedScene" uid="uid://cgvck342lg1o2" path="res://Scenes/Utility/game_over.tscn" id="17_5ea7b"]
 
 [node name="SplitScreenMain" type="Control" unique_id=801453013]
 layout_mode = 3
@@ -148,5 +149,7 @@ player_1 = NodePath("../../../../SplitContainer/CoderViewContainer/CoderViewport
 player_2 = NodePath("../../../../SplitContainer/AnalystViewContainer/AnalystViewport/AnalystWorld/AnalystPlayer")
 
 [node name="Congratulation" parent="." unique_id=825101189 instance=ExtResource("16_ftovv")]
+
+[node name="GameOver" parent="." unique_id=1125454697 instance=ExtResource("17_5ea7b")]
 
 [connection signal="pressed" from="HUD/Pause" to="." method="_on_pause_pressed"]

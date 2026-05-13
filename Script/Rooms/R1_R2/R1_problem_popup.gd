@@ -16,6 +16,8 @@ signal puzzle_correct
 var is_open := false
 var puzzle_done := false
 
+var x := 0
+var i := 5
 
 func _ready():
 	add_to_group("analyst_popup")
@@ -89,8 +91,14 @@ func _on_submit_pressed():
 
 	else:
 		answer_sfx.play_wrong()
-
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		close_button.visible = true
 		ans1.grab_focus()
 

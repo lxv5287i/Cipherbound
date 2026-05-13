@@ -27,6 +27,9 @@ var is_open := false
 var already_solved := false
 
 
+var x := 0
+var i := 5
+
 func _ready():
 	add_to_group("coder_popup")
 
@@ -106,25 +109,53 @@ func clean_text(value: String) -> String:
 func _on_submit_pressed():
 	if ans1.text.strip_edges() != "for":
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans1.grab_focus()
 		return
 
 	if ans2.text.strip_edges() != "1":
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans2.grab_focus()
 		return
 
 	if ans3.text.strip_edges() != "3":
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans3.grab_focus()
 		return
 
 	if ans4.text.strip_edges() != "i++":
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans4.grab_focus()
 		return
 
@@ -133,7 +164,14 @@ func _on_submit_pressed():
 
 	if line5 != "system.out.print(\"*\")":
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans5.grab_focus()
 		return
 
@@ -142,7 +180,14 @@ func _on_submit_pressed():
 		line6 != "system.out.print(\"\\n\")"
 	):
 		answer_sfx.play_wrong()
-		result_label.text = "INCORRECT"
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
 		ans6.grab_focus()
 		return
 

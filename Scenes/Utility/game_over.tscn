@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cgvck342lg1o2"]
+
+[ext_resource type="Script" uid="uid://dxkgvv5g8j8xs" path="res://Script/Utility/game_over.gd" id="1_ixemq"]
+[ext_resource type="Texture2D" uid="uid://bk8o173axh85r" path="res://Assets/User Interface/Popups/GameOver.png" id="2_ixemq"]
+[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://Assets/User Interface/Buttons/quitToMenu.png" id="3_3hb6s"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://Assets/User Interface/Buttons/quitToMenu_pressed.png" id="4_rkc34"]
+[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="5_evniu"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_x3i2q"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1125454697]
+script = ExtResource("1_ixemq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=667480820]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.69411767)
+
+[node name="Control" type="Control" parent="." unique_id=427023353]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -352.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1012229475]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 352.0
+texture = ExtResource("2_ixemq")
+
+[node name="Quit to Menu" type="TextureButton" parent="Control" unique_id=948217124]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 305.0
+offset_right = 417.0
+offset_bottom = 345.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_3hb6s")
+texture_pressed = ExtResource("4_rkc34")
+texture_hover = ExtResource("5_evniu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=2080912982]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 99.0
+offset_right = 452.0
+offset_bottom = 234.0
+theme_override_fonts/normal_font = ExtResource("6_x3i2q")
+theme_override_fonts/bold_font = ExtResource("6_x3i2q")
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 18
+bbcode_enabled = true
+text = "you ran out of time"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Control/Quit to Menu" to="." method="_on_quit_to_menu_pressed"]
