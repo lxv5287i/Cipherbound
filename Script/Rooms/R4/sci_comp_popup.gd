@@ -138,7 +138,7 @@ func _on_submit_pressed():
 		return
 
 	if (
-		line6 != "system.out.println()" and
+		line6 != "system.out.println(\"\")" and
 		line6 != "system.out.print(\"\\n\")"
 	):
 		answer_sfx.play_wrong()
@@ -174,7 +174,6 @@ func show_explanation_only():
 	ans6.visible = false
 
 	submit_button.visible = false
-	result_label.visible = false
 
 	close_button.visible = true
 

@@ -1,39 +1,38 @@
 [gd_scene format=4 uid="uid://cgy8d6o80xk5x"]
 
-[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_x3cab"]
-[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_u2i1c"]
-[ext_resource type="Texture2D" uid="uid://d4d8ra0xbxlia" path="res://Assets/World/Objects/R5_Obejcts.png" id="3_u2i1c"]
-[ext_resource type="Texture2D" uid="uid://ct0imur1xh0wo" path="res://Assets/Interactables/R5/inheritancePanel.png" id="6_idjqp"]
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_x3cab"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://bcd1gspxao47s" path="res://Assets/World/Objects/R5_Obejcts.png" id="3_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://cpha6rpp3t8db" path="res://Assets/Interactables/R5/inheritancePanel.png" id="6_idjqp"]
 [ext_resource type="Script" uid="uid://dx8j6uunr7jb1" path="res://Script/Rooms/R5/analyst_board.gd" id="6_nk5kx"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="7_mlspx"]
-[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_3g6xh"]
-[ext_resource type="Texture2D" uid="uid://cgiorrtcdeyta" path="res://Assets/Interactables/R5/repairTerminal.png" id="8_6p5ga"]
-[ext_resource type="Texture2D" uid="uid://caalgdwunre2b" path="res://Assets/Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_3g6xh"]
+[ext_resource type="Texture2D" uid="uid://b71bu6nbgidcn" path="res://Assets/Interactables/R5/repairTerminal.png" id="8_6p5ga"]
+[ext_resource type="Texture2D" uid="uid://myybn5st2pyb" path="res://Assets/Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
 [ext_resource type="Script" uid="uid://dt6xyw12jpobu" path="res://Script/Rooms/R5/coder_terminal.gd" id="8_t37p4"]
-[ext_resource type="FontFile" uid="uid://c3v2pti167hee" path="res://Assets/World/Font/NicoClean-Regular.otf" id="9_cttw5"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
-[ext_resource type="Texture2D" uid="uid://ddn0wam507fa5" path="res://Assets/Interactables/R5/statusMonitor.png" id="11_3p68e"]
+[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="9_cttw5"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
+[ext_resource type="Texture2D" uid="uid://c2wagaq5bhtgq" path="res://Assets/Interactables/R5/statusMonitor.png" id="11_3p68e"]
 [ext_resource type="Script" uid="uid://ccg88u7jobd72" path="res://Script/Rooms/R5/drone_robot.gd" id="11_gr3ss"]
-[ext_resource type="Texture2D" uid="uid://c2j0dk0alnbrm" path="res://Assets/Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
-[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_kmav1"]
-[ext_resource type="Texture2D" uid="uid://c06xvt447pogj" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_2g4yd"]
-[ext_resource type="Texture2D" uid="uid://1d4ek0wyjdnc" path="res://Assets/Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
-[ext_resource type="Texture2D" uid="uid://djfyo42xl5rhl" path="res://Assets/Interactables/R5/computerHint.png" id="16_gshci"]
-[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="16_mlspx"]
+[ext_resource type="Texture2D" uid="uid://csioq6jboos4w" path="res://Assets/Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
+[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_kmav1"]
+[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_2g4yd"]
+[ext_resource type="Texture2D" uid="uid://bu265yif8fl24" path="res://Assets/Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
+[ext_resource type="Texture2D" uid="uid://b2k0fl82rbwxx" path="res://Assets/Interactables/R5/computerHint.png" id="16_gshci"]
+[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="16_mlspx"]
 [ext_resource type="Script" uid="uid://dokatutmbrne1" path="res://Script/Rooms/R5/computer_hint.gd" id="16_xusyf"]
-[ext_resource type="Texture2D" uid="uid://da40sxm7p1x5f" path="res://Assets/Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
-[ext_resource type="Texture2D" uid="uid://b6f1r030nv1rf" path="res://Assets/World/underline.png" id="18_noo2n"]
+[ext_resource type="Texture2D" uid="uid://dpcom1jqp415j" path="res://Assets/Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
+[ext_resource type="Texture2D" uid="uid://de4d4v2gi3h15" path="res://Assets/World/underline.png" id="18_noo2n"]
 [ext_resource type="Script" uid="uid://dqla2vtotbo2i" path="res://Script/Rooms/R5/computer_hint_popup.gd" id="19_4mq8d"]
 [ext_resource type="LabelSettings" uid="uid://ct60fidahgv05" path="res://Assets/World/Font/16FONT.tres" id="20_mlspx"]
 [ext_resource type="Script" uid="uid://2prrbj308nkf" path="res://Script/Doors/R5exit_door.gd" id="20_tvxs7"]
-[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="22_440xx"]
-[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="22_hnjk5"]
-[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="23_gmluh"]
-[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="23_ifiiy"]
-[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="23_qa7lu"]
-[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="24_as56t"]
-[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
-[ext_resource type="Texture2D" uid="uid://by21h0islqn2i" path="res://Assets/Interactables/coderBG.png" id="26_lo355"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="22_440xx"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="22_hnjk5"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="23_gmluh"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="23_ifiiy"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="23_qa7lu"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="24_as56t"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="29_cttw5"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="34_ypfhw"]
 [ext_resource type="AudioStream" uid="uid://dp3t4rj3r6qcv" path="res://World/Music/room5(5).wav" id="35_2vdva"]
@@ -725,6 +724,8 @@ font = ExtResource("10_fv1an")
 font_size = 14
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifiiy"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_fv1an"]
 line_spacing = 1.0
 paragraph_spacing = 3.0
@@ -735,6 +736,8 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p5ga"]
 size = Vector2(12, 28)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_as56t"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyl3w"]
 texture = ExtResource("18_noo2n")
@@ -751,6 +754,18 @@ size = Vector2(23, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qryu6"]
 size = Vector2(29, 12.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rmal"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnmsp"]
+texture = ExtResource("18_noo2n")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0n7re"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7865"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lo355"]
+font = ExtResource("10_fv1an")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xusyf"]
 size = Vector2(30, 20)
@@ -842,10 +857,10 @@ patch_margin_bottom = 6
 
 [node name="Clean" type="VBoxContainer" parent="AnalystBoard/AnalystPopup/Panel" unique_id=756404718]
 layout_mode = 0
-offset_left = 5.0
-offset_top = -10.0
-offset_right = 251.0
-offset_bottom = 163.0
+offset_left = 10.0
+offset_top = -6.0
+offset_right = 256.0
+offset_bottom = 167.0
 
 [node name="TitleLabel" type="Label" parent="AnalystBoard/AnalystPopup/Panel/Clean" unique_id=204831848]
 layout_mode = 2
@@ -866,6 +881,7 @@ theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 4
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ifiiy")
 flat = true
 item_count = 3
 popup/item_0/text = "Machine"
@@ -905,10 +921,10 @@ popup/item_2/id = 1
 
 [node name="Submit" type="TextureButton" parent="AnalystBoard/AnalystPopup/Panel" unique_id=787831024]
 layout_mode = 0
-offset_left = 190.0
-offset_top = 148.0
-offset_right = 350.0
-offset_bottom = 180.5
+offset_left = 214.0
+offset_top = 171.0
+offset_right = 374.0
+offset_bottom = 203.5
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("14_kmav1")
 texture_pressed = ExtResource("15_2g4yd")
@@ -916,10 +932,10 @@ texture_hover = ExtResource("16_mlspx")
 
 [node name="Result" type="Label" parent="AnalystBoard/AnalystPopup/Panel" unique_id=814345725]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 118.0
-offset_right = 95.0
-offset_bottom = 141.0
+offset_left = -18.0
+offset_top = 166.0
+offset_right = 64.0
+offset_bottom = 189.0
 text = "result"
 label_settings = SubResource("LabelSettings_fv1an")
 horizontal_alignment = 1
@@ -938,10 +954,10 @@ texture_hover = ExtResource("24_as56t")
 
 [node name="ExplanationLabel" type="RichTextLabel" parent="AnalystBoard/AnalystPopup/Panel" unique_id=595970342]
 layout_mode = 0
-offset_left = -5.0
-offset_top = -15.0
-offset_right = 282.0
-offset_bottom = 147.0
+offset_left = -22.0
+offset_top = -6.0
+offset_right = 284.0
+offset_bottom = 176.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("10_fv1an")
 theme_override_font_sizes/normal_font_size = 15
@@ -991,19 +1007,20 @@ uppercase = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 78.0
-offset_top = 77.0
-offset_right = -134.0
-offset_bottom = -100.0
+offset_left = 72.0
+offset_top = 75.0
+offset_right = -140.0
+offset_bottom = -102.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_as56t")
 
 [node name="TextureRect" type="NinePatchRect" parent="CoderTerminal/CoderPopup/Panel" unique_id=12797764]
 layout_mode = 0
-offset_left = 4.0
-offset_top = -24.0
-offset_right = 339.0
-offset_bottom = 221.0
+offset_left = -63.0
+offset_top = -69.0
+offset_right = 411.0
+offset_bottom = 272.0
 texture = ExtResource("8_3g6xh")
 region_rect = Rect2(49, 17, 14, 14)
 patch_margin_left = 6
@@ -1013,10 +1030,10 @@ patch_margin_bottom = 6
 
 [node name="CodeLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel" unique_id=895485282]
 layout_mode = 0
-offset_left = 20.0
-offset_top = -11.0
-offset_right = 309.0
-offset_bottom = 122.0
+offset_left = -47.0
+offset_top = -23.0
+offset_right = 182.0
+offset_bottom = 253.0
 size_flags_vertical = 0
 theme_override_colors/default_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
 theme_override_fonts/normal_font = ExtResource("10_fv1an")
@@ -1025,28 +1042,28 @@ bbcode_enabled = true
 text = "public class Machine {
     String name
     Machine (String name) {
-       [color=#FF0000][u]1     [/u][/color].name = name;         
+       [color=#FF0000][u]  1   [/u][/color].name = name;         
     }
-  void [color=#FF0000][u]2    [/u][/color] {
+  void [color=#FF0000][u]  2   [/u][/color] {
    System.out.println(name + \": SYSTEM ONLINE\");
     }
 }
 
-class CombatRobot [color=#FF0000][u]3   [/u][/color] Machine {    
+class CombatRobot [color=#FF0000][u]  3   [/u][/color] Machine {    
     CombatRobot(String name) {
-        [color=#FF0000][u]4   [/u][/color](name);               
+        [color=#FF0000][u]  4   [/u][/color](name);               
     }
-       [color=#FF0000][u]5    [/u][/color]{
+       [color=#FF0000][u]  5    [/u][/color]{
         System.out.println(name + \": FIRING WEAPONS\");
     }
 }
 
-class Drone [color=#FF0000][u]6    [/u][/color] CombatRobot {      
-    Drone([color=#FF0000][u]7    [/u][/color]) {
+class Drone [color=#FF0000][u]  6    [/u][/color] CombatRobot {      
+    Drone([color=#FF0000][u]  7    [/u][/color]) {
         super(name);
     }
     void fly() {
-       [color=#FF0000][u]8    [/u][/color](name + \": TAKING FLIGHT\");
+       [color=#FF0000][u]  8    [/u][/color](name + \": TAKING FLIGHT\");
     }
 }
 "
@@ -1055,14 +1072,12 @@ tab_size = 3
 [node name="GridContainer" type="GridContainer" parent="CoderTerminal/CoderPopup/Panel" unique_id=1444894758]
 custom_minimum_size = Vector2(50, 15)
 layout_mode = 0
-offset_left = 43.0
-offset_top = 119.0
-offset_right = 375.0
-offset_bottom = 199.0
-scale = Vector2(0.8, 0.8)
+offset_left = 202.99997
+offset_top = -29.999985
+offset_right = 357.99997
+offset_bottom = 147.00002
 theme_override_constants/h_separation = 7
 theme_override_constants/v_separation = 7
-columns = 2
 
 [node name="Ans1" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=824804772]
 custom_minimum_size = Vector2(155, 15)
@@ -1162,10 +1177,10 @@ text = "8"
 
 [node name="SubmitButton" type="TextureButton" parent="CoderTerminal/CoderPopup/Panel" unique_id=307890119]
 layout_mode = 0
-offset_left = 256.0
-offset_top = 194.0
-offset_right = 302.0
-offset_bottom = 213.0
+offset_left = 327.0
+offset_top = 242.0
+offset_right = 487.0
+offset_bottom = 274.0
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("14_kmav1")
 texture_pressed = ExtResource("15_2g4yd")
@@ -1173,20 +1188,19 @@ texture_hover = ExtResource("16_mlspx")
 
 [node name="ResultLabel" type="Label" parent="CoderTerminal/CoderPopup/Panel" unique_id=8988253]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 194.0
-offset_right = 198.0
-offset_bottom = 217.0
+offset_left = 204.0
+offset_top = 158.0
+offset_right = 304.0
+offset_bottom = 181.0
 text = "RESULT"
 label_settings = ExtResource("20_mlspx")
-horizontal_alignment = 1
 
 [node name="CloseButton" type="TextureButton" parent="CoderTerminal/CoderPopup/Panel" unique_id=1359002387]
 layout_mode = 0
-offset_left = 316.99997
-offset_top = -15.999985
-offset_right = 476.99997
-offset_bottom = 16.000015
+offset_left = 381.0
+offset_top = -54.999996
+offset_right = 413.0
+offset_bottom = -22.999996
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("22_hnjk5")
 texture_pressed = ExtResource("23_ifiiy")
@@ -1194,10 +1208,10 @@ texture_hover = ExtResource("24_as56t")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CoderTerminal/CoderPopup/Panel" unique_id=2052299372]
 layout_mode = 0
-offset_left = 27.0
-offset_top = -3.0
-offset_right = 316.0
-offset_bottom = 200.0
+offset_left = -49.0
+offset_top = -37.0
+offset_right = 393.0
+offset_bottom = 234.0
 theme_override_fonts/normal_font = ExtResource("10_fv1an")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -1251,6 +1265,15 @@ Main concept:
 4. A [color=#170C79]subclass[/color] can use methods from all classes above it in the hierarchy."
 scroll_following = true
 
+[node name="TerminalLabel" type="Label" parent="CoderTerminal/CoderPopup/Panel" unique_id=817433684]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -55.0
+offset_right = 118.0
+offset_bottom = -32.0
+text = "CODER_TERMINAL.exe"
+label_settings = ExtResource("20_mlspx")
+
 [node name="Blocker" type="StaticBody2D" parent="CoderTerminal" unique_id=1184216624]
 collision_layer = 2
 
@@ -1264,17 +1287,12 @@ collision_layer = 4
 script = ExtResource("11_gr3ss")
 locked_texture = ExtResource("11_3p68e")
 locked_inrange_texture = ExtResource("15_eh4pa")
-problem_text = "                                                               {
-                                            
-                                           (String[] args) {
-
-                               d = new Drone(\"UNIT-7\");
-
-        d.powerOn();  
-
-        d.attack();   
-
-        d.
+problem_text = "                                 {
+                                          (String[] args) {
+                    d = new Drone(\"UNIT-7\");
+       d.powerOn();  
+       d.attack();   
+       d.
     }
 }"
 explanation_text = "[color=#170C79]main()[/color]
@@ -1320,6 +1338,7 @@ texture = ExtResource("11_3p68e")
 
 [node name="Blocker" type="StaticBody2D" parent="DroneRobot" unique_id=256186492]
 collision_layer = 2
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DroneRobot/Blocker" unique_id=190464127]
 position = Vector2(0, 10)
@@ -1329,106 +1348,138 @@ debug_color = Color(0.94089234, 1.155138e-05, 0.61519563, 0.41960785)
 [node name="CanvasLayer" type="CanvasLayer" parent="DroneRobot" unique_id=1767071778]
 
 [node name="Panel" type="Panel" parent="DroneRobot/CanvasLayer" unique_id=314901545]
-offset_left = 129.0
-offset_top = 56.0
-offset_right = 367.0
-offset_bottom = 204.0
+anchors_preset = -1
+anchor_left = 0.051000003
+anchor_top = 0.064
+anchor_right = 0.95400006
+anchor_bottom = 0.93100005
+offset_left = 102.888
+offset_top = 33.472
+offset_right = -110.44803
+offset_bottom = -123.712006
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7rmal")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="DroneRobot/CanvasLayer/Panel" unique_id=904291833]
+layout_mode = 0
+offset_left = 189.0
+offset_top = -47.0
+offset_right = 373.0
+offset_bottom = 287.0
+texture = ExtResource("8_3g6xh")
+region_rect = Rect2(49, 17, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="NinePatchRect" type="NinePatchRect" parent="DroneRobot/CanvasLayer/Panel" unique_id=1038024560]
 layout_mode = 0
-offset_left = -57.0
-offset_top = -28.0
-offset_right = 331.0
-offset_bottom = 263.0
-texture = ExtResource("26_lo355")
+offset_left = -117.0
+offset_top = -47.0
+offset_right = 173.0
+offset_bottom = 286.0
+texture = ExtResource("8_3g6xh")
+region_rect = Rect2(49, 17, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="Problem" type="RichTextLabel" parent="DroneRobot/CanvasLayer/Panel" unique_id=530020139]
 layout_mode = 0
-offset_left = -25.0
-offset_right = 313.0
-offset_bottom = 221.0
+offset_left = -106.0
+offset_top = -12.0
+offset_right = 168.0
+offset_bottom = 241.0
 theme_override_fonts/normal_font = ExtResource("10_fv1an")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "                                                               {
-                                            
-                                           (String[] args) {
-
-                               d = new Drone(\"UNIT-7\");
-
-        d.powerOn();  
-
-        d.attack();   
-
-        d.
+text = "                                 {
+                                          (String[] args) {
+                    d = new Drone(\"UNIT-7\");
+       d.powerOn();  
+       d.attack();   
+       d.
     }
 }"
 
 [node name="ans1" type="LineEdit" parent="DroneRobot/CanvasLayer/Panel" unique_id=1968951971]
 layout_mode = 0
-offset_left = 9.0
-offset_top = -1.0
-offset_right = 215.0
-offset_bottom = 23.0
+offset_left = -105.0
+offset_top = -14.0
+offset_right = 22.0
+offset_bottom = 2.0
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
-text = "1"
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnmsp")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_0n7re")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f7865")
+text = "public class Main"
 
 [node name="ans2" type="LineEdit" parent="DroneRobot/CanvasLayer/Panel" unique_id=1286403579]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 28.0
-offset_right = 145.0
-offset_bottom = 52.0
+offset_left = -104.0
+offset_top = 6.0
+offset_right = 62.0
+offset_bottom = 22.0
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
-text = "2"
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnmsp")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_0n7re")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f7865")
+text = "public static void main"
 
 [node name="ans3" type="LineEdit" parent="DroneRobot/CanvasLayer/Panel" unique_id=1763671235]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 58.0
-offset_right = 90.5
-offset_bottom = 82.0
+offset_left = -79.0
+offset_top = 37.0
+offset_right = -32.0
+offset_bottom = 53.0
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
-text = "3"
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnmsp")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_0n7re")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f7865")
+text = "Drone"
 
 [node name="ans4" type="LineEdit" parent="DroneRobot/CanvasLayer/Panel" unique_id=2047309894]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 158.0
-offset_right = 77.5
-offset_bottom = 182.0
+offset_left = -62.0
+offset_top = 84.0
+offset_right = -10.5
+offset_bottom = 100.0
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnmsp")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_0n7re")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f7865")
 text = "4"
 
 [node name="Result" type="Label" parent="DroneRobot/CanvasLayer/Panel" unique_id=2118195129]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 240.0
-offset_right = 80.0
-offset_bottom = 263.0
+offset_left = -102.0
+offset_top = 253.0
+offset_right = -45.0
+offset_bottom = 276.0
 text = "Result"
 label_settings = ExtResource("20_mlspx")
 uppercase = true
 
 [node name="Output" type="Label" parent="DroneRobot/CanvasLayer/Panel" unique_id=945243094]
 layout_mode = 0
-offset_left = 146.0
-offset_top = 240.0
-offset_right = 203.0
-offset_bottom = 263.0
+offset_left = 200.0
+offset_top = -5.0
+offset_right = 257.0
+offset_bottom = 18.0
 text = "OUTPUT"
-label_settings = ExtResource("20_mlspx")
+label_settings = SubResource("LabelSettings_lo355")
 
 [node name="Submit" type="TextureButton" parent="DroneRobot/CanvasLayer/Panel" unique_id=1241590942]
 layout_mode = 0
-offset_left = 221.0
-offset_top = 231.0
-offset_right = 381.0
-offset_bottom = 271.0
+offset_left = 78.0
+offset_top = 257.0
+offset_right = 238.0
+offset_bottom = 297.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("14_kmav1")
 texture_pressed = ExtResource("15_2g4yd")
@@ -1436,10 +1487,10 @@ texture_hover = ExtResource("16_mlspx")
 
 [node name="Close" type="TextureButton" parent="DroneRobot/CanvasLayer/Panel" unique_id=598631725]
 layout_mode = 0
-offset_left = 278.0
-offset_top = -8.0
-offset_right = 318.0
-offset_bottom = 32.0
+offset_left = 142.0
+offset_top = -36.0
+offset_right = 182.0
+offset_bottom = 4.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("22_hnjk5")
 texture_pressed = ExtResource("23_ifiiy")
@@ -1447,8 +1498,10 @@ texture_hover = ExtResource("24_as56t")
 
 [node name="Explanation" type="RichTextLabel" parent="DroneRobot/CanvasLayer/Panel" unique_id=706572723]
 layout_mode = 0
-offset_right = 288.0
-offset_bottom = 220.0
+offset_left = -105.0
+offset_top = -14.0
+offset_right = 159.0
+offset_bottom = 252.0
 theme_override_fonts/normal_font = ExtResource("10_fv1an")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -1475,6 +1528,15 @@ Method calls:
  [color=#170C79]d.fly();[/color]
   → method from [color=#170C79]Drone[/color]
 "
+
+[node name="Label" type="Label" parent="DroneRobot/CanvasLayer/Panel" unique_id=1918322820]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -33.0
+offset_right = 258.0
+offset_bottom = -10.0
+text = "Output:"
+label_settings = ExtResource("20_mlspx")
 
 [node name="ComputerHint" type="Area2D" parent="." unique_id=1587964772 groups=["analyst_interactable"]]
 position = Vector2(47, 223)
@@ -1509,7 +1571,6 @@ shape = SubResource("RectangleShape2D_gshci")
 debug_color = Color(0.8200989, 0.4034578, 0, 0.41960785)
 
 [node name="ComputerHintPopup" type="CanvasLayer" parent="ComputerHint" unique_id=1427164895 groups=["info_group"]]
-visible = false
 script = ExtResource("19_4mq8d")
 
 [node name="Panel" type="Panel" parent="ComputerHint/ComputerHintPopup" unique_id=512408390]
@@ -1593,10 +1654,7 @@ offset_top = -24.0
 offset_right = 44.0
 offset_bottom = -1.0
 
-[node name="CanvasLayer" parent="RobotInteractable" index="3" unique_id=1533831507]
-visible = false
-
-[node name="Panel" parent="RobotInteractable/CanvasLayer" index="0" unique_id=1976795389]
+[node name="Panel" parent="RobotInteractable/CanvasLayer" parent_id_path=PackedInt32Array(1239817990, 1533831507) index="0" unique_id=1976795389]
 offset_left = 295.0
 offset_top = 102.0
 offset_right = 414.0
