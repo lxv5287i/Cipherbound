@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="2_n70i8"]
 [ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="3_eg6uk"]
 [ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="4_ay5h3"]
-[ext_resource type="AudioStream" uid="uid://cgs2710htjhu2" path="res://World/Music/Leaderboard(9).wav" id="6_cblhh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n70i8"]
 
@@ -71,7 +70,6 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ay5h3")
 text = "Reset"
 
 [node name="LeaderboardMusic" type="AudioStreamPlayer" parent="." unique_id=1717388009]
-stream = ExtResource("6_cblhh")
 
 [connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="PanelContainer/ResetButton" to="." method="_on_reset_button_pressed"]

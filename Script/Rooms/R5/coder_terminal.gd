@@ -1,5 +1,7 @@
 extends Area2D
 
+signal unlock_next_interactable
+
 @onready var answer_sfx = $"../AnswerSFX"
 
 @export var normal_texture: Texture2D
@@ -7,12 +9,9 @@ extends Area2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
-
 @onready var popup_panel: Panel = $CoderPopup/Panel
-
 @onready var code_label: RichTextLabel = $CoderPopup/Panel/CodeLabel
 @onready var explanation_label: RichTextLabel = $CoderPopup/Panel/RichTextLabel
-
 @onready var grid_container: GridContainer = $CoderPopup/Panel/GridContainer
 
 @onready var ans1: LineEdit = $CoderPopup/Panel/GridContainer/Ans1
@@ -23,10 +22,6 @@ extends Area2D
 @onready var ans6: LineEdit = $CoderPopup/Panel/GridContainer/Ans6
 @onready var ans7: LineEdit = $CoderPopup/Panel/GridContainer/Ans7
 @onready var ans8: LineEdit = $CoderPopup/Panel/GridContainer/Ans8
-@onready var ans9: LineEdit = $CoderPopup/Panel/GridContainer/Ans9
-@onready var ans10: LineEdit = $CoderPopup/Panel/GridContainer/Ans10
-@onready var ans11: LineEdit = $CoderPopup/Panel/GridContainer/Ans11
-@onready var ans12: LineEdit = $CoderPopup/Panel/GridContainer/Ans12
 
 @onready var submit_button: TextureButton = $CoderPopup/Panel/SubmitButton
 @onready var result_label: Label = $CoderPopup/Panel/ResultLabel
@@ -43,7 +38,6 @@ func _ready():
 
 	popup_panel.visible = false
 	prompt_label.visible = false
-
 	close_button.visible = false
 	explanation_label.visible = false
 
@@ -117,10 +111,9 @@ func open_popup():
 	grid_container.visible = true
 	submit_button.visible = true
 	result_label.visible = true
-	close_button.visible = false
+	close_button.visible = true
 
 	result_label.text = ""
-
 	clear_answers()
 
 
@@ -138,10 +131,6 @@ func setup_placeholders():
 	ans6.placeholder_text = "6"
 	ans7.placeholder_text = "7"
 	ans8.placeholder_text = "8"
-	ans9.placeholder_text = "9"
-	ans10.placeholder_text = "10"
-	ans11.placeholder_text = "11"
-	ans12.placeholder_text = "12"
 
 
 func clear_answers():
@@ -153,91 +142,64 @@ func clear_answers():
 	ans6.text = ""
 	ans7.text = ""
 	ans8.text = ""
-	ans9.text = ""
-	ans10.text = ""
-	ans11.text = ""
-	ans12.text = ""
 
 
 func clean_text(value: String) -> String:
-	return value.strip_edges()
+	return value.to_lower().replace(" ", "").strip_edges()
+
+
+func has_empty_answer() -> bool:
+	return clean_text(ans1.text) == "" \
+	or clean_text(ans2.text) == "" \
+	or clean_text(ans3.text) == "" \
+	or clean_text(ans4.text) == "" \
+	or clean_text(ans5.text) == "" \
+	or clean_text(ans6.text) == "" \
+	or clean_text(ans7.text) == "" \
+	or clean_text(ans8.text) == ""
 
 
 func _on_submit_pressed():
-	if clean_text(ans1.text) == "" \
-	and clean_text(ans2.text) == "" \
-	and clean_text(ans3.text) == "" \
-	and clean_text(ans4.text) == "" \
-	and clean_text(ans5.text) == "" \
-	and clean_text(ans6.text) == "" \
-	and clean_text(ans7.text) == "" \
-	and clean_text(ans8.text) == "" \
-	and clean_text(ans9.text) == "" \
-	and clean_text(ans10.text) == "" \
-	and clean_text(ans11.text) == "" \
-	and clean_text(ans12.text) == "":
+	result_label.visible = true
 
+	if has_empty_answer():
 		answer_sfx.play_wrong()
-
-		result_label.visible = true
-		result_label.text = "Please input answer"
-		ans1.grab_focus()
+		result_label.text = "Complete your answer"
 		return
 
 	var correct := true
-	var error_text := ""
 
 	if clean_text(ans1.text) != "this":
 		correct = false
-		error_text = "Answer 1 is wrong."
-	elif clean_text(ans2.text) != "powerOn()":
+	elif clean_text(ans2.text) != "poweron()":
 		correct = false
-		error_text = "Answer 2 is wrong."
 	elif clean_text(ans3.text) != "extends":
 		correct = false
-		error_text = "Answer 3 is wrong."
 	elif clean_text(ans4.text) != "super":
 		correct = false
-		error_text = "Answer 4 is wrong."
-	elif clean_text(ans5.text) != "void attack()":
+	elif clean_text(ans5.text) != "voidattack()":
 		correct = false
-		error_text = "Answer 5 is wrong."
 	elif clean_text(ans6.text) != "extends":
 		correct = false
-		error_text = "Answer 6 is wrong."
-	elif clean_text(ans7.text) != "String name":
+	elif clean_text(ans7.text) != "stringname":
 		correct = false
-		error_text = "Answer 7 is wrong."
-	elif clean_text(ans8.text) != "System.out.println":
+	elif clean_text(ans8.text) != "system.out.println":
 		correct = false
-		error_text = "Answer 8 is wrong."
-	elif clean_text(ans9.text) != "public class Main":
-		correct = false
-		error_text = "Answer 9 is wrong."
-	elif clean_text(ans10.text) != "public static void main":
-		correct = false
-		error_text = "Answer 10 is wrong."
-	elif clean_text(ans11.text) != "Drone":
-		correct = false
-		error_text = "Answer 11 is wrong."
-	elif clean_text(ans12.text) != "fly":
-		correct = false
-		error_text = "Answer 12 is wrong."
 
 	if correct:
-
 		answer_sfx.play_correct()
+		result_label.text = "CORRECT"
 
 		solved = true
 		GameProgress.solve_room5_coder()
+		unlock_next_interactable.emit()
+
+		await get_tree().create_timer(0.8).timeout
 		show_explanation_only()
 
 	else:
-
 		answer_sfx.play_wrong()
-
-		result_label.visible = true
-		result_label.text = error_text
+		result_label.text = "INCORRECT"
 
 
 func open_explanation_only():
@@ -253,5 +215,4 @@ func show_explanation_only():
 	grid_container.visible = false
 	submit_button.visible = false
 	result_label.visible = false
-
 	close_button.visible = true

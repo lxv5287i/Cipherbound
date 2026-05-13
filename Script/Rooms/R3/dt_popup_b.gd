@@ -22,7 +22,8 @@ func _ready():
 	panel.visible = false
 
 	explanation_label.visible = false
-	close_button.visible = false
+	close_button.visible = true
+	result_label.visible = false
 	result_label.text = ""
 
 	question_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -43,6 +44,7 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	panel.visible = true
+	close_button.visible = true
 
 	if solved:
 		show_explanation()
@@ -53,8 +55,7 @@ func open_popup():
 
 	answer_input.visible = true
 	submit_button.visible = true
-	close_button.visible = false
-	result_label.visible = true
+	result_label.visible = false
 
 	answer_input.text = ""
 	result_label.text = ""
@@ -72,24 +73,20 @@ func close_popup():
 
 
 func _on_submit_pressed():
-	var user_answer := answer_input.text.strip_edges().to_lower()
+	var user_answer := answer_input.text.to_lower().replace(" ", "").strip_edges()
+
+	result_label.visible = true
 
 	if user_answer == "":
 		answer_sfx.play_wrong()
-
-		result_label.visible = true
 		result_label.text = "Please input answer"
-
 		answer_input.grab_focus()
 		return
 
-	if user_answer == "if else" or user_answer == "ifelse":
-
+	if user_answer == "ifelse":
 		answer_sfx.play_correct()
 
-		result_label.visible = true
-		result_label.text = "Correct"
-
+		result_label.text = "CORRECT"
 		solved = true
 
 		var progress = get_tree().get_first_node_in_group("game_progress")
@@ -99,16 +96,13 @@ func _on_submit_pressed():
 			progress.solve_analyst()
 
 		submit_button.visible = false
-		close_button.visible = true
 		answer_input.visible = false
+		close_button.visible = true
 
 		return
 
 	answer_sfx.play_wrong()
-
-	result_label.visible = true
-	result_label.text = "Try again"
-
+	result_label.text = "INCORRECT"
 	answer_input.grab_focus()
 
 

@@ -11,25 +11,34 @@ signal puzzle_correct
 @onready var ans2: LineEdit = $Panel/Ans2
 @onready var ans3: LineEdit = $Panel/Ans3
 
-@onready var submit_button: TextureButton = $Panel/SubmitButton
 @onready var result_label: Label = $Panel/ResultLabel
+
+@onready var done_button: TextureButton = $Panel/DoneButton
+@onready var submit_button: TextureButton = $Panel/SubmitButton
 @onready var close_button: TextureButton = $Panel/CloseButton
 
 var is_open := false
+var puzzle_done := false
 var correct_answers := ["135", "60", "%"]
 
 func _ready():
 	add_to_group("coder_popup")
+
 	hide()
 	panel.visible = false
-	close_button.visible = false
-	result_label.text = ""
+
+	result_label.visible = false
+	done_button.visible = false
 
 	if not submit_button.pressed.is_connected(_on_submit_pressed):
 		submit_button.pressed.connect(_on_submit_pressed)
 
 	if not close_button.pressed.is_connected(close_popup):
 		close_button.pressed.connect(close_popup)
+
+	if not done_button.pressed.is_connected(close_popup):
+		done_button.pressed.connect(close_popup)
+
 
 func open_popup():
 	show()
@@ -40,18 +49,29 @@ func open_popup():
 	ans2.visible = true
 	ans3.visible = true
 
-	submit_button.visible = true
-	result_label.visible = true
-	close_button.visible = false
+	close_button.visible = true
 
-	result_label.text = ""
+	if puzzle_done:
+		submit_button.visible = false
+		done_button.visible = true
 
-	ans1.text = ""
-	ans2.text = ""
-	ans3.text = ""
+		result_label.visible = true
+		result_label.text = "CORRECT"
 
-	await get_tree().process_frame
-	ans1.grab_focus()
+	else:
+		submit_button.visible = true
+		done_button.visible = false
+
+		result_label.visible = false
+		result_label.text = ""
+
+		ans1.text = ""
+		ans2.text = ""
+		ans3.text = ""
+
+		await get_tree().process_frame
+		ans1.grab_focus()
+
 
 func close_popup():
 	hide()
@@ -62,27 +82,34 @@ func close_popup():
 	ans2.release_focus()
 	ans3.release_focus()
 
+
 func _on_submit_pressed():
 	var a1 := ans1.text.strip_edges()
 	var a2 := ans2.text.strip_edges()
 	var a3 := ans3.text.strip_edges()
 
+	result_label.visible = true
+
 	if a1 == correct_answers[0] and a2 == correct_answers[1] and a3 == correct_answers[2]:
 		answer_sfx.play_correct()
 
-		result_label.text = """
-		Batteries: 2
-		Remaining Energy: 15
-		"""
+		puzzle_done = true
+
+		result_label.text = "Batteries: 2\nRemaining Energy: 15"
 
 		puzzle_correct.emit()
 
 		submit_button.visible = false
+		done_button.visible = true
+		close_button.visible = true
 
 	else:
 		answer_sfx.play_wrong()
 
 		result_label.text = "INCORRECT"
-		ans1.grab_focus()
 
-	close_button.visible = true
+		submit_button.visible = true
+		done_button.visible = false
+		close_button.visible = true
+
+		ans1.grab_focus()

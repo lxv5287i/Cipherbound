@@ -1,46 +1,45 @@
 [gd_scene format=4 uid="uid://bhcxrro80ubsg"]
 
-[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_5dx1k"]
-[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_lvt4s"]
-[ext_resource type="Texture2D" uid="uid://dq4wil2thwym7" path="res://Assets/World/Objects/R3_Objects.png" id="3_8xjlg"]
-[ext_resource type="Texture2D" uid="uid://b44680lxrnvo7" path="res://Assets/Interactables/R3/Screen.png" id="5_8p3gp"]
+[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_5dx1k"]
+[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_lvt4s"]
+[ext_resource type="Texture2D" uid="uid://dffunngmjujti" path="res://Assets/World/Objects/R3_Objects.png" id="3_8xjlg"]
+[ext_resource type="Texture2D" uid="uid://djkhxncn1ay1i" path="res://Assets/Interactables/R3/Screen.png" id="5_8p3gp"]
 [ext_resource type="Script" uid="uid://c4cysgi01kyo5" path="res://Script/Rooms/R3/data_table.gd" id="6_0ia3a"]
-[ext_resource type="Texture2D" uid="uid://b0wv3vw05y2ci" path="res://Assets/Interactables/R3/Screen_inrange.png" id="6_1esxs"]
-[ext_resource type="Texture2D" uid="uid://2dvm22lxwqak" path="res://Assets/Interactables/R3/dataTable.png" id="6_8xjlg"]
-[ext_resource type="Texture2D" uid="uid://df7y1q58c4at8" path="res://Assets/Interactables/R3/dataTable_inrange.png" id="8_0bpve"]
+[ext_resource type="Texture2D" uid="uid://djfaxk8us6boi" path="res://Assets/Interactables/R3/Screen_inrange.png" id="6_1esxs"]
+[ext_resource type="Texture2D" uid="uid://c2gs55xg2w5fk" path="res://Assets/Interactables/R3/dataTable.png" id="6_8xjlg"]
+[ext_resource type="Texture2D" uid="uid://lmt54h3g52v3" path="res://Assets/Interactables/R3/dataTable_inrange.png" id="8_0bpve"]
 [ext_resource type="Script" uid="uid://b73f2swu7sls8" path="res://Script/Rooms/R3/dt_popup_a.gd" id="8_lnly0"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_ny18x"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_ny18x"]
 [ext_resource type="Script" uid="uid://d000ckm6x85e6" path="res://Script/Rooms/R3/dt_popup_b.gd" id="11_lnly0"]
-[ext_resource type="Texture2D" uid="uid://db8xmlnrvhgdn" path="res://Assets/Interactables/R3/hint.png" id="13_4ig2l"]
+[ext_resource type="Texture2D" uid="uid://ba11ta7pht2qj" path="res://Assets/Interactables/R3/hint.png" id="13_4ig2l"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="13_ny18x"]
 [ext_resource type="Script" uid="uid://c277h2bol2esd" path="res://Script/Rooms/R3/hint.gd" id="13_o73mh"]
-[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="14_mnda3"]
-[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_ny18x"]
-[ext_resource type="Texture2D" uid="uid://b4cjvj0tpm1q7" path="res://Assets/Interactables/R3/hint_inrange.png" id="15_bbtj1"]
+[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_ny18x"]
+[ext_resource type="Texture2D" uid="uid://c27qk1bfqdq1x" path="res://Assets/Interactables/R3/hint_inrange.png" id="15_bbtj1"]
 [ext_resource type="Script" uid="uid://bfqoht6b265kg" path="res://Script/Rooms/R3/hint_popup.gd" id="15_cjl45"]
-[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="15_d0cu2"]
-[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_qo0bv"]
-[ext_resource type="Texture2D" uid="uid://fkwcyn2ckqrx" path="res://Assets/Interactables/R3/CalculatorWrong.png" id="16_bbtj1"]
-[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="16_n632a"]
+[ext_resource type="Texture2D" uid="uid://c06xvt447pogj" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_qo0bv"]
+[ext_resource type="Texture2D" uid="uid://0y6476gmae57" path="res://Assets/Interactables/R3/CalculatorWrong.png" id="16_bbtj1"]
 [ext_resource type="Script" uid="uid://can4wk13wlley" path="res://Script/Rooms/R3/calculator.gd" id="16_oy1py"]
-[ext_resource type="Texture2D" uid="uid://cer8jop48qgyw" path="res://Assets/User Interface/Buttons/nextBTN_hovered.png" id="16_tyadb"]
-[ext_resource type="FontFile" uid="uid://b0menpw3ca2fp" path="res://Assets/World/Font/DePixelHalbfett.ttf" id="17_qo0bv"]
-[ext_resource type="Texture2D" uid="uid://c0jh2qjrfs17m" path="res://Assets/Interactables/R3/CalculatorWrong_inrange.png" id="18_kukuf"]
-[ext_resource type="Texture2D" uid="uid://c86p31xt78eqb" path="res://Assets/Interactables/R3/CalculatorCorrect.png" id="19_sfrby"]
-[ext_resource type="Texture2D" uid="uid://caurjf6my7sy" path="res://Assets/Interactables/R3/CalculatorCorrect_inrange.png" id="20_lsee2"]
-[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="20_obyfn"]
+[ext_resource type="Texture2D" uid="uid://diird6iof0u7l" path="res://Assets/User Interface/Buttons/nextBTN_hovered.png" id="16_tyadb"]
+[ext_resource type="FontFile" uid="uid://blqwf428pessp" path="res://Assets/World/Font/DePixelHalbfett.ttf" id="17_qo0bv"]
+[ext_resource type="Texture2D" uid="uid://c1w1m3ih2bo04" path="res://Assets/Interactables/R3/CalculatorWrong_inrange.png" id="18_kukuf"]
+[ext_resource type="Texture2D" uid="uid://brib61wulskwp" path="res://Assets/Interactables/R3/CalculatorCorrect.png" id="19_sfrby"]
+[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="19_stgmk"]
+[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="20_im7vr"]
+[ext_resource type="Texture2D" uid="uid://ioicjammg4wk" path="res://Assets/Interactables/R3/CalculatorCorrect_inrange.png" id="20_lsee2"]
+[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="20_obyfn"]
+[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="21_586xr"]
 [ext_resource type="Script" uid="uid://d3jy8rta5vobg" path="res://Script/Rooms/R3/calculator_popup.gd" id="21_sfrby"]
 [ext_resource type="Script" uid="uid://fjqubmhxsu6w" path="res://Script/Doors/R3exit_door.gd" id="22_xjlda"]
-[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="24_1t1af"]
-[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="25_4j04t"]
-[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="26_8p3gp"]
-[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="27_1esxs"]
+[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="24_1t1af"]
+[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="25_4j04t"]
+[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="26_8p3gp"]
+[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="27_1esxs"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="31_8p3gp"]
-[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="32_qo0bv"]
+[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="32_qo0bv"]
 [ext_resource type="LabelSettings" uid="uid://ct60fidahgv05" path="res://Assets/World/Font/16FONT.tres" id="32_tyadb"]
-[ext_resource type="Texture2D" uid="uid://de4d4v2gi3h15" path="res://Assets/World/underline.png" id="33_m5gp6"]
+[ext_resource type="Texture2D" uid="uid://b6f1r030nv1rf" path="res://Assets/World/underline.png" id="33_m5gp6"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="40_17yus"]
-[ext_resource type="AudioStream" uid="uid://bb0yr231glh0u" path="res://World/Music/room 1-4(10).wav" id="41_apf7v"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="42_apf7v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ia3a"]
@@ -968,26 +967,27 @@ patch_margin_bottom = 6
 
 [node name="QuestionLabel" type="Label" parent="DTPopup/Panel" unique_id=1574310484]
 layout_mode = 0
-offset_left = -15.0
-offset_top = -2.0
-offset_right = 242.0
-offset_bottom = 144.0
+offset_left = -37.0
+offset_top = -13.0
+offset_right = 256.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 8
 text = "Instructions: 
 1. Analyze the condition.
 2. Create a class.
 3. Add main method.
-4. Use the correct conditional 
-      statement.
-5. Display PASS or FAIL."
+4. Use the correct conditional statement.
+5. Display PASS or FAIL.
+
+What Conditional Statement to use?"
 label_settings = SubResource("LabelSettings_tyadb")
 
 [node name="Ans" type="LineEdit" parent="DTPopup/Panel" unique_id=1920858058]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 137.0
-offset_right = 114.0
-offset_bottom = 161.0
+offset_left = 42.0
+offset_top = 147.0
+offset_right = 119.0
+offset_bottom = 171.0
 theme_override_fonts/font = ExtResource("10_ny18x")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_m5gp6")
@@ -997,10 +997,10 @@ text = "Answer"
 
 [node name="SubmitButton" type="TextureButton" parent="DTPopup/Panel" unique_id=973327767]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 147.0
-offset_right = 336.0
-offset_bottom = 179.0
+offset_left = 184.0
+offset_top = 158.0
+offset_right = 344.0
+offset_bottom = 190.5
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("14_ny18x")
 texture_pressed = ExtResource("15_qo0bv")
@@ -1009,30 +1009,30 @@ texture_hover = ExtResource("16_tyadb")
 [node name="Result" type="Label" parent="DTPopup/Panel" unique_id=770452207]
 layout_mode = 0
 offset_left = 41.0
-offset_top = 174.0
-offset_right = 117.0
-offset_bottom = 197.0
+offset_top = 179.0
+offset_right = 118.0
+offset_bottom = 202.0
 text = "RESULT"
 label_settings = SubResource("LabelSettings_ms3wq")
 horizontal_alignment = 1
 
 [node name="CloseButton" type="TextureButton" parent="DTPopup/Panel" unique_id=49388056]
 layout_mode = 0
-offset_left = 177.0
-offset_top = 175.0
-offset_right = 337.0
-offset_bottom = 207.0
+offset_left = 252.0
+offset_top = -18.999985
+offset_right = 317.0
+offset_bottom = 13.000015
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("14_mnda3")
-texture_pressed = ExtResource("15_d0cu2")
-texture_hover = ExtResource("16_n632a")
+texture_normal = ExtResource("19_stgmk")
+texture_pressed = ExtResource("20_im7vr")
+texture_hover = ExtResource("21_586xr")
 
 [node name="ExplanationLabel" type="RichTextLabel" parent="DTPopup/Panel" unique_id=804110548]
 layout_mode = 0
-offset_left = -30.0
-offset_top = -8.0
-offset_right = 249.0
-offset_bottom = 168.0
+offset_left = -32.0
+offset_top = -1.0
+offset_right = 247.0
+offset_bottom = 178.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("10_ny18x")
 theme_override_font_sizes/normal_font_size = 16
@@ -1364,6 +1364,7 @@ offset_bottom = 127.0
 theme_override_font_sizes/font_size = 8
 text = "Result"
 label_settings = ExtResource("32_tyadb")
+uppercase = true
 
 [node name="ExplantionLabel" type="RichTextLabel" parent="CalculatorPopup/Panel" unique_id=1120130704]
 layout_mode = 0
@@ -1418,14 +1419,14 @@ Main concept:
 
 [node name="CloseButton" type="TextureButton" parent="CalculatorPopup/Panel" unique_id=1339345088]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 216.0
-offset_right = 167.0
-offset_bottom = 248.0
+offset_left = 84.0
+offset_top = -63.0
+offset_right = 244.0
+offset_bottom = -31.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("14_mnda3")
-texture_pressed = ExtResource("15_d0cu2")
-texture_hover = ExtResource("16_n632a")
+texture_normal = ExtResource("19_stgmk")
+texture_pressed = ExtResource("20_im7vr")
+texture_hover = ExtResource("21_586xr")
 
 [node name="Output" type="Label" parent="CalculatorPopup/Panel" unique_id=2023529350]
 layout_mode = 0
@@ -1511,7 +1512,6 @@ anchor_bottom = 1.1590909
 
 [node name="RoomMusicController" type="Node" parent="." unique_id=939215120]
 script = ExtResource("40_17yus")
-music = ExtResource("41_apf7v")
 target_volume = -15.0
 fade_time = 3.0
 start_volume = -20.0

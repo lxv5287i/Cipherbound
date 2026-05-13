@@ -69,7 +69,7 @@ func show_question():
 
 	submit_button.visible = true
 	result_label.visible = true
-	close_button.visible = false
+	close_button.visible = true
 
 	code_label.text = question_text
 
@@ -99,48 +99,65 @@ func close_popup():
 	ans6.release_focus()
 
 
+func clean_text(value: String) -> String:
+	return value.to_lower().replace(" ", "").strip_edges()
+
+
 func _on_submit_pressed():
 	if ans1.text.strip_edges() != "for":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 1 is wrong."
+		result_label.text = "INCORRECT"
 		ans1.grab_focus()
 		return
 
 	if ans2.text.strip_edges() != "1":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 2 is wrong."
+		result_label.text = "INCORRECT"
 		ans2.grab_focus()
 		return
 
 	if ans3.text.strip_edges() != "3":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 3 is wrong."
+		result_label.text = "INCORRECT"
 		ans3.grab_focus()
 		return
 
 	if ans4.text.strip_edges() != "i++":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 4 is wrong."
+		result_label.text = "INCORRECT"
 		ans4.grab_focus()
 		return
 
-	if ans5.text.strip_edges() != "System.out.print(\"*\")":
+	var line5 := clean_text(ans5.text)
+	var line6 := clean_text(ans6.text)
+
+	if line5 != "system.out.print(\"*\")":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 5 is wrong."
+		result_label.text = "INCORRECT"
 		ans5.grab_focus()
 		return
 
-	if ans6.text.strip_edges() != "System.out.println()":
+	if (
+		line6 != "system.out.println()" and
+		line6 != "system.out.print(\"\\n\")"
+	):
 		answer_sfx.play_wrong()
-		result_label.text = "Line 6 is wrong."
+		result_label.text = "INCORRECT"
 		ans6.grab_focus()
 		return
 
 	answer_sfx.play_correct()
 
+	result_label.visible = true
+	result_label.text = "*
+	**
+	***"
+
 	if not already_solved:
 		already_solved = true
 		puzzle_correct.emit()
+
+	await get_tree().create_timer(1.5).timeout
 
 	show_explanation_only()
 

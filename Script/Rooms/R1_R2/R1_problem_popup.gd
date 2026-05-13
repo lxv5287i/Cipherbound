@@ -14,14 +14,15 @@ signal puzzle_correct
 @onready var close_button: TextureButton = $Panel/CloseButton
 
 var is_open := false
+var puzzle_done := false
 
 
 func _ready():
 	add_to_group("analyst_popup")
 
 	panel.visible = false
-	result_label.text = ""
-	close_button.visible = false
+	result_label.visible = false
+	close_button.visible = true
 
 	if not submit_button.pressed.is_connected(_on_submit_pressed):
 		submit_button.pressed.connect(_on_submit_pressed)
@@ -37,17 +38,20 @@ func open_popup():
 	question_label.visible = true
 	ans1.visible = true
 	ans2.visible = true
-	submit_button.visible = true
-	result_label.visible = true
-	close_button.visible = false
+	close_button.visible = true
 
-	result_label.text = ""
+	if puzzle_done:
+		open_explanation_only()
+	else:
+		submit_button.visible = true
+		result_label.visible = false
+		result_label.text = ""
 
-	ans1.text = ""
-	ans2.text = ""
+		ans1.text = ""
+		ans2.text = ""
 
-	await get_tree().process_frame
-	ans1.grab_focus()
+		await get_tree().process_frame
+		ans1.grab_focus()
 
 
 func close_popup():
@@ -62,11 +66,16 @@ func _on_submit_pressed():
 	var a1 := ans1.text.strip_edges()
 	var a2 := ans2.text.strip_edges()
 
-	if a1 == "2" and a2 == "15":
+	result_label.visible = true
 
+	if a1 == "2" and a2 == "15":
 		answer_sfx.play_correct()
 
-		result_label.text = "Correct"
+		puzzle_done = true
+		result_label.text = "CORRECT"
+
+		submit_button.visible = false
+		close_button.visible = true
 
 		var progress = get_tree().get_first_node_in_group("game_progress")
 		print("Analyst popup found progress:", progress)
@@ -76,14 +85,13 @@ func _on_submit_pressed():
 
 		puzzle_correct.emit()
 
-		await get_tree().create_timer(0.4).timeout
-		close_popup()
+		open_explanation_only()
 
 	else:
-
 		answer_sfx.play_wrong()
 
-		result_label.text = "Try again"
+		result_label.text = "INCORRECT"
+		close_button.visible = true
 		ans1.grab_focus()
 
 
@@ -98,7 +106,8 @@ func open_explanation_only():
 	result_label.visible = false
 	close_button.visible = true
 
-	question_label.text = """Explanation:
+	question_label.text = """
+Explanation:
 
 135 energy units are available.
 Each full battery needs 60 energy units.

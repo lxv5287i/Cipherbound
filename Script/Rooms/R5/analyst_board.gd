@@ -79,7 +79,7 @@ func open_popup():
 	submit_button.visible = true
 	result_label.visible = true
 	explanation_label.visible = false
-	close_button.visible = false
+	close_button.visible = true
 
 	result_label.text = ""
 
@@ -133,7 +133,6 @@ func _on_submit_pressed():
 		show_explanation()
 
 	else:
-
 		answer_sfx.play_wrong()
 
 		result_label.visible = true

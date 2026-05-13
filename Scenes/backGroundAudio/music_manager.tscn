@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://dmqfcaa4d1r42"]
 
-[ext_resource type="AudioStream" uid="uid://c34rvf0rihrpi" path="res://World/Music/background.wav" id="1_ud6om"]
 [ext_resource type="Script" uid="uid://nbnewef55fa8" path="res://Scenes/backGroundAudio/music_manager.gd" id="2_qj73b"]
 
 [node name="MusicManager" type="AudioStreamPlayer" unique_id=1287119675]
-stream = ExtResource("1_ud6om")
 autoplay = true
 script = ExtResource("2_qj73b")

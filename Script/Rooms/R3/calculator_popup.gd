@@ -7,6 +7,10 @@ signal puzzle_correct
 @export var exit_door_path: NodePath
 
 @onready var panel: Panel = $Panel
+
+@onready var texture_rect2: NinePatchRect = $Panel/TextureRect2
+@onready var texture_rect: NinePatchRect = $Panel/TextureRect
+
 @onready var code_label: RichTextLabel = $Panel/CodeLabel
 @onready var explanation_label: RichTextLabel = $Panel/ExplantionLabel
 
@@ -29,10 +33,15 @@ var checked_90 := false
 var checked_71 := false
 var checked_75 := false
 
+
 func _ready():
 	add_to_group("coder_popup")
 	hide()
+
 	panel.visible = false
+	texture_rect2.visible = false
+	texture_rect.visible = false
+
 	explanation_label.visible = false
 	result_label.text = ""
 	output_display.text = ""
@@ -48,6 +57,7 @@ func _ready():
 	if not close_button.pressed.is_connected(close_popup):
 		close_button.pressed.connect(close_popup)
 
+
 func open_popup():
 	var progress = get_tree().get_first_node_in_group("game_progress")
 
@@ -58,11 +68,18 @@ func open_popup():
 	if not progress.analyst_solved:
 		show()
 		panel.visible = true
+
+		texture_rect2.visible = true
+		texture_rect.visible = true
+
 		code_label.visible = true
 		explanation_label.visible = false
 		close_button.visible = true
+
 		code_label.text = "LOCKED\n\nThe Analyst must solve the puzzle first."
+
 		hide_inputs()
+
 		GameLock.movement_locked = true
 		is_open = true
 		return
@@ -76,9 +93,13 @@ func open_popup():
 	GameLock.movement_locked = true
 
 	panel.visible = true
+
+	texture_rect2.visible = true
+	texture_rect.visible = true
+
 	code_label.visible = true
 	explanation_label.visible = false
-	close_button.visible = false
+	close_button.visible = true
 
 	ans1.visible = true
 	ans2.visible = true
@@ -107,13 +128,16 @@ func open_popup():
 	await get_tree().process_frame
 	ans1.grab_focus()
 
+
 func close_popup():
 	hide()
+
 	is_open = false
 	GameLock.movement_locked = false
 
 	panel.visible = false
-	close_button.visible = false
+	texture_rect2.visible = false
+	texture_rect.visible = false
 
 	ans1.release_focus()
 	ans2.release_focus()
@@ -122,40 +146,41 @@ func close_popup():
 	ans5.release_focus()
 	ans6.release_focus()
 
-func _on_submit_pressed():
-	var a1 := ans1.text.strip_edges()
-	var a2 := ans2.text.strip_edges()
-	var a3 := ans3.text.strip_edges()
-	var a4 := ans4.text.strip_edges()
-	var a5 := ans5.text.strip_edges()
-	var a6 := ans6.text.strip_edges()
 
-	if a1 != "public class Main":
+func clean_text(value: String) -> String:
+	return value.to_lower().replace(" ", "").strip_edges()
+
+
+func _on_submit_pressed():
+	var a1 := clean_text(ans1.text)
+	var a2 := clean_text(ans2.text)
+	var a3 := ans3.text.strip_edges()
+	var a4 := ans4.text.replace(" ", "").strip_edges()
+
+	var custom_pass_result := ans5.text.strip_edges()
+	var custom_fail_result := ans6.text.strip_edges()
+
+	if a1 != "publicclassmain":
 		answer_sfx.play_wrong()
 		result_label.text = "Line 1 is wrong."
 		ans1.grab_focus()
 		return
 
 	if (
-		a2 != "public static void main (String args[])" and
-		a2 != "public static void main (String[] args)" and
-		a2 != "public static void main (String args)"
+		a2 != "publicstaticvoidmain(stringargs[])" and
+		a2 != "publicstaticvoidmain(string[]args)" and
+		a2 != "publicstaticvoidmain(stringargs)"
 	):
 		answer_sfx.play_wrong()
 		result_label.text = "Line 2 is wrong."
 		ans2.grab_focus()
 		return
 
-	var score_result := ""
-
 	if a3 == "90":
-		score_result = "PASS"
 		checked_90 = true
 	elif a3 == "71":
-		score_result = "FAIL"
 		checked_71 = true
 	elif a3 == "75":
-		score_result = "PASS"
 		checked_75 = true
 	else:
 		answer_sfx.play_wrong()
@@ -169,21 +194,14 @@ func _on_submit_pressed():
 		ans4.grab_focus()
 		return
 
-	if a5 != "PASS":
-		answer_sfx.play_wrong()
-		result_label.text = "Line 5 is wrong."
-		ans5.grab_focus()
-		return
-
-	if a6 != "FAIL":
-		answer_sfx.play_wrong()
-		result_label.text = "Line 6 is wrong."
-		ans6.grab_focus()
-		return
-
 	if checked_90 and checked_71 and checked_75:
 		answer_sfx.play_correct()
-		output_display.text = "PASS\nFAIL\nPASS"
+
+		output_display.text = "%s\n%s\n%s" % [
+			custom_pass_result,
+			custom_fail_result,
+			custom_pass_result
+		]
 
 		if not already_solved:
 			already_solved = true
@@ -193,34 +211,48 @@ func _on_submit_pressed():
 		show_explanation()
 		return
 
-	# build progress — show score and result, _ for unchecked
 	var p1 = "" if checked_90 else "90"
 	var p2 = "" if checked_71 else "71"
 	var p3 = "" if checked_75 else "75"
+
 	result_label.text = "please check:\n%s\n%s\n%s" % [p1, p2, p3]
 
-	var r1 = "PASS" if checked_90 else ""
-	var r2 = "FAIL" if checked_71 else ""
-	var r3 = "PASS" if checked_75 else ""
+	var r1 = custom_pass_result if checked_90 else ""
+	var r2 = custom_fail_result if checked_71 else ""
+	var r3 = custom_pass_result if checked_75 else ""
+
 	output_display.text = "%s\n%s\n%s" % [r1, r2, r3]
 
 	ans3.text = ""
 	ans3.grab_focus()
 
+
 func open_explanation_only():
 	show()
+
 	panel.visible = true
+	texture_rect2.visible = true
+	texture_rect.visible = true
+
 	GameLock.movement_locked = true
 	is_open = true
+
 	show_explanation()
 
+
 func show_explanation():
+	texture_rect2.visible = true
+	texture_rect.visible = true
+
 	code_label.visible = false
 	explanation_label.visible = true
+
 	hide_inputs()
+
 	submit_button.visible = false
 	result_label.visible = false
 	close_button.visible = true
+
 
 func hide_inputs():
 	ans1.visible = false
@@ -229,11 +261,14 @@ func hide_inputs():
 	ans4.visible = false
 	ans5.visible = false
 	ans6.visible = false
+
 	submit_button.visible = false
 	result_label.visible = false
 
+
 func open_room_exit_door():
 	var exit_door = get_node_or_null(exit_door_path)
+
 	if exit_door and exit_door.has_method("open_door"):
 		exit_door.open_door()
 		print("Calculator opened exit door")

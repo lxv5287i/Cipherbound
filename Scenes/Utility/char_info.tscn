@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://ds034udoqe4su"]
 
 [ext_resource type="Script" uid="uid://d3ktqdkx7i73x" path="res://Script/Utility/char_info.gd" id="1_ql3g4"]
-[ext_resource type="Texture2D" uid="uid://qgtcgo7562ui" path="res://Assets/User Interface/Popups/characterUD.png" id="2_cdf3l"]
-[ext_resource type="Texture2D" uid="uid://dtu6c6dqn4chl" path="res://Assets/User Interface/Buttons/continue.png" id="3_7l5mn"]
-[ext_resource type="Texture2D" uid="uid://l6hlcgc1vof7" path="res://Assets/User Interface/Buttons/continue_pressed.png" id="4_vh0g3"]
-[ext_resource type="Texture2D" uid="uid://df11iptj06yil" path="res://Assets/User Interface/Buttons/continue_hovered.png" id="5_tye78"]
-[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="6_vh0g3"]
-[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_tye78"]
-[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_iieth"]
-[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_tye78"]
-[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Assets/Interactables/R1/computerOFF.png" id="10_kojy4"]
+[ext_resource type="Texture2D" uid="uid://jx7u73qiwoea" path="res://Assets/User Interface/Popups/characterUD.png" id="2_cdf3l"]
+[ext_resource type="Texture2D" uid="uid://cwslre6br33ch" path="res://Assets/User Interface/Buttons/continue.png" id="3_7l5mn"]
+[ext_resource type="Texture2D" uid="uid://df5ktpmt6tj6g" path="res://Assets/User Interface/Buttons/continue_pressed.png" id="4_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://cmnj65m0tc631" path="res://Assets/User Interface/Buttons/continue_hovered.png" id="5_tye78"]
+[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="6_vh0g3"]
+[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_tye78"]
+[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_iieth"]
+[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_tye78"]
+[ext_resource type="Texture2D" uid="uid://7go41d785j2j" path="res://Assets/Interactables/R1/computerOFF.png" id="10_kojy4"]
 [ext_resource type="Texture2D" uid="uid://unf4lixhbiqd" path="res://Assets/Interactables/UI_Popups/Popup Overlays/computerOFF_ANALYST.png" id="11_al33m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tye78"]
+line_spacing = 0.0
 font = ExtResource("9_tye78")
 font_size = 10
 
@@ -41,10 +42,10 @@ offset_bottom = 40.0
 [node name="Econtrol" type="Label" parent="PanelContainer" unique_id=1022148794]
 z_index = 1
 layout_mode = 0
-offset_left = 367.00003
-offset_top = 208.0
-offset_right = 454.00003
-offset_bottom = 247.0
+offset_left = 360.00003
+offset_top = 206.0
+offset_right = 447.00003
+offset_bottom = 245.0
 theme_override_font_sizes/font_size = 16
 text = "E – Interact 
 with objects 
@@ -54,7 +55,7 @@ label_settings = SubResource("LabelSettings_tye78")
 [node name="SpaceControl" type="Label" parent="PanelContainer" unique_id=865295270]
 z_index = 1
 layout_mode = 0
-offset_left = 143.0
+offset_left = 127.0
 offset_top = 208.0
 offset_right = 230.0
 offset_bottom = 247.0
