@@ -1,37 +1,38 @@
 [gd_scene format=4 uid="uid://cgy8d6o80xk5x"]
 
-[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_x3cab"]
-[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_u2i1c"]
-[ext_resource type="Texture2D" uid="uid://d4d8ra0xbxlia" path="res://Assets/World/Objects/R5_Obejcts.png" id="3_u2i1c"]
-[ext_resource type="Texture2D" uid="uid://ct0imur1xh0wo" path="res://Assets/Interactables/R5/inheritancePanel.png" id="6_idjqp"]
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_x3cab"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://bcd1gspxao47s" path="res://Assets/World/Objects/R5_Obejcts.png" id="3_u2i1c"]
+[ext_resource type="Texture2D" uid="uid://cpha6rpp3t8db" path="res://Assets/Interactables/R5/inheritancePanel.png" id="6_idjqp"]
 [ext_resource type="Script" uid="uid://dx8j6uunr7jb1" path="res://Script/Rooms/R5/analyst_board.gd" id="6_nk5kx"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="7_mlspx"]
-[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_3g6xh"]
-[ext_resource type="Texture2D" uid="uid://cgiorrtcdeyta" path="res://Assets/Interactables/R5/repairTerminal.png" id="8_6p5ga"]
-[ext_resource type="Texture2D" uid="uid://caalgdwunre2b" path="res://Assets/Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="8_3g6xh"]
+[ext_resource type="Texture2D" uid="uid://b71bu6nbgidcn" path="res://Assets/Interactables/R5/repairTerminal.png" id="8_6p5ga"]
+[ext_resource type="Texture2D" uid="uid://myybn5st2pyb" path="res://Assets/Interactables/R5/inheritancePanel_inrange.png" id="8_17isa"]
 [ext_resource type="Script" uid="uid://dt6xyw12jpobu" path="res://Script/Rooms/R5/coder_terminal.gd" id="8_t37p4"]
-[ext_resource type="FontFile" uid="uid://c3v2pti167hee" path="res://Assets/World/Font/NicoClean-Regular.otf" id="9_cttw5"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
-[ext_resource type="Texture2D" uid="uid://ddn0wam507fa5" path="res://Assets/Interactables/R5/statusMonitor.png" id="11_3p68e"]
+[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="9_cttw5"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="10_fv1an"]
+[ext_resource type="Texture2D" uid="uid://c2wagaq5bhtgq" path="res://Assets/Interactables/R5/statusMonitor.png" id="11_3p68e"]
 [ext_resource type="Script" uid="uid://ghi0br4uuw5f" path="res://Script/Rooms/R5/drone_robot.gd" id="11_gr3ss"]
-[ext_resource type="Texture2D" uid="uid://c2j0dk0alnbrm" path="res://Assets/Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
-[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_kmav1"]
-[ext_resource type="Texture2D" uid="uid://c06xvt447pogj" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_2g4yd"]
-[ext_resource type="Texture2D" uid="uid://1d4ek0wyjdnc" path="res://Assets/Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
-[ext_resource type="Texture2D" uid="uid://djfyo42xl5rhl" path="res://Assets/Interactables/R5/computerHint.png" id="16_gshci"]
-[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="16_mlspx"]
+[ext_resource type="Texture2D" uid="uid://csioq6jboos4w" path="res://Assets/Interactables/R5/repairTerminal_inrange.png" id="11_qryu6"]
+[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="14_kmav1"]
+[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="15_2g4yd"]
+[ext_resource type="Texture2D" uid="uid://bu265yif8fl24" path="res://Assets/Interactables/R5/statusMonitor_inrange.png" id="15_eh4pa"]
+[ext_resource type="Texture2D" uid="uid://b2k0fl82rbwxx" path="res://Assets/Interactables/R5/computerHint.png" id="16_gshci"]
+[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="16_mlspx"]
 [ext_resource type="Script" uid="uid://dokatutmbrne1" path="res://Script/Rooms/R5/computer_hint.gd" id="16_xusyf"]
-[ext_resource type="Texture2D" uid="uid://da40sxm7p1x5f" path="res://Assets/Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
-[ext_resource type="Texture2D" uid="uid://v5ibtxuvurt1" path="res://Assets/User Interface/Buttons/closeButton.png" id="18_mlspx"]
+[ext_resource type="Texture2D" uid="uid://dpcom1jqp415j" path="res://Assets/Interactables/R5/computerHint_inrange.png" id="18_as0qb"]
+[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="18_mlspx"]
+[ext_resource type="Texture2D" uid="uid://de4d4v2gi3h15" path="res://Assets/World/underline.png" id="18_noo2n"]
 [ext_resource type="Script" uid="uid://dqla2vtotbo2i" path="res://Script/Rooms/R5/computer_hint_popup.gd" id="19_4mq8d"]
-[ext_resource type="Texture2D" uid="uid://c6tohceggejk6" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="19_fv1an"]
+[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="19_fv1an"]
 [ext_resource type="LabelSettings" uid="uid://ct60fidahgv05" path="res://Assets/World/Font/16FONT.tres" id="20_mlspx"]
 [ext_resource type="Script" uid="uid://2prrbj308nkf" path="res://Script/Doors/R5exit_door.gd" id="20_tvxs7"]
-[ext_resource type="Texture2D" uid="uid://q2f6gqjb4dp2" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="20_yqdhs"]
-[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="22_440xx"]
-[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="23_gmluh"]
-[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="23_qa7lu"]
-[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
+[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="20_yqdhs"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="22_440xx"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="23_gmluh"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="23_qa7lu"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="29_cttw5"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="34_ypfhw"]
 [ext_resource type="AudioStream" uid="uid://dp3t4rj3r6qcv" path="res://World/Music/room5(5).wav" id="35_2vdva"]
@@ -734,6 +735,13 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p5ga"]
 size = Vector2(12, 28)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyl3w"]
+texture = ExtResource("18_noo2n")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lo355"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnjk5"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17isa"]
 size = Vector2(42.5, 34)
 
@@ -1058,98 +1066,146 @@ columns = 4
 [node name="Ans1" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=824804772]
 custom_minimum_size = Vector2(80, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "1"
-alignment = 1
 
 [node name="Ans2" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=651914445]
 custom_minimum_size = Vector2(80, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "2"
-alignment = 1
 
 [node name="Ans3" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1663684961]
 custom_minimum_size = Vector2(80, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "3"
-alignment = 1
 
 [node name="Ans4" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=267012876]
 custom_minimum_size = Vector2(80, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "4"
-alignment = 1
 
 [node name="Ans5" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=119894330]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "5"
-alignment = 1
 
 [node name="Ans6" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1774023822]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "6"
-alignment = 1
 
 [node name="Ans7" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=956399981]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "7"
-alignment = 1
 
 [node name="Ans8" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=710915202]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "8"
-alignment = 1
 
 [node name="Ans9" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=935535062]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "9"
-alignment = 1
 
 [node name="Ans10" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=933093598]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "10"
-alignment = 1
 
 [node name="Ans11" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1213873180]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "11"
-alignment = 1
 
 [node name="Ans12" type="LineEdit" parent="CoderTerminal/CoderPopup/Panel/GridContainer" unique_id=1899465360]
 custom_minimum_size = Vector2(70, 15)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_fv1an")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_iyl3w")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_lo355")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnjk5")
 text = "12"
-alignment = 1
 
 [node name="SubmitButton" type="TextureButton" parent="CoderTerminal/CoderPopup/Panel" unique_id=307890119]
 layout_mode = 0

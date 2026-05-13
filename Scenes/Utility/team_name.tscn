@@ -71,7 +71,7 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxEmpty_kw202")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_menai")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cn2yy")
-placeholder_text = "Team 1"
+placeholder_text = "Cipherbound"
 
 [connection signal="pressed" from="PanelContainer/Enter Game" to="." method="_on_enter_game_pressed"]
 [connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]

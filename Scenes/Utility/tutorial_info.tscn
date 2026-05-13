@@ -1,29 +1,22 @@
 [gd_scene format=3 uid="uid://bw5lts6p7b0w2"]
 
 [ext_resource type="Script" uid="uid://chtoxokvrtddq" path="res://Script/Utility/tutorial_info.gd" id="1_k3hhr"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="1_y3qj5"]
-[ext_resource type="Texture2D" uid="uid://jx7u73qiwoea" path="res://Assets/User Interface/Popups/characterUD.png" id="2_k3hhr"]
-[ext_resource type="Texture2D" uid="uid://c70j2idx1hwkd" path="res://Assets/User Interface/Buttons/enterTutorial.png" id="3_y3qj5"]
-[ext_resource type="Texture2D" uid="uid://donjs5amm0c82" path="res://Assets/User Interface/Buttons/enterTutorial_pressed.png" id="4_k3hhr"]
-[ext_resource type="Texture2D" uid="uid://dlowyqqrjoc6r" path="res://Assets/User Interface/Buttons/enterTutorial_hovered.png" id="5_1d45x"]
-[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="6_0t81v"]
-[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_uo4km"]
-[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_hwu80"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="1_y3qj5"]
+[ext_resource type="Texture2D" uid="uid://qgtcgo7562ui" path="res://Assets/User Interface/Popups/characterUD.png" id="2_k3hhr"]
+[ext_resource type="Texture2D" uid="uid://nwb0blm7qfb2" path="res://Assets/User Interface/Buttons/enterTutorial.png" id="3_y3qj5"]
+[ext_resource type="Texture2D" uid="uid://b8qc0sqr8vpwu" path="res://Assets/User Interface/Buttons/enterTutorial_pressed.png" id="4_k3hhr"]
+[ext_resource type="Texture2D" uid="uid://bbsvlkpd6bt5y" path="res://Assets/User Interface/Buttons/enterTutorial_hovered.png" id="5_1d45x"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="6_0t81v"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_uo4km"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_hwu80"]
+[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Assets/Interactables/R1/computerOFF.png" id="10_pn2jd"]
+[ext_resource type="Texture2D" uid="uid://unf4lixhbiqd" path="res://Assets/Interactables/UI_Popups/Popup Overlays/computerOFF_ANALYST.png" id="11_7snm8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_pj27c"]
+[sub_resource type="LabelSettings" id="LabelSettings_wrxy1"]
 font = ExtResource("1_y3qj5")
 font_size = 10
 
-[sub_resource type="LabelSettings" id="LabelSettings_a5igh"]
-font = ExtResource("1_y3qj5")
-font_size = 10
-
-[sub_resource type="LabelSettings" id="LabelSettings_pn2jd"]
-line_spacing = 0.0
-font = ExtResource("1_y3qj5")
-font_size = 9
-
-[sub_resource type="LabelSettings" id="LabelSettings_3vbbo"]
+[sub_resource type="LabelSettings" id="LabelSettings_gqw2p"]
 line_spacing = 0.0
 font = ExtResource("1_y3qj5")
 font_size = 9
@@ -31,7 +24,7 @@ font_size = 9
 [node name="tutorial_info" type="CanvasLayer" unique_id=1208683870]
 script = ExtResource("1_k3hhr")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1121571092]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1694140533]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -39,92 +32,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6666667)
 
-[node name="PanelContainer" type="Control" parent="." unique_id=223025334]
+[node name="PanelContainer" type="Control" parent="." unique_id=450681098]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="TextureRect" parent="PanelContainer" unique_id=1787738448]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_k3hhr")
-
-[node name="Enter Tutorial" type="TextureButton" parent="PanelContainer" unique_id=798863344]
-layout_mode = 0
-offset_left = 183.0
-offset_top = 320.0
-offset_right = 439.0
-offset_bottom = 360.0
-scale = Vector2(0.6, 0.6)
-texture_normal = ExtResource("3_y3qj5")
-texture_pressed = ExtResource("4_k3hhr")
-texture_hover = ExtResource("5_1d45x")
-
-[node name="Cancel" type="TextureButton" parent="PanelContainer" unique_id=1034713116]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 56.0
-offset_bottom = 56.0
-texture_normal = ExtResource("6_0t81v")
-texture_pressed = ExtResource("7_uo4km")
-texture_hover = ExtResource("8_hwu80")
-
-[node name="CoderControls" type="Label" parent="PanelContainer" unique_id=155721328]
+[node name="Econtrol" type="Label" parent="PanelContainer" unique_id=154737309]
 z_index = 1
 layout_mode = 0
-offset_left = 297.0
-offset_top = 204.0
-offset_right = 370.33334
-offset_bottom = 259.55554
-scale = Vector2(0.9, 0.9)
-text = "W – Move Up
-A – Move Left
-S – Move Down
-D – Move Right"
-label_settings = SubResource("LabelSettings_pj27c")
+offset_left = 367.00003
+offset_top = 208.0
+offset_right = 454.00003
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 16
+text = "E – Interact 
+with objects 
+highlighted in blue."
+label_settings = SubResource("LabelSettings_wrxy1")
 
-[node name="Econtrol" type="Label" parent="PanelContainer/CoderControls" unique_id=1003579287]
+[node name="SpaceControl" type="Label" parent="PanelContainer" unique_id=1412174516]
 z_index = 1
 layout_mode = 0
-offset_left = 77.7778
-offset_top = 4.444436
-offset_right = 173.33337
-offset_bottom = 43.444435
-text = "E – Interact with 
-terminals, objects, 
-and code interfaces"
-label_settings = SubResource("LabelSettings_a5igh")
-
-[node name="AnalytsControls" type="Label" parent="PanelContainer" unique_id=1161045619]
-z_index = 1
-layout_mode = 0
-offset_left = 71.0
-offset_top = 202.0
-offset_right = 145.0
-offset_bottom = 258.0
-text = "↑  – Move Up
-← – Move Left
-↓  – Move Down
-→  – Move Right"
-label_settings = SubResource("LabelSettings_pn2jd")
-
-[node name="SpaceControl" type="Label" parent="PanelContainer/AnalytsControls" unique_id=1173621182]
-z_index = 1
-layout_mode = 0
-offset_left = 71.0
-offset_top = 5.0
-offset_right = 158.0
-offset_bottom = 47.0
+offset_left = 143.0
+offset_top = 208.0
+offset_right = 230.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 16
 text = "Space Bar – Interact 
-with clues, symbols, 
-and environmental 
-objects"
-label_settings = SubResource("LabelSettings_3vbbo")
+with objects 
+highlighted in green"
+label_settings = SubResource("LabelSettings_gqw2p")
 
-[node name="CoderInfo" type="RichTextLabel" parent="PanelContainer" unique_id=842726991]
+[node name="CoderInfo" type="RichTextLabel" parent="PanelContainer" unique_id=95051494]
 z_index = 1
 layout_mode = 0
 offset_left = 370.0
@@ -139,7 +79,7 @@ bbcode_enabled = true
 text = "                [b][color=#6FD1D7]Coder[/color][/b] 
 Executes code, inputs solutions, and unlocks digital pathways."
 
-[node name="AnalystInfo" type="RichTextLabel" parent="PanelContainer" unique_id=320185440]
+[node name="AnalystInfo" type="RichTextLabel" parent="PanelContainer" unique_id=1244800241]
 z_index = 1
 layout_mode = 0
 offset_left = 68.0
@@ -154,7 +94,7 @@ bbcode_enabled = true
 text = "             [b][color=#6FD1D7]Analyst[/color][/b]
 Interprets hints and guides puzzle-solving strategies."
 
-[node name="Controls2" type="RichTextLabel" parent="PanelContainer" unique_id=1670102948]
+[node name="Controls2" type="RichTextLabel" parent="PanelContainer" unique_id=1232385463]
 z_index = 1
 layout_mode = 0
 offset_left = 286.0
@@ -166,7 +106,7 @@ theme_override_font_sizes/bold_font_size = 12
 bbcode_enabled = true
 text = "[b][color=#6FD1D7]Controls[/color][/b]"
 
-[node name="Controls" type="RichTextLabel" parent="PanelContainer" unique_id=1621596562]
+[node name="Controls" type="RichTextLabel" parent="PanelContainer" unique_id=1069095127]
 z_index = 1
 layout_mode = 0
 offset_left = 62.0
@@ -179,7 +119,7 @@ theme_override_font_sizes/bold_font_size = 12
 bbcode_enabled = true
 text = "[b][color=#6FD1D7]Controls[/color][/b]"
 
-[node name="TeamWork" type="RichTextLabel" parent="PanelContainer" unique_id=1935228664]
+[node name="TeamWork" type="RichTextLabel" parent="PanelContainer" unique_id=1992094793]
 z_index = 1
 layout_mode = 0
 offset_left = 193.0
@@ -197,5 +137,49 @@ and combine your skills to escape!"
 scroll_active = false
 horizontal_alignment = 1
 
-[connection signal="pressed" from="PanelContainer/Enter Tutorial" to="." method="_on_enter_tutorial_pressed"]
+[node name="Background" type="TextureRect" parent="PanelContainer" unique_id=1711160863]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_k3hhr")
+
+[node name="EnterTutorial" type="TextureButton" parent="PanelContainer" unique_id=961738637]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 320.0
+offset_right = 437.0
+offset_bottom = 360.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_y3qj5")
+texture_pressed = ExtResource("4_k3hhr")
+texture_hover = ExtResource("5_1d45x")
+
+[node name="Cancel" type="TextureButton" parent="PanelContainer" unique_id=1761808971]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture_normal = ExtResource("6_0t81v")
+texture_pressed = ExtResource("7_uo4km")
+texture_hover = ExtResource("8_hwu80")
+
+[node name="Coder" type="TextureRect" parent="PanelContainer" unique_id=578633528]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 208.0
+offset_right = 326.0
+offset_bottom = 248.0
+texture = ExtResource("10_pn2jd")
+
+[node name="Analyst" type="TextureRect" parent="PanelContainer" unique_id=1624486179]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 205.0
+offset_right = 102.0
+offset_bottom = 245.0
+texture = ExtResource("11_7snm8")
+
+[connection signal="pressed" from="PanelContainer/EnterTutorial" to="." method="_on_enter_tutorial_pressed"]
+[connection signal="pressed" from="PanelContainer/EnterTutorial" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]

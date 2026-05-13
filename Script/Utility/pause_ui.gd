@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var panel = $PanelContainer
+@onready var team_label: Label = $PanelContainer/TeamLabel
 
 func _ready():
 	hide()
@@ -8,6 +9,7 @@ func _ready():
 
 func open():
 	show()
+	team_label.text = GameProgress.team_name
 	var screen_height = get_viewport().get_visible_rect().size.y
 	var screen_width = get_viewport().get_visible_rect().size.x
 	
@@ -44,4 +46,4 @@ func _on_resume_pressed() -> void:
 func _on_quit_to_menu_pressed() -> void:
 	get_tree().paused = false
 	GameLock.movement_locked = false
-	get_tree().change_scene_to_file("res://Assets/MAIN UI/mainMenu.tscn")
+	get_tree().change_scene_to_file("res://Assets/Main Menu/mainMenu.tscn")

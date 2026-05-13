@@ -7,8 +7,8 @@ extends Area2D
 
 @export_multiline var question_text: String = ""
 
-@export var correct_a: String = "Hello;"
-@export var correct_b: String = "World;"
+@export var correct_a: String = "\"Hello\";" 
+@export var correct_b: String = "\"World\";"
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
@@ -128,7 +128,7 @@ func _on_submit_pressed():
 
 	if a == correct_a and b == correct_b:
 		solved = true
-		result_label.text = "Hello World"
+		result_label.text = "Hello World!"
 
 		var level = get_tree().get_first_node_in_group("tutorial_level")
 		if level and level.has_method("solve_coder"):

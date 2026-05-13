@@ -6,6 +6,7 @@ extends CanvasLayer
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	team_input.max_length = 12
 
 func open():
 	show()
@@ -29,7 +30,7 @@ func close():
 func _on_enter_game_pressed() -> void:
 	var team_name = team_input.text.strip_edges()
 	if team_name == "":
-		team_name = "Team 1"
+		team_name = "Cipherbound"
 	GameProgress.team_name = team_name
 	
 	# Debug unlock

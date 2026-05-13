@@ -6,14 +6,22 @@ var dot_interval := 0.4
 var active := false
 var target_scene := ""
 
+var tips: Array[String] = [
+	"Tip: The Analyst reads the clues. The Coder writes the solution. Work together!",
+	"Tip: Both players must stand on the exit door at the same time to proceed.",
+	"Tip: The Analyst unlocks information that the Coder needs to solve the puzzle.",
+	"Tip: Stuck? Re-read the problem carefully — the answer is always in the details.",
+	"Tip: Make sure to check objects around you. Who knows, they might teach you a thing or two.",
+]
+
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var bg: TextureRect = $TextureRect
-@onready var label: Label = $Label
+@onready var label: RichTextLabel = $Label
 
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	var placeholder: Texture2D = load("res://Assets/World/placeholder.png")
+	var placeholder: Texture2D = load("res://Assets/World/Utility/loading_screen.png")
 	if placeholder:
 		bg.texture = placeholder
 	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -31,7 +39,10 @@ func _process(delta):
 		dot_count += 1
 		if dot_count > 3:
 			dot_count = 1
-		label.text = "Loading" + ".".repeat(dot_count)
+		# update only the dots part, keep the tip text
+		var current = label.text
+		var base = current.rstrip(".")
+		label.text = base + ".".repeat(dot_count)
 
 func show_overlay():
 	if active:
@@ -40,7 +51,9 @@ func show_overlay():
 	target_scene = ""
 	dot_count = 1
 	dot_timer = 0.0
-	label.text = "Loading."
+	# pick a random tip
+	var tip = tips[randi() % tips.size()]
+	label.text = tip + "."
 	show()
 	anim.play("fade_in")
 

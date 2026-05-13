@@ -26,13 +26,6 @@ func close():
 	await tween.finished
 	hide()
 
-
-func _on_continue_pressed() -> void:
-	close()
-	await get_tree().create_timer(0.3).timeout  # wait for close animation
-	get_tree().get_first_node_in_group("main_menu").open_team_name()
-
-
 func _on_cancel_pressed() -> void:
 	close()
 

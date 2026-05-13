@@ -1,6 +1,6 @@
-extends Node2D
+extends AudioStreamPlayer
 
-@onready var tutorial_music: AudioStreamPlayer = $TutorialMusic
+@onready var tutorial_music: AudioStreamPlayer = $"."
 
 var robot_done := false
 var analyst_done := false

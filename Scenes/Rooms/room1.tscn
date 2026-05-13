@@ -1,40 +1,34 @@
 [gd_scene format=4 uid="uid://c5t6av2t1ng7s"]
 
-[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_t1d84"]
-[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_hbc0m"]
-[ext_resource type="Texture2D" uid="uid://ulcbxbmy18vk" path="res://Assets/World/Objects/R1_2_Objects.png" id="3_t1d84"]
-[ext_resource type="Texture2D" uid="uid://qfgi7rwkb2gn" path="res://Assets/Interactables/R1/poweroff.png" id="5_4yq2u"]
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_t1d84"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_hbc0m"]
+[ext_resource type="Texture2D" uid="uid://bmq2wflqoenr5" path="res://Assets/World/Objects/R1_2_Objects.png" id="3_t1d84"]
+[ext_resource type="Texture2D" uid="uid://darg23jhsvpgt" path="res://Assets/Interactables/R1/poweroff.png" id="5_4yq2u"]
 [ext_resource type="Script" uid="uid://gw2krwwhlb8c" path="res://Script/Rooms/R1_R2/powercabinet.gd" id="6_53ype"]
-[ext_resource type="Texture2D" uid="uid://c6bfuoh7bpa2r" path="res://Assets/Interactables/R1/poweroff_inrange.png" id="6_ksc4w"]
-[ext_resource type="Texture2D" uid="uid://cqxfnrd3o2lsk" path="res://Assets/Interactables/R1/poweron.png" id="6_t1d84"]
-[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="7_hbc0m"]
+[ext_resource type="Texture2D" uid="uid://cv3gq05ab26t1" path="res://Assets/Interactables/R1/poweroff_inrange.png" id="6_ksc4w"]
+[ext_resource type="Texture2D" uid="uid://cisycy7f4ft8h" path="res://Assets/Interactables/R1/poweron.png" id="6_t1d84"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="7_hbc0m"]
 [ext_resource type="Script" uid="uid://cgln0sbfoqy0e" path="res://Script/Rooms/R1_R2/R2_problem_popup.gd" id="8_4yq2u"]
-[ext_resource type="Texture2D" uid="uid://bybbotkjvlmj6" path="res://Assets/Interactables/R1/poweron_inrange.png" id="8_61qh4"]
-[ext_resource type="Texture2D" uid="uid://ckvpnk361fk5c" path="res://Assets/Interactables/UI_Popups/Popup Overlays/wires.png" id="11_l17w2"]
+[ext_resource type="Texture2D" uid="uid://2uyocsqub7o" path="res://Assets/Interactables/R1/poweron_inrange.png" id="8_61qh4"]
 [ext_resource type="Script" uid="uid://csaqyhlomfa2k" path="res://Script/Utility/FilteredLineEdit.gd" id="11_t1d84"]
-[ext_resource type="Texture2D" uid="uid://b32i36m2dk528" path="res://Assets/Interactables/UI_Popups/Popup Overlays/electric.png" id="12_drf2a"]
-[ext_resource type="FontFile" uid="uid://c3v2pti167hee" path="res://Assets/World/Font/NicoClean-Regular.otf" id="12_l17w2"]
-[ext_resource type="Texture2D" uid="uid://7b0shobpqyav" path="res://Assets/Interactables/UI_Popups/Popup Overlays/wires2.png" id="13_drf2a"]
-[ext_resource type="Texture2D" uid="uid://7go41d785j2j" path="res://Assets/Interactables/R1/computerOFF.png" id="13_ksc4w"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="14_gs4k2"]
-[ext_resource type="Texture2D" uid="uid://cwb34lntfac4m" path="res://Assets/Interactables/R1/computerOFF_inrange.png" id="15_cfaiu"]
-[ext_resource type="Texture2D" uid="uid://bgnyes3o38t0e" path="res://Assets/User Interface/Buttons/submitButton.png" id="16_j72vs"]
-[ext_resource type="Texture2D" uid="uid://bw4xe728bh4f8" path="res://Assets/Interactables/R1/computerON.png" id="16_l1rno"]
-[ext_resource type="Texture2D" uid="uid://c06xvt447pogj" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="17_gs4k2"]
-[ext_resource type="Texture2D" uid="uid://vfs45o78tetg" path="res://Assets/Interactables/R1/computerON_inrange.png" id="17_uaei7"]
+[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Assets/Interactables/R1/computerOFF.png" id="13_ksc4w"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="14_gs4k2"]
+[ext_resource type="Texture2D" uid="uid://blfel0o8abhfs" path="res://Assets/Interactables/R1/computerOFF_inrange.png" id="15_cfaiu"]
+[ext_resource type="Texture2D" uid="uid://de4d4v2gi3h15" path="res://Assets/World/underline.png" id="16_abywg"]
+[ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="16_j72vs"]
+[ext_resource type="Texture2D" uid="uid://curbg4fxns0c3" path="res://Assets/Interactables/R1/computerON.png" id="16_l1rno"]
+[ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="17_gs4k2"]
+[ext_resource type="Texture2D" uid="uid://crduc4l1ya1yl" path="res://Assets/Interactables/R1/computerON_inrange.png" id="17_uaei7"]
 [ext_resource type="Script" uid="uid://c5rl46ux6gck4" path="res://Script/Rooms/R1_R2/computer_switch.gd" id="17_voffe"]
 [ext_resource type="Script" uid="uid://d38og00u5uywp" path="res://Script/Doors/R1exit_door.gd" id="18_ufxwj"]
-[ext_resource type="Texture2D" uid="uid://b22eq1wbh7hwx" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="18_uljo1"]
-[ext_resource type="Texture2D" uid="uid://t7cmxvdkcc7v" path="res://Assets/User Interface/Buttons/nextButton.png" id="19_faung"]
-[ext_resource type="Texture2D" uid="uid://dl4o5522t1xq3" path="res://Assets/User Interface/Buttons/nextBTN_pressed.png" id="20_kw4da"]
-[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="20_roffw"]
-[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="21_4ys52"]
-[ext_resource type="Texture2D" uid="uid://diird6iof0u7l" path="res://Assets/User Interface/Buttons/nextBTN_hovered.png" id="21_hfggf"]
-[ext_resource type="Texture2D" uid="uid://v5ibtxuvurt1" path="res://Assets/User Interface/Buttons/closeButton.png" id="22_hupe5"]
-[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="22_xta8d"]
-[ext_resource type="Texture2D" uid="uid://c6tohceggejk6" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="23_dvaie"]
-[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="23_petlm"]
-[ext_resource type="Texture2D" uid="uid://q2f6gqjb4dp2" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="24_dyxol"]
+[ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="18_uljo1"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="20_roffw"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="21_4ys52"]
+[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="22_hupe5"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="22_xta8d"]
+[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="23_dvaie"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="23_petlm"]
+[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="24_dyxol"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="26_nsosf"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="31_uljo1"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="38_d0tfp"]
@@ -734,10 +728,19 @@ size = Vector2(14, 14)
 line_spacing = 1.0
 paragraph_spacing = 3.0
 font = ExtResource("14_gs4k2")
+font_size = 14
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85j2o"]
+texture = ExtResource("16_abywg")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ap8ii"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yeqbh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2rppd"]
 line_spacing = 0.0
-font = ExtResource("12_l17w2")
+font = ExtResource("14_gs4k2")
+font_size = 14
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfaiu"]
 size = Vector2(30, 12)
@@ -807,13 +810,13 @@ offset_top = 94.0
 offset_right = 226.0
 offset_bottom = 254.0
 
-[node name="Background" type="NinePatchRect" parent="CoderPuzzlePopup/Panel" unique_id=341165309]
+[node name="Background2" type="NinePatchRect" parent="CoderPuzzlePopup/Panel" unique_id=2123881205]
 texture_filter = 1
 layout_mode = 0
-offset_left = -7.0
-offset_top = -80.0
-offset_right = 238.0
-offset_bottom = 245.0
+offset_left = -6.0
+offset_top = 173.0
+offset_right = 248.0
+offset_bottom = 256.0
 texture = ExtResource("7_hbc0m")
 region_rect = Rect2(33, 1, 14, 14)
 patch_margin_left = 6
@@ -821,93 +824,96 @@ patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
 
-[node name="Wires" type="TextureRect" parent="CoderPuzzlePopup/Panel" unique_id=1303316491]
+[node name="Background" type="NinePatchRect" parent="CoderPuzzlePopup/Panel" unique_id=341165309]
+texture_filter = 1
 layout_mode = 0
-offset_left = 169.0
-offset_top = -75.0
-offset_right = 233.0
-offset_bottom = -11.0
-texture = ExtResource("11_l17w2")
-
-[node name="Electric" type="TextureRect" parent="CoderPuzzlePopup/Panel" unique_id=1752595923]
-layout_mode = 0
-offset_left = 165.0
-offset_top = 120.0
-offset_right = 229.0
-offset_bottom = 184.0
-texture = ExtResource("12_drf2a")
-
-[node name="Wires2" type="TextureRect" parent="CoderPuzzlePopup/Panel" unique_id=430775262]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 175.0
-offset_right = 69.0
-offset_bottom = 239.0
-texture = ExtResource("13_drf2a")
+offset_left = -6.0
+offset_top = -82.0
+offset_right = 248.0
+offset_bottom = 174.0
+texture = ExtResource("7_hbc0m")
+region_rect = Rect2(33, 1, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
 
 [node name="QuestionLabel" type="Label" parent="CoderPuzzlePopup/Panel" unique_id=772706512]
 texture_filter = 1
 layout_mode = 0
-offset_left = -1.0
-offset_top = -64.0
-offset_right = 232.0
-offset_bottom = 192.0
+offset_left = 2.0
+offset_top = -74.0
+offset_right = 436.0
+offset_bottom = 102.0
 theme_override_constants/line_spacing = -4
-text = "BEGIN
-
-SET energy  =           ;
-
-batteries = energy /           ;
-
-remainingEnergy=energy 					         60;
-
-DISPLAY batteries, 
-remainingEnergy;
-
-END"
+text = "public class Main {
+public static void main(String 
+args[]){
+int energy =            ;
+batteries = energy /          ;
+remainingEnergy = energy         60;
+System.out.println
+(\"Batteries: \" + batteries);
+System.out.println
+(\"Remaining Energy: \" + 
+remainingEnergy);
+}
+}"
 label_settings = SubResource("LabelSettings_53ype")
 
 [node name="Ans1" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=1841779391]
 texture_filter = 1
 layout_mode = 0
-offset_left = 90.0
-offset_top = -27.0
-offset_right = 135.5
-offset_bottom = -3.0
+offset_left = 77.0
+offset_top = -21.0
+offset_right = 113.0
+offset_bottom = 3.0
 scale = Vector2(0.9, 0.9)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_gs4k2")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_85j2o")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_ap8ii")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yeqbh")
 text = "1"
-alignment = 1
 script = ExtResource("11_t1d84")
 filter_mode = 2
 
 [node name="Ans2" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=1525203946]
 texture_filter = 1
 layout_mode = 0
-offset_left = 138.00003
-offset_top = 12.999998
-offset_right = 184.12503
-offset_bottom = 37.0
+offset_left = 131.0
+offset_right = 167.0
+offset_bottom = 24.0
 scale = Vector2(0.9, 0.9)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_gs4k2")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_85j2o")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_ap8ii")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yeqbh")
 text = "2"
-alignment = 1
 script = ExtResource("11_t1d84")
 filter_mode = 2
 
 [node name="Ans3" type="LineEdit" parent="CoderPuzzlePopup/Panel" unique_id=83307096]
 texture_filter = 1
 layout_mode = 0
-offset_left = 171.19998
-offset_top = 55.0
-offset_right = 215.19998
-offset_bottom = 79.0
+offset_left = 160.0
+offset_top = 18.0
+offset_right = 196.0
+offset_bottom = 42.0
 scale = Vector2(0.9, 0.9)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_gs4k2")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_85j2o")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_ap8ii")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yeqbh")
 text = "%"
 alignment = 1
 script = ExtResource("11_t1d84")
@@ -917,10 +923,10 @@ filter_mode = 2
 texture_filter = 1
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
-offset_left = 158.0
-offset_top = 205.0
-offset_right = 318.0
-offset_bottom = 237.0
+offset_left = 170.00002
+offset_top = 139.0
+offset_right = 330.0
+offset_bottom = 171.0
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("16_j72vs")
 texture_pressed = ExtResource("17_gs4k2")
@@ -929,38 +935,34 @@ texture_hover = ExtResource("18_uljo1")
 [node name="ResultLabel" type="Label" parent="CoderPuzzlePopup/Panel" unique_id=739234057]
 texture_filter = 1
 layout_mode = 0
-offset_left = 62.0
-offset_top = 186.0
-offset_right = 146.0
-offset_bottom = 200.0
+offset_left = 11.0
+offset_top = 189.0
+offset_right = 95.0
+offset_bottom = 205.0
 text = "result"
 label_settings = SubResource("LabelSettings_2rppd")
-horizontal_alignment = 1
 uppercase = true
-
-[node name="NextButton" type="TextureButton" parent="CoderPuzzlePopup/Panel" unique_id=125815743]
-texture_filter = 1
-layout_mode = 0
-offset_left = 157.99998
-offset_top = 205.0
-offset_right = 358.0
-offset_bottom = 245.0
-scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("19_faung")
-texture_pressed = ExtResource("20_kw4da")
-texture_hover = ExtResource("21_hfggf")
 
 [node name="CloseButton" type="TextureButton" parent="CoderPuzzlePopup/Panel" unique_id=295275428]
 texture_filter = 1
 layout_mode = 0
-offset_left = 158.0
-offset_top = 205.0
-offset_right = 318.0
-offset_bottom = 237.0
+offset_left = 170.00002
+offset_top = 139.0
+offset_right = 330.0
+offset_bottom = 171.0
 scale = Vector2(0.4, 0.4)
 texture_normal = ExtResource("22_hupe5")
 texture_pressed = ExtResource("23_dvaie")
 texture_hover = ExtResource("24_dyxol")
+
+[node name="Output" type="Label" parent="CoderPuzzlePopup/Panel" unique_id=741461273]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 182.0
+offset_right = 61.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("14_gs4k2")
+text = "Output:"
 
 [node name="ComputerSwitches" type="Node2D" parent="." unique_id=1772253429]
 
