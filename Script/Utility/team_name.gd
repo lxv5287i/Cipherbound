@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var team_input: LineEdit = $PanelContainer/LineEdit
-@onready var panel = $PanelContainer  # adjust to your actual panel path
+@onready var panel = $PanelContainer 
 
 func _ready():
 	hide()

@@ -4,7 +4,8 @@ extends CanvasLayer
 @onready var text_label: RichTextLabel = $Panel/Text
 
 var is_open := false
-
+var x := 0
+var i := 5
 
 func _ready():
 	add_to_group("info_popup")

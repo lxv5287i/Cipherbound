@@ -2,14 +2,23 @@ extends Node
 
 var elapsed_time: float = 0.0
 var running: bool = false
+var game_over_triggered := false
 
 func _process(delta):
+	if game_over_triggered:
+		return
+
 	if running:
 		elapsed_time += delta
+
+	if elapsed_time >= 1800:
+		game_over_triggered = true
+		show_game_over()
 
 func start():
 	elapsed_time = 0.0
 	running = true
+	game_over_triggered = false
 
 func stop():
 	running = false
@@ -19,6 +28,9 @@ func pause_timer():
 
 func resume_timer():
 	running = true
+
+func add_penalty(seconds: float):
+	elapsed_time += seconds
 
 func get_formatted() -> String:
 	var total = int(elapsed_time)
@@ -62,3 +74,16 @@ func reset_leaderboard():
 			OS.get_user_data_dir() + "/leaderboard.json"
 		)
 		print("Leaderboard reset.")
+
+func show_game_over():
+	running = false
+
+	var game_over_scene = preload(
+		"res://Scenes/Utility/game_over.tscn"
+	)
+
+	var game_over = game_over_scene.instantiate()
+
+	get_tree().current_scene.add_child(game_over)
+
+	game_over.open()

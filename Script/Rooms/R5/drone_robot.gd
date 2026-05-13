@@ -36,6 +36,8 @@ var unlocked := false
 var solved := false
 var analyst_in_range := false
 
+var x := 0
+var i := 5
 
 func _ready():
 	add_to_group("drone_robot")
@@ -222,25 +224,53 @@ func _on_submit_pressed():
 
 	if a1 != "publicclassmain":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 9 is incorrect."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 1 is incorrect.\n+" + str(i) + " SECONDS"
 		ans1.grab_focus()
 		return
 
 	if a2 != "publicstaticvoidmain":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 10 is incorrect."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 2 is incorrect.\n+" + str(i) + " SECONDS"
 		ans2.grab_focus()
 		return
 
 	if a3 != "drone":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 11 is incorrect."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 3 is incorrect.\n+" + str(i) + " SECONDS"
 		ans3.grab_focus()
 		return
 
 	if a4 != "fly();":
 		answer_sfx.play_wrong()
-		result_label.text = "Line 12 is incorrect."
+		GameTimer.add_penalty(i)
+		if i < 30:
+			x+=1
+			if x == 5:
+				i += 5
+				x = 0
+			
+		result_label.text = "Line 4 is incorrect.\n+" + str(i) + " SECONDS"
 		ans4.grab_focus()
 		return
 
