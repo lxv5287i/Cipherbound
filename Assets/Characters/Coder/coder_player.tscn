@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wfuwrcp0130k"]
 
 [ext_resource type="Script" uid="uid://dxsruw5rr6oij" path="res://Assets/Characters/Coder/coder_player.gd" id="1_qxruy"]
-[ext_resource type="Texture2D" uid="uid://csk6g8jhb2p6e" path="res://Assets/Characters/Analyst/FEMALE.png" id="2_7m2ag"]
+[ext_resource type="Texture2D" uid="uid://csk6g8jhb2p6e" path="res://Assets/Characters/Coder/FEMALE.png" id="2_7m2ag"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 16)

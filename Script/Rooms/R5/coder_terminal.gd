@@ -213,6 +213,6 @@ func show_explanation_only():
 	explanation_label.visible = true
 
 	grid_container.visible = false
-	submit_button.visible = false
 	result_label.visible = false
+	submit_button.visible = false
 	close_button.visible = true

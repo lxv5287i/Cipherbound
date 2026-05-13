@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://c0tipgt4d3s8j" path="res://Assets/Interactables/R3/status_inrange.png" id="7_vgc17"]
 [ext_resource type="LabelSettings" uid="uid://dsfn5qc1fp8je" path="res://Assets/World/Font/robot.tres" id="8_3h0wn"]
 [ext_resource type="Texture2D" uid="uid://b0kioirigt7wd" path="res://Assets/Interactables/R3/statusCORRECT.png" id="8_7ycns"]
-[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/closeButton.png" id="9_pqrgu"]
+[ext_resource type="Texture2D" uid="uid://dctrfn3uygrrv" path="res://Assets/User Interface/Buttons/done.png" id="9_pqrgu"]
 [ext_resource type="Texture2D" uid="uid://dn0hyyr0ovu3o" path="res://Assets/Interactables/R3/statusCORRECT_inrange.png" id="9_uxnl2"]
-[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/closeBTN_pressed.png" id="10_or8a6"]
-[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="11_la5i4"]
+[ext_resource type="Texture2D" uid="uid://dinm5va5te1s" path="res://Assets/User Interface/Buttons/done_pressed.png" id="10_or8a6"]
+[ext_resource type="Texture2D" uid="uid://dgjffpv5kcng5" path="res://Assets/User Interface/Buttons/done_hovered.png" id="11_la5i4"]
 [ext_resource type="Texture2D" uid="uid://dfidnq515kn76" path="res://Assets/User Interface/Buttons/submitButton.png" id="12_8uvx6"]
 [ext_resource type="Texture2D" uid="uid://djsr0pib8sr2y" path="res://Assets/User Interface/Buttons/submitBTN_pressed.png" id="13_gjt4w"]
 [ext_resource type="Texture2D" uid="uid://bkb2u1c3cvmjo" path="res://Assets/User Interface/Buttons/submitBTN_hovered.png" id="14_h8rrn"]
@@ -948,7 +948,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CloseButton" type="TextureButton" parent="TutorialCoder/CoderPopup/Panel" unique_id=286257564]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.18461537
+anchor_left = -0.18461539
 anchor_top = -0.16568047
 anchor_right = -0.18461539
 anchor_bottom = -0.16568047
@@ -965,7 +965,7 @@ metadata/_edit_use_anchors_ = true
 [node name="SubmitButton" type="TextureButton" parent="TutorialCoder/CoderPopup/Panel" unique_id=267124891]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.18461537
+anchor_left = -0.18461539
 anchor_top = -0.16568047
 anchor_right = -0.18461539
 anchor_bottom = -0.16568047
