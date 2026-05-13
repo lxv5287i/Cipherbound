@@ -10,5 +10,7 @@ correct_sound = ExtResource("2_h01xm")
 wrong_sound = ExtResource("3_gbe68")
 
 [node name="CorrectSFX" type="AudioStreamPlayer" parent="." unique_id=711936006]
+stream = ExtResource("2_h01xm")
 
 [node name="WrongSFX" type="AudioStreamPlayer" parent="." unique_id=1659773755]
+stream = ExtResource("3_gbe68")

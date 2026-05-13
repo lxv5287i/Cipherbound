@@ -38,7 +38,9 @@ func _ready():
 	question_label.text = question_text
 
 	result_label.text = ""
-	close_button.visible = false
+
+	# close button always visible and always works
+	close_button.visible = true
 
 	if normal_texture:
 		sprite.texture = normal_texture
@@ -93,10 +95,8 @@ func open_popup():
 
 	if solved:
 		submit_button.visible = false
-		close_button.visible = true
 	else:
 		submit_button.visible = true
-		close_button.visible = false
 		ans1.text = ""
 		ans2.text = ""
 
@@ -116,21 +116,30 @@ func _on_submit_pressed():
 	var a := ans1.text.strip_edges()
 	var b := ans2.text.strip_edges()
 
-	if a == "" and b == "":
+	# make inputs not case-sensitive
+	var input_a = a.to_lower()
+	var input_b = b.to_lower()
+
+	var correct_input_a = correct_a.strip_edges().to_lower()
+	var correct_input_b = correct_b.strip_edges().to_lower()
+
+	if input_a == "" and input_b == "":
 		result_label.text = "Please input answer"
 		ans1.grab_focus()
 		return
 
-	if a == correct_a and b == correct_b:
+	# check answers
+	if input_a == correct_input_a and input_b == correct_input_b:
 		solved = true
-		result_label.text = "Hello World"
+
+		# show exactly what player typed
+		result_label.text = a + " " + b
 
 		var level = get_tree().get_first_node_in_group("tutorial_level")
 		if level and level.has_method("solve_analyst"):
 			level.solve_analyst()
 
 		submit_button.visible = false
-		close_button.visible = true
 
 		update_texture()
 		return

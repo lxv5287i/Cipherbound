@@ -3,21 +3,22 @@ extends CanvasLayer
 @onready var panel = $PanelContainer
 @onready var entries_container: VBoxContainer = $PanelContainer/ScrollContainer/EntriesContainer
 @onready var reset_button: Button = $PanelContainer/ResetButton
-@onready var music: AudioStreamPlayer = $LeaderboardMusic
+@onready var music_controller = $RoomMusicController
+
 
 func _ready():
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	music.volume_db = 0
+
+
 func open():
 	show()
 	_populate()
-	MusicManager.volume_db = -30
-	music.volume_db = 0
-	music.play()
 
-	var fade_in = create_tween()
-	fade_in.tween_property(music, "volume_db", -15, 4.0) #adjust the music f(ade in)
+	await MusicManager.stop_music()
+
+	if music_controller.room_music:
+		MusicManager.play_music(music_controller.room_music)
 
 	var screen_height = get_viewport().get_visible_rect().size.y
 	panel.position.y = screen_height
@@ -27,11 +28,8 @@ func open():
 	tween.set_trans(Tween.TRANS_BACK)
 	tween.tween_property(panel, "position:y", 0, 0.8)
 
-func close():
-	MusicManager.volume_db = -15 #adjust the bg music
 
-	var fade_out = create_tween()
-	fade_out.tween_property(music, "volume_db", -30, 3.0)
+func close():
 
 	var screen_height = get_viewport().get_visible_rect().size.y
 
@@ -42,7 +40,6 @@ func close():
 
 	await tween.finished
 
-	music.stop()
 	hide()
 
 

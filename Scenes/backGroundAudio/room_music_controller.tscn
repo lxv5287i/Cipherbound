@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://281xcno25tqc"]
+
+[ext_resource type="Script" uid="uid://bkvqkaivi4jl1" path="res://Scenes/backGroundAudio/room_music_controller.gd" id="1_8or2s"]
+
+[node name="RoomMusicController" type="Node" unique_id=605751194]
+script = ExtResource("1_8or2s")

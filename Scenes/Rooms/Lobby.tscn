@@ -40,6 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://cfrh0v803iakj" path="res://Assets/World/Wall/room3TAG.png" id="36_2n0gg"]
 [ext_resource type="Texture2D" uid="uid://diutt8oqcb37n" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
 [ext_resource type="Texture2D" uid="uid://8xevdhxc3uyc" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
+[ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="41_p4v8g"]
+[ext_resource type="AudioStream" uid="uid://c0vtp5qiqeenr" path="res://World/Music/tutorialRoom1.ogg" id="42_p4v8g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -2594,3 +2596,6 @@ label_settings = SubResource("LabelSettings_ngjh1")
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("40_amwwa")
+
+[node name="RoomMusicController" parent="." unique_id=605751194 instance=ExtResource("41_p4v8g")]
+room_music = ExtResource("42_p4v8g")

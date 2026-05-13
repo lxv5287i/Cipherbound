@@ -7,8 +7,9 @@ extends Area2D
 
 @export_multiline var question_text: String = ""
 
-@export var correct_a: String = "\"Hello\";" 
-@export var correct_b: String = "\"World\";"
+# correct answers
+@export var correct_a: String = "hello"
+@export var correct_b: String = "world"
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var prompt_label: Label = $Label
@@ -37,7 +38,9 @@ func _ready():
 	question_label.text = question_text
 
 	result_label.text = ""
-	close_button.visible = false
+
+	# close button always works
+	close_button.visible = true
 
 	if normal_texture:
 		sprite.texture = normal_texture
@@ -98,10 +101,8 @@ func open_popup():
 
 	if solved:
 		submit_button.visible = false
-		close_button.visible = true
 	else:
 		submit_button.visible = true
-		close_button.visible = false
 		ans1.text = ""
 		ans2.text = ""
 
@@ -121,26 +122,47 @@ func _on_submit_pressed():
 	var a := ans1.text.strip_edges()
 	var b := ans2.text.strip_edges()
 
+	# check empty
 	if a == "" and b == "":
 		result_label.text = "Please input answer"
 		ans1.grab_focus()
 		return
 
-	if a == correct_a and b == correct_b:
+	# require quotation marks
+	if not a.contains("\"") or not b.contains("\""):
+		result_label.text = "You need to put quotation marks (\")"
+		ans1.grab_focus()
+		return
+
+	# remove spaces
+	var clean_a = a.replace(" ", "")
+	var clean_b = b.replace(" ", "")
+
+	# remove quotation marks and semicolon for checking
+	clean_a = clean_a.replace("\"", "").replace(";", "").to_lower()
+	clean_b = clean_b.replace("\"", "").replace(";", "").to_lower()
+
+	# correct answer check
+	if clean_a == correct_a.to_lower() and clean_b == correct_b.to_lower():
 		solved = true
-		result_label.text = "Hello World!"
+
+		# remove quotation marks only
+		var final_a = a.replace("\"", "").strip_edges()
+		var final_b = b.replace("\"", "").strip_edges()
+
+		# show what player typed + !
+		result_label.text = final_a + " " + final_b + "!"
 
 		var level = get_tree().get_first_node_in_group("tutorial_level")
 		if level and level.has_method("solve_coder"):
 			level.solve_coder()
 
 		submit_button.visible = false
-		close_button.visible = true
 
 		update_texture()
 		return
 
-	result_label.text = "Try again"
+	result_label.text = "INCORRECT"
 	ans1.grab_focus()
 
 
