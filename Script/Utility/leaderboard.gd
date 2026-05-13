@@ -31,7 +31,7 @@ func close():
 	MusicManager.volume_db = -15 #adjust the bg music
 
 	var fade_out = create_tween()
-	fade_out.tween_property(music, "volume_db", -40, 2.0)
+	fade_out.tween_property(music, "volume_db", -30, 3.0)
 
 	var screen_height = get_viewport().get_visible_rect().size.y
 

@@ -13,11 +13,11 @@ func open():
 
 	MusicManager.volume_db = -30
 
-	congratulation_bg.volume_db = -40
+	congratulation_bg.volume_db = -15
 	congratulation_bg.play()
 
 	var fade_in = create_tween()
-	fade_in.tween_property(congratulation_bg, "volume_db", -10, 2.0)
+	fade_in.tween_property(congratulation_bg, "volume_db", -15, 2.0)
 
 	var screen_height = get_viewport().get_visible_rect().size.y
 	panel.position.y = screen_height
@@ -30,7 +30,7 @@ func open():
 
 func _on_quit_to_menu_pressed() -> void:
 	var fade_out = create_tween()
-	fade_out.tween_property(congratulation_bg, "volume_db", -40, 1.0)
+	fade_out.tween_property(congratulation_bg, "volume_db", -30, 3.0)
 
 	await fade_out.finished
 

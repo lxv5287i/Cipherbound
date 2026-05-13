@@ -10,13 +10,13 @@ var coder_done := false
 func _ready():
 	add_to_group("tutorial_level")
 
-	tutorial_music.volume_db = -40
+	tutorial_music.volume_db = -30
 
 	if not tutorial_music.playing:
 		tutorial_music.play()
 
 	var fade_in = create_tween()
-	fade_in.tween_property(tutorial_music, "volume_db", -15, 2.0)
+	fade_in.tween_property(tutorial_music, "volume_db", -15, 3.0)
 
 
 func unlock_analyst():
@@ -33,7 +33,7 @@ func solve_coder():
 
 func fade_out_music():
 	var fade_out = create_tween()
-	fade_out.tween_property(tutorial_music, "volume_db", -40, 2.0)
+	fade_out.tween_property(tutorial_music, "volume_db", -30, 4.0)
 
 	await fade_out.finished
 

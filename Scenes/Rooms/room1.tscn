@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://q2f6gqjb4dp2" path="res://Assets/User Interface/Buttons/closeBTN_hovered.png" id="24_dyxol"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="26_nsosf"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="31_uljo1"]
+[ext_resource type="AudioStream" uid="uid://y4vtj72mk56r" path="res://World/Music/room 1-4.ogg" id="37_d0tfp"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="38_d0tfp"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="40_h5jgb"]
 
@@ -1179,9 +1180,7 @@ anchor_bottom = 0.78409094
 
 [node name="RoomMusicController" type="Node" parent="." unique_id=1253534969]
 script = ExtResource("38_d0tfp")
-target_volume = -15.0
-fade_time = 3.0
-start_volume = -20.0
+music = ExtResource("37_d0tfp")
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("40_h5jgb")]
 

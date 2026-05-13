@@ -33,6 +33,7 @@
 [ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="22_petlm"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="31_jkmjr"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="33_4452d"]
+[ext_resource type="AudioStream" uid="uid://y4vtj72mk56r" path="res://World/Music/room 1-4.ogg" id="33_augk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1rno"]
 texture = ExtResource("1_pfsya")
@@ -1096,9 +1097,7 @@ position = Vector2(0, 10)
 
 [node name="RoomMusicController" type="Node" parent="." unique_id=994960754]
 script = ExtResource("31_jkmjr")
-target_volume = -15.0
-fade_time = 3.0
-start_volume = -20.0
+music = ExtResource("33_augk2")
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("33_4452d")]
 

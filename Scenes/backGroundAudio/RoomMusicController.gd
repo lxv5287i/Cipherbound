@@ -1,9 +1,9 @@
 extends Node
 
 @export var music: AudioStream
-@export var target_volume := -10.0
-@export var fade_time := 2.0
-@export var start_volume := -40.0
+@export var target_volume := -15.0
+@export var fade_time := 3.0
+@export var start_volume := -30.0
 
 func _ready():
 	if music == null:

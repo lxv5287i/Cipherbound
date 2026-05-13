@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://de5ybeijitdu7" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
 [ext_resource type="Texture2D" uid="uid://dd7wneywsi04a" path="res://Assets/User Interface/Popups/congratulations.png" id="5_3elxb"]
 [ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_78uih"]
-[ext_resource type="AudioStream" uid="uid://rn3ek80pprve" path="res://World/Music/correctAnswerLong.wav" id="7_e53f5"]
+[ext_resource type="AudioStream" uid="uid://vw8w5prdkfh4" path="res://World/Music/correctAnswer.ogg" id="7_e53f5"]
 
 [node name="Congratulation" type="CanvasLayer" unique_id=825101189]
 script = ExtResource("1_ulro0")

@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="30_t0twx"]
 [ext_resource type="Script" uid="uid://hv5eu7gvmy7m" path="res://Scenes/backGroundAudio/RoomMusicController.gd" id="35_moa77"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="37_1uale"]
+[ext_resource type="AudioStream" uid="uid://y4vtj72mk56r" path="res://World/Music/room 1-4.ogg" id="38_ft0n4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mbuy"]
 texture = ExtResource("1_ue16m")
@@ -1433,9 +1434,7 @@ anchor_bottom = 1.0909091
 
 [node name="RoomMusicController" type="Node" parent="." unique_id=1016288904]
 script = ExtResource("35_moa77")
-target_volume = -15.0
-fade_time = 3.0
-start_volume = -20.0
+music = ExtResource("38_ft0n4")
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("37_1uale")]
 
