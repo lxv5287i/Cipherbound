@@ -97,7 +97,7 @@ func _on_submit_pressed():
 
 		puzzle_done = true
 
-		result_label.text = "Batteries: 2\nRemaining Energy: 15"
+		result_label.text = "Remaining Energy: 15\nBatteries: 2"
 
 		puzzle_correct.emit()
 
