@@ -16,6 +16,7 @@ extends Control
 @onready var congratulation = $Congratulation
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group("split_screen_main")
 	get_tree().paused = false
 	GameLock.movement_locked = false
@@ -41,10 +42,10 @@ func _process(_delta):
 
 func _toggle_pause():
 	if pause_menu.visible:
-		pause_menu.close()
+		pause_menu.close() 
 	else:
-		pause_menu.open()
 		GameTimer.pause_timer()
+		pause_menu.open()
 
 func _on_pause_pressed() -> void:
 	_toggle_pause()

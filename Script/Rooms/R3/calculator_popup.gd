@@ -171,7 +171,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "Line 1 is incorrect.\n+" + str(i) + " SECONDS"
+		result_label.text = "Line 1 is incorrect.\n-" + str(i) + " SECONDS"
 		ans1.grab_focus()
 		return
 
@@ -188,7 +188,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "Line 2 is incorrect.\n+" + str(i) + " SECONDS"
+		result_label.text = "Line 2 is incorrect.\n-" + str(i) + " SECONDS"
 		ans2.grab_focus()
 		return
 
@@ -207,7 +207,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "Line 3 is incorrect.\n+" + str(i) + " SECONDS"
+		result_label.text = "Line 3 is incorrect.\n-" + str(i) + " SECONDS"
 		ans3.grab_focus()
 		return
 
@@ -220,7 +220,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "Line 4 is incorrect.\n+" + str(i) + " SECONDS"
+		result_label.text = "Line 4 is incorrect.\n-" + str(i) + " SECONDS"
 		ans4.grab_focus()
 		return
 

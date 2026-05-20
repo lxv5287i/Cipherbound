@@ -116,7 +116,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans1.grab_focus()
 		return
 
@@ -129,7 +129,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans2.grab_focus()
 		return
 
@@ -142,7 +142,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans3.grab_focus()
 		return
 
@@ -155,7 +155,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans4.grab_focus()
 		return
 
@@ -171,7 +171,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans5.grab_focus()
 		return
 
@@ -187,7 +187,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		ans6.grab_focus()
 		return
 

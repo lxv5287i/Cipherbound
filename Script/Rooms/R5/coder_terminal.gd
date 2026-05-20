@@ -208,7 +208,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 
 
 func open_explanation_only():

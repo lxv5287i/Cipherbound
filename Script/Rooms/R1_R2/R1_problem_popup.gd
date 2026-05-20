@@ -98,7 +98,7 @@ func _on_submit_pressed():
 				i += 5
 				x = 0
 			
-		result_label.text = "INCORRECT\n+" + str(i) + " SECONDS"
+		result_label.text = "INCORRECT!\n-" + str(i) + " SECONDS"
 		close_button.visible = true
 		ans1.grab_focus()
 

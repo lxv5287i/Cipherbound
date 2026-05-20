@@ -144,7 +144,7 @@ func _on_submit_pressed():
 				x = 0
 			
 		result_label.visible = true
-		result_label.text = "WRONG HIERARCHY\n+" + str(i) + " SECONDS"
+		result_label.text = "WRONG HIERARCHY!\n-" + str(i) + " SECONDS"
 
 
 

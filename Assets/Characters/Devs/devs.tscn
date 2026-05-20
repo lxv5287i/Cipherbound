@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://cwq2v054ce7lf"]
+
+[ext_resource type="Texture2D" uid="uid://b4a375set0j2a" path="res://Assets/Characters/Devs/kemz.png" id="2_0k1nb"]
+[ext_resource type="LabelSettings" uid="uid://dsfn5qc1fp8je" path="res://Assets/World/Font/robot.tres" id="3_eaqm8"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="4_m6srp"]
+[ext_resource type="FontFile" uid="uid://xk8xxxgjp1m7" path="res://Assets/World/Font/NicoClean-Regular.otf" id="5_05v7y"]
+
+[sub_resource type="GDScript" id="GDScript_imgby"]
+script/source = "extends Area2D
+
+@export_multiline var popup_text: String = \"Put robot text here.\"
+@export var default_animation: String = \"down\"
+
+@onready var sprite: AnimatedSprite2D = $Sprite2D
+@onready var prompt_label: Label = $Label
+@onready var popup_canvas: CanvasLayer = $CanvasLayer
+@onready var rich_text_label: RichTextLabel = $CanvasLayer/Panel/RichTextLabel
+
+var popup_open := false
+
+
+func _ready():
+	add_to_group(\"analyst_interactable\")
+	add_to_group(\"coder_interactable\")
+
+	prompt_label.visible = false
+	popup_canvas.visible = false
+
+	rich_text_label.bbcode_enabled = true
+	rich_text_label.text = popup_text
+
+	sprite.play(default_animation)
+
+
+func show_prompt():
+	prompt_label.visible = true
+	prompt_label.text = \"[WELCOME]\"
+
+
+func hide_prompt():
+	prompt_label.visible = false
+	close_popup()
+
+	sprite.play(default_animation)
+
+
+func interact(player: Node2D = null):
+
+	if player == null:
+		player = get_nearest_player()
+
+	if player == null:
+		print(\"NO PLAYER FOUND\")
+		return
+
+	face_player(player)
+
+	popup_open = true
+	popup_canvas.visible = true
+
+	rich_text_label.text = popup_text
+
+
+func close_popup():
+	popup_open = false
+	popup_canvas.visible = false
+
+
+func get_nearest_player() -> Node2D:
+
+	var analyst = get_tree().get_first_node_in_group(\"analyst_player\")
+	var coder = get_tree().get_first_node_in_group(\"coder_player\")
+
+	var nearest_player: Node2D = null
+	var nearest_distance := 999999.0
+
+	if analyst != null:
+
+		var analyst_distance = global_position.distance_to(analyst.global_position)
+
+		if analyst_distance < nearest_distance:
+			nearest_distance = analyst_distance
+			nearest_player = analyst
+
+	if coder != null:
+
+		var coder_distance = global_position.distance_to(coder.global_position)
+
+		if coder_distance < nearest_distance:
+			nearest_distance = coder_distance
+			nearest_player = coder
+
+	return nearest_player
+
+
+func face_player(player: Node2D):
+
+	var direction: Vector2 = player.global_position - sprite.global_position
+
+	print(\"PLAYER: \", player.name)
+	print(\"DIRECTION: \", direction)
+
+	# LEFT / RIGHT
+	if abs(direction.x) > abs(direction.y):
+
+		# PLAYER IS RIGHT
+		if direction.x > 0:
+			sprite.play(\"right\")
+
+		# PLAYER IS LEFT
+		else:
+			sprite.play(\"left\")
+
+	# UP / DOWN
+	else:
+
+		# PLAYER IS BELOW
+		if direction.y > 0:
+			sprite.play(\"down\")
+
+		# PLAYER IS ABOVE
+		else:
+			sprite.play(\"up\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4bum"]
+size = Vector2(9, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hohp2"]
+size = Vector2(13, 7)
+
+[node name="Devs" type="Area2D" unique_id=1239817990 groups=["analyst_interactable", "coder_interactable"]]
+z_index = 9
+collision_layer = 4
+script = SubResource("GDScript_imgby")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=224457115]
+texture = ExtResource("2_0k1nb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=780611906]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_q4bum")
+
+[node name="Label" type="Label" parent="." unique_id=306761151]
+offset_left = -39.0
+offset_top = -26.0
+offset_right = 39.0
+offset_bottom = -3.0
+text = "[INTERACT]"
+label_settings = ExtResource("3_eaqm8")
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1533831507]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1976795389]
+offset_left = 57.0
+offset_top = 58.0
+offset_right = 176.0
+offset_bottom = 146.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Panel" unique_id=784274997]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.17045455
+anchor_right = 0.12605043
+anchor_bottom = 0.77272725
+offset_left = -47.0
+offset_top = -20.0
+offset_right = 169.0
+offset_bottom = 108.0
+texture = ExtResource("4_m6srp")
+region_rect = Rect2(1, 1, 14, 14)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel" unique_id=1074240285]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.075630255
+anchor_top = -0.1590909
+anchor_right = 0.15966387
+anchor_bottom = 0.07954545
+offset_left = -23.0
+offset_top = -6.0
+offset_right = 150.0
+offset_bottom = 93.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_05v7y")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Blocker" type="StaticBody2D" parent="." unique_id=1451310383]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocker" unique_id=1358508063]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_hohp2")
+debug_color = Color(0.71266866, 0.48048764, 0.18151197, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

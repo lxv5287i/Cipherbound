@@ -1,18 +1,22 @@
 extends Node
 
+const MAX_TIME: float = 1800.0  # 30 minutes in seconds
+
 var elapsed_time: float = 0.0
 var running: bool = false
 var game_over_triggered := false
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _process(delta):
 	if game_over_triggered:
 		return
-
 	if running:
 		elapsed_time += delta
-
-	if elapsed_time >= 1800:
+	if elapsed_time >= MAX_TIME:
 		game_over_triggered = true
+		elapsed_time = MAX_TIME
 		show_game_over()
 
 func start():
@@ -33,20 +37,19 @@ func add_penalty(seconds: float):
 	elapsed_time += seconds
 
 func get_formatted() -> String:
-	var total = int(elapsed_time)
-	var h = total / 3600
-	var m = (total % 3600) / 60
+	var remaining = MAX_TIME - elapsed_time
+	remaining = max(remaining, 0.0)
+	var total = int(remaining)
+	var m = total / 60
 	var s = total % 60
-	return "%02d:%02d:%02d" % [h, m, s]
+	return "%02d:%02d" % [m, s]
 
 func save_score():
 	var team = GameProgress.team_name
 	var time = elapsed_time
-
 	var scores = _load_scores()
 	scores.append({"team": team, "time": time})
 	scores.sort_custom(func(a, b): return a["time"] < b["time"])
-
 	var file = FileAccess.open("user://leaderboard.json", FileAccess.WRITE)
 	if file:
 		file.store_string(JSON.stringify(scores))
@@ -77,13 +80,7 @@ func reset_leaderboard():
 
 func show_game_over():
 	running = false
-
-	var game_over_scene = preload(
-		"res://Scenes/Utility/game_over.tscn"
-	)
-
+	var game_over_scene = preload("res://Scenes/Utility/game_over.tscn")
 	var game_over = game_over_scene.instantiate()
-
 	get_tree().current_scene.add_child(game_over)
-
 	game_over.open()
