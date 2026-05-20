@@ -2,4 +2,4 @@
 .import/
 *.import
 *.cache
-*.tmp
+*.tmpbuild/ 
