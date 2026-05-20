@@ -91,10 +91,10 @@ Developed by **WANPIP GAME DEVELOPMENT**
 
 ### Team Members
 
-* Calimbo
-* Torio
-* Aspera
-* Morallos
-* Vestuir
+* Calimbo, Queen Kimberly
+* Torio, Samantha Mei
+* Aspera, Dustin Rain
+* Morallos, Janah Louisse
+* Vestuir, Charles Newell
 
 Cipherbound was created as an educational cooperative game project focused on combining learning, teamwork, and interactive gameplay through programming-based challenges.
