@@ -1,16 +1,37 @@
 [gd_scene format=3 uid="uid://bw5lts6p7b0w2"]
 
 [ext_resource type="Script" uid="uid://chtoxokvrtddq" path="res://Script/Utility/tutorial_info.gd" id="1_k3hhr"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="1_y3qj5"]
-[ext_resource type="Texture2D" uid="uid://jx7u73qiwoea" path="res://Assets/User Interface/Popups/characterUD.png" id="2_k3hhr"]
-[ext_resource type="Texture2D" uid="uid://c70j2idx1hwkd" path="res://Assets/User Interface/Buttons/enterTutorial.png" id="3_y3qj5"]
-[ext_resource type="Texture2D" uid="uid://donjs5amm0c82" path="res://Assets/User Interface/Buttons/enterTutorial_pressed.png" id="4_k3hhr"]
-[ext_resource type="Texture2D" uid="uid://dlowyqqrjoc6r" path="res://Assets/User Interface/Buttons/enterTutorial_hovered.png" id="5_1d45x"]
-[ext_resource type="Texture2D" uid="uid://d17a5hl4yshvm" path="res://Assets/User Interface/Buttons/x.png" id="6_0t81v"]
-[ext_resource type="Texture2D" uid="uid://2guoh2r7f63e" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_uo4km"]
-[ext_resource type="Texture2D" uid="uid://jbdurmybhoqk" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_hwu80"]
-[ext_resource type="Texture2D" uid="uid://7go41d785j2j" path="res://Assets/Interactables/R1/computerOFF.png" id="10_pn2jd"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="1_y3qj5"]
+[ext_resource type="Texture2D" uid="uid://qgtcgo7562ui" path="res://Assets/User Interface/Popups/characterUD.png" id="2_k3hhr"]
+[ext_resource type="Texture2D" uid="uid://nwb0blm7qfb2" path="res://Assets/User Interface/Buttons/enterTutorial.png" id="3_y3qj5"]
+[ext_resource type="Texture2D" uid="uid://b8qc0sqr8vpwu" path="res://Assets/User Interface/Buttons/enterTutorial_pressed.png" id="4_k3hhr"]
+[ext_resource type="Texture2D" uid="uid://bbsvlkpd6bt5y" path="res://Assets/User Interface/Buttons/enterTutorial_hovered.png" id="5_1d45x"]
+[ext_resource type="Texture2D" uid="uid://dqvpmng7d3fdq" path="res://Assets/User Interface/Buttons/x.png" id="6_0t81v"]
+[ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="7_uo4km"]
+[ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="8_hwu80"]
+[ext_resource type="Texture2D" uid="uid://bmc2v5frl0y34" path="res://Assets/User Interface/Buttons/Keyboard/a_key.png" id="10_nyfbt"]
+[ext_resource type="Texture2D" uid="uid://dim6mlw5iqnws" path="res://Assets/Interactables/R1/computerOFF.png" id="10_pn2jd"]
 [ext_resource type="Texture2D" uid="uid://unf4lixhbiqd" path="res://Assets/Interactables/UI_Popups/Popup Overlays/computerOFF_ANALYST.png" id="11_7snm8"]
+[ext_resource type="Texture2D" uid="uid://px2yhyi1v0ip" path="res://Assets/User Interface/Buttons/Keyboard/a_key-hovered.png" id="11_exyr5"]
+[ext_resource type="Texture2D" uid="uid://bcaawvku5ekrm" path="res://Assets/User Interface/Buttons/Keyboard/w_key.png" id="12_56xq4"]
+[ext_resource type="Texture2D" uid="uid://bssah6mcuyjx" path="res://Assets/User Interface/Buttons/Keyboard/w_key-hovered.png" id="13_s8f1e"]
+[ext_resource type="Texture2D" uid="uid://dvg4n6kjiwoly" path="res://Assets/User Interface/Buttons/Keyboard/s_key.png" id="14_q6yks"]
+[ext_resource type="Texture2D" uid="uid://tjtv37m52vje" path="res://Assets/User Interface/Buttons/Keyboard/s_key-hovered.png" id="15_f5aa1"]
+[ext_resource type="Texture2D" uid="uid://du0emcsy1ls6p" path="res://Assets/User Interface/Buttons/Keyboard/d_key.png" id="16_3u5ax"]
+[ext_resource type="Texture2D" uid="uid://vmcnodtbkq37" path="res://Assets/User Interface/Buttons/Keyboard/d_key-hovered.png" id="17_6qpdt"]
+[ext_resource type="Texture2D" uid="uid://dmtn3wfg3bywh" path="res://Assets/User Interface/Buttons/Keyboard/e_key.png" id="18_6l76s"]
+[ext_resource type="Texture2D" uid="uid://dnfljnpxdbw1m" path="res://Assets/User Interface/Buttons/Keyboard/e_key-hovered.png" id="19_j630x"]
+[ext_resource type="Texture2D" uid="uid://7g4bd24guf2l" path="res://Assets/User Interface/Buttons/Keyboard/up_key.png" id="20_i7unm"]
+[ext_resource type="Texture2D" uid="uid://dvtyxnwu3qfuv" path="res://Assets/User Interface/Buttons/Keyboard/up_key-hovered.png" id="21_rmfad"]
+[ext_resource type="Texture2D" uid="uid://q4o8jxqby06u" path="res://Assets/User Interface/Buttons/Keyboard/down_key.png" id="22_xili5"]
+[ext_resource type="Texture2D" uid="uid://ipnr8ix4rkfv" path="res://Assets/User Interface/Buttons/Keyboard/down_key-hovered.png" id="23_304g8"]
+[ext_resource type="Texture2D" uid="uid://bjna6sctkryju" path="res://Assets/User Interface/Buttons/Keyboard/left_key.png" id="24_i7c6x"]
+[ext_resource type="Texture2D" uid="uid://dwwj4bupj01eu" path="res://Assets/User Interface/Buttons/Keyboard/left_key-hovered.png" id="25_gowxq"]
+[ext_resource type="Texture2D" uid="uid://bxc704tyiqbf1" path="res://Assets/User Interface/Buttons/Keyboard/right_key.png" id="26_irmh4"]
+[ext_resource type="Texture2D" uid="uid://bomqvqi34x37w" path="res://Assets/User Interface/Buttons/Keyboard/right_key-hovered.png" id="27_lqgi7"]
+[ext_resource type="Texture2D" uid="uid://ckjfhruekwdwy" path="res://Assets/User Interface/Buttons/Keyboard/spacebar.png" id="28_ir4eh"]
+[ext_resource type="Texture2D" uid="uid://c7jnol5b47sxt" path="res://Assets/User Interface/Buttons/Keyboard/spacebar-hovered.png" id="29_ttfji"]
+[ext_resource type="Texture2D" uid="uid://blfel0o8abhfs" path="res://Assets/Interactables/R1/computerOFF_inrange.png" id="31_1a403"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wrxy1"]
 line_spacing = 0.0
@@ -165,22 +186,119 @@ texture_normal = ExtResource("6_0t81v")
 texture_pressed = ExtResource("7_uo4km")
 texture_hover = ExtResource("8_hwu80")
 
-[node name="Coder" type="TextureRect" parent="PanelContainer" unique_id=578633528]
+[node name="buttons" type="Control" parent="PanelContainer" unique_id=332492021]
+anchors_preset = 0
+
+[node name="aKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=480626564]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 138.0
+offset_right = 415.0
+offset_bottom = 170.0
+texture_normal = ExtResource("10_nyfbt")
+texture_hover = ExtResource("11_exyr5")
+
+[node name="wKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=1669007957]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 114.0
+offset_right = 433.0
+offset_bottom = 146.0
+texture_normal = ExtResource("12_56xq4")
+texture_hover = ExtResource("13_s8f1e")
+
+[node name="sKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=1627984730]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 138.0
+offset_right = 438.0
+offset_bottom = 170.0
+texture_normal = ExtResource("14_q6yks")
+texture_hover = ExtResource("15_f5aa1")
+
+[node name="dKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=458928244]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 138.0
+offset_right = 461.0
+offset_bottom = 170.0
+texture_normal = ExtResource("16_3u5ax")
+texture_hover = ExtResource("17_6qpdt")
+
+[node name="eKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=1840448951]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 114.0
+offset_right = 457.0
+offset_bottom = 146.0
+texture_normal = ExtResource("18_6l76s")
+texture_hover = ExtResource("19_j630x")
+
+[node name="upKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=877265647]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 100.0
+offset_right = 214.0
+offset_bottom = 132.0
+texture_normal = ExtResource("20_i7unm")
+texture_hover = ExtResource("21_rmfad")
+
+[node name="downKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=1597182864]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 124.0
+offset_right = 214.0
+offset_bottom = 156.0
+texture_normal = ExtResource("22_xili5")
+texture_hover = ExtResource("23_304g8")
+
+[node name="leftKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=781610155]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 124.0
+offset_right = 191.0
+offset_bottom = 156.0
+texture_normal = ExtResource("24_i7c6x")
+texture_hover = ExtResource("25_gowxq")
+
+[node name="rightKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=1937849163]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 124.0
+offset_right = 237.0
+offset_bottom = 156.0
+texture_normal = ExtResource("26_irmh4")
+texture_hover = ExtResource("27_lqgi7")
+
+[node name="spaceKey" type="TextureButton" parent="PanelContainer/buttons" unique_id=394284743]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 150.0
+offset_right = 237.0
+offset_bottom = 182.0
+texture_normal = ExtResource("28_ir4eh")
+texture_hover = ExtResource("29_ttfji")
+
+[node name="analyst" type="TextureButton" parent="PanelContainer/buttons" unique_id=906996251]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 206.0
+offset_right = 94.5
+offset_bottom = 238.0
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("11_7snm8")
+texture_hover = ExtResource("31_1a403")
+
+[node name="coder" type="TextureButton" parent="PanelContainer/buttons" unique_id=2045387428]
 layout_mode = 0
 offset_left = 286.0
 offset_top = 208.0
-offset_right = 326.0
-offset_bottom = 248.0
-texture = ExtResource("10_pn2jd")
+offset_right = 318.0
+offset_bottom = 240.0
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("10_pn2jd")
+texture_hover = ExtResource("31_1a403")
 
-[node name="Analyst" type="TextureRect" parent="PanelContainer" unique_id=1624486179]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 205.0
-offset_right = 102.0
-offset_bottom = 245.0
-texture = ExtResource("11_7snm8")
-
-[connection signal="pressed" from="PanelContainer/EnterTutorial" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PanelContainer/EnterTutorial" to="." method="_on_enter_tutorial_pressed"]
+[connection signal="pressed" from="PanelContainer/EnterTutorial" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PanelContainer/Cancel" to="." method="_on_cancel_pressed"]

@@ -1,58 +1,63 @@
 [gd_scene format=4 uid="uid://k5ppokrlrys7"]
 
-[ext_resource type="Texture2D" uid="uid://cn7wddfveh4nj" path="res://Assets/World/Floor/FLOOR.png" id="1_wgubu"]
-[ext_resource type="Texture2D" uid="uid://c00kh353552j5" path="res://Assets/World/Wall/WALL.png" id="2_lolwk"]
-[ext_resource type="Texture2D" uid="uid://b7ujp15boku7s" path="res://Assets/World/Objects/Lobby_Objects.png" id="3_wgubu"]
-[ext_resource type="Texture2D" uid="uid://6gh4gga0ey3g" path="res://Assets/Interactables/LOBBY/folder.png" id="4_nsj2m"]
+[ext_resource type="Texture2D" uid="uid://b8klyky6ajhm8" path="res://Assets/World/Floor/FLOOR.png" id="1_wgubu"]
+[ext_resource type="Texture2D" uid="uid://c2878xlu7qjyd" path="res://Assets/World/Wall/WALL.png" id="2_lolwk"]
+[ext_resource type="Texture2D" uid="uid://dycw2klcfp71e" path="res://Assets/World/Objects/Lobby_Objects.png" id="3_wgubu"]
+[ext_resource type="Texture2D" uid="uid://crymn885gt4gl" path="res://Assets/Interactables/LOBBY/folder.png" id="4_nsj2m"]
 [ext_resource type="Script" uid="uid://daepisdlnnwhs" path="res://Script/Rooms/Lobby/folder_interactable.gd" id="4_yg8gm"]
 [ext_resource type="Script" uid="uid://ggeylgdm3412" path="res://Script/Rooms/Lobby/folder_popup.gd" id="5_s3paf"]
-[ext_resource type="Texture2D" uid="uid://xjxdgcxovamy" path="res://Assets/Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
-[ext_resource type="Texture2D" uid="uid://bk0nw4opkx7e3" path="res://Assets/Interactables/LOBBY/Banner.png" id="6_vmftg"]
+[ext_resource type="Texture2D" uid="uid://bvccxwdqxalpq" path="res://Assets/Interactables/LOBBY/folder_inrange.png" id="6_sup6t"]
+[ext_resource type="Texture2D" uid="uid://rionlqh8losg" path="res://Assets/Interactables/LOBBY/Banner.png" id="6_vmftg"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="8_amwwa"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="9_6msik"]
 [ext_resource type="Script" uid="uid://bkdmh22car0dp" path="res://Script/Rooms/Lobby/banner_interactable.gd" id="10_b6u2u"]
 [ext_resource type="Script" uid="uid://64dxsjgcaueb" path="res://Script/Rooms/Lobby/banner_popup.gd" id="11_idhfa"]
-[ext_resource type="Texture2D" uid="uid://duhsledsrwod6" path="res://Assets/Interactables/LOBBY/box.png" id="11_r753w"]
-[ext_resource type="Texture2D" uid="uid://brgi1ah31sb0v" path="res://Assets/Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
+[ext_resource type="Texture2D" uid="uid://bnh0a3ifh7my6" path="res://Assets/Interactables/LOBBY/box.png" id="11_r753w"]
+[ext_resource type="Texture2D" uid="uid://df5na580d4cia" path="res://Assets/Interactables/LOBBY/banner_inrange.png" id="12_03jl0"]
 [ext_resource type="Script" uid="uid://bt5uxn1sf0sps" path="res://Script/Rooms/Lobby/box.gd" id="14_kr8xt"]
-[ext_resource type="Texture2D" uid="uid://cq5ww278xrxhj" path="res://Assets/Interactables/LOBBY/experiment.png" id="15_yesx4"]
-[ext_resource type="Texture2D" uid="uid://bp7o5b5f5qfrm" path="res://Assets/Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
+[ext_resource type="Texture2D" uid="uid://csuiv884sq50b" path="res://Assets/Interactables/LOBBY/experiment.png" id="15_yesx4"]
+[ext_resource type="Texture2D" uid="uid://d3qs3n11kox6m" path="res://Assets/Interactables/LOBBY/box_inrange.png" id="16_qsv27"]
 [ext_resource type="Script" uid="uid://c6ev3iv2f6ew5" path="res://Script/Rooms/Lobby/box_popup.gd" id="17_6n5of"]
 [ext_resource type="Script" uid="uid://dfhdigndf2jie" path="res://Script/Rooms/Lobby/experiment_interactable.gd" id="18_y5q1o"]
-[ext_resource type="Texture2D" uid="uid://w3a3rs4gphkl" path="res://Assets/Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
+[ext_resource type="Texture2D" uid="uid://rjqgk0dojq8t" path="res://Assets/Interactables/LOBBY/experiment_inrange.png" id="20_cpovp"]
 [ext_resource type="Script" uid="uid://ds87xmk73jeq7" path="res://Script/Rooms/Lobby/experiment_popup.gd" id="20_u60dt"]
 [ext_resource type="Script" uid="uid://cvr77d4hgkttv" path="res://Script/Rooms/Lobby/simple_info_interactable.gd" id="22_7yj0t"]
-[ext_resource type="Texture2D" uid="uid://c6gg7w3lmtjwl" path="res://Assets/Interactables/LOBBY/organizer.png" id="22_sy2g3"]
-[ext_resource type="Texture2D" uid="uid://d3y0hjnneq7v7" path="res://Assets/Interactables/LOBBY/table.png" id="23_4sjms"]
-[ext_resource type="Texture2D" uid="uid://cm1dx22tm24ht" path="res://Assets/Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
-[ext_resource type="Texture2D" uid="uid://rtyv0orj34r2" path="res://Assets/Interactables/UI_Popups/UI.png" id="24_yoplv"]
+[ext_resource type="Texture2D" uid="uid://coe7nodwocgd5" path="res://Assets/Interactables/LOBBY/organizer.png" id="22_sy2g3"]
+[ext_resource type="Texture2D" uid="uid://6o14f31m7thc" path="res://Assets/Interactables/LOBBY/table.png" id="23_4sjms"]
+[ext_resource type="Texture2D" uid="uid://c1r6dvpsrmjsh" path="res://Assets/Interactables/LOBBY/tableUp.png" id="24_dpjhh"]
+[ext_resource type="Texture2D" uid="uid://cni838qdfsr1d" path="res://Assets/Interactables/UI_Popups/UI.png" id="24_yoplv"]
 [ext_resource type="Script" uid="uid://d1677ki88bmov" path="res://Script/Rooms/Lobby/simple_info_popup.gd" id="25_5g874"]
-[ext_resource type="Texture2D" uid="uid://dsj35cwnsbioq" path="res://Assets/Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
-[ext_resource type="Texture2D" uid="uid://bgs6jr4txk7ci" path="res://Assets/Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
-[ext_resource type="Texture2D" uid="uid://cpyutbv6x17er" path="res://Assets/Interactables/LOBBY/tableUp_inrange.png" id="31_3u0wr"]
+[ext_resource type="Texture2D" uid="uid://bmhnqbuyg1ld6" path="res://Assets/Interactables/LOBBY/organizer_inrange.png" id="27_iexsg"]
+[ext_resource type="Texture2D" uid="uid://d32bajtu4nh3a" path="res://Assets/Interactables/LOBBY/table_inrange.png" id="29_7ecbt"]
+[ext_resource type="Texture2D" uid="uid://cr6v1pingboiv" path="res://Assets/Interactables/LOBBY/tableUp_inrange.png" id="31_3u0wr"]
 [ext_resource type="Script" uid="uid://bc5gaifio4jf7" path="res://Script/Doors/door_to_room3.gd" id="31_hqvxi"]
 [ext_resource type="Script" uid="uid://cnysnopm06dor" path="res://Script/Doors/door_to_room4.gd" id="33_1al0n"]
-[ext_resource type="Texture2D" uid="uid://3ccm3lygs7ks" path="res://Assets/Interactables/doorclose_inrange.png" id="33_xfaes"]
-[ext_resource type="Texture2D" uid="uid://ceakwnik757x2" path="res://Assets/Interactables/dooropen.png" id="34_6msik"]
-[ext_resource type="Texture2D" uid="uid://cpwbub7gx6jyv" path="res://Assets/Interactables/doorclose.png" id="34_wagpd"]
+[ext_resource type="Texture2D" uid="uid://l8eh07su5auu" path="res://Assets/Interactables/doorclose_inrange.png" id="33_xfaes"]
+[ext_resource type="Texture2D" uid="uid://58ytlwf002tm" path="res://Assets/Interactables/dooropen.png" id="34_6msik"]
+[ext_resource type="Texture2D" uid="uid://djkmxl6j20mpm" path="res://Assets/Interactables/doorclose.png" id="34_wagpd"]
 [ext_resource type="Script" uid="uid://rum5vlvjou8n" path="res://Script/Doors/door_to_room5.gd" id="34_xfaes"]
-[ext_resource type="Texture2D" uid="uid://cgflq2qc3lah" path="res://Assets/Interactables/dooropen_inrange.png" id="35_8isgd"]
-[ext_resource type="Texture2D" uid="uid://cfrh0v803iakj" path="res://Assets/World/Wall/room3TAG.png" id="36_2n0gg"]
-[ext_resource type="Texture2D" uid="uid://diutt8oqcb37n" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
-[ext_resource type="Texture2D" uid="uid://8xevdhxc3uyc" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
+[ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="35_8isgd"]
+[ext_resource type="Texture2D" uid="uid://crf15klxa40et" path="res://Assets/World/Wall/room3TAG.png" id="36_2n0gg"]
+[ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
+[ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
 [ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="41_p4v8g"]
-[ext_resource type="AudioStream" uid="uid://bwa0mtcdl5tv3" path="res://Assets/Music/Lobby+Tutorial_BGM.ogg" id="42_64gy1"]
+[ext_resource type="AudioStream" uid="uid://diqdcjq7fuufh" path="res://Assets/Music/Lobby+Tutorial_BGM.ogg" id="42_64gy1"]
 [ext_resource type="Script" uid="uid://ba02kcx3j13a3" path="res://Script/Dev/dev_kemz.gd" id="43_xkmgd"]
 [ext_resource type="Texture2D" uid="uid://b4a375set0j2a" path="res://Assets/Characters/Devs/kemz.png" id="44_1l4hh"]
-[ext_resource type="Texture2D" uid="uid://cyk2qpobclnpm" path="res://Assets/Interactables/Infobot/tail.png" id="45_4ie12"]
+[ext_resource type="Texture2D" uid="uid://ilu6kl3t1gey" path="res://Assets/Interactables/Infobot/tail.png" id="45_4ie12"]
+[ext_resource type="Texture2D" uid="uid://dribj7bjl4rkd" path="res://Assets/Characters/Devs/kim_head.png" id="46_dj0rn"]
 [ext_resource type="Script" uid="uid://jclnem642yhj" path="res://Script/Dev/dev_sam.gd" id="46_xkmgd"]
 [ext_resource type="Texture2D" uid="uid://12yt4uxmb31" path="res://Assets/Characters/Devs/sam.png" id="47_4ie12"]
 [ext_resource type="Script" uid="uid://bjt7acxh3uhei" path="res://Script/Dev/dev_janah.gd" id="49_54b7b"]
+[ext_resource type="Texture2D" uid="uid://oo5myfd2fxh5" path="res://Assets/Characters/Devs/sam_head.png" id="49_rc877"]
 [ext_resource type="Texture2D" uid="uid://ce20nkwus06ln" path="res://Assets/Characters/Devs/janah.png" id="50_80wsb"]
 [ext_resource type="Texture2D" uid="uid://ojbsfvbmoomk" path="res://Assets/Characters/Devs/munchliex.png" id="51_64gy1"]
 [ext_resource type="Script" uid="uid://un2ekd2kctc" path="res://Script/Dev/dev_liex.gd" id="51_80wsb"]
+[ext_resource type="Texture2D" uid="uid://d1qkf435ijuk4" path="res://Assets/Characters/Devs/janah_head.png" id="52_tdxtm"]
 [ext_resource type="Script" uid="uid://c8mgiu0edmy2y" path="res://Script/Dev/dev_dustin.gd" id="53_uj4j6"]
 [ext_resource type="Texture2D" uid="uid://1pmmqo0aujqg" path="res://Assets/Characters/Devs/dustin.png" id="54_4hcpg"]
+[ext_resource type="Texture2D" uid="uid://c2xcj6gvnf0mo" path="res://Assets/Characters/Devs/munchliex_head.png" id="55_yyjcq"]
+[ext_resource type="Texture2D" uid="uid://b2636rnjgi06i" path="res://Assets/Characters/Devs/dustin_head.png" id="58_00whn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsj2m"]
 texture = ExtResource("1_wgubu")
@@ -2705,10 +2710,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect2" type="TextureRect" parent="devKemz/CanvasLayer/Panel" unique_id=1092958915]
 layout_mode = 0
 offset_left = 255.0
-offset_top = 10.0
-offset_right = 297.0
+offset_top = 39.0
+offset_right = 287.0
 offset_bottom = 71.0
-texture = ExtResource("44_1l4hh")
+texture = ExtResource("46_dj0rn")
 
 [node name="Blocker" type="StaticBody2D" parent="devKemz" unique_id=592297887 groups=["analyst_interactable", "coder_interactable"]]
 position = Vector2(32, 50)
@@ -2804,10 +2809,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect2" type="TextureRect" parent="devSam/CanvasLayer/Panel" unique_id=964583281]
 layout_mode = 0
 offset_left = 265.0
-offset_top = 4.0
-offset_right = 305.0
+offset_top = 40.0
+offset_right = 297.0
 offset_bottom = 72.0
-texture = ExtResource("47_4ie12")
+texture = ExtResource("49_rc877")
 
 [node name="Blocker" type="StaticBody2D" parent="devSam" unique_id=957348744 groups=["analyst_interactable", "coder_interactable"]]
 position = Vector2(32, 50)
@@ -2903,10 +2908,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Janah" type="TextureRect" parent="devJanah/CanvasLayer/Panel" unique_id=316649606]
 layout_mode = 0
 offset_left = 265.0
-offset_top = 5.0
-offset_right = 305.0
+offset_top = 40.0
+offset_right = 297.0
 offset_bottom = 72.0
-texture = ExtResource("50_80wsb")
+texture = ExtResource("52_tdxtm")
 
 [node name="Blocker" type="StaticBody2D" parent="devJanah" unique_id=998980424 groups=["analyst_interactable", "coder_interactable"]]
 position = Vector2(32, 50)
@@ -2954,6 +2959,7 @@ metadata/_edit_use_anchors_ = true
 [node name="NinePatchRect" type="NinePatchRect" parent="devLiex/CanvasLayer/Panel" unique_id=47841756]
 layout_mode = 1
 anchors_preset = -1
+anchor_left = -0.010869565
 anchor_right = -0.010869565
 offset_left = 39.0
 offset_top = -3.0
@@ -3004,10 +3010,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Munchliex" type="TextureRect" parent="devLiex/CanvasLayer/Panel" unique_id=968790396]
 layout_mode = 0
 offset_left = 260.0
-offset_top = 7.0
-offset_right = 300.0
+offset_top = 39.0
+offset_right = 292.0
 offset_bottom = 71.0
-texture = ExtResource("51_64gy1")
+texture = ExtResource("55_yyjcq")
 
 [node name="Blocker" type="StaticBody2D" parent="devLiex" unique_id=151084192 groups=["analyst_interactable", "coder_interactable"]]
 position = Vector2(32, 50)
@@ -3102,11 +3108,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Dustin" type="TextureRect" parent="devDustin/CanvasLayer/Panel" unique_id=1098748516]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 8.0
-offset_right = 312.0
-offset_bottom = 72.0
-texture = ExtResource("54_4hcpg")
+offset_left = 267.0
+offset_top = 38.0
+offset_right = 299.0
+offset_bottom = 70.0
+texture = ExtResource("58_00whn")
 
 [node name="Blocker" type="StaticBody2D" parent="devDustin" unique_id=1450008059 groups=["analyst_interactable", "coder_interactable"]]
 position = Vector2(32, 50)
