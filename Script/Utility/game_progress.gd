@@ -151,6 +151,34 @@ func full_reset():
 	team_name = "Team 1"
 	print("Full game progress reset")
 
+func debug_unlock_all() -> void:
+	# Unlock all lobby doors
+	room3_unlocked = true
+	room4_unlocked = true
+	room5_unlocked = true
+
+	# Room 1 & 2 exit doors (both_solved signal)
+	analyst_done = true
+	coder_done = true
+	exit_signal_sent = false  # keep false so doors don't auto-teleport
+	coder_at_exit = false
+	analyst_at_exit = false
+
+	# Room 3 exit door
+	room3_completed = false  # keep false so it stays enterable
+
+	# Room 4 exit door (listens to room4_both_done signal)
+	room4_analyst_opened_count = 999
+	room4_coder_done = true
+	room4_done_signal_sent = false  # keep false so door doesn't block
+
+	# Room 5 exit door (listens to room5_drone_done signal)
+	room5_analyst_solved = true
+	room5_coder_solved = true
+	room5_drone_solved = true
+	room5_done_signal_sent = false  # keep false so door doesn't block
+
+	print("[DEBUG] All doors unlocked for w@np1pdevs")
 
 func solve_analyst():
 	if analyst_done:
