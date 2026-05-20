@@ -1,6 +1,7 @@
 extends Area2D
 
-@export_multiline var popup_text: String = "Hi! my name is kim."
+@export_multiline var popup_text: String = "Hi! my name is Kim."
+@export var prompt_name: String = "KIM"
 @export var default_animation: String = "down"
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -24,7 +25,7 @@ func _ready():
 
 func show_prompt():
 	prompt_label.visible = true
-	prompt_label.text = "KIM"
+	prompt_label.text = prompt_name
 
 
 func hide_prompt():
@@ -41,11 +42,14 @@ func interact(player: Node2D = null):
 
 	popup_open = true
 	popup_canvas.visible = true
+
+	# Uses Inspector text
 	rich_text_label.text = popup_text
 
 	var level = get_tree().get_first_node_in_group("tutorial_level")
 	if level and level.has_method("unlock_analyst"):
 		level.unlock_analyst()
+
 
 func close_popup():
 	popup_open = false

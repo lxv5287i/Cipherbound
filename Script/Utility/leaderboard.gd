@@ -111,3 +111,4 @@ func _format_time(seconds: float) -> String:
 func _on_reset_button_pressed() -> void:
 	GameTimer.reset_leaderboard()
 	_populate()
+	
