@@ -130,7 +130,8 @@ func _on_submit_pressed():
 
 	# require quotation marks
 	if not a.contains("\"") or not b.contains("\""):
-		result_label.text = "You need to put quotation marks (\")"
+		result_label.text = "You need to put 
+		quotation marks (\")"
 		ans1.grab_focus()
 		return
 

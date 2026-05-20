@@ -778,17 +778,17 @@ inrange_texture = ExtResource("7_vgc17")
 solved_texture = ExtResource("8_7ycns")
 solved_inrange_texture = ExtResource("9_uxnl2")
 question_text = "public class Main {
+    public static void 
+main(String[] args) {
 
-    public static void main(String[] args) {
+   String a =                  ;           
 
-        String a =                         
+   String b =                  ;
 
-        String b =                         
-
-        System.out.println(a + \", \" + b + \"!\");
+     System.out.println
+(a + \", \" + b + \"!\");
     }
-}
-"
+}"
 
 [node name="Sprite2D" type="Sprite2D" parent="TutorialCoder" unique_id=952406403]
 texture = ExtResource("7_mlcvv")
@@ -879,9 +879,9 @@ text = "public class Main {
     public static void 
 main(String[] args) {
 
-   String a =                  
+   String a =                  ;           
 
-   String b =                  
+   String b =                  ;
 
      System.out.println
 (a + \", \" + b + \"!\");
@@ -892,10 +892,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Ans1" type="LineEdit" parent="TutorialCoder/CoderPopup/Panel" unique_id=2921046]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.11538464
-anchor_top = -0.16568047
-anchor_right = -0.115384616
-anchor_bottom = -0.16568047
+anchor_left = -0.20384616
+anchor_top = -0.23076919
+anchor_right = -0.20384616
+anchor_bottom = -0.23076919
 offset_left = 24.000002
 offset_top = 10.0
 offset_right = 101.499985
@@ -913,10 +913,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Ans2" type="LineEdit" parent="TutorialCoder/CoderPopup/Panel" unique_id=564764507]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.11538464
-anchor_top = -0.16568047
-anchor_right = -0.115384616
-anchor_bottom = -0.16568045
+anchor_left = -0.20769225
+anchor_top = -0.24852064
+anchor_right = -0.20769219
+anchor_bottom = -0.24852064
 offset_left = 24.000002
 offset_top = 38.999996
 offset_right = 103.999985
