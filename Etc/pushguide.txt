@@ -1,0 +1,8 @@
+cd C:\Users\Charles\Documents\GameDEV\Cipherbound
+git add .
+git commit -m "your message here"
+git push origin main
+
+git add Scenes/room1.tscn Scenes/room2.tscn
+git commit -m "Fix merge conflicts in room1 and room2"
+git push origin main
