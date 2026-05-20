@@ -13,6 +13,7 @@ config_version=5
 config/name="Cipherbound"
 run/main_scene="uid://b768p582nwe5y"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="uid://cw036o85m85y5"
 
 [autoload]
 
