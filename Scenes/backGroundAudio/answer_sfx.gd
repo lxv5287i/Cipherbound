@@ -42,10 +42,8 @@ func play_correct():
 
 
 func play_wrong():
-
 	if correct_sfx.playing:
 		correct_sfx.stop()
-
 	if wrong_sfx.playing:
 		wrong_sfx.stop()
 

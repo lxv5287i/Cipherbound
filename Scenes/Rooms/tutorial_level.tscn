@@ -38,7 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://bob2jnewkdoq3" path="res://Assets/User Interface/Buttons/x_pressed.png" id="34_7jbcr"]
 [ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="35_w1cbo"]
 [ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="38_vgc17"]
-[ext_resource type="AudioStream" uid="uid://c0vtp5qiqeenr" path="res://World/Music/tutorialRoom1.ogg" id="39_vgc17"]
+[ext_resource type="AudioStream" uid="uid://diqdcjq7fuufh" path="res://Assets/Music/Lobby+Tutorial_BGM.ogg" id="39_vgc17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7qun"]
 texture = ExtResource("1_hy7s5")

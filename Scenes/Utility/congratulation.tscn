@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cr455csc5de3r"]
 
 [ext_resource type="Script" uid="uid://cdwnmlumf3foh" path="res://Script/Utility/congratulation.gd" id="1_ulro0"]
-[ext_resource type="Texture2D" uid="uid://bxv7vga14vdtq" path="res://Assets/User Interface/Buttons/quitToMenu.png" id="2_i0n60"]
-[ext_resource type="Texture2D" uid="uid://beywda60od1g" path="res://Assets/User Interface/Buttons/quitToMenu_pressed.png" id="3_3elxb"]
-[ext_resource type="Texture2D" uid="uid://de5ybeijitdu7" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
-[ext_resource type="Texture2D" uid="uid://dd7wneywsi04a" path="res://Assets/User Interface/Popups/congratulations.png" id="5_3elxb"]
-[ext_resource type="FontFile" uid="uid://b7t7fjpid3bdc" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_78uih"]
+[ext_resource type="Texture2D" uid="uid://5kk5e6ifag2k" path="res://Assets/User Interface/Buttons/quitToMenu.png" id="2_i0n60"]
+[ext_resource type="Texture2D" uid="uid://rg8pjm27tesi" path="res://Assets/User Interface/Buttons/quitToMenu_pressed.png" id="3_3elxb"]
+[ext_resource type="Texture2D" uid="uid://cbxitvwbha7p2" path="res://Assets/User Interface/Buttons/quitToMenu_hovered.png" id="4_sudjp"]
+[ext_resource type="Texture2D" uid="uid://d4ef0maki1oh0" path="res://Assets/User Interface/Popups/congratulations.png" id="5_3elxb"]
+[ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="6_78uih"]
 [ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="7_e53f5"]
-[ext_resource type="AudioStream" uid="uid://vw8w5prdkfh4" path="res://World/Music/correctAnswer.ogg" id="8_u2jm1"]
+[ext_resource type="AudioStream" uid="uid://vw8w5prdkfh4" path="res://Assets/Music/correct_SFX.ogg" id="8_u2jm1"]
 
 [node name="Congratulation" type="CanvasLayer" unique_id=825101189]
 script = ExtResource("1_ulro0")

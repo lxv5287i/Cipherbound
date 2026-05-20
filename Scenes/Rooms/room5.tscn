@@ -35,8 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://dkbcritv5e6oi" path="res://Assets/Interactables/dooropen_inrange.png" id="24_ltqot"]
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="29_cttw5"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="36_2vdva"]
-[ext_resource type="PackedScene" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="36_noo2n"]
-[ext_resource type="AudioStream" uid="uid://bidxkf35k88rb" path="res://World/Music/room5.ogg" id="37_iyl3w"]
+[ext_resource type="AudioStream" uid="uid://tgykb4pfg3t8" path="res://Assets/Music/wrong_SFX.ogg" id="36_iyl3w"]
+[ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="36_noo2n"]
+[ext_resource type="AudioStream" uid="uid://cpahamormtyl" path="res://Assets/Music/FinalRoom_BGM.ogg" id="38_lo355"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0oo0"]
 texture = ExtResource("1_x3cab")
@@ -1688,8 +1689,9 @@ anchor_right = 0.6302521
 anchor_bottom = 1.2954545
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("36_2vdva")]
+wrong_sound = ExtResource("36_iyl3w")
 
 [node name="RoomMusicController" parent="." unique_id=605751194 instance=ExtResource("36_noo2n")]
-room_music = ExtResource("37_iyl3w")
+room_music = ExtResource("38_lo355")
 
 [editable path="RobotInteractable"]

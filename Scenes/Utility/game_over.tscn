@@ -47,16 +47,24 @@ texture_hover = ExtResource("5_evniu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=2080912982]
 layout_mode = 0
-offset_left = 62.0
+offset_left = 125.0
 offset_top = 99.0
-offset_right = 452.0
+offset_right = 386.0
 offset_bottom = 234.0
 theme_override_fonts/normal_font = ExtResource("6_x3i2q")
 theme_override_fonts/bold_font = ExtResource("6_x3i2q")
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 8
 theme_override_font_sizes/bold_font_size = 18
 bbcode_enabled = true
-text = "you ran out of time"
+text = "[b][color=#C20909]MISSION FAILED[/color][/b]
+
+The operation was terminated before all systems could be decoded. Time expired, and the facility automatically restored its encrypted lockdown protocols.
+All progress within the simulation has been erased.
+
+You and your team failed to escape before the countdown reached zero.
+
+[b][color=#C20909]MISSION STATUS: FAILED[/color][/b]
+“Every second wasted becomes another lock you cannot break.”"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/Quit to Menu" to="." method="_on_quit_to_menu_pressed"]

@@ -36,7 +36,8 @@
 [ext_resource type="PackedScene" uid="uid://bdvic42k6q4ol" path="res://Scenes/Utility/robot_interactable.tscn" id="26_nsosf"]
 [ext_resource type="LabelSettings" uid="uid://j3iho06b8dbq" path="res://Assets/World/Font/interact.tres" id="31_uljo1"]
 [ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="37_14hrn"]
-[ext_resource type="AudioStream" uid="uid://y4vtj72mk56r" path="res://World/Music/room 1-4.ogg" id="37_d0tfp"]
+[ext_resource type="AudioStream" uid="uid://tgykb4pfg3t8" path="res://Assets/Music/wrong_SFX.ogg" id="37_h5jgb"]
+[ext_resource type="AudioStream" uid="uid://c5v3vih8o7mwx" path="res://Assets/Music/Rooms1-4_BGM.ogg" id="39_abywg"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="40_h5jgb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksc4w"]
@@ -1179,9 +1180,10 @@ anchor_right = -0.11764706
 anchor_bottom = 0.78409094
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("40_h5jgb")]
+wrong_sound = ExtResource("37_h5jgb")
 
 [node name="RoomMusicController" parent="." unique_id=605751194 instance=ExtResource("37_14hrn")]
-room_music = ExtResource("37_d0tfp")
+room_music = ExtResource("39_abywg")
 
 [connection signal="body_entered" from="PowerCabinet" to="PowerCabinet" method="_on_body_entered"]
 [connection signal="body_exited" from="PowerCabinet" to="PowerCabinet" method="_on_body_exited"]

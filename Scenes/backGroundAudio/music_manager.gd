@@ -5,7 +5,7 @@ var is_switching := false
 
 
 func _ready():
-	volume_db = -20
+	volume_db = -50
 
 
 func play_music(music: AudioStream, fade := 1.5):

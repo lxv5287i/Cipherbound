@@ -41,7 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://bwa7es2ejcryk" path="res://Assets/World/Wall/room4TAG.png" id="38_ngjh1"]
 [ext_resource type="Texture2D" uid="uid://dokenp5o86v6c" path="res://Assets/World/Wall/room5TAG.png" id="40_amwwa"]
 [ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="41_p4v8g"]
-[ext_resource type="AudioStream" uid="uid://c0vtp5qiqeenr" path="res://World/Music/tutorialRoom1.ogg" id="42_p4v8g"]
+[ext_resource type="AudioStream" uid="uid://diqdcjq7fuufh" path="res://Assets/Music/Lobby+Tutorial_BGM.ogg" id="42_64gy1"]
 [ext_resource type="Script" uid="uid://ba02kcx3j13a3" path="res://Script/Dev/dev_kemz.gd" id="43_xkmgd"]
 [ext_resource type="Texture2D" uid="uid://b4a375set0j2a" path="res://Assets/Characters/Devs/kemz.png" id="44_1l4hh"]
 [ext_resource type="Texture2D" uid="uid://ilu6kl3t1gey" path="res://Assets/Interactables/Infobot/tail.png" id="45_4ie12"]
@@ -2617,7 +2617,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("40_amwwa")
 
 [node name="RoomMusicController" parent="." unique_id=605751194 instance=ExtResource("41_p4v8g")]
-room_music = ExtResource("42_p4v8g")
+room_music = ExtResource("42_64gy1")
 
 [node name="devKemz" type="Area2D" parent="." unique_id=476782236 groups=["analyst_interactable", "analyst_player", "coder_interactable", "coder_player"]]
 z_index = 11

@@ -32,8 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://cvekdnbwf8mbm" path="res://Assets/User Interface/Buttons/x_hovered.png" id="21_vgpdj"]
 [ext_resource type="FontFile" uid="uid://chx3em5tlc3ur" path="res://Assets/Fonts/PixelOperator-Bold.ttf" id="22_petlm"]
 [ext_resource type="PackedScene" uid="uid://cy143gfep0iuc" path="res://Scenes/backGroundAudio/answer_sfx.tscn" id="33_4452d"]
-[ext_resource type="AudioStream" uid="uid://y4vtj72mk56r" path="res://World/Music/room 1-4.ogg" id="33_augk2"]
-[ext_resource type="PackedScene" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="33_yjo8q"]
+[ext_resource type="AudioStream" uid="uid://tgykb4pfg3t8" path="res://Assets/Music/wrong_SFX.ogg" id="33_vgpdj"]
+[ext_resource type="PackedScene" uid="uid://281xcno25tqc" path="res://Scenes/backGroundAudio/room_music_controller.tscn" id="33_yjo8q"]
+[ext_resource type="AudioStream" uid="uid://c5v3vih8o7mwx" path="res://Assets/Music/Rooms1-4_BGM.ogg" id="35_2jgp2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1rno"]
 texture = ExtResource("1_pfsya")
@@ -1096,9 +1097,10 @@ text = "Welcome, Analyst. You have entered Room 2, a place built around logic an
 position = Vector2(0, 10)
 
 [node name="AnswerSFX" parent="." unique_id=218458408 instance=ExtResource("33_4452d")]
+wrong_sound = ExtResource("33_vgpdj")
 
 [node name="RoomMusicController" parent="." unique_id=605751194 instance=ExtResource("33_yjo8q")]
-room_music = ExtResource("33_augk2")
+room_music = ExtResource("35_2jgp2")
 
 [connection signal="body_entered" from="WhiteBoard" to="WhiteBoard" method="_on_body_entered"]
 [connection signal="body_exited" from="WhiteBoard" to="WhiteBoard" method="_on_body_exited"]
